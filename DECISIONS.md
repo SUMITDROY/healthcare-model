@@ -90,3 +90,9 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Evidence: Linux Docker five-fold evaluation confirms 44/60 top-1, 50/60 top-3 and 57.5/75. Top-100 candidate recall is 60/60. External 200-note inference is 5.0495 seconds, 202.05 MiB peak process RSS, capped at 2 CPUs/2 GiB, network disabled, no API cost, no missing/invalid/empty predictions. Thirteen tests pass in Docker. Current training-set score is 57.5/75, not the prior memorized 75/75.
 - Options: default the larger model despite its regression, present only the training score, or publish the smaller measured result with limitations. Chose the latter.
 - Revisit: independently labeled clinical accuracy, broader language coverage and official WHO enrichment are still required. Public MTS-Dialog lacks ICD-11 gold labels; synthetic catalog probes are debugging controls.
+
+## 2026-11-05 14:43 IST — commit: `Record v2 fresh-clone reproducibility`
+- Decision: verify v2 from a separate clean clone and no-cache Docker build before packaging the updated git bundle.
+- Evidence: source commit 0e07125 builds without an existing local artifact; the exact assignment command returns 200/200 valid outputs in 4.363 seconds, byte-equivalent as decoded JSON to the original checkout. Machine-readable evidence is fresh-clone-v2.json. Only documentation changes follow that check.
+- Options: trust the existing local environment, or verify a fresh build. Chose reproducibility.
+- Revisit: repeat on target x86 Linux and whenever implementation or dependencies change.

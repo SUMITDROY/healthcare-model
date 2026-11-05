@@ -39,6 +39,8 @@ These public records include encounter sections and are not always complete cons
 
 Machine-readable measurements are in `benchmark.json`; generated outputs are `external-predictions.jsonl` and `predictions.jsonl`.
 
+Fresh-clone verification: source commit `0e071259d28255bc8c14a25a521271f122a3f1b1` built successfully with `--no-cache` and no local model artifact. The exact assignment command emitted 200/200 valid predictions in 4.363 seconds including model load, identical to the original checkout's predictions. Evidence: `fresh-clone-v2.json`. Subsequent changes are documentation only.
+
 ## Additional regression coverage
 
 Thirteen automated contract/regression checks pass in Docker, covering ID preservation, Unicode, no network, valid codes, input overwrite protection, inline/current assessments, patient speculation, complication distinctions, maternal care and taxonomy negation.
