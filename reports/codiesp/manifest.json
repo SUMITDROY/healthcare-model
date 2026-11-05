@@ -1,0 +1,23 @@
+{
+  "source": "https://huggingface.co/datasets/Biomedical-TeMU/CodiEsp_corpus/resolve/5ff2b006ea74699eccd393a5a0f3b99396d01e0c/",
+  "revision": "5ff2b006ea74699eccd393a5a0f3b99396d01e0c",
+  "license": "CC-BY-4.0",
+  "citation": "Miranda-Escalada, Gonzalez-Agirre & Krallinger (2020), CodiEsp corpus",
+  "source_split": "dev; external to Sugen model development",
+  "selection": "All source documents with at least one diagnosis annotation whose normalized mention exactly matches WHO Spanish title/indexTerm/inclusion for exactly one allowed leaf. No predictions used for selection. No ICD-10-to-ICD-11 crosswalk is asserted.",
+  "source_diagnosis_annotations": 3431,
+  "selected_cases": 221,
+  "matched_annotations": 1063,
+  "proxy_code_count": 423,
+  "cases_sha256": "1a9bb28aeff8cfc7cb62a93312201e2a06fb5fa7d0fc5474e39e13c05869d961",
+  "annotations_sha256": "0085171947bfe045fcd6b243d7de6df09001a9fa28d201dd1ebf80b7b1329088",
+  "who_sha256": "d9c47caaf9387910bcbb308a20a7242dbfff1c1cfafd1c4805b57bd3dacbfca3",
+  "limitations": [
+    "Exact-term filtering introduces selection bias.",
+    "Mapped codes are reference-derived proxies, not clinician-adjudicated ICD-11 gold.",
+    "Case reports contain multiple/historical diagnoses; any-label hit does not establish primary-diagnosis accuracy.",
+    "Spanish only; no French or mixed-language validation."
+  ],
+  "frozen_before_inference": true,
+  "used_for_training": false
+}

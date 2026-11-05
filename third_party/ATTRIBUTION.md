@@ -25,3 +25,9 @@ Official local deployment documentation: https://icd.who.int/docs/icd-api/ICDAPI
 
 
 French and Spanish 2026-01 MMS API records are additionally retained, unmodified, in `data/who-2026-01-fr.jsonl.gz` and `data/who-2026-01-es.jsonl.gz`. Their source manifests include language-specific hashes and confirm that every title is in its requested language. These are WHO's translations, not generated translations. English search normalization and separate foreign lookup indexes are our software additions.
+
+# CodiEsp external evaluation only
+
+Antonio Miranda-Escalada, Aitor Gonzalez-Agirre and Martin Krallinger (2020), CodiEsp corpus: Spanish clinical cases coded in ICD10 (CIE10), eHealth CLEF 2020. Author-hosted source: https://huggingface.co/datasets/Biomedical-TeMU/CodiEsp_corpus at revision `5ff2b006ea74699eccd393a5a0f3b99396d01e0c`. Homepage: https://temu.bsc.es/codiesp/ . License: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/ (full text already included as `MTS-Dialog-LICENSE.txt`).
+
+Changes: selected 221 Spanish development cases before inference, preserving clinical text, source ICD-10 annotations and provenance; added exact unique matches to official WHO Spanish terms as **derived ICD-11 proxies, not independent ICD-11 gold**. Selection, hashes and original README: `reports/codiesp/`. These cases do not train or tune the engine. Original corpus licenses and author attribution remain applicable. No inference results were used to select cases.
