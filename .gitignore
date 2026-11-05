@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+artifacts/
+reports/*predictions.jsonl
+reports/*per-note.jsonl
+.venv/

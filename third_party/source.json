@@ -1,0 +1,11 @@
+{
+  "dataset": "MTS-Dialog",
+  "authors": "Asma Ben Abacha, Wen-wai Yim, Yadan Fan, Thomas Lin",
+  "paper": "https://aclanthology.org/2023.eacl-main.168/",
+  "repository": "https://github.com/abachaa/MTS-Dialog",
+  "license": "CC-BY-4.0",
+  "commit": "3ff0801933608d6f570468c13125125fb5cabdea",
+  "download_url": "https://raw.githubusercontent.com/abachaa/MTS-Dialog/3ff0801933608d6f570468c13125125fb5cabdea/Main-Dataset/MTS-Dialog-TestSet-1-MEDIQA-Chat-2023.csv",
+  "sha256": "b4d38dd2c99b2e9860099abcf653f1e0f3e9b69f9fcc45be2a2699b37a4d2f37",
+  "purpose": "External inference only; no ICD-11 gold labels; not training data."
+}

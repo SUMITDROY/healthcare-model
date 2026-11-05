@@ -1,0 +1,14 @@
+services:
+  coder:
+    build: .
+    cpus: 2
+    mem_limit: 2g
+    network_mode: none
+    environment:
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+    volumes:
+      - ${CODER_INPUT_DIR:-./data}:/in:ro
+      - ${CODER_OUTPUT_DIR:-./reports}:/out

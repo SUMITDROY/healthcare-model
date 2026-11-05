@@ -1,0 +1,7 @@
+.git
+artifacts
+third_party
+reports
+tests
+scripts
+__pycache__
