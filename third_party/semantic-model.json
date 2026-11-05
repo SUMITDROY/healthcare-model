@@ -1,0 +1,40 @@
+{
+  "model": "Xenova/multilingual-e5-small",
+  "revision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+  "base_model": "intfloat/multilingual-e5-small",
+  "base_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "license": "MIT (upstream model)",
+  "files": [
+    {
+      "filename": "model_quantized.onnx",
+      "url": "https://huggingface.co/Xenova/multilingual-e5-small/resolve/761b726dd34fb83930e26aab4e9ac3899aa1fa78/onnx/model_quantized.onnx",
+      "sha256": "f80102d3f2a1229f387d3c81909990d8945513e347b0eab049f7de3c6f98c193",
+      "bytes": 118308185
+    },
+    {
+      "filename": "tokenizer.json",
+      "url": "https://huggingface.co/Xenova/multilingual-e5-small/resolve/761b726dd34fb83930e26aab4e9ac3899aa1fa78/tokenizer.json",
+      "sha256": "0b44a9d7b51c3c62626640cda0e2c2f70fdacdc25bbbd68038369d14ebdf4c39",
+      "bytes": 17082730
+    },
+    {
+      "filename": "config.json",
+      "url": "https://huggingface.co/Xenova/multilingual-e5-small/resolve/761b726dd34fb83930e26aab4e9ac3899aa1fa78/config.json",
+      "sha256": "cb99455288675345e1a4f411438d5d0adbba5fbd3a67ea4fb03c015433b996c1",
+      "bytes": 658
+    }
+  ],
+  "purpose": "offline multilingual retrieval; no external test-note training",
+  "documentation": [
+    {
+      "filename": "e5-upstream-README.md",
+      "url": "https://huggingface.co/intfloat/multilingual-e5-small/resolve/614241f622f53c4eeff9890bdc4f31cfecc418b3/README.md",
+      "sha256": "0038de97aee16258cecbad7ffda4b4febd6953e747a00e0ddbc8e6ed241e9c1c"
+    },
+    {
+      "filename": "e5-onnx-README.md",
+      "url": "https://huggingface.co/Xenova/multilingual-e5-small/resolve/761b726dd34fb83930e26aab4e9ac3899aa1fa78/README.md",
+      "sha256": "561a19594636657fe033f8b4427a7743b5f6f3a12f16cecc5f286feca0453245"
+    }
+  ]
+}

@@ -35,12 +35,15 @@ def main():
     resub = [full.predict(r['text'])[0] for r in notes]
     del full
     heldout = [None]*len(notes)
+    diagnostics = [None]*len(notes)
     fold_reports = []
     for fold, (train, test) in enumerate(KFold(n_splits=5, shuffle=True, random_state=20261105).split(notes), 1):
         model = OfflineCoder(categories, [notes[int(i)] for i in train])
         assert not {notes[int(i)]['id'] for i in test} & set(model.example_ids)
         for i in test:
-            heldout[int(i)] = model.predict(notes[int(i)]['text'])[0]
+            heldout[int(i)], diagnostic = model.predict(notes[int(i)]['text'])
+            diagnostics[int(i)] = {'id': notes[int(i)]['id'], 'gold':notes[int(i)]['gold'],
+                                   'pred':heldout[int(i)], 'fold':fold, **diagnostic}
         fold_reports.append({'fold': fold, 'training_ids': model.example_ids,
                              'heldout_ids': [notes[int(i)]['id'] for i in test]})
         print(f'Finished held-out fold {fold}/5', flush=True)
@@ -51,6 +54,10 @@ def main():
         'title_only_no_supervised_examples': metrics(notes,title_pred),
         'training_set_resubstitution_not_generalisation': metrics(notes,resub),
         'five_fold_out_of_fold': metrics(notes,heldout),
+        'candidate_recall_top50': round(sum(bool(set(r['gold']) & set(d['candidate_codes_top50'])) for r,d in zip(notes,diagnostics))/len(notes),4),
+        'candidate_recall_top100': round(sum(bool(set(r['gold']) & set(d['candidate_codes_top100'])) for r,d in zip(notes,diagnostics))/len(notes),4),
+        'trained_method': 'pairwise logistic ranker for alternative suggestions; primary from context-adjusted retrieval',
+        'semantic_retrieval_active': any(d['semantic_retrieval'] for d in diagnostics),
         'folds': fold_reports, 'seed': 20261105,
         'seconds': round(time.perf_counter()-start, 3),
         'limitations': [
@@ -62,6 +69,7 @@ def main():
         ],
     }
     Path('reports/evaluation.json').write_text(json.dumps(result,indent=2)+'\n')
+    Path('reports/heldout-diagnostics.jsonl').write_text('\n'.join(json.dumps(d,ensure_ascii=False) for d in diagnostics)+'\n')
     print(json.dumps({k:v for k,v in result.items() if k != 'folds'},indent=2))
 
 

@@ -1,0 +1,35 @@
+{
+  "scope": "Synthetic exact-title retrieval probes; NOT clinical accuracy or hidden-score estimate",
+  "n": 200,
+  "chapters": 26,
+  "top1_hits": 198,
+  "top3_hits": 200,
+  "top1_accuracy": 0.99,
+  "top3_accuracy": 1.0,
+  "seed": 20261105,
+  "all_codes_absent_from_training_labels": true,
+  "failures": [
+    {
+      "id": "catalog-probe-027",
+      "gold": [
+        "2A80.1"
+      ],
+      "pred": [
+        "2A80.0",
+        "2A80.1",
+        "2A80.2"
+      ]
+    },
+    {
+      "id": "catalog-probe-030",
+      "gold": [
+        "5C50.12"
+      ],
+      "pred": [
+        "5C50.11",
+        "5C50.12",
+        "KB63.4"
+      ]
+    }
+  ]
+}

@@ -60,3 +60,21 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Evidence: source commit f6fe5f1 builds successfully; the exact command emits 200/200 valid predictions in 2.182 seconds including model load. Six automated contract/regression checks passed on the same code in Docker. Final changes after this check are documentation only.
 - Alternatives: test only the host Python environment or rebuild using the existing image.
 - Revisit: repeat on the target x86 Linux hardware and after any code changes.
+
+## 2026-11-05 14:28 IST — commit: `Improve evidence parsing and train code-agnostic alternative ranking`
+- Decision: fix inline assessment extraction, distinguish historical `dx 2019` from the current assessment, retain boundaries between spoken diagnostic clauses, reduce short negated spans, and check context required by congenital/neonatal/pregnancy/traditional categories.
+- Evidence: v1's held-out 34/60 top-1 became 40/60 with the first context fixes. The next evidence/qualifier and title-family fixes produced 44/60 top-1 without supervised example matching.
+- Options: note-specific overrides, more weight on matching training notes, or reusable parsing and category-evidence rules. Chose reusable rules; eleven regression/contract tests pass.
+- Revisit: a real clinical assertion parser and official hierarchy/terminology enrichment. These heuristics remain dev-informed and have scope limitations.
+
+## 2026-11-05 14:28 IST — commit: `Improve evidence parsing and train code-agnostic alternative ranking`
+- Decision: remove nearest-note label transfer. Train a shared pairwise logistic ranking function on positive and negative category pairs from the supplied 60 notes. Fit search vocabulary on the catalog only. Retain the evidence-based first choice; use the trained function for the two alternatives.
+- Evidence: full pointwise model reranking achieved only 40/60 held-out top-1. Pairwise reranking of all positions achieved 43/60 and 50/60 top-3. Keeping evidence-first top-1 with learned alternatives gives 44/60 top-1 and 50/60 top-3, or 57.5/75, versus v1's 45/75. Training-set performance is now 57.5/75 rather than a memorized 75/75.
+- Options: a 61-class classifier, exemplar lookup, pointwise/pairwise full reranking, or learned alternatives. Shared features can score all 18,375 categories, including codes never used as training labels.
+- Revisit: more representative independent labels may support learned primary selection. Repeated dev-informed validation is diagnostic, not an unbiased estimate.
+
+## 2026-11-05 14:28 IST — commit: `Improve evidence parsing and train code-agnostic alternative ranking`
+- Decision: leave quantized multilingual E5 disabled by default; retain a pinned, hashed offline-build experiment and the upstream/converter model cards.
+- Evidence: first semantic fusion trial reduced held-out top-1 from 40/60 to 39/60 and top-3 from 47/60 to 46/60, while adding a 118 MB model, 17 MB tokenizer and 28 MB category vectors. Title embeddings built on CPU in 56 seconds. WHO's official API returned 401 without credentials; attempted public browser endpoints returned 404, so no WHO enrichment is claimed.
+- Options: default semantic retrieval, lexical-only improvements, or a local generative model. Selected the smaller measured improvement and no runtime model downloads.
+- Revisit: independently labeled multilingual examples and supervised hybrid fusion. Source manifest and optional requirements are retained for reproducibility.

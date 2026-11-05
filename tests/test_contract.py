@@ -18,7 +18,7 @@ class ContractTests(unittest.TestCase):
 
     def test_assessment_beats_negated_history(self):
         note = 'Hx: malaria in the past.\nDx: Upper respiratory infection. Malaria excluded.\nPlan: fluids'
-        self.assertEqual(focus(note), 'Upper respiratory infection. Malaria excluded.')
+        self.assertEqual(focus(note), 'Upper respiratory infection.')
 
     def test_no_network_and_broad_code_space(self):
         with patch.object(socket.socket, 'connect', side_effect=AssertionError('network call')):
@@ -37,6 +37,30 @@ class ContractTests(unittest.TestCase):
         model = self.model
         codes, _ = model.predict('Dx: Acute tonsillitis.', use_examples=False)
         self.assertEqual(codes[0], 'CA03.Z')
+
+    def test_historical_dx_does_not_hide_current_assessment(self):
+        note = 'History: asthma dx 2014.\nA: Acute bronchitis.\nPlan: review.'
+        self.assertEqual(focus(note), 'Acute bronchitis.')
+
+    def test_inline_assessment_is_found(self):
+        note = 'Seen today. No fever. Dx: Acute bronchitis. Plan: review.'
+        self.assertEqual(focus(note), 'Acute bronchitis.')
+        self.assertEqual(self.model.predict(note)[0][0], 'CA42.Z')
+
+    def test_unobserved_training_code_is_reachable(self):
+        observed = {c for r in self.model.examples for c in r['gold']}
+        self.assertNotIn('1A00', observed)
+        self.assertEqual(self.model.predict('Diagnosis: Cholera.')[0][0], '1A00')
+
+    def test_explicit_complication_changes_prediction(self):
+        a = self.model.predict('Diagnosis: Malaria due to Plasmodium falciparum, unspecified.')[0][0]
+        b = self.model.predict('Diagnosis: Plasmodium falciparum malaria with cerebral complications.')[0][0]
+        self.assertEqual(a, '1F40.Z')
+        self.assertEqual(b, '1F40.0')
+
+    def test_negated_patient_guess_does_not_win(self):
+        text = "Patient: I think it's malaria.\nDoctor: It is not malaria. This is acute tonsillitis."
+        self.assertEqual(self.model.predict(text)[0][0], 'CA03.Z')
 
     def test_cli_preserves_ids_and_unicode(self):
         with tempfile.TemporaryDirectory() as d:

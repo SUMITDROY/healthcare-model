@@ -1,0 +1,3 @@
+# Optional experiment only: not required by the default offline image.
+onnxruntime==1.31.1
+tokenizers==0.23.3
