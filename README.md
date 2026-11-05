@@ -1,6 +1,6 @@
-# Sugen offline coding engine — v2
+# Sugen offline ICD-11 coder — v3
 
-CPU-only ICD-11 coding: catalog-wide word/character retrieval, clinician-assessment and context rules, and a **pairwise logistic ranker trained on the 60 supplied labeled notes**. Evidence-based retrieval selects the first code; the learned model ranks alternatives. It can score all 18,375 categories, including codes absent from training labels. No nearest-note label lookup or LLM fine-tuning. No API calls or runtime downloads.
+CPU-only coding across all 18,375 permitted categories. Separate word/character, WHO term and definition searches feed evidence-based primary ranking; a pairwise alternative ranker is fitted to the 60 supplied notes. Explicit clinical facts and qualifier checks support specificity. French/Spanish use separate WHO terminology indexes with language identification. No generative model, paid API or runtime downloads.
 
 ## Run
 
@@ -9,28 +9,27 @@ docker compose build
 docker compose run coder /in/notes.jsonl /out/predictions.jsonl
 ```
 
-Default input: the independent 200-conversation MTS-Dialog sample. Output: `reports/predictions.jsonl`. For other inputs set `CODER_INPUT_DIR` and `CODER_OUTPUT_DIR` to host directories. Compose enforces **2 CPUs, 2 GiB RAM, no network**, and one numerical-library thread. Build requires internet for packages and trains the local artifact automatically.
+Default input: the independent 200-conversation MTS-Dialog sample. Output: `reports/predictions.jsonl`. Set `CODER_INPUT_DIR` / `CODER_OUTPUT_DIR` for other host directories. Compose enforces **2 CPUs, 2 GiB RAM, no network**, with one numerical-library thread. Build downloads packages and creates the local index from packaged reference data.
 
 ## Results and limits
 
-- Dev-informed five-fold check: **44/60 top-1 (73.3%), 50/60 top-3 (83.3%), official score 57.5/75**. V1: 34/60, 40/60, 45/75. Each fold trains the ranker without its 12 held-out examples. Parsing/aliases/model selection used dev feedback, so this is not independent validation.
-- Training-set score: 57.5/75. The old memorizing baseline's 75/75 is archived and is not evidence of generalisation. Untrained ranking ablation: 44/60 top-1, 48/60 top-3, 56.667/75.
-- External 200-note Docker test: **5.0495 seconds**, 202.05 MiB peak process RSS, no missing/invalid/empty predictions, no keys and **$0 API cost**. Linux ARM64; build/container startup excluded. External ICD-11 accuracy is unknown because these records have no gold codes.
-- Candidate recall: 58/60 within 50 candidates, 60/60 within 100. Synthetic exact-title debugging probes across all 26 chapters: 200/200 top-1/top-3. These expose parsing regressions, not clinical accuracy.
-- Hidden-score estimate: provisional 60/100, an uncalibrated planning guess; the generalisation slice remains unmeasured. Known gaps include uncertainty, multi-condition encounter selection and multilingual clinical reasoning.
+- Dev-informed five-fold diagnostic: **56/60 top-1 (93.3%), 58/60 top-3 (96.7%), official core score 70.8/75**. V2: 44/60, 50/60, 57.5/75. V1: 34/60, 40/60, 45/75.
+- Each fold excludes its 12 held-out notes when fitting the alternative ranker. Rules, aliases and approach choices used the visible dev set, so the figure is a development diagnostic, not independent accuracy. Training-set performance is also 70.8/75; removing the learned ranker gives the same aggregate result. Its held-out gain is not established in v3.
+- External offline Docker benchmark: **200/200 outputs in 10.087 seconds**, 548.49 MiB peak process RSS, no invalid/empty predictions, no keys, **$0 API cost**. Linux ARM64; image build/container startup excluded. External coding accuracy is unknown because these records have no ICD-11 gold labels.
+- Beyond dev: 15 contract/regression tests; 20 clinical counterfactual controls; 10 French/Spanish terminology controls; 200 exact-title probes across 26 chapters. All pass. These debugging controls are engineer-authored/catalog-derived, not independent clinical validation.
+- Hidden-score estimate: provisional 80/100, an uncalibrated planning guess. Broader clinical accuracy, complex foreign narrative context and languages beyond English/French/Spanish remain unverified.
 
-## Data, evaluation and AI tooling
+## Data and evaluation
 
-Added MTS-Dialog TestSet-1 under CC BY 4.0 **for inference only**. Original summaries stay separate. Source commit/hash/attribution/license: `third_party/`. Synthetic catalog probes are clearly labeled, excluded from training and now used for debugging. No WHO definitions/synonyms have been downloaded; API credentials are needed. Handwritten aliases are dev-informed.
+Added official WHO MMS 2026-01 English/French/Spanish API records, preserving code/title/URI, and 324,197 index-term entries across the three releases. Compressed reference data is 10.65 MB. Supported local API export needs no cloud OAuth; all exports ship in the repo, so graders need no WHO service. License, provenance and SHA-256 manifests: `third_party/`.
 
-A pinned quantized multilingual E5 experiment regressed the initial English checks and remains disabled. Optional requirements, build script and provenance are retained; its weights are not in the default image or git bundle.
+MTS-Dialog TestSet-1 (CC BY 4.0) is inference-only; summaries remain separate. None of its 200 notes trains the model.
 
 ```sh
 docker compose run --rm --entrypoint python coder scripts/benchmark.py --output /out/external-predictions.jsonl --report /out/benchmark.json
 docker compose run --rm -v "$PWD/reports:/app/reports" --entrypoint python coder scripts/evaluate.py
-docker compose run --rm --entrypoint python coder -m unittest discover -s tests -v
 ```
 
-AI error caught: naive negation removal turned `virus not identified` into `virus`, reversing a coding distinction. Taxonomy negation is now preserved and tested. Historical `dx 2019` was also incorrectly parsed as the active assessment.
+AI error caught: a tested local model turned a Swahili age of 30 into a temperature and reversed uncomplicated malaria into severe disease. It was rejected; raw failure evidence is retained. Sparse substring pseudo-stemming also conflated protein with Proteus; full stemming and a counterfactual check corrected it.
 
-Applicant hours spent: not yet recorded; agent execution time is not a substitute.
+Applicant hours spent: not yet supplied; agent execution time is recorded separately from applicant effort.

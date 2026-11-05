@@ -137,3 +137,9 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Decision: after the user's authorization to free space, remove regenerable unused Docker build caches and task-created temporary files, retaining personal files, project data, images/volumes and the selected model artifact.
 - Evidence: reclaimed 3.912 GB of unused build cache last accessed months ago; free space increased from 1.9 GiB to 5.6 GiB. Metadata services, raw export caches and rejected model files were subsequently removed after the compressed reference exports were verified.
 - Revisit: future large-model experiments should check free disk before downloads. Runtime engine remains a small sparse index, without a generative model.
+
+## 2026-11-05 18:37 IST — commit: `Publish v3 accuracy and offline resource verification`
+- Decision: publish the frozen evidence/reference engine and its limitations, retaining rejected model traces and v1/v2 comparisons.
+- Evidence: Linux Docker diagnostic confirms 56/60 top-1, 58/60 top-3 and 70.833/75. All 15 tests, 20 clinical controls and 10 language controls pass. External 200-note inference is 10.087 seconds, 548.49 MiB peak process RSS, with a 2-CPU/2-GiB cgroup limit, no network, no keys, no missing/invalid predictions and $0 API spending. Exact assignment command also passes.
+- Options: claim the development percentage as unseen accuracy or distinguish the diagnostic from independent validation. Chose explicit separation. The alternative-ranker ablation has the same aggregate v3 score, so no learned-ranker gain is claimed.
+- Revisit: independent clinician-coded test data, complex foreign narrative context, x86 resource verification and other languages. No further English rule tuning is planned before that validation.

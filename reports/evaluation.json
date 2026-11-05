@@ -369,7 +369,7 @@
     }
   ],
   "seed": 20261105,
-  "seconds": 38.37,
+  "seconds": 50.796,
   "limitations": [
     "Only 60 development notes; wide uncertainty and narrow chapter coverage.",
     "Each fold fits vocabulary and supervised examples without the held-out notes.",
