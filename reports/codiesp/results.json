@@ -1,0 +1,3767 @@
+{
+  "scope": "External annotated Spanish case-report proxy probe, NOT ICD-11 accuracy or assignment score. No model changes after inspecting results.",
+  "model_sha256": "ca085ff2822e27a8715b80bc6cbab33d1a62f8d2ca4e4341e7bdcfc3389ad5bb",
+  "source_revision": "5ff2b006ea74699eccd393a5a0f3b99396d01e0c",
+  "cases_sha256": "1a9bb28aeff8cfc7cb62a93312201e2a06fb5fa7d0fc5474e39e13c05869d961",
+  "n": 221,
+  "any_proxy_top1_hits": 81,
+  "any_proxy_top3_hits": 138,
+  "spanish_detected": 221,
+  "seconds_excluding_model_load": 24.02042149999761,
+  "api_calls": 0,
+  "api_cost_usd": 0,
+  "exact_training_text_overlap": 0,
+  "limitations": [
+    "Exact-term filtering introduces selection bias.",
+    "Mapped codes are reference-derived proxies, not clinician-adjudicated ICD-11 gold.",
+    "Case reports contain multiple/historical diagnoses; any-label hit does not establish primary-diagnosis accuracy.",
+    "Spanish only; no French or mixed-language validation."
+  ],
+  "results": [
+    {
+      "id": "codiesp-S0004-06142005000900016-1",
+      "proxy_codes": [
+        "GB70.0Z",
+        "MD81.4",
+        "ME05.0",
+        "MF50.4Z"
+      ],
+      "pred": [
+        "ME05.0",
+        "DD91.1",
+        "MD81.4"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142005001000011-1",
+      "proxy_codes": [
+        "6B60.6",
+        "8A45.00",
+        "BE2Y",
+        "GB71.0",
+        "LB52.2",
+        "MF50.63"
+      ],
+      "pred": [
+        "MF50.65",
+        "LB52.2",
+        "8A04.4"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142006000200011-1",
+      "proxy_codes": [
+        "MG26"
+      ],
+      "pred": [
+        "MF40.21",
+        "MF50.65",
+        "GB00.Y"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142006000500002-3",
+      "proxy_codes": [
+        "2E2Z",
+        "GB03",
+        "GB04.0",
+        "LB52.2"
+      ],
+      "pred": [
+        "GB03",
+        "LB52.2",
+        "MF56"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142006000500002-4",
+      "proxy_codes": [
+        "GB00.Z",
+        "MC85"
+      ],
+      "pred": [
+        "MH12.1",
+        "GB00.Y",
+        "KB40.Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142006000600015-1",
+      "proxy_codes": [
+        "GB06.1"
+      ],
+      "pred": [
+        "GB06.1",
+        "GB06.Y",
+        "2C81.Z"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142006000700008-1",
+      "proxy_codes": [
+        "1B95",
+        "BA41.Z",
+        "GB00.Z"
+      ],
+      "pred": [
+        "BA50",
+        "MF40.21",
+        "1B95"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142006000900008-1",
+      "proxy_codes": [
+        "LD2D.1Z"
+      ],
+      "pred": [
+        "2C94.Z",
+        "KB20.0",
+        "KB20.1"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142006000900009-1",
+      "proxy_codes": [
+        "DD70.Z",
+        "EB21",
+        "EC90.Z"
+      ],
+      "pred": [
+        "EH76.2",
+        "DD70.Z",
+        "JB09.2"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142007000300012-1",
+      "proxy_codes": [
+        "2C90.Y",
+        "GB61.5",
+        "MF96.Z",
+        "QB94.1",
+        "QB94.2"
+      ],
+      "pred": [
+        "MG02",
+        "ME84.2Z",
+        "GC2Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142007000700014-1",
+      "proxy_codes": [
+        "GB60.Z"
+      ],
+      "pred": [
+        "QB61.5",
+        "KA22.0",
+        "BA02"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142007000700015-1",
+      "proxy_codes": [
+        "LA90.1Z",
+        "MF50.63"
+      ],
+      "pred": [
+        "MF50.1",
+        "MF50.5",
+        "KA83.4"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142008000300011-1",
+      "proxy_codes": [
+        "LA82",
+        "ME84.2Z"
+      ],
+      "pred": [
+        "CA24",
+        "MF40.21",
+        "LA82"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142008000300013-1",
+      "proxy_codes": [
+        "1F73.Z",
+        "GB70.0Z",
+        "GC00.Z",
+        "ME84.2Z",
+        "MF50.41",
+        "MF50.4Z",
+        "MF56",
+        "MG26"
+      ],
+      "pred": [
+        "GB80.0",
+        "MF56",
+        "NB92.7"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142008000400013-1",
+      "proxy_codes": [
+        "2C73.0Z",
+        "2C90.Y",
+        "2E00",
+        "MF50.4Z"
+      ],
+      "pred": [
+        "2C73.0Z",
+        "2C90.Y",
+        "MD81.4"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142008000500014-1",
+      "proxy_codes": [
+        "GB71.0",
+        "GC00.Z",
+        "MF50.63",
+        "MG27"
+      ],
+      "pred": [
+        "GC00.1",
+        "MF50.1",
+        "JA00"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142008000500015-1",
+      "proxy_codes": [
+        "GB00.2"
+      ],
+      "pred": [
+        "GB00.2",
+        "NB92.Y",
+        "GB08"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142008000600011-1",
+      "proxy_codes": [
+        "2C90.Y",
+        "5C55.Y",
+        "MF50.4Z",
+        "MG01",
+        "NF02"
+      ],
+      "pred": [
+        "BE1C",
+        "PK91.14",
+        "GB90.3"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142008000600013-1",
+      "proxy_codes": [
+        "2C90.Y",
+        "5A01.1",
+        "5A01.2",
+        "QB9B"
+      ],
+      "pred": [
+        "QB9B",
+        "5A01.1",
+        "5A02.2"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142008000700014-1",
+      "proxy_codes": [
+        "GB00.Z",
+        "MD81.10",
+        "MG43.7"
+      ],
+      "pred": [
+        "MF40.21",
+        "GA90",
+        "MD81.10"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142009000100013-1",
+      "proxy_codes": [
+        "4B03.Z",
+        "8C71.0",
+        "9A23.1",
+        "GC08.Z",
+        "ME84.2Z",
+        "MF50.4Z",
+        "MF50.63",
+        "MG26"
+      ],
+      "pred": [
+        "MF50.7",
+        "MD81.0",
+        "ME84.2Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142009000400011-1",
+      "proxy_codes": [
+        "GC03",
+        "GC0Y"
+      ],
+      "pred": [
+        "GC03",
+        "GC01.2",
+        "MC85"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0004-06142009000900012-1",
+      "proxy_codes": [
+        "2C6Z",
+        "BA8Z",
+        "ME84.2Z",
+        "MG25",
+        "MG26"
+      ],
+      "pred": [
+        "5A11",
+        "MD81.12",
+        "KB40.Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062003000400012-1",
+      "proxy_codes": [
+        "LB30.00",
+        "LB57"
+      ],
+      "pred": [
+        "LB57",
+        "GB04.0",
+        "LB30.00"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062003001000009-1",
+      "proxy_codes": [
+        "5B81.Z",
+        "GC01.2",
+        "GC03",
+        "GC04.14",
+        "GC06",
+        "ME10.02",
+        "MF50.0",
+        "MF50.21",
+        "MF50.2Z",
+        "MF50.4Z",
+        "MF50.63",
+        "MF55"
+      ],
+      "pred": [
+        "GC06",
+        "GC01.2",
+        "MF50.21"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062004000400007-1",
+      "proxy_codes": [
+        "EH94",
+        "MA82.1Z",
+        "MG01"
+      ],
+      "pred": [
+        "MB28.3",
+        "MG01",
+        "2E00"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062004000500010-1",
+      "proxy_codes": [
+        "GB00.Z",
+        "MA16.11"
+      ],
+      "pred": [
+        "GB01.0",
+        "MA16.11",
+        "MF3A"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062004000800009-1",
+      "proxy_codes": [
+        "DC11.Z",
+        "MF50.4Z",
+        "MG01",
+        "MG43.7"
+      ],
+      "pred": [
+        "MG43.7",
+        "MG01",
+        "MD81.4"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062005000300016-2",
+      "proxy_codes": [
+        "BA6Z",
+        "BD51.4",
+        "MC86",
+        "MF50.4Z"
+      ],
+      "pred": [
+        "MF50.40",
+        "MC86",
+        "MD11.6"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062005000400012-1",
+      "proxy_codes": [
+        "2C73.0Z",
+        "2C82.Y",
+        "5C55.Y",
+        "BA41.Z",
+        "BE2Y",
+        "EH94",
+        "GC00.Z",
+        "MF50.4Z"
+      ],
+      "pred": [
+        "FB56.4",
+        "MF50.1",
+        "MB40.8"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062006000100016-1",
+      "proxy_codes": [
+        "GB90.Y"
+      ],
+      "pred": [
+        "GC03",
+        "KA83.9",
+        "GC02.Y"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062006000300015-1",
+      "proxy_codes": [
+        "GB90.2"
+      ],
+      "pred": [
+        "GB90.2",
+        "GB90.Y",
+        "LB31.8"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062006000300016-1",
+      "proxy_codes": [
+        "BA41.Z",
+        "DA93.0",
+        "MF50.4Z"
+      ],
+      "pred": [
+        "2C91.0",
+        "2C92.0",
+        "2C94.2"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062006000700012-1",
+      "proxy_codes": [
+        "GA34.01",
+        "GA91.1",
+        "GA91.Y",
+        "MA16.11",
+        "MF40.21",
+        "MG26"
+      ],
+      "pred": [
+        "MF40.21",
+        "MF50.7",
+        "MA16.11"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062007000400012-1",
+      "proxy_codes": [
+        "2C94.Y",
+        "4B00.0Z",
+        "4B00.1Z",
+        "5C73.Z",
+        "8E47",
+        "MA16.11",
+        "MA18.0Z",
+        "MB20.1",
+        "MB20.2",
+        "MB21.4",
+        "MG26",
+        "MG42"
+      ],
+      "pred": [
+        "2C94.2",
+        "MB20.2",
+        "DB99.5"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062007000500016-1",
+      "proxy_codes": [
+        "1D03.Y",
+        "GA91.1",
+        "MF50.2Z",
+        "MG26"
+      ],
+      "pred": [
+        "GA91.1",
+        "ME09",
+        "GA34.01"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062007000700016-1",
+      "proxy_codes": [
+        "MF50.4Z"
+      ],
+      "pred": [
+        "2C91.0",
+        "MF50.40",
+        "MD82"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062007000700017-1",
+      "proxy_codes": [
+        "BA41.Z",
+        "BD50.4Z",
+        "MF50.40",
+        "MF50.4Z",
+        "QC46"
+      ],
+      "pred": [
+        "2E68",
+        "MF50.40",
+        "NB9Y"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062007001000004-3",
+      "proxy_codes": [
+        "GB03"
+      ],
+      "pred": [
+        "2C80.2",
+        "MF40.21",
+        "2C30.Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062007001000004-4",
+      "proxy_codes": [
+        "MD82"
+      ],
+      "pred": [
+        "2C80.2",
+        "MD82",
+        "2F9Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062009000300013-2",
+      "proxy_codes": [
+        "GB70.0Z",
+        "ME84.2Z"
+      ],
+      "pred": [
+        "ME84.2Z",
+        "GB70.0Z",
+        "ME84.2"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062009000300013-5",
+      "proxy_codes": [
+        "CB41.1Z",
+        "GB70.1"
+      ],
+      "pred": [
+        "MF54.2",
+        "MB40.8",
+        "GB70.1"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062009000400020-1",
+      "proxy_codes": [
+        "2A82.00",
+        "BB6Z"
+      ],
+      "pred": [
+        "2A82.00",
+        "2B33.3",
+        "DD92.1"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-48062010000100019-4",
+      "proxy_codes": [
+        "5D00.Z",
+        "CA40.Z",
+        "CA43.2",
+        "GB60.Z",
+        "GB61.Z",
+        "MF50.40",
+        "MF50.4Z"
+      ],
+      "pred": [
+        "MF50.40",
+        "CA43.2",
+        "CA43.1"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-56912006000100005-1",
+      "proxy_codes": [
+        "1A40.Z",
+        "5C70.0",
+        "BB90.Z",
+        "GB60.Z",
+        "LD40.0",
+        "MC83.Z",
+        "MD11.1",
+        "MD11.5",
+        "ME64.1",
+        "MG29.Z",
+        "MG40.Z"
+      ],
+      "pred": [
+        "KB2D",
+        "KA21.44",
+        "QA00.2"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-56912007000200007-3",
+      "proxy_codes": [
+        "3B64.Z",
+        "5C73.Z",
+        "MC82.4",
+        "MF51",
+        "MG26"
+      ],
+      "pred": [
+        "MA14.15",
+        "ME84.2Z",
+        "MC82.4"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-56912007000900007-3",
+      "proxy_codes": [
+        "5C70.0",
+        "8C71.0",
+        "DC31.Z",
+        "MB20.2",
+        "MB21.4",
+        "MF51"
+      ],
+      "pred": [
+        "MB21.4",
+        "5C70.0",
+        "MD90.1"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-56912007000900007-6",
+      "proxy_codes": [
+        "5B91.0",
+        "5C70.0",
+        "5C80.1",
+        "6C40.2Z",
+        "8C71.0",
+        "DC11.Z",
+        "DC31.Z",
+        "GB60.Z",
+        "GB6Z",
+        "MD11.Y"
+      ],
+      "pred": [
+        "DC31.2",
+        "5C80.1",
+        "5C70.0"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-56912009000700006-2",
+      "proxy_codes": [
+        "MA80.0",
+        "MA80.1",
+        "MA80.2Z",
+        "MB20.1"
+      ],
+      "pred": [
+        "8B22.0",
+        "MB20.1",
+        "MA80.0"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-56912009000900008-1",
+      "proxy_codes": [
+        "2D50",
+        "3B20",
+        "3B64.Z",
+        "BB01.Z",
+        "GB60.Z",
+        "MD11.5",
+        "MD12",
+        "MG26"
+      ],
+      "pred": [
+        "CB05.0",
+        "3B20",
+        "CB04.4"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0210-56912010000400009-1",
+      "proxy_codes": [
+        "8B88.0",
+        "9C84.Z",
+        "MB45.Y",
+        "MD11.Y",
+        "MD33",
+        "MG29.Z"
+      ],
+      "pred": [
+        "QD51",
+        "MF58",
+        "MD33"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0211-69952009000500017-1",
+      "proxy_codes": [
+        "5B81.Z",
+        "5C55.Y",
+        "LD2H.Y",
+        "MF50.41",
+        "MF96.Z"
+      ],
+      "pred": [
+        "5A40.0",
+        "ME84.2Z",
+        "MF8Y"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0211-69952010000400013-1",
+      "proxy_codes": [
+        "FA2Z",
+        "GB40",
+        "GB4Z",
+        "MF50.41",
+        "MF51",
+        "MF96.Z",
+        "MG26",
+        "MG29.Z"
+      ],
+      "pred": [
+        "ME84.2Z",
+        "PB24",
+        "MA14.11"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0211-69952011000400013-1",
+      "proxy_codes": [
+        "5C55.Y",
+        "5C78",
+        "FA92.0Z",
+        "GB41",
+        "GB70.0Z",
+        "MA01.0",
+        "MA01.Z",
+        "MC85",
+        "MF50.41",
+        "MF96.Z"
+      ],
+      "pred": [
+        "BB01.0",
+        "GB41",
+        "MA01.0"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0211-69952011000500011-3",
+      "proxy_codes": [
+        "DC31.2",
+        "DC31.Z",
+        "MD11.Y",
+        "QE13"
+      ],
+      "pred": [
+        "EF40.0",
+        "ME84.2Z",
+        "5A11"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0211-69952011000500013-1",
+      "proxy_codes": [
+        "5A51.Z",
+        "5B91.0",
+        "GB61.Z",
+        "GB90.48"
+      ],
+      "pred": [
+        "5B91.0",
+        "GB61.Z",
+        "GB42.1"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0211-69952012000200030-1",
+      "proxy_codes": [
+        "5B81.Z",
+        "5C80.0Z",
+        "BA4Z",
+        "BE2Y",
+        "DC51.2",
+        "GB61.Z",
+        "GB90.3",
+        "GC2Z",
+        "ME84.1",
+        "MF51",
+        "MG40.Z"
+      ],
+      "pred": [
+        "NE60",
+        "BD40.2",
+        "LA90.4Y"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0211-69952012000500016-1",
+      "proxy_codes": [
+        "3A00.Z",
+        "4A60.0",
+        "5D00.Z",
+        "DA96.0Z",
+        "FA92.0Z",
+        "GB61.Z",
+        "GC2Z",
+        "MD92",
+        "MD93",
+        "ME84.2Z",
+        "MF96.Z",
+        "MG26"
+      ],
+      "pred": [
+        "5D00.1",
+        "5B5K.0",
+        "4A60.0"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0211-69952013000400027-1",
+      "proxy_codes": [
+        "MD82",
+        "ME64.0",
+        "ME84.2Z"
+      ],
+      "pred": [
+        "BA03",
+        "MD82",
+        "BD73.0"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0211-69952015000600014-2",
+      "proxy_codes": [
+        "DB30.Y",
+        "DC50.Z",
+        "GB40"
+      ],
+      "pred": [
+        "GB40",
+        "MF84",
+        "DB30.Y"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0212-16112005000600011-1",
+      "proxy_codes": [
+        "5C56.2Y",
+        "6C40.2Z",
+        "9D45",
+        "DA96.0Z",
+        "DC12.0Y",
+        "DC32.Z",
+        "MC85"
+      ],
+      "pred": [
+        "9A76",
+        "MC18",
+        "5A12"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0212-16112007000600015-1",
+      "proxy_codes": [
+        "MH10"
+      ],
+      "pred": [
+        "MH10",
+        "KA21.32",
+        "KA20.0Z"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0212-16112013000300055-1",
+      "proxy_codes": [
+        "1A40.Z",
+        "3B61.0Y",
+        "3B61.Z",
+        "5A11",
+        "5B5K.0",
+        "5B7Z",
+        "5B80.0Z",
+        "5B81.Z",
+        "5D0Y",
+        "DD71.Z",
+        "ME64.2",
+        "MG29.3"
+      ],
+      "pred": [
+        "5A11",
+        "MG29.3",
+        "5A10"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0212-16112013000300056-1",
+      "proxy_codes": [
+        "1G41",
+        "CA40.Z",
+        "DD70.Z",
+        "MG26",
+        "MG40.Z"
+      ],
+      "pred": [
+        "QC05.0",
+        "QC05.Y",
+        "NB30.2Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0212-16112013000400053-1",
+      "proxy_codes": [
+        "DC50.Z",
+        "MC85"
+      ],
+      "pred": [
+        "2C25.0",
+        "2C24.0",
+        "2D40"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0212-16112014000300032-1",
+      "proxy_codes": [
+        "1A40.0",
+        "1G41",
+        "EC90.Z",
+        "GB61.Z",
+        "ME64.0",
+        "MG40.Z"
+      ],
+      "pred": [
+        "GB61.4",
+        "GB61.1",
+        "QB7Y"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0212-71992000001200006-1",
+      "proxy_codes": [
+        "1F54.Z",
+        "1F57.Z",
+        "9B72.Z",
+        "MG26",
+        "MG29.Z"
+      ],
+      "pred": [
+        "MD81.0",
+        "9B72.01",
+        "ME24.A3"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0212-71992000001200009-1",
+      "proxy_codes": [
+        "CA21.Z",
+        "CB21.Z",
+        "CB40.3",
+        "MD11.5",
+        "MD11.Y",
+        "MD12",
+        "MG26",
+        "NF0A.7"
+      ],
+      "pred": [
+        "MD11.5",
+        "MD12",
+        "GA04"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0212-71992000001200010-1",
+      "proxy_codes": [
+        "DB90.0",
+        "DD70.Z",
+        "MA16.11",
+        "ME01",
+        "MG26",
+        "MG43.7"
+      ],
+      "pred": [
+        "DD70.1",
+        "MA16.11",
+        "DC10.01"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0212-71992005000200008-1",
+      "proxy_codes": [
+        "5A11",
+        "5D00.Z",
+        "BB61.Z",
+        "BC63.2Z",
+        "GB00.Z",
+        "MF55"
+      ],
+      "pred": [
+        "5A11",
+        "MB48.4",
+        "ME05.1"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0212-71992005001200008-1",
+      "proxy_codes": [
+        "2F34",
+        "MD81.10",
+        "ME01"
+      ],
+      "pred": [
+        "ME01",
+        "DC31.Y",
+        "MD81.10"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0212-71992005001200010-1",
+      "proxy_codes": [
+        "1D81.Z",
+        "3B63.1Z",
+        "3B63.Z",
+        "5B81.Z",
+        "CA0Y",
+        "MC85"
+      ],
+      "pred": [
+        "2A90.6",
+        "3B63.1Z",
+        "5D00.3"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0212-71992006000200006-1",
+      "proxy_codes": [
+        "5A11",
+        "5C80.0Z",
+        "BB71.Z",
+        "MG26"
+      ],
+      "pred": [
+        "MG26",
+        "BB01.0",
+        "5A10"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0212-71992006000600007-1",
+      "proxy_codes": [
+        "2A85.4",
+        "3A9Z",
+        "BE2Y",
+        "FA20.1",
+        "FA20.Z",
+        "FA2Z",
+        "MB40.3",
+        "ME10.01",
+        "MG26"
+      ],
+      "pred": [
+        "FA20.1",
+        "MA14.13",
+        "FB56.4"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0212-71992006001000008-1",
+      "proxy_codes": [
+        "EE7Y",
+        "ME64.2"
+      ],
+      "pred": [
+        "ME64.2",
+        "ME64.4",
+        "5A00.Z"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0212-71992007000100006-1",
+      "proxy_codes": [
+        "1A6Z",
+        "1F03.0",
+        "1F57.Z",
+        "8B88.0",
+        "MA80.2Z",
+        "MB5Z"
+      ],
+      "pred": [
+        "8B88.0",
+        "QF00",
+        "SD00"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0213-12852006000600002-1",
+      "proxy_codes": [
+        "1F23.2",
+        "1F23.Z",
+        "1F57.Z",
+        "4B00.0Z",
+        "MG26"
+      ],
+      "pred": [
+        "1D82.0",
+        "1E51.Y",
+        "2A81.Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0213-12852013000400006-1",
+      "proxy_codes": [
+        "9C84.Z"
+      ],
+      "pred": [
+        "AB31.3",
+        "MB48.0Z",
+        "MB48.Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0213-12852016000500002-1",
+      "proxy_codes": [
+        "DA09.1",
+        "DA09.8",
+        "FB80.6",
+        "MB40.6",
+        "MC85"
+      ],
+      "pred": [
+        "DA09.8",
+        "2E83.Z",
+        "2E83.1"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912003000600010-1",
+      "proxy_codes": [
+        "8A8Z",
+        "9C40.A0",
+        "MA10.0",
+        "MC1Y",
+        "MF51",
+        "MF96.Z",
+        "MG29.3",
+        "MG29.Z"
+      ],
+      "pred": [
+        "9B73.3",
+        "9B78.5",
+        "MG29.3"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912004000900009-1",
+      "proxy_codes": [
+        "3B61.Z",
+        "9B78.7"
+      ],
+      "pred": [
+        "9B78.8",
+        "9C61.01",
+        "3B61.0Y"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912004001100012-1",
+      "proxy_codes": [
+        "1F57.3",
+        "1F57.Z",
+        "9A60.Z",
+        "GB06.0Z",
+        "ME66.6Z",
+        "MG26"
+      ],
+      "pred": [
+        "MB40.8",
+        "DA01.Z",
+        "DA01.15"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912006000100008-1",
+      "proxy_codes": [
+        "9A20.00"
+      ],
+      "pred": [
+        "LD2D.10",
+        "9D90.6",
+        "DB94.1Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912006000300009-1",
+      "proxy_codes": [
+        "9B60"
+      ],
+      "pred": [
+        "9A90.2",
+        "9B01.3",
+        "EE10.4"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912006000600010-2",
+      "proxy_codes": [
+        "8A6Z"
+      ],
+      "pred": [
+        "9D42.4",
+        "9D5Y",
+        "9D90.6"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912006000900011-1",
+      "proxy_codes": [
+        "5B59"
+      ],
+      "pred": [
+        "9B78.8",
+        "9B78.5",
+        "9D90.6"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912007000100009-1",
+      "proxy_codes": [
+        "4A44.2",
+        "9A20.00",
+        "9D46",
+        "ME64.2",
+        "MG29.Z"
+      ],
+      "pred": [
+        "9B00.0",
+        "QA00.61",
+        "MC15"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912007000200009-1",
+      "proxy_codes": [
+        "8A40.Z",
+        "9C40.10",
+        "9C40.1Z",
+        "FA20.Z",
+        "MB24.5"
+      ],
+      "pred": [
+        "9B00.0",
+        "QA00.61",
+        "9C40.10"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912007000300011-1",
+      "proxy_codes": [
+        "9C84.Z",
+        "9D00.0",
+        "CA40.Z",
+        "FA31.0",
+        "FB82.1",
+        "LA05.51",
+        "LB70.00",
+        "LB71.1",
+        "MB47.2"
+      ],
+      "pred": [
+        "LA05.51",
+        "LB70.00",
+        "LB71.1"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912007000700009-1",
+      "proxy_codes": [
+        "9B10.Z",
+        "9B78.4"
+      ],
+      "pred": [
+        "9B51",
+        "9B73.0",
+        "9B60"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912007001000008-1",
+      "proxy_codes": [
+        "9C80.4",
+        "9D46"
+      ],
+      "pred": [
+        "9C40.A0",
+        "8A6Z",
+        "9B78.5"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912008000700011-1",
+      "proxy_codes": [
+        "MA01.Z"
+      ],
+      "pred": [
+        "2C33",
+        "FB32.Y",
+        "KB40.Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912008001000010-1",
+      "proxy_codes": [
+        "9C40.A0"
+      ],
+      "pred": [
+        "9C40.A0",
+        "LB70.Y",
+        "7A42.0"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912009000800005-2",
+      "proxy_codes": [
+        "9A03.0Z",
+        "9D46",
+        "MG26"
+      ],
+      "pred": [
+        "9D90.2",
+        "9A03.0Z",
+        "9D46"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912010000200005-1",
+      "proxy_codes": [
+        "MA01.Z"
+      ],
+      "pred": [
+        "GA04",
+        "9A01.1",
+        "2C33"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912011000300005-1",
+      "proxy_codes": [
+        "BC81.3Z"
+      ],
+      "pred": [
+        "9B78.5",
+        "QA82",
+        "9B7Y"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912011000600005-2",
+      "proxy_codes": [
+        "9B71.Z",
+        "MC1Y",
+        "MG29.3"
+      ],
+      "pred": [
+        "1E51.1",
+        "1E51.0Y",
+        "9D90.2"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912011000700004-1",
+      "proxy_codes": [
+        "9B78.5",
+        "9B78.7",
+        "9B83",
+        "MD11.7",
+        "MG29.Z"
+      ],
+      "pred": [
+        "9B83",
+        "MD11.7",
+        "9D90.6"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912011001000005-1",
+      "proxy_codes": [
+        "9D46"
+      ],
+      "pred": [
+        "9B81",
+        "9B78.5",
+        "9D00.4"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912011001100006-1",
+      "proxy_codes": [
+        "9A78.0",
+        "9A7Z",
+        "9B10.Z"
+      ],
+      "pred": [
+        "9A78.0",
+        "9A77.Y",
+        "LA11.5"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912012000300003-1",
+      "proxy_codes": [
+        "2A60.39",
+        "MD11.9"
+      ],
+      "pred": [
+        "MD11.9",
+        "2A60.39",
+        "CA00"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0365-66912012000500005-1",
+      "proxy_codes": [
+        "9B78.3Y",
+        "EC40",
+        "MG29.3"
+      ],
+      "pred": [
+        "EC40",
+        "MD11.6",
+        "9C40.BZ"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0376-78922007000400008-1",
+      "proxy_codes": [
+        "CB00",
+        "DB99.0",
+        "EF02.3",
+        "GB60.Z",
+        "MA16.11",
+        "MB40.3",
+        "ME01",
+        "ME04.Z",
+        "ME10.01",
+        "ME64.0",
+        "ME64.3",
+        "MG26",
+        "ND56.0"
+      ],
+      "pred": [
+        "FB56.4",
+        "ME01",
+        "DD91.3"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0376-78922009000300005-1",
+      "proxy_codes": [
+        "1A94.0",
+        "1F23.Z",
+        "JA80.0"
+      ],
+      "pred": [
+        "DB52",
+        "GA02.3",
+        "DA00.3"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0376-78922011000200004-1",
+      "proxy_codes": [
+        "1B71.Z",
+        "GB61.Z",
+        "MC85",
+        "MG26"
+      ],
+      "pred": [
+        "EH76.1",
+        "QC05.Y",
+        "EL53"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0376-78922012000100001-1",
+      "proxy_codes": [
+        "MC85"
+      ],
+      "pred": [
+        "GB23.2",
+        "2C61.0",
+        "EL51"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0376-78922012000300005-1",
+      "proxy_codes": [
+        "MG29.Z"
+      ],
+      "pred": [
+        "8C10.2",
+        "LB90.0",
+        "LB80.2"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0376-78922012000300010-1",
+      "proxy_codes": [
+        "9A02.0Z"
+      ],
+      "pred": [
+        "2F36.2",
+        "2F36.Y",
+        "ND32"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0376-78922012000400009-1",
+      "proxy_codes": [
+        "BD93.Z"
+      ],
+      "pred": [
+        "MF40.00",
+        "QA82",
+        "NE89"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0376-78922014000300013-1",
+      "proxy_codes": [
+        "BD52.2",
+        "MG29.Z"
+      ],
+      "pred": [
+        "EL52",
+        "NC15.1Z",
+        "NC15.10"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0376-78922015000200010-1",
+      "proxy_codes": [
+        "2E80.0Z",
+        "6A02.Z",
+        "8A6Z",
+        "CA0J.Z",
+        "LA02.Z",
+        "LA05.3",
+        "LB71.1"
+      ],
+      "pred": [
+        "LA05.3",
+        "LA51",
+        "MC13"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0376-78922016000200012-1",
+      "proxy_codes": [
+        "2E03",
+        "5C80.0Z",
+        "BE2Y",
+        "EH94",
+        "FA70.1",
+        "MB24.5",
+        "MB45.4",
+        "MB46.Z",
+        "ME84.2Z"
+      ],
+      "pred": [
+        "MF56",
+        "2C82.0",
+        "MB45.4"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0376-78922017000100008-1",
+      "proxy_codes": [
+        "MC85"
+      ],
+      "pred": [
+        "MB40.8",
+        "QA76",
+        "PL13.6"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0378-48352004000200007-1",
+      "proxy_codes": [
+        "2D70",
+        "8A68.Z",
+        "CB27",
+        "MB20.0",
+        "MB21.4",
+        "MC85",
+        "MD11.5",
+        "MF50.2Z"
+      ],
+      "pred": [
+        "QB9B",
+        "MB20.0",
+        "MB21.4"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0378-48352004000300007-1",
+      "proxy_codes": [
+        "MG26"
+      ],
+      "pred": [
+        "PK81.5",
+        "PK81.4",
+        "MA01.Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0378-48352004000900006-1",
+      "proxy_codes": [
+        "MC85"
+      ],
+      "pred": [
+        "2C6Y",
+        "2C25.Y",
+        "2C24.1"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0378-48352005000400004-1",
+      "proxy_codes": [
+        "2D70",
+        "2E03",
+        "5A01.1",
+        "ME84.2Z"
+      ],
+      "pred": [
+        "2E03",
+        "3A70.Z",
+        "3C0Y"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0378-48352005000900005-1",
+      "proxy_codes": [
+        "2E03"
+      ],
+      "pred": [
+        "2B72.0",
+        "2C25.0",
+        "2C24.0"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0378-48352006000300006-1",
+      "proxy_codes": [
+        "8A80.Z",
+        "8B88.0",
+        "MB24.5",
+        "MC85",
+        "MG29.Z"
+      ],
+      "pred": [
+        "8B88.0",
+        "PK98.0",
+        "LA06.1"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S0465-546X2014000400012-1",
+      "proxy_codes": [
+        "MG29.Z"
+      ],
+      "pred": [
+        "5A11",
+        "5A10",
+        "8C10.0"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082005000500013-1",
+      "proxy_codes": [
+        "2C30.Z",
+        "DB30.Y"
+      ],
+      "pred": [
+        "DA91.0",
+        "2C30.Z",
+        "DB30.Y"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082005000800013-1",
+      "proxy_codes": [
+        "DB99.1Z"
+      ],
+      "pred": [
+        "QA00.C",
+        "DB99.1Z",
+        "DB99.1"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082005001100014-1",
+      "proxy_codes": [
+        "ME64.2"
+      ],
+      "pred": [
+        "MB22.7",
+        "ME64.2",
+        "MG22"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082006000900015-1",
+      "proxy_codes": [
+        "1A6Z",
+        "DD71.Z"
+      ],
+      "pred": [
+        "DD71.Y",
+        "1C80",
+        "DB90.Y"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082007000100014-1",
+      "proxy_codes": [
+        "DC10.02",
+        "DC11.6",
+        "DC11.Z",
+        "DC51.Y",
+        "ME10.1"
+      ],
+      "pred": [
+        "MB28.3",
+        "DC11.6",
+        "ME84.2Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082007000500016-1",
+      "proxy_codes": [
+        "5A11",
+        "5C80.0Z",
+        "DB90.0",
+        "MG25"
+      ],
+      "pred": [
+        "5A11",
+        "MB28.3",
+        "MD81.0"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082008000100017-1",
+      "proxy_codes": [
+        "1A36.Z",
+        "1F54.Z",
+        "1F57.Z",
+        "1F73.Z",
+        "1F86.Z",
+        "DB99.0",
+        "MA16.0Y",
+        "ME10.01"
+      ],
+      "pred": [
+        "ME10.02",
+        "DA43.0",
+        "1F82"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082008000500008-1",
+      "proxy_codes": [
+        "5B7Z",
+        "DA20.0",
+        "MD93"
+      ],
+      "pred": [
+        "MD93",
+        "2B61.0",
+        "2E90.7"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082008000900015-1",
+      "proxy_codes": [
+        "LB15.0"
+      ],
+      "pred": [
+        "LB15.0",
+        "LB12.Y",
+        "2B80.10"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082008000900016-1",
+      "proxy_codes": [
+        "ME84.2Z"
+      ],
+      "pred": [
+        "2C10.0",
+        "DC30.0",
+        "DC3Y"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082008000900017-1",
+      "proxy_codes": [
+        "DC72.Z",
+        "DD01.Z",
+        "ME24.A3",
+        "ME24.A5",
+        "MG40.Z"
+      ],
+      "pred": [
+        "ME24.A5",
+        "DC72.Z",
+        "1A40.0"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082008001200016-1",
+      "proxy_codes": [
+        "ME05.0"
+      ],
+      "pred": [
+        "ME05.0",
+        "2E92.4Y",
+        "MH12.1"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082009000200011-1",
+      "proxy_codes": [
+        "2D70",
+        "CA22.Z",
+        "MD11.5",
+        "MD12",
+        "MD22"
+      ],
+      "pred": [
+        "DA91.0",
+        "2B58.Y",
+        "DA91.Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082009000500012-1",
+      "proxy_codes": [
+        "DB99.1Z"
+      ],
+      "pred": [
+        "2D86",
+        "2D80.1",
+        "DB99.1Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082009000500015-1",
+      "proxy_codes": [
+        "1C10.Z",
+        "5A11",
+        "8A20",
+        "BC81.32",
+        "BC81.3Z"
+      ],
+      "pred": [
+        "5A11",
+        "5A10",
+        "8A20"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082009000600018-1",
+      "proxy_codes": [
+        "DB11.6",
+        "MD82"
+      ],
+      "pred": [
+        "DB11.6",
+        "MD82",
+        "QA87"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082009000700016-1",
+      "proxy_codes": [
+        "BE2Y",
+        "ME24.3Z"
+      ],
+      "pred": [
+        "ME84.2Z",
+        "ME24.3Z",
+        "MA14.15"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082009000900015-1",
+      "proxy_codes": [
+        "5C80.Z",
+        "DC31.Z",
+        "DC32.Z"
+      ],
+      "pred": [
+        "DC35.0",
+        "LB21.1",
+        "DC31.Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-01082009001000011-1",
+      "proxy_codes": [
+        "MD92",
+        "MG29.Z"
+      ],
+      "pred": [
+        "MD92",
+        "MB71.Y",
+        "MH12.1"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-05582003000600004-3",
+      "proxy_codes": [
+        "LA52"
+      ],
+      "pred": [
+        "LA52",
+        "QA8B",
+        "QA86"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-05582004000400006-1",
+      "proxy_codes": [
+        "EK90.0"
+      ],
+      "pred": [
+        "DD51",
+        "EK90.0",
+        "ME66.3"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-05582007000600003-1",
+      "proxy_codes": [
+        "MA01.Z"
+      ],
+      "pred": [
+        "GA04",
+        "2C30.Z",
+        "QA8B"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-05582008000300004-1",
+      "proxy_codes": [
+        "MC85"
+      ],
+      "pred": [
+        "6D11.5",
+        "MB71.Y",
+        "QA86"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-05582008000400008-3",
+      "proxy_codes": [
+        "DA09.8"
+      ],
+      "pred": [
+        "DA09.8",
+        "NA02.74",
+        "QB84"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-05582008000500009-1",
+      "proxy_codes": [
+        "MD11.5",
+        "MD12",
+        "MD41"
+      ],
+      "pred": [
+        "2B6A.0",
+        "2C24.1",
+        "ND72.4"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-05582009000500007-1",
+      "proxy_codes": [
+        "PA0Z"
+      ],
+      "pred": [
+        "QA00.B",
+        "FB80.B",
+        "2E83.1"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-05582010000100007-1",
+      "proxy_codes": [
+        "2D70",
+        "QB9B"
+      ],
+      "pred": [
+        "QB9B",
+        "DB52",
+        "2B5F.2"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-05582013000400005-1",
+      "proxy_codes": [
+        "CA0Y",
+        "MD20"
+      ],
+      "pred": [
+        "MD20",
+        "9C81.0Z",
+        "NE81.0Z"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-05582014000200008-1",
+      "proxy_codes": [
+        "CA40.Z"
+      ],
+      "pred": [
+        "2E83.Z",
+        "MG67",
+        "MD40.7"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-05582014000400006-2",
+      "proxy_codes": [
+        "DA01.30",
+        "MA16.11",
+        "MA82.1Z",
+        "MD11.5",
+        "MD11.Y",
+        "MD93",
+        "MG26"
+      ],
+      "pred": [
+        "MA16.11",
+        "GA04",
+        "MD93"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-05582017000200099-1",
+      "proxy_codes": [
+        "FB51.2"
+      ],
+      "pred": [
+        "QA00.B",
+        "FB51.2",
+        "MH12.1"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-14732005000200003-1",
+      "proxy_codes": [
+        "9C84.Z",
+        "MB5Z"
+      ],
+      "pred": [
+        "9C83.5",
+        "LA52",
+        "MG29.02"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-14732005000300004-1",
+      "proxy_codes": [
+        "MA01.Z",
+        "ME84.0",
+        "MG30.5Z"
+      ],
+      "pred": [
+        "ME84.0",
+        "FB56.4",
+        "GA04"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-14732005000400006-1",
+      "proxy_codes": [
+        "2D70",
+        "6B60.6",
+        "MB40.3",
+        "ME84.2Z",
+        "MG01"
+      ],
+      "pred": [
+        "MB71.Y",
+        "NB72",
+        "8C11.3"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-14732006000400005-1",
+      "proxy_codes": [
+        "2A00.00",
+        "9C61.Z",
+        "MB21.1Z"
+      ],
+      "pred": [
+        "2A00.00",
+        "PK98.0",
+        "PH48"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-14732008000500005-2",
+      "proxy_codes": [
+        "8A8Z",
+        "MB44.0",
+        "MB45.0"
+      ],
+      "pred": [
+        "MD90.1",
+        "MB44.0",
+        "1C11.1"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-14732009000300006-1",
+      "proxy_codes": [
+        "9D45",
+        "9D46",
+        "MC81.Z",
+        "MG26"
+      ],
+      "pred": [
+        "LC40",
+        "9C83.5",
+        "8E40.1"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-14732009000600006-1",
+      "proxy_codes": [
+        "2A83.1"
+      ],
+      "pred": [
+        "2E81.20",
+        "2E03",
+        "QA82"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-14732011000300008-1",
+      "proxy_codes": [
+        "1D03.Y",
+        "MG26"
+      ],
+      "pred": [
+        "1D03.Y",
+        "NE81.2Z",
+        "JB40.1"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-63432014000100011-1",
+      "proxy_codes": [
+        "8A02.Z",
+        "8A06.Z",
+        "8A0Z",
+        "EA8Z",
+        "EA90.0",
+        "EA90.Z",
+        "MB40.3",
+        "MB48.Z"
+      ],
+      "pred": [
+        "EA90.0",
+        "8A02.2",
+        "MB46.1"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-63432014000400015-1",
+      "proxy_codes": [
+        "5D0Y",
+        "ME01",
+        "MG26"
+      ],
+      "pred": [
+        "ME01",
+        "JA89.1",
+        "DD91.3"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-63432015000100008-1",
+      "proxy_codes": [
+        "5C72",
+        "5C80.0Z",
+        "BA01"
+      ],
+      "pred": [
+        "MD90.0",
+        "5C72",
+        "GB42.1"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-63432015000400006-1",
+      "proxy_codes": [
+        "1A04",
+        "5A60.2Z",
+        "5C71",
+        "5C72",
+        "5C73.Z",
+        "5C74",
+        "BC81.30",
+        "BC81.3Z",
+        "CA40.Z",
+        "CA71.0",
+        "GB60.Z",
+        "GB6Z",
+        "MA15.0",
+        "MD11.5",
+        "MD93",
+        "MG27",
+        "MG42"
+      ],
+      "pred": [
+        "BC81.30",
+        "ME05.1",
+        "MA15.0"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-63432016000100007-1",
+      "proxy_codes": [
+        "5C64.41",
+        "CA25.Z"
+      ],
+      "pred": [
+        "PL14.B",
+        "1E51.0Y",
+        "QA8B"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1130-63432016000600013-1",
+      "proxy_codes": [
+        "5C55.Y",
+        "MB46.Z"
+      ],
+      "pred": [
+        "5A74.1",
+        "2A33",
+        "NE60"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1132-62552015000100006-1",
+      "proxy_codes": [
+        "2B31.2Z",
+        "CA21.Z",
+        "MD11.5",
+        "MD12",
+        "MG26"
+      ],
+      "pred": [
+        "MD12",
+        "EE80.0",
+        "QA00.B"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1134-80462004000600007-1",
+      "proxy_codes": [
+        "JA88.1",
+        "MD11.5",
+        "MD11.Y",
+        "ME10.02",
+        "ME84.1",
+        "MG26"
+      ],
+      "pred": [
+        "ME10.02",
+        "2B30.10",
+        "CB22.Z"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1134-80462005000300004-1",
+      "proxy_codes": [
+        "DA63.Z",
+        "MB24.5",
+        "ME05.0",
+        "PA6Z"
+      ],
+      "pred": [
+        "NB52.0",
+        "ND13.0",
+        "ME84.0"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1134-80462009000200004-1",
+      "proxy_codes": [
+        "MD12"
+      ],
+      "pred": [
+        "LA07.4",
+        "MB40.8",
+        "8D66.1"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1134-80462015000200003-1",
+      "proxy_codes": [
+        "EC90.Z",
+        "GB61.Z",
+        "GC2Z",
+        "ME05.0"
+      ],
+      "pred": [
+        "EC90.10",
+        "MD90.0",
+        "ME05.0"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1134-80462015000200004-1",
+      "proxy_codes": [
+        "1D03.3Z",
+        "6C40.2Z",
+        "8B11.5Z",
+        "MB20.0",
+        "MB24.5",
+        "MB24.F",
+        "MG26",
+        "NE81.2Z"
+      ],
+      "pred": [
+        "6C43.4",
+        "6C45.4",
+        "MB40.8"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1134-80462015000500005-1",
+      "proxy_codes": [
+        "EC90.Z",
+        "MB40.5"
+      ],
+      "pred": [
+        "MB40.5",
+        "MB40.1",
+        "ME65.3"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1135-76062010000200004-1",
+      "proxy_codes": [
+        "CB26",
+        "LD28.01",
+        "MG45.Z",
+        "NF08.1"
+      ],
+      "pred": [
+        "LD28.01",
+        "BD52.3",
+        "8B22.5"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1135-76062010000200006-1",
+      "proxy_codes": [
+        "MC82.4"
+      ],
+      "pred": [
+        "ND72.1",
+        "PE20",
+        "PE20.Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1135-76062011000200009-1",
+      "proxy_codes": [
+        "8D60.Z",
+        "MH10"
+      ],
+      "pred": [
+        "8B22.0",
+        "MH10",
+        "NA60.0Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1135-76062014000100006-1",
+      "proxy_codes": [
+        "BA52.Z",
+        "BB24",
+        "EH94",
+        "MG45.Z"
+      ],
+      "pred": [
+        "DD51",
+        "MD90.0",
+        "GA90"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1135-76062014000200009-1",
+      "proxy_codes": [
+        "BB70.Z",
+        "BC45",
+        "CB01",
+        "LA8A.22",
+        "MG29.Z"
+      ],
+      "pred": [
+        "LA8A.22",
+        "BC45",
+        "CB01"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1135-76062014000300006-1",
+      "proxy_codes": [
+        "1C1C.1",
+        "5C73.Z",
+        "BB25",
+        "BC42.Z",
+        "CB01",
+        "CB27",
+        "GA10.Z",
+        "MD11.Y",
+        "ME10.01",
+        "ME64.3",
+        "ME66.6Z",
+        "ME84.Z",
+        "MG26",
+        "MG29.Z",
+        "MG40.Z"
+      ],
+      "pred": [
+        "ME10.01",
+        "BC42.Z",
+        "BC42"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1137-66272006000300009-1",
+      "proxy_codes": [
+        "PA6Z"
+      ],
+      "pred": [
+        "FB56.4",
+        "FA37.0",
+        "NC96.Y"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1137-66272006000500011-1",
+      "proxy_codes": [
+        "6C40.2Z",
+        "DB94.1Z",
+        "MD11.5",
+        "MD93"
+      ],
+      "pred": [
+        "GA04",
+        "MD81.0",
+        "MD93"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1137-66272009000100013-1",
+      "proxy_codes": [
+        "BA6Z",
+        "BC63.3",
+        "BC63.Y",
+        "CA21.Z",
+        "QC46"
+      ],
+      "pred": [
+        "BC63.3",
+        "6D11.5",
+        "BA6Z"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1137-66272009000500016-1",
+      "proxy_codes": [
+        "5A74.Z",
+        "6A00.Z",
+        "8D60.1",
+        "MB20.1",
+        "MB21.4",
+        "MB24.F",
+        "MB27.2Z",
+        "MC85",
+        "MG29.Z",
+        "MG43.7",
+        "MH10"
+      ],
+      "pred": [
+        "8D60.1",
+        "MH10",
+        "DB98.4"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1137-66272011000100013-1",
+      "proxy_codes": [
+        "1B10.Z",
+        "CA60.0Z",
+        "MD11.5",
+        "MD41",
+        "QC46"
+      ],
+      "pred": [
+        "MD40.51",
+        "MD11.5",
+        "CA60.0Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1137-66272011000100013-2",
+      "proxy_codes": [
+        "1B10.Z",
+        "1F20.Z",
+        "MA16.11",
+        "MD22"
+      ],
+      "pred": [
+        "MD40.51",
+        "MD22",
+        "MA16.11"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1137-66272012000100018-1",
+      "proxy_codes": [
+        "8A6Z",
+        "8A80.Z",
+        "MB48.Z",
+        "MC41",
+        "MC81.2",
+        "MF50.2Z"
+      ],
+      "pred": [
+        "BC63.3",
+        "MB28.3",
+        "MC81.2"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1137-66272012000300021-1",
+      "proxy_codes": [
+        "DC51.Y",
+        "DC81.Z",
+        "DD01.Z",
+        "MD90.1",
+        "MG26"
+      ],
+      "pred": [
+        "DA93.0",
+        "2C82.0",
+        "1B91"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1137-66272012000300024-1",
+      "proxy_codes": [
+        "2A2Z",
+        "3B63.Z",
+        "BB00.Z",
+        "BC81.3Z",
+        "CB27",
+        "DB98.3",
+        "DD30.2",
+        "DD31.0Z",
+        "FB83.1Z",
+        "MD11.1",
+        "MD11.5",
+        "MG26"
+      ],
+      "pred": [
+        "BD71.4",
+        "BD71.0",
+        "CB27"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1137-66272013000200022-1",
+      "proxy_codes": [
+        "5C64.10",
+        "DA26.0Z",
+        "DB98.7Z",
+        "DC10.02",
+        "DD70.Z",
+        "ME10.01"
+      ],
+      "pred": [
+        "DB98.2",
+        "DC10.02",
+        "DB98.7Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1137-66272014000100021-1",
+      "proxy_codes": [
+        "MD12"
+      ],
+      "pred": [
+        "MB28.3",
+        "MD41",
+        "CA08.00"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1137-66272014000300017-1",
+      "proxy_codes": [
+        "EC91.Z",
+        "MA16.11",
+        "ME64.0",
+        "ME66.6Z",
+        "MG26"
+      ],
+      "pred": [
+        "GA04",
+        "ME64.0",
+        "MA16.11"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1137-66272015000200019-2",
+      "proxy_codes": [
+        "CA40.Z",
+        "ME84.1"
+      ],
+      "pred": [
+        "ME84.1",
+        "MD30.1",
+        "MD30.Z"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1137-66272016000200010-1",
+      "proxy_codes": [
+        "3A9Z"
+      ],
+      "pred": [
+        "MD40.51",
+        "ME24.A6",
+        "3A9Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1137-66272016000200013-1",
+      "proxy_codes": [
+        "4B00.1Z",
+        "DC11.6",
+        "MA16.11",
+        "MD81.10",
+        "MG26"
+      ],
+      "pred": [
+        "DB90.0",
+        "4A43.0",
+        "MA16.11"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1138-123X2004000100006-2",
+      "proxy_codes": [
+        "DA0E.5Y"
+      ],
+      "pred": [
+        "DA0E.5Y",
+        "NB51.4",
+        "NC31.4"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1138-123X2006000200007-1",
+      "proxy_codes": [
+        "DA0C.Z"
+      ],
+      "pred": [
+        "DA0C.1",
+        "QA83",
+        "AA42"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1139-76322009000500006-1",
+      "proxy_codes": [
+        "2F37.Z",
+        "2F7A.0",
+        "5A51.Z",
+        "5A61.0",
+        "9D42.3",
+        "GB22",
+        "MF55"
+      ],
+      "pred": [
+        "QA00.61",
+        "9D42.71",
+        "PK98.0"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1139-76322009000700015-1",
+      "proxy_codes": [
+        "1D81.Z",
+        "1F57.Z",
+        "5D0Y",
+        "CA40.Z",
+        "EC90.Z",
+        "ME66.6Z"
+      ],
+      "pred": [
+        "MA14.13",
+        "ME84.2Z",
+        "EA00"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1139-76322012000300009-1",
+      "proxy_codes": [
+        "DB30.Y",
+        "ME01"
+      ],
+      "pred": [
+        "ME01",
+        "MD81.0",
+        "ME64.2"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1139-76322012000400010-1",
+      "proxy_codes": [
+        "MG26"
+      ],
+      "pred": [
+        "MB40.8",
+        "ME82",
+        "QA82"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1139-76322013000100009-1",
+      "proxy_codes": [
+        "5D0Y",
+        "9C8Y",
+        "MG26"
+      ],
+      "pred": [
+        "9C80.0",
+        "MD90.1",
+        "ME05.1"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1139-76322014000400007-1",
+      "proxy_codes": [
+        "1G00.Z",
+        "4B00.1Z",
+        "MD81.0",
+        "MG26"
+      ],
+      "pred": [
+        "MD81.0",
+        "MG51.00",
+        "MA1A.0"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1139-76322014000400009-1",
+      "proxy_codes": [
+        "BC81.Z",
+        "BE2Y",
+        "MC81.2",
+        "MD11.5",
+        "MD90.0",
+        "ME84.1"
+      ],
+      "pred": [
+        "MC81.2",
+        "MD11.5",
+        "MC81.3"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1139-76322015000100010-1",
+      "proxy_codes": [
+        "8A85",
+        "9A03.0Z"
+      ],
+      "pred": [
+        "MD90.0",
+        "9A03.0Z",
+        "LA14.04"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1139-76322015000300013-1",
+      "proxy_codes": [
+        "MC81.0"
+      ],
+      "pred": [
+        "BC9Z",
+        "BA00.Z",
+        "BA2Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1139-76322015000500009-1",
+      "proxy_codes": [
+        "FB32.Y"
+      ],
+      "pred": [
+        "FB32.Y",
+        "SC63",
+        "MB47.3"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1139-76322016000400012-1",
+      "proxy_codes": [
+        "EC23.2Y",
+        "MB40.2"
+      ],
+      "pred": [
+        "EC23.2Y",
+        "DC50.2",
+        "LB30.7"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1579-699X2004000400002-1",
+      "proxy_codes": [
+        "6B02",
+        "8E7Y",
+        "DA63.Z",
+        "MB24.3",
+        "MB24.5",
+        "MB46.Z",
+        "MC81.2"
+      ],
+      "pred": [
+        "6B02",
+        "DB52",
+        "PL13.6"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1698-44472004000200012-1",
+      "proxy_codes": [
+        "FC00.Y",
+        "LA52"
+      ],
+      "pred": [
+        "LA52",
+        "QA00.B",
+        "NE89"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1698-44472004000400011-1",
+      "proxy_codes": [
+        "LA30.3"
+      ],
+      "pred": [
+        "LA30.3",
+        "2E83.1",
+        "QC48.Y"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1698-69462006000100003-1",
+      "proxy_codes": [
+        "DA03.Y",
+        "LB71.1"
+      ],
+      "pred": [
+        "LB71.1",
+        "ED64",
+        "EC21.2"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1698-69462006000100019-1",
+      "proxy_codes": [
+        "MA01.Z"
+      ],
+      "pred": [
+        "2B90.20",
+        "2B90.30",
+        "2D8Y"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1698-69462006000300015-1",
+      "proxy_codes": [
+        "FC00.Y",
+        "LA52"
+      ],
+      "pred": [
+        "LA52",
+        "FC00.Y",
+        "2C30.Z"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1699-65852010000300002-1",
+      "proxy_codes": [
+        "DA09.8"
+      ],
+      "pred": [
+        "DA09.8",
+        "QA00.B",
+        "QA21.2"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1699-695X2015000200010-1",
+      "proxy_codes": [
+        "LB90.4",
+        "MG30.Z"
+      ],
+      "pred": [
+        "LB80.2",
+        "LB90.4",
+        "FA31.2"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1699-695X2016000200009-1",
+      "proxy_codes": [
+        "6C00.Z",
+        "8A40.Z",
+        "8A41.0",
+        "8A43.Z",
+        "9C40.1Z",
+        "MB40.5",
+        "MB40.6",
+        "MB40.Z",
+        "MB45.0",
+        "MB45.Y",
+        "MC1Y",
+        "ME84.2Z",
+        "ME84.Z",
+        "MF50.2Z"
+      ],
+      "pred": [
+        "8A41.0",
+        "MB40.6",
+        "6C00.0"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1699-695X2016000200013-1",
+      "proxy_codes": [
+        "DC51.Y",
+        "EF00.Z",
+        "GB00.Z",
+        "GB02.1",
+        "GB22",
+        "LB52.Z",
+        "MA01.Z"
+      ],
+      "pred": [
+        "MF40.21",
+        "MA01.0",
+        "MA01.Z"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1887-85712011000200007-1",
+      "proxy_codes": [
+        "8A8Z",
+        "9C61.01",
+        "MC1Y"
+      ],
+      "pred": [
+        "MC15",
+        "9C61.01",
+        "9D90.6"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1888-75462014000200009-1",
+      "proxy_codes": [
+        "BC63.3",
+        "BE2Y",
+        "MC81.2",
+        "MC81.Z"
+      ],
+      "pred": [
+        "BC63.3",
+        "BC62",
+        "QA0B"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1889-836X2015000200005-2",
+      "proxy_codes": [
+        "FB40.Z",
+        "FB83.1Z",
+        "MG29.Z"
+      ],
+      "pred": [
+        "EH92.01",
+        "5B57.Z",
+        "5B57"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": false,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S1889-836X2015000400006-1",
+      "proxy_codes": [
+        "5C73.Z",
+        "FB32.Y",
+        "GB90.42",
+        "MA18.0Z",
+        "MB44.2",
+        "MF96.Z"
+      ],
+      "pred": [
+        "MB44.2",
+        "GB90.42",
+        "MF93"
+      ],
+      "any_proxy_top1": true,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    },
+    {
+      "id": "codiesp-S2254-28842013000300009-1",
+      "proxy_codes": [
+        "5A74.Z",
+        "5C80.0Z",
+        "8B82.0",
+        "BA01",
+        "BE2Y",
+        "DC50.Z",
+        "DC51.Y",
+        "MB24.5",
+        "MG26",
+        "MG30.5Z"
+      ],
+      "pred": [
+        "MD81.0",
+        "8B82.0",
+        "ME64.2"
+      ],
+      "any_proxy_top1": false,
+      "any_proxy_top3": true,
+      "detected_language": "es"
+    }
+  ]
+}

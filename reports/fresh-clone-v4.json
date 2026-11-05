@@ -1,0 +1,21 @@
+{
+  "source_commit": "7115c0832d55ab457285706a897f4d18154f81a1",
+  "source_bundle": "sugen-offline-v4.bundle",
+  "bundle_sha256": "1707d695918921c31062bed81a0522dcd601796740051cb7aa5140e48fec1d83",
+  "cloned_from_bundle": true,
+  "fresh_clone_without_local_artifact": true,
+  "no_cache_build": true,
+  "exact_command": "docker compose run coder /in/notes.jsonl /out/predictions.jsonl",
+  "input_notes": 200,
+  "valid_predictions": 200,
+  "missing_ids": 0,
+  "invalid_codes": 0,
+  "same_predictions_as_original_checkout": true,
+  "unit_tests_passed": 20,
+  "exact_cli_seconds_including_model_load": 42.971,
+  "network_mode": "none",
+  "cpu_limit": 2,
+  "memory_limit_gib": 2,
+  "api_cost_usd": 0,
+  "status": "PASS"
+}

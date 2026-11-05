@@ -20,3 +20,45 @@ For further work, prioritise a locked, independently reviewed set across clinics
 
 
 French/Spanish follow-up: “I found and fixed concrete context errors rather than relying only on dictionary lookup. A reproducible 132-case synthetic challenge improved from 108 to 132 correct first choices. It covers negation contrast, relatives, assessment headings, plan distractors and uppercase input, plus official terms across 26 chapters. We inspected these cases while developing, so I would not call that unseen clinical accuracy. Real multilingual clinical generalisation still requires independent clinician-labelled evaluation.”
+
+## A 60-second introduction
+
+“I built a batch ICD-11 ranking engine for a fixed taxonomy, with no dependency on a hosted model. I enriched the supplied titles with release-pinned WHO terminology, then used sparse retrieval and explicit evidence checks to rank supported codes. The container runs on two CPUs and two GiB and streams results. It scored 70.8/75 on the visible set and processed 200 external notes in under a minute at zero API cost. The main limitation is generalisation: the visible set influenced the rules, and the external Spanish proxy check was substantially weaker. I kept those results separate rather than claiming the synthetic tests proved unseen accuracy.”
+
+## Likely questions and direct answers
+
+**What exactly is trained?** A shared pairwise logistic ranker learns differences between candidate evidence features from the 60 supplied notes. It can rank categories absent from those labels because the feature representation is shared across codes. Retrieval indexes also fit term statistics on public taxonomy text; they do not learn clinical labels from the external evaluation cases.
+
+**Did training improve the final version?** Not demonstrably at the aggregate level. The current ranker and no-ranker ablation give the same development score. The major observed improvements came from WHO reference enrichment and evidence/context handling. I would not attribute the whole gain to machine learning.
+
+**Why does 93.3% not establish unseen accuracy?** Although ranker folds exclude their test notes, rules, synonyms and implementation choices used all 60 visible notes. That leaks development knowledge into the overall diagnostic. A frozen external set is needed to estimate the complete pipeline.
+
+**What do the external Spanish results mean?** Before inference, I froze 221 CodiEsp cases selected by exact, unique matches between annotated diagnosis spans and official Spanish WHO terms. The first code matched an available proxy in 81 cases; a proxy appeared in the top three in 138. Those are 36.7% and 62.4% any-proxy match rates, not primary-diagnosis accuracy or the employer's score. CodiEsp gold is ICD-10, the ICD-11 mapping is derived, and clinical case reports contain multiple and historical diagnoses. The result nevertheless contradicts any claim that synthetic 100% established broad clinical generalisation. No engine change was made after inspecting this set.
+
+**Why not use a stronger local LLM?** Tested selectors were slow and unreliable; one translation introduced clinically material facts. Bigger model size did not justify accepting those errors or the additional memory. The failed experiment outputs are retained so this is an evidence-based choice.
+
+**How do you choose parent, child or unspecified?** The scorer rewards the most specific code supported by the note. Evidence checks penalize unsupported qualifiers and promote an appropriate generic residual when the note lacks subtype evidence. These are imperfect heuristics; a child isn't justified merely because its title shares more words.
+
+**How does the system handle non-English notes?** Separate official French and Spanish reference indexes, language identification and bounded assertion/negation parsing. It preserves qualifiers such as “without aura.” Synthetic context checks pass, but complex consultations, other languages and code-switching lack independent ICD-11 validation. There is no general-purpose translation model.
+
+**Why no paid API path?** Offline performance was the priority, and zero calls satisfies the budget cap. The current version doesn't change behaviour when a key is supplied. An API reranker would need a separate measured accuracy benefit, proxy configuration, token budget, timeout and deterministic fallback before being added.
+
+**How does it scale?** Indexes load once, each note uses bounded retrieval/ranking, and output flushes incrementally. Input is streamed rather than loaded as a batch. Model memory is approximately 550 MiB in the measured container. For larger volume, workers could reuse loaded indexes and process disjoint records; memory would grow with worker count and the output merge must preserve unique IDs. Multi-worker throughput is a proposal, not a measured result here.
+
+**Can you promise the grading machine's timing?** No; the measurements are Linux ARM64 on this Docker host. They are comfortably below the requested eight-to-ten-minute 200-note target. The base image supports x86 and ARM, but x86 accuracy and timing were not separately benchmarked. The assignment's 600 unseen notes can differ in length and complexity, so I would report the measured 200-note result rather than a guaranteed extrapolation.
+
+**How do you reproduce the build?** Clone the supplied bundle, run the build, then the exact compose command. Dependencies and base image are pinned; WHO exports ship in the repository. The final v4 runtime was tested from a fresh bundle clone with cache disabled and no prebuilt local artifact. Every input ID appeared, every emitted code was allowed, and all 200 outputs matched the original checkout.
+
+**What would you do next?** Obtain independently adjudicated ICD-11 outpatient notes across chapters, clinic styles and languages. Split by source/patient before tuning, reserve a final test partition, and analyze qualifier, assertion, temporal and language failures on a separate development partition. Prioritize measured error classes over another larger model.
+
+**How much did you personally build?** Be explicit that the implementation was substantially AI-assisted. Read and be able to explain the evidence flow, limitations and failed experiments. Personal working hours were not reliably tracked; don't replace them with the elapsed agent session.
+
+## Five-minute demo
+
+1. Show `README.md`, `compose.yaml` and the source whitelist: fixed valid taxonomy, no runtime network, two CPUs/two GiB.
+2. Run the exact command from the fresh clone: `docker compose run coder /in/notes.jsonl /out/predictions.jsonl`.
+3. Show `reports/fresh-clone-v4.json`, `reports/v4-benchmark.json` and the supplied scorer's v4 development output. Keep throughput and accuracy distinct.
+4. Show one negation/family-history regression and the rejected translation output. Explain why unsupported specificity matters.
+5. Show `reports/codiesp/results.json` alongside its manifest. Explain the weaker external result, mapping caveats and the next properly held-out evaluation.
+
+Do not claim access to the employer's hidden notes, clinically validated multilingual accuracy, a measured 600-note timing result, or that all 18,375 categories have been independently clinically tested.
