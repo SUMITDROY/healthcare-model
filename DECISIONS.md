@@ -25,3 +25,15 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Alternatives: host-only thread limits, or downloads at startup.
 - Evidence: host-only thread limits do not prove memory/CPU isolation; runtime downloads violate the assignment's offline requirement.
 - Revisit: Docker engine availability and measure actual container usage before reporting success.
+
+## 2026-11-05 13:57 IST — commit: `Measure honest holdouts and correct context and specificity errors`
+- Decision: preserve the initial results rather than presenting 75/75 on the training set as generalisation.
+- Evidence: initial five-fold validation: top-1 15/60 (25%), top-3 27/60 (45%), score 23.75/75. Titles-only achieved 26.25/75. Training-set resubstitution was 75/75 and is not predictive of hidden performance.
+- Options: report only the attractive dev score, or separate the training, ablation and held-out results. Chose the latter.
+- Revisit: independent expert-labeled notes are needed for a credible unseen accuracy estimate.
+
+## 2026-11-05 13:57 IST — commit: `Measure honest holdouts and correct context and specificity errors`
+- Decision: restrict ambient assessment extraction to Doctor lines; add explicit terminology aliases; prefer a title-verified unspecified leaf over its generic non-leaf parent; gate weak exemplar matches.
+- Evidence: dev-060's patient thyroid speculation and generic tonsillitis/pneumonia parent predictions exposed errors. Chickenpox/varicella and frozen shoulder/adhesive capsulitis show title-only vocabulary gaps. These are dev-informed changes, so cross-validation is diagnostic rather than an untouched test.
+- Options: more training-note weight, code-by-code overrides, or general text/ranking changes. Chose transparent text/ranking changes without note-ID special cases.
+- Revisit: official WHO aliases, reliable hierarchy metadata and context-aware exclusion handling. These heuristics do not solve clinical reasoning or multilingual coding.

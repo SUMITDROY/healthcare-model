@@ -5,5 +5,8 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY coder coder
 COPY data data
+COPY scripts scripts
+COPY tests tests
+COPY score.py .
 RUN python -m coder.train
 ENTRYPOINT ["python", "-m", "coder.cli"]
