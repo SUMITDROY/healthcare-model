@@ -331,6 +331,42 @@ class OfflineCoder:
             self.ranker.fit(np.concatenate(features), np.asarray(labels))
 
     def retrieve(self, text: str, language_override=None):
+        # Symptom narratives need clinical-description evidence rather than a
+        # disease-name match. Explicit diagnoses keep the specificity path.
+        if (
+            language_override is None
+            and self.reference is not None
+            and hasattr(self.reference, "descriptions")
+        ):
+            from coder.languages import detect, clinical_focus
+            from coder.symptoms import needs_description
+
+            language = detect(text)
+            focused = (
+                clinical_focus(text, language)
+                if language in {"fr", "es"}
+                else focus(text)
+            )
+            if needs_description(text, focused):
+                scores = self.reference.descriptions[language].query(text)
+                # Do not use absent definitions as evidence. Keep a small
+                # nonleaf penalty; no unsupported residual specificity bonus.
+                scores = scores.copy()
+                scores[self.title_masks["nonleaf"]] *= 0.85
+                features = np.zeros(
+                    (len(self.codes), len(self.feature_names)), dtype=np.float32
+                )
+                features[:, 2] = scores
+                return (
+                    scores,
+                    features,
+                    {
+                        "assessment": focused[:500],
+                        "language": language,
+                        "symptom_retrieval": True,
+                        "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+                    },
+                )
         if (
             language_override is None
             and self.reference is not None
@@ -572,7 +608,11 @@ class OfflineCoder:
     def predict(self, text: str, use_examples=True) -> tuple[list[str], dict]:
         retrieval, matrix, diagnostic = self.retrieve(text)
         candidates = np.argsort(-retrieval, kind="stable")[:100]
-        use_examples = use_examples and diagnostic.get("language", "en") == "en"
+        use_examples = (
+            use_examples
+            and diagnostic.get("language", "en") == "en"
+            and not diagnostic.get("symptom_retrieval", False)
+        )
         if use_examples and self.ranker is not None:
             scores = self.ranker.decision_function(matrix[candidates])
             scores = (

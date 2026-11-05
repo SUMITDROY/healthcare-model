@@ -1,0 +1,22 @@
+{
+  "model": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+  "revision": "2c4055b12046f11709e9df2c122e59ffbdc2f900",
+  "asset_sha256": {
+    "model_quantized.onnx": "66fc00f5f29afcaff34092e1bdd20008ca3918265a82fb9695a551e510cc4ebc",
+    "tokenizer.json": "b60b6b43406a48bf3638526314f3d232d97058bc93472ff2de930d43686fa441"
+  },
+  "reference": "WHO English category titles and own definitions; all18375 codes",
+  "development_cases_per_language": 14,
+  "top1_hits": {
+    "en": 0,
+    "fr": 0,
+    "es": 0
+  },
+  "top3_hits": {
+    "en": 0,
+    "fr": 0,
+    "es": 0
+  },
+  "vector_build_seconds": 859.971,
+  "decision": "Rejected; no improvement, not shipped."
+}

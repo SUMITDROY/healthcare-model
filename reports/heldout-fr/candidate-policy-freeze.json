@@ -1,0 +1,18 @@
+{
+  "frozen_at": "2026-11-05T21:12:51.390247+05:30",
+  "policy": "Native morphology + explicit letter subtypes; WHO clinical-description BM25 for long unasserted narratives, with presentation-weighted query; no generative/embedding model.",
+  "coder_sha256": {
+    "coder/__init__.py": "d5a84b32157b3f04f99015e4d1899249a2cb687ddb2b53f51815a632f6d61c8e",
+    "coder/cli.py": "170c4745ced22cff5a921b0bc9eab91cd966db6ba7072a8f366416cb7df259b8",
+    "coder/context.py": "b2cfa5abf6d3a11e8fbb378be5d98705668c78ffb4bc971795480797bbedc75d",
+    "coder/engine.py": "43459e6c27f533139c6a51714477dc0107eca680754625d57c63917d40212c73",
+    "coder/enrichment.py": "5dca75862978ceb9b9b5365a9093634c43934e5703f49c37761f2a28a45059d7",
+    "coder/facts.py": "c2e48d1e65025fe6e3c71e6e5061d797c20b526d1b4d0d7d36c14a31f73422d8",
+    "coder/foreign.py": "0a50c53a78a341d27c8b461daedc9f21e955b9cb788f7dbf705046c96811dcaf",
+    "coder/languages.py": "fcdafe73032152b67c581de328cd757d071aa8dcf8b7e711309b45951c75874c",
+    "coder/semantic.py": "841b2adbde2aef0fae1c57a4ee130e399fbf2f217a575cb8827a77dece857076",
+    "coder/symptoms.py": "229235e8016f26c5e6164894269df423721785ddb72f9361f71813fb67a9c762",
+    "coder/train.py": "80f8f4679be07fec2da9a228e165b61c883fe53424900a7d839cff0dc33f27c2"
+  },
+  "heldout_results_not_yet_inspected": true
+}

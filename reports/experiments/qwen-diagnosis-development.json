@@ -1,0 +1,930 @@
+{
+  "scope": "Inspected exam development cases, not independent validation. Generated concepts are hypotheses, not documented diagnoses. No reference answers or codes supplied to model.",
+  "seconds_total": 186.03769274998922,
+  "results": [
+    {
+      "id": "medexpqa-130-en",
+      "language": "en",
+      "diagnosis": "Drug-resistant epilepsy",
+      "raw": "{\"diagnosis\": \"Drug-resistant epilepsy\"}",
+      "pred": [
+        "MG52.02",
+        "MG52.00",
+        "MG53.0"
+      ],
+      "gold": [
+        "8A61.30"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 4.719,
+      "usage": {
+        "prompt_tokens": 135,
+        "completion_tokens": 9,
+        "total_tokens": 144
+      }
+    },
+    {
+      "id": "medexpqa-130-es",
+      "language": "es",
+      "diagnosis": "Epilepsia focal con descargas de polipuntas agudas",
+      "raw": "{\"diagnosis\": \"Epilepsia focal con descargas de polipuntas agudas\"}",
+      "pred": [
+        "8A61.4Y",
+        "8A66.0",
+        "MF3A"
+      ],
+      "gold": [
+        "8A61.30"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.541,
+      "usage": {
+        "prompt_tokens": 161,
+        "completion_tokens": 20,
+        "total_tokens": 181
+      }
+    },
+    {
+      "id": "medexpqa-130-fr",
+      "language": "fr",
+      "diagnosis": "Sévéralités de l'adulte",
+      "raw": "{\"diagnosis\": \"Sévéralités de l'adulte\"}",
+      "pred": [
+        "1B10.Z",
+        "ME24",
+        "LB99.0"
+      ],
+      "gold": [
+        "8A61.30"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.931,
+      "usage": {
+        "prompt_tokens": 176,
+        "completion_tokens": 16,
+        "total_tokens": 192
+      }
+    },
+    {
+      "id": "medexpqa-143-en",
+      "language": "en",
+      "diagnosis": "Bacterial meningitis",
+      "raw": "{\"diagnosis\": \"Bacterial meningitis\"}",
+      "pred": [
+        "1D01.0Z",
+        "1D01.0Y",
+        "1D01.0"
+      ],
+      "gold": [
+        "1B11.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.92,
+      "usage": {
+        "prompt_tokens": 137,
+        "completion_tokens": 10,
+        "total_tokens": 147
+      }
+    },
+    {
+      "id": "medexpqa-143-es",
+      "language": "es",
+      "diagnosis": "Meningitis por estreptococo",
+      "raw": "{\"diagnosis\": \"Meningitis por estreptococo\"}",
+      "pred": [
+        "MB24.C",
+        "ME84.2Z",
+        "1B53"
+      ],
+      "gold": [
+        "1B11.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.086,
+      "usage": {
+        "prompt_tokens": 160,
+        "completion_tokens": 15,
+        "total_tokens": 175
+      }
+    },
+    {
+      "id": "medexpqa-143-fr",
+      "language": "fr",
+      "diagnosis": "Meningeite lymphohémorragique",
+      "raw": "{\"diagnosis\": \"Meningeite lymphohémorragique\"}",
+      "pred": [
+        "MB24.C",
+        "8C60.Z",
+        "1A11.1"
+      ],
+      "gold": [
+        "1B11.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.443,
+      "usage": {
+        "prompt_tokens": 169,
+        "completion_tokens": 16,
+        "total_tokens": 185
+      }
+    },
+    {
+      "id": "medexpqa-16-en",
+      "language": "en",
+      "diagnosis": "Epidermolysis bullosa",
+      "raw": "{\"diagnosis\": \"Epidermolysis bullosa\"}",
+      "pred": [
+        "EC3Z",
+        "EC30",
+        "EC31"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.004,
+      "usage": {
+        "prompt_tokens": 150,
+        "completion_tokens": 13,
+        "total_tokens": 163
+      }
+    },
+    {
+      "id": "medexpqa-16-es",
+      "language": "es",
+      "diagnosis": "Verruga vulgar",
+      "raw": "{\"diagnosis\": \"Verruga vulgar\"}",
+      "pred": [
+        "ED71",
+        "1E51.Y",
+        "KA62.9"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.82,
+      "usage": {
+        "prompt_tokens": 172,
+        "completion_tokens": 10,
+        "total_tokens": 182
+      }
+    },
+    {
+      "id": "medexpqa-16-fr",
+      "language": "fr",
+      "diagnosis": "Vésicules herpes simples sur le dos des mains",
+      "raw": "{\"diagnosis\": \"Vésicules herpes simples sur le dos des mains\"}",
+      "pred": [
+        "ED71",
+        "QC46",
+        "1E51.Y"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.713,
+      "usage": {
+        "prompt_tokens": 187,
+        "completion_tokens": 17,
+        "total_tokens": 204
+      }
+    },
+    {
+      "id": "medexpqa-194-en",
+      "language": "en",
+      "diagnosis": "Thalassemia",
+      "raw": "{\"diagnosis\": \"Thalassemia\"}",
+      "pred": [
+        "3A50.Z",
+        "3A50.Y",
+        "3A50.2"
+      ],
+      "gold": [
+        "1F54.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.78,
+      "usage": {
+        "prompt_tokens": 218,
+        "completion_tokens": 11,
+        "total_tokens": 229
+      }
+    },
+    {
+      "id": "medexpqa-194-es",
+      "language": "es",
+      "diagnosis": "Síndrome de Bartter, tipo 2",
+      "raw": "{\"diagnosis\": \"Síndrome de Bartter, tipo 2\"}",
+      "pred": [
+        "GB90.43",
+        "4B21",
+        "ME64.2"
+      ],
+      "gold": [
+        "1F54.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 5.061,
+      "usage": {
+        "prompt_tokens": 255,
+        "completion_tokens": 17,
+        "total_tokens": 272
+      }
+    },
+    {
+      "id": "medexpqa-194-fr",
+      "language": "fr",
+      "diagnosis": "Mélanome de Wilms",
+      "raw": "{\"diagnosis\": \"Mélanome de Wilms\"}",
+      "pred": [
+        "4B21",
+        "ME64.2",
+        "MG43.7"
+      ],
+      "gold": [
+        "1F54.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 4.665,
+      "usage": {
+        "prompt_tokens": 262,
+        "completion_tokens": 13,
+        "total_tokens": 275
+      }
+    },
+    {
+      "id": "medexpqa-236-en",
+      "language": "en",
+      "diagnosis": "Thrombocytopenic purpura with hemolytic anemia",
+      "raw": "{\"diagnosis\": \"Thrombocytopenic purpura with hemolytic anemia\"}",
+      "pred": [
+        "3B64.10",
+        "3B64.14",
+        "3B64.12"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": true,
+      "seconds": 4.707,
+      "usage": {
+        "prompt_tokens": 209,
+        "completion_tokens": 22,
+        "total_tokens": 231
+      }
+    },
+    {
+      "id": "medexpqa-236-es",
+      "language": "es",
+      "diagnosis": "Síndrome de idiopático espinodermal (SIE)",
+      "raw": "{\"diagnosis\": \"Síndrome de idiopático espinodermal (SIE)\"}",
+      "pred": [
+        "ME64.3",
+        "ME84.2Z",
+        "MC81.3"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 5.059,
+      "usage": {
+        "prompt_tokens": 244,
+        "completion_tokens": 23,
+        "total_tokens": 267
+      }
+    },
+    {
+      "id": "medexpqa-236-fr",
+      "language": "fr",
+      "diagnosis": "Thrombocythemia with schistocytic thrombocytopenia",
+      "raw": "{\"diagnosis\": \"Thrombocythemia with schistocytic thrombocytopenia\"}",
+      "pred": [
+        "ME64.3",
+        "MG22",
+        "6B8Z"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 6.517,
+      "usage": {
+        "prompt_tokens": 271,
+        "completion_tokens": 23,
+        "total_tokens": 294
+      }
+    },
+    {
+      "id": "medexpqa-279-en",
+      "language": "en",
+      "diagnosis": "Lymphocytic colitis",
+      "raw": "{\"diagnosis\": \"Lymphocytic colitis\"}",
+      "pred": [
+        "DB33.11",
+        "DD71.Z",
+        "DB33.1Z"
+      ],
+      "gold": [
+        "DB33.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.237,
+      "usage": {
+        "prompt_tokens": 181,
+        "completion_tokens": 12,
+        "total_tokens": 193
+      }
+    },
+    {
+      "id": "medexpqa-279-es",
+      "language": "es",
+      "diagnosis": "Linfomatos de tipo B (Lymphoma)",
+      "raw": "{\"diagnosis\": \"Linfomatos de tipo B (Lymphoma)\"}",
+      "pred": [
+        "ME05.1",
+        "2B90.2Z",
+        "QA1C"
+      ],
+      "gold": [
+        "DB33.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 4.35,
+      "usage": {
+        "prompt_tokens": 232,
+        "completion_tokens": 18,
+        "total_tokens": 250
+      }
+    },
+    {
+      "id": "medexpqa-279-fr",
+      "language": "fr",
+      "diagnosis": "Atrophie et dénudation épithéliale (AEDE)",
+      "raw": "{\"diagnosis\": \"Atrophie et dénudation épithéliale (AEDE)\"}",
+      "pred": [
+        "ME05.1",
+        "1A40.Z",
+        "BD50.41"
+      ],
+      "gold": [
+        "DB33.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 4.658,
+      "usage": {
+        "prompt_tokens": 216,
+        "completion_tokens": 22,
+        "total_tokens": 238
+      }
+    },
+    {
+      "id": "medexpqa-280-en",
+      "language": "en",
+      "diagnosis": "",
+      "raw": "{\"diagnosis\": \"Lymphocytic intestinal inflammation (Lymphocytic Intestinal Inflammation, LII)}. \n\nThis diagnosis is supported by the presence of intraepithelial lymphocytosis, epithelial atrophy",
+      "pred": [
+        "KB86.2",
+        "2B90.20",
+        "KB85.1"
+      ],
+      "gold": [
+        "DB33.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 6.903,
+      "usage": {
+        "prompt_tokens": 179,
+        "completion_tokens": 48,
+        "total_tokens": 227
+      }
+    },
+    {
+      "id": "medexpqa-280-es",
+      "language": "es",
+      "diagnosis": "Linfomatos de tipo B (Lymphoma)",
+      "raw": "{\"diagnosis\": \"Linfomatos de tipo B (Lymphoma)\"}",
+      "pred": [
+        "ME05.1",
+        "2B90.2Z",
+        "QA1C"
+      ],
+      "gold": [
+        "DB33.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 4.451,
+      "usage": {
+        "prompt_tokens": 232,
+        "completion_tokens": 18,
+        "total_tokens": 250
+      }
+    },
+    {
+      "id": "medexpqa-280-fr",
+      "language": "fr",
+      "diagnosis": "Atrophie et dénudation épithéliale (AEDE)",
+      "raw": "{\"diagnosis\": \"Atrophie et dénudation épithéliale (AEDE)\"}",
+      "pred": [
+        "ME05.1",
+        "1A40.Z",
+        "BD50.41"
+      ],
+      "gold": [
+        "DB33.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 4.651,
+      "usage": {
+        "prompt_tokens": 216,
+        "completion_tokens": 22,
+        "total_tokens": 238
+      }
+    },
+    {
+      "id": "medexpqa-298-en",
+      "language": "en",
+      "diagnosis": "Hepatitis A",
+      "raw": "{\"diagnosis\": \"Hepatitis A\"}",
+      "pred": [
+        "1E50.0",
+        "DB91.0",
+        "1E50.1"
+      ],
+      "gold": [
+        "1B91"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.247,
+      "usage": {
+        "prompt_tokens": 126,
+        "completion_tokens": 10,
+        "total_tokens": 136
+      }
+    },
+    {
+      "id": "medexpqa-298-es",
+      "language": "es",
+      "diagnosis": "Salmonellosis",
+      "raw": "{\"diagnosis\": \"Salmonellosis\"}",
+      "pred": [
+        "FB56.2",
+        "MD90.1",
+        "MD90"
+      ],
+      "gold": [
+        "1B91"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.617,
+      "usage": {
+        "prompt_tokens": 153,
+        "completion_tokens": 11,
+        "total_tokens": 164
+      }
+    },
+    {
+      "id": "medexpqa-298-fr",
+      "language": "fr",
+      "diagnosis": "Leishmaniose du sang",
+      "raw": "{\"diagnosis\": \"Leishmaniose du sang\"}",
+      "pred": [
+        "MD90.0",
+        "FB56.2",
+        "MD90.1"
+      ],
+      "gold": [
+        "1B91"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.98,
+      "usage": {
+        "prompt_tokens": 166,
+        "completion_tokens": 13,
+        "total_tokens": 179
+      }
+    },
+    {
+      "id": "medexpqa-4-en",
+      "language": "en",
+      "diagnosis": "Acute Hepatitis B",
+      "raw": "{\"diagnosis\": \"Acute Hepatitis B\"}",
+      "pred": [
+        "1E50.1",
+        "1E50.0",
+        "1E50.3"
+      ],
+      "gold": [
+        "1E50.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "seconds": 2.374,
+      "usage": {
+        "prompt_tokens": 123,
+        "completion_tokens": 11,
+        "total_tokens": 134
+      }
+    },
+    {
+      "id": "medexpqa-4-es",
+      "language": "es",
+      "diagnosis": "Hepatite B aguda con infección viral",
+      "raw": "{\"diagnosis\": \"Hepatite B aguda con infección viral\"}",
+      "pred": [
+        "1E50.1",
+        "GC50.0",
+        "MA14.11"
+      ],
+      "gold": [
+        "1E50.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "seconds": 3.939,
+      "usage": {
+        "prompt_tokens": 144,
+        "completion_tokens": 18,
+        "total_tokens": 162
+      }
+    },
+    {
+      "id": "medexpqa-4-fr",
+      "language": "fr",
+      "diagnosis": "",
+      "raw": "{\"diagnosis\": \"Hépatite virale à transitoire (HBV)}</think>\n\n**Explication :**  \nLe profil des marqueurs sérologiques (IgM anti-HBc positifs, HB",
+      "pred": [
+        "MG22",
+        "8C01.3",
+        "FA24.1"
+      ],
+      "gold": [
+        "1E50.1"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 7.463,
+      "usage": {
+        "prompt_tokens": 150,
+        "completion_tokens": 48,
+        "total_tokens": 198
+      }
+    },
+    {
+      "id": "medexpqa-52-en",
+      "language": "en",
+      "diagnosis": "Adjustment disorder with mixed features",
+      "raw": "{\"diagnosis\": \"Adjustment disorder with mixed features\"}",
+      "pred": [
+        "6B43",
+        "QB30.5",
+        "QB30.6"
+      ],
+      "gold": [
+        "6B43"
+      ],
+      "top1": true,
+      "top3": true,
+      "seconds": 3.698,
+      "usage": {
+        "prompt_tokens": 160,
+        "completion_tokens": 12,
+        "total_tokens": 172
+      }
+    },
+    {
+      "id": "medexpqa-52-es",
+      "language": "es",
+      "diagnosis": "Trastorno de estrés postraumático (TEPT) con síntomas de ansiedad y depresión",
+      "raw": "{\"diagnosis\": \"Trastorno de estrés postraumático (TEPT) con síntomas de ansiedad y depresión\"}",
+      "pred": [
+        "6B40",
+        "PA0Z",
+        "MB24.5"
+      ],
+      "gold": [
+        "6B43"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 6.195,
+      "usage": {
+        "prompt_tokens": 201,
+        "completion_tokens": 31,
+        "total_tokens": 232
+      }
+    },
+    {
+      "id": "medexpqa-52-fr",
+      "language": "fr",
+      "diagnosis": "Dépression dépressive chronique",
+      "raw": "{\"diagnosis\": \"Dépression dépressive chronique\"}",
+      "pred": [
+        "MB24.5",
+        "MB24.3",
+        "6A72"
+      ],
+      "gold": [
+        "6B43"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.359,
+      "usage": {
+        "prompt_tokens": 193,
+        "completion_tokens": 12,
+        "total_tokens": 205
+      }
+    },
+    {
+      "id": "medexpqa-558-en",
+      "language": "en",
+      "diagnosis": "",
+      "raw": "{\"diagnosis\": \"Thrombocytopenic purpura (paroxysmal nocturnal hemoglobinuria)}</think>\n\nThe most likely diagnosis is **Thrombocytopenic purpura (paroxys",
+      "pred": [
+        "4B05",
+        "4B04",
+        "4A01.05"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 7.306,
+      "usage": {
+        "prompt_tokens": 206,
+        "completion_tokens": 48,
+        "total_tokens": 254
+      }
+    },
+    {
+      "id": "medexpqa-558-es",
+      "language": "es",
+      "diagnosis": "Esquistomatosi filariácea",
+      "raw": "{\"diagnosis\": \"Esquistomatosi filariácea\"}",
+      "pred": [
+        "KB21.1",
+        "MG26",
+        "ME84.2Z"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 4.649,
+      "usage": {
+        "prompt_tokens": 248,
+        "completion_tokens": 17,
+        "total_tokens": 265
+      }
+    },
+    {
+      "id": "medexpqa-558-fr",
+      "language": "fr",
+      "diagnosis": "Sévéral lignes de réflexion",
+      "raw": "{\"diagnosis\": \"Sévéral lignes de réflexion\"}",
+      "pred": [
+        "MA16.1Z",
+        "MG26",
+        "6B8Z"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 4.79,
+      "usage": {
+        "prompt_tokens": 256,
+        "completion_tokens": 16,
+        "total_tokens": 272
+      }
+    },
+    {
+      "id": "medexpqa-559-en",
+      "language": "en",
+      "diagnosis": "",
+      "raw": "{\"diagnosis\": \"Thrombocytopenic purpura (paroxysmal nocturnal hemoglobinuria)}</think>\n\nThe most likely diagnosis is **Thrombocytopenic purpura (paroxys",
+      "pred": [
+        "4B05",
+        "4B04",
+        "4A01.05"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 7.277,
+      "usage": {
+        "prompt_tokens": 206,
+        "completion_tokens": 48,
+        "total_tokens": 254
+      }
+    },
+    {
+      "id": "medexpqa-559-es",
+      "language": "es",
+      "diagnosis": "Esquistomatosi filariácea",
+      "raw": "{\"diagnosis\": \"Esquistomatosi filariácea\"}",
+      "pred": [
+        "KB21.1",
+        "MG26",
+        "ME84.2Z"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 5.17,
+      "usage": {
+        "prompt_tokens": 248,
+        "completion_tokens": 17,
+        "total_tokens": 265
+      }
+    },
+    {
+      "id": "medexpqa-559-fr",
+      "language": "fr",
+      "diagnosis": "Sévéral lignes de réflexion",
+      "raw": "{\"diagnosis\": \"Sévéral lignes de réflexion\"}",
+      "pred": [
+        "MA16.1Z",
+        "MG26",
+        "6B8Z"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 4.605,
+      "usage": {
+        "prompt_tokens": 256,
+        "completion_tokens": 16,
+        "total_tokens": 272
+      }
+    },
+    {
+      "id": "medexpqa-95-en",
+      "language": "en",
+      "diagnosis": "Pemphigus foliaceus",
+      "raw": "{\"diagnosis\": \"Pemphigus foliaceus\"}",
+      "pred": [
+        "EB40.1",
+        "EB40.Z",
+        "EB40.Y"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.872,
+      "usage": {
+        "prompt_tokens": 132,
+        "completion_tokens": 15,
+        "total_tokens": 147
+      }
+    },
+    {
+      "id": "medexpqa-95-es",
+      "language": "es",
+      "diagnosis": "Epidermolis bullosa acquisita",
+      "raw": "{\"diagnosis\": \"Epidermolis bullosa acquisita\"}",
+      "pred": [
+        "EE40.3",
+        "ME67",
+        "EE40.31"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.35,
+      "usage": {
+        "prompt_tokens": 159,
+        "completion_tokens": 16,
+        "total_tokens": 175
+      }
+    },
+    {
+      "id": "medexpqa-95-fr",
+      "language": "fr",
+      "diagnosis": "Cloque sous-épidermique (pityriasis versicolor)",
+      "raw": "{\"diagnosis\": \"Cloque sous-épidermique (pityriasis versicolor)\"}",
+      "pred": [
+        "1F2D.0",
+        "EE21",
+        "EB90.40"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 4.103,
+      "usage": {
+        "prompt_tokens": 171,
+        "completion_tokens": 23,
+        "total_tokens": 194
+      }
+    },
+    {
+      "id": "medexpqa-96-en",
+      "language": "en",
+      "diagnosis": "Pemphigus foliaceus",
+      "raw": "{\"diagnosis\": \"Pemphigus foliaceus\"}",
+      "pred": [
+        "EB40.1",
+        "EB40.Z",
+        "EB40.Y"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.726,
+      "usage": {
+        "prompt_tokens": 128,
+        "completion_tokens": 15,
+        "total_tokens": 143
+      }
+    },
+    {
+      "id": "medexpqa-96-es",
+      "language": "es",
+      "diagnosis": "Epidermolis bullosa acquisita",
+      "raw": "{\"diagnosis\": \"Epidermolis bullosa acquisita\"}",
+      "pred": [
+        "EE40.3",
+        "ME67",
+        "EE40.31"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.439,
+      "usage": {
+        "prompt_tokens": 159,
+        "completion_tokens": 16,
+        "total_tokens": 175
+      }
+    },
+    {
+      "id": "medexpqa-96-fr",
+      "language": "fr",
+      "diagnosis": "Cloque sous-épidermique (pityriasis versicolor)",
+      "raw": "{\"diagnosis\": \"Cloque sous-épidermique (pityriasis versicolor)\"}",
+      "pred": [
+        "1F2D.0",
+        "EE21",
+        "EB90.40"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 5.065,
+      "usage": {
+        "prompt_tokens": 171,
+        "completion_tokens": 23,
+        "total_tokens": 194
+      }
+    }
+  ]
+}

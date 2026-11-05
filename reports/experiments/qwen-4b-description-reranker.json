@@ -1,0 +1,98 @@
+[
+  {
+    "id": "medexpqa-16-en",
+    "selected": "5C58.10",
+    "selected_title": "Porphyria cutanea tarda",
+    "gold": [
+      "5C58.10"
+    ],
+    "correct": true,
+    "raw": "2",
+    "seconds": 39.58837158299866,
+    "usage": {
+      "prompt_tokens": 811,
+      "completion_tokens": 1,
+      "total_tokens": 812
+    }
+  },
+  {
+    "id": "medexpqa-16-es",
+    "selected": "5C58.10",
+    "selected_title": "Porphyria cutanea tarda",
+    "gold": [
+      "5C58.10"
+    ],
+    "correct": true,
+    "raw": "1",
+    "seconds": 36.12471533298958,
+    "usage": {
+      "prompt_tokens": 805,
+      "completion_tokens": 1,
+      "total_tokens": 806
+    }
+  },
+  {
+    "id": "medexpqa-16-fr",
+    "selected": "5C58.10",
+    "selected_title": "Porphyria cutanea tarda",
+    "gold": [
+      "5C58.10"
+    ],
+    "correct": true,
+    "raw": "7",
+    "seconds": 33.85292737497366,
+    "usage": {
+      "prompt_tokens": 801,
+      "completion_tokens": 1,
+      "total_tokens": 802
+    }
+  },
+  {
+    "id": "medexpqa-279-en",
+    "selected": "DB33.11",
+    "selected_title": "Lymphocytic colitis",
+    "gold": [
+      "DB33.10"
+    ],
+    "correct": false,
+    "raw": "1",
+    "seconds": 34.26315229100874,
+    "usage": {
+      "prompt_tokens": 796,
+      "completion_tokens": 1,
+      "total_tokens": 797
+    }
+  },
+  {
+    "id": "medexpqa-279-es",
+    "selected": "DB33.11",
+    "selected_title": "Lymphocytic colitis",
+    "gold": [
+      "DB33.10"
+    ],
+    "correct": false,
+    "raw": "2",
+    "seconds": 36.769460834009806,
+    "usage": {
+      "prompt_tokens": 877,
+      "completion_tokens": 1,
+      "total_tokens": 878
+    }
+  },
+  {
+    "id": "medexpqa-279-fr",
+    "selected": "DB33.10",
+    "selected_title": "Collagenous colitis",
+    "gold": [
+      "DB33.10"
+    ],
+    "correct": true,
+    "raw": "1",
+    "seconds": 38.79924104199745,
+    "usage": {
+      "prompt_tokens": 862,
+      "completion_tokens": 1,
+      "total_tokens": 863
+    }
+  }
+]

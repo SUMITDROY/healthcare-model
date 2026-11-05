@@ -110,6 +110,9 @@ class WHOReference:
         self.definition_matrix = self.definition_vectorizer.fit_transform(definitions)
         self.term_count = len(terms)
         self.definition_count = sum(bool(d) for d in definitions)
+        from coder.symptoms import DescriptionIndex
+
+        self.descriptions = {"en": DescriptionIndex(path, codes, "en")}
         self.foreign = {}
         for language in ("fr", "es"):
             file = Path(path).with_name(f"who-2026-01-{language}.jsonl.gz")
@@ -117,6 +120,7 @@ class WHOReference:
                 from coder.foreign import ForeignIndex
 
                 self.foreign[language] = ForeignIndex(file, codes, language)
+                self.descriptions[language] = DescriptionIndex(file, codes, language)
 
     @lru_cache(maxsize=512)
     def query(self, focused, whole):

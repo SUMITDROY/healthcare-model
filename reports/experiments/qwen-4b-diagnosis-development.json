@@ -1,0 +1,600 @@
+{
+  "scope": "Inspected exam development cases, not independent validation. Generated concepts are hypotheses, not documented diagnoses. No reference answers or codes supplied to model.",
+  "seconds_total": 312.69762920800713,
+  "results": [
+    {
+      "id": "medexpqa-130-en",
+      "language": "en",
+      "diagnosis": "Absence epilepsy with generalized tonic-clonic seizures and polyp spike-wave discharges",
+      "raw": "{\"diagnosis\": \"Absence epilepsy with generalized tonic-clonic seizures and polyp spike-wave discharges\"}",
+      "pred": [
+        "8A61.31",
+        "8A61.21",
+        "8A61.22"
+      ],
+      "gold": [
+        "8A61.30"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 14.815,
+      "usage": {
+        "prompt_tokens": 123,
+        "completion_tokens": 22,
+        "total_tokens": 145
+      }
+    },
+    {
+      "id": "medexpqa-130-es",
+      "language": "es",
+      "diagnosis": "",
+      "raw": "{\"diagnosis\": \"Epilepsia con actividad de polipuntas agudas a 6 ciclos/segundo, probablemente asociada a un trastorno de tipo focal con generalización, compatible con epilepsia de",
+      "pred": [
+        "8A61.4Y",
+        "8A66.0",
+        "BA40.0"
+      ],
+      "gold": [
+        "8A61.30"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 14.61,
+      "usage": {
+        "prompt_tokens": 149,
+        "completion_tokens": 48,
+        "total_tokens": 197
+      }
+    },
+    {
+      "id": "medexpqa-130-fr",
+      "language": "fr",
+      "diagnosis": "Épilepsie avec syndrome de l'absence généralisée et de crises de type petit déjeuner (synchronisation de pointes à 6 Hz)",
+      "raw": "{\"diagnosis\": \"Épilepsie avec syndrome de l'absence généralisée et de crises de type petit déjeuner (synchronisation de pointes à 6 Hz)\"}",
+      "pred": [
+        "8A6Y",
+        "8A61.4Y",
+        "LB99.0"
+      ],
+      "gold": [
+        "8A61.30"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 12.923,
+      "usage": {
+        "prompt_tokens": 164,
+        "completion_tokens": 40,
+        "total_tokens": 204
+      }
+    },
+    {
+      "id": "medexpqa-143-en",
+      "language": "en",
+      "diagnosis": "Bacterial meningitis",
+      "raw": "{\"diagnosis\": \"Bacterial meningitis\"}",
+      "pred": [
+        "1D01.0Z",
+        "1D01.0Y",
+        "1D01.0"
+      ],
+      "gold": [
+        "1B11.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 5.756,
+      "usage": {
+        "prompt_tokens": 125,
+        "completion_tokens": 10,
+        "total_tokens": 135
+      }
+    },
+    {
+      "id": "medexpqa-143-es",
+      "language": "es",
+      "diagnosis": "Meningitis bacteriana",
+      "raw": "{\"diagnosis\": \"Meningitis bacteriana\"}",
+      "pred": [
+        "MB24.C",
+        "ME84.2Z",
+        "1D01.0Z"
+      ],
+      "gold": [
+        "1B11.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 6.41,
+      "usage": {
+        "prompt_tokens": 148,
+        "completion_tokens": 11,
+        "total_tokens": 159
+      }
+    },
+    {
+      "id": "medexpqa-143-fr",
+      "language": "fr",
+      "diagnosis": "Méningite virale",
+      "raw": "{\"diagnosis\": \"Méningite virale\"}",
+      "pred": [
+        "MB24.C",
+        "8C60.Z",
+        "1C8E.Z"
+      ],
+      "gold": [
+        "1B11.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 7.281,
+      "usage": {
+        "prompt_tokens": 157,
+        "completion_tokens": 12,
+        "total_tokens": 169
+      }
+    },
+    {
+      "id": "medexpqa-16-en",
+      "language": "en",
+      "diagnosis": "Acne vulgaris",
+      "raw": "{\"diagnosis\": \"Acne vulgaris\"}",
+      "pred": [
+        "ED80.Z",
+        "ED80",
+        "ED80.Y"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 6.44,
+      "usage": {
+        "prompt_tokens": 138,
+        "completion_tokens": 10,
+        "total_tokens": 148
+      }
+    },
+    {
+      "id": "medexpqa-16-es",
+      "language": "es",
+      "diagnosis": "Lupus eritematoso discoide",
+      "raw": "{\"diagnosis\": \"Lupus eritematoso discoide\"}",
+      "pred": [
+        "EB51.0",
+        "ED71",
+        "1E51.Y"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 7.965,
+      "usage": {
+        "prompt_tokens": 160,
+        "completion_tokens": 15,
+        "total_tokens": 175
+      }
+    },
+    {
+      "id": "medexpqa-16-fr",
+      "language": "fr",
+      "diagnosis": "Dermatite de l'acné malaire",
+      "raw": "{\"diagnosis\": \"Dermatite de l'acné malaire\"}",
+      "pred": [
+        "ED71",
+        "QC46",
+        "1E51.Y"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 9.174,
+      "usage": {
+        "prompt_tokens": 175,
+        "completion_tokens": 18,
+        "total_tokens": 193
+      }
+    },
+    {
+      "id": "medexpqa-194-en",
+      "language": "en",
+      "diagnosis": "Hemoglobinuria due to hemolytic anemia secondary to malaria",
+      "raw": "{\"diagnosis\": \"Hemoglobinuria due to hemolytic anemia secondary to malaria\"}",
+      "pred": [
+        "1F42.Y",
+        "1F42",
+        "1F4Z"
+      ],
+      "gold": [
+        "1F54.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 11.104,
+      "usage": {
+        "prompt_tokens": 206,
+        "completion_tokens": 20,
+        "total_tokens": 226
+      }
+    },
+    {
+      "id": "medexpqa-194-es",
+      "language": "es",
+      "diagnosis": "",
+      "raw": "{\"diagnosis\": \"Linfoma de células B de tipo B-cell lymphoma (posible linfoma de células B de tipo B-cell lymphoma, especialmente considerando el contexto clínico y el perfil inmun",
+      "pred": [
+        "4B21",
+        "ME64.2",
+        "MG43.7"
+      ],
+      "gold": [
+        "1F54.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 18.599,
+      "usage": {
+        "prompt_tokens": 243,
+        "completion_tokens": 48,
+        "total_tokens": 291
+      }
+    },
+    {
+      "id": "medexpqa-194-fr",
+      "language": "fr",
+      "diagnosis": "",
+      "raw": "{\"diagnosis\": \"Lymphome de la région du foie (lymphome de type B, probablement de type diffuse de la région hépatique ou lymphome de la région splénique), mais le profil clinique",
+      "pred": [
+        "4B21",
+        "ME64.2",
+        "MG43.7"
+      ],
+      "gold": [
+        "1F54.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 19.113,
+      "usage": {
+        "prompt_tokens": 250,
+        "completion_tokens": 48,
+        "total_tokens": 298
+      }
+    },
+    {
+      "id": "medexpqa-236-en",
+      "language": "en",
+      "diagnosis": "Drug-induced thrombotic microangiopathy (TMA) secondary to ticlopidine",
+      "raw": "{\"diagnosis\": \"Drug-induced thrombotic microangiopathy (TMA) secondary to ticlopidine\"}",
+      "pred": [
+        "8C80",
+        "3B65",
+        "FA25.11"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 12.292,
+      "usage": {
+        "prompt_tokens": 197,
+        "completion_tokens": 24,
+        "total_tokens": 221
+      }
+    },
+    {
+      "id": "medexpqa-236-es",
+      "language": "es",
+      "diagnosis": "Anemia hemolítica por esquistocitos",
+      "raw": "{\"diagnosis\": \"Anemia hemolítica por esquistocitos\"}",
+      "pred": [
+        "ME64.3",
+        "ME84.2Z",
+        "MC81.3"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 10.715,
+      "usage": {
+        "prompt_tokens": 232,
+        "completion_tokens": 16,
+        "total_tokens": 248
+      }
+    },
+    {
+      "id": "medexpqa-236-fr",
+      "language": "fr",
+      "diagnosis": "Déficit de la membrane des plaquettes (thrombocytopenie avec schistocytes) due à une toxicité de la ticlopidine",
+      "raw": "{\"diagnosis\": \"Déficit de la membrane des plaquettes (thrombocytopenie avec schistocytes) due à une toxicité de la ticlopidine\"}",
+      "pred": [
+        "ME64.3",
+        "MG22",
+        "3B62.0Y"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 17.513,
+      "usage": {
+        "prompt_tokens": 259,
+        "completion_tokens": 40,
+        "total_tokens": 299
+      }
+    },
+    {
+      "id": "medexpqa-279-en",
+      "language": "en",
+      "diagnosis": "Crohn's disease",
+      "raw": "{\"diagnosis\": \"Crohn's disease\"}",
+      "pred": [
+        "DD70.Z",
+        "DD70.1",
+        "DD70.3"
+      ],
+      "gold": [
+        "DB33.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 7.22,
+      "usage": {
+        "prompt_tokens": 169,
+        "completion_tokens": 10,
+        "total_tokens": 179
+      }
+    },
+    {
+      "id": "medexpqa-279-es",
+      "language": "es",
+      "diagnosis": "Linfoma de células B del intestino delgado o linfoma de células B del colon (posible diagnóstico de linfoma de células B del colon)",
+      "raw": "{\"diagnosis\": \"Linfoma de células B del intestino delgado o linfoma de células B del colon (posible diagnóstico de linfoma de células B del colon)\"}",
+      "pred": [
+        "ME05.1",
+        "2B33.5",
+        "2A81.1"
+      ],
+      "gold": [
+        "DB33.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 16.925,
+      "usage": {
+        "prompt_tokens": 220,
+        "completion_tokens": 45,
+        "total_tokens": 265
+      }
+    },
+    {
+      "id": "medexpqa-279-fr",
+      "language": "fr",
+      "diagnosis": "",
+      "raw": "{\"diagnosis\": \"Lésion de la muqueuse intestinale due à une atrophie épithéliale avec dénudation, compatible avec une maladie de la muqueuse intestinale chronique",
+      "pred": [
+        "ME05.1",
+        "1A40.Z",
+        "BD50.41"
+      ],
+      "gold": [
+        "DB33.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 17.172,
+      "usage": {
+        "prompt_tokens": 204,
+        "completion_tokens": 48,
+        "total_tokens": 252
+      }
+    },
+    {
+      "id": "medexpqa-280-en",
+      "language": "en",
+      "diagnosis": "Crohn's disease",
+      "raw": "{\"diagnosis\": \"Crohn's disease\"}",
+      "pred": [
+        "DD70.Z",
+        "DD70.1",
+        "DD70.3"
+      ],
+      "gold": [
+        "DB33.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 7.0,
+      "usage": {
+        "prompt_tokens": 167,
+        "completion_tokens": 10,
+        "total_tokens": 177
+      }
+    },
+    {
+      "id": "medexpqa-280-es",
+      "language": "es",
+      "diagnosis": "Linfoma de células B del intestino delgado o linfoma de células B del colon (posible diagnóstico de linfoma de células B del colon)",
+      "raw": "{\"diagnosis\": \"Linfoma de células B del intestino delgado o linfoma de células B del colon (posible diagnóstico de linfoma de células B del colon)\"}",
+      "pred": [
+        "ME05.1",
+        "2B33.5",
+        "2A81.1"
+      ],
+      "gold": [
+        "DB33.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 14.997,
+      "usage": {
+        "prompt_tokens": 220,
+        "completion_tokens": 45,
+        "total_tokens": 265
+      }
+    },
+    {
+      "id": "medexpqa-280-fr",
+      "language": "fr",
+      "diagnosis": "",
+      "raw": "{\"diagnosis\": \"Lésion de la muqueuse intestinale due à une atrophie épithéliale avec dénudation, compatible avec une maladie de la muqueuse intestinale chronique",
+      "pred": [
+        "ME05.1",
+        "1A40.Z",
+        "BD50.41"
+      ],
+      "gold": [
+        "DB33.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 14.555,
+      "usage": {
+        "prompt_tokens": 204,
+        "completion_tokens": 48,
+        "total_tokens": 252
+      }
+    },
+    {
+      "id": "medexpqa-298-en",
+      "language": "en",
+      "diagnosis": "Viral hepatitis (likely hepatitis E)",
+      "raw": "{\"diagnosis\": \"Viral hepatitis (likely hepatitis E)\"}",
+      "pred": [
+        "1E5Z",
+        "1E50.Z",
+        "1E51.Z"
+      ],
+      "gold": [
+        "1B91"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 5.358,
+      "usage": {
+        "prompt_tokens": 114,
+        "completion_tokens": 14,
+        "total_tokens": 128
+      }
+    },
+    {
+      "id": "medexpqa-298-es",
+      "language": "es",
+      "diagnosis": "Fiebre tifoidea por Salmonella typhi",
+      "raw": "{\"diagnosis\": \"Fiebre tifoidea por Salmonella typhi\"}",
+      "pred": [
+        "FB56.2",
+        "MD90.1",
+        "MD90"
+      ],
+      "gold": [
+        "1B91"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 6.707,
+      "usage": {
+        "prompt_tokens": 141,
+        "completion_tokens": 17,
+        "total_tokens": 158
+      }
+    },
+    {
+      "id": "medexpqa-298-fr",
+      "language": "fr",
+      "diagnosis": "",
+      "raw": "{\"diagnosis\": \"Fébréole de la région de l'Asie du Sud-Est (probablement une infection par le virus de la fièvre de la région de l'Asie du Sud-Est",
+      "pred": [
+        "MD90.0",
+        "FB56.2",
+        "MD90.1"
+      ],
+      "gold": [
+        "1B91"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 12.628,
+      "usage": {
+        "prompt_tokens": 154,
+        "completion_tokens": 48,
+        "total_tokens": 202
+      }
+    },
+    {
+      "id": "medexpqa-4-en",
+      "language": "en",
+      "diagnosis": "Acute hepatitis B infection",
+      "raw": "{\"diagnosis\": \"Acute hepatitis B infection\"}",
+      "pred": [
+        "1E50.1",
+        "1E50.0",
+        "1E50.3"
+      ],
+      "gold": [
+        "1E50.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "seconds": 4.655,
+      "usage": {
+        "prompt_tokens": 111,
+        "completion_tokens": 11,
+        "total_tokens": 122
+      }
+    },
+    {
+      "id": "medexpqa-4-es",
+      "language": "es",
+      "diagnosis": "Infección aguda por virus de la hepatitis C",
+      "raw": "{\"diagnosis\": \"Infección aguda por virus de la hepatitis C\"}",
+      "pred": [
+        "1E50.2",
+        "KA62.9",
+        "1E51.1"
+      ],
+      "gold": [
+        "1E50.1"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 6.284,
+      "usage": {
+        "prompt_tokens": 132,
+        "completion_tokens": 17,
+        "total_tokens": 149
+      }
+    },
+    {
+      "id": "medexpqa-4-fr",
+      "language": "fr",
+      "diagnosis": "Hépatite virale B aiguë",
+      "raw": "{\"diagnosis\": \"Hépatite virale B aiguë\"}",
+      "pred": [
+        "1E50.1",
+        "MG22",
+        "8C01.3"
+      ],
+      "gold": [
+        "1E50.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "seconds": 6.361,
+      "usage": {
+        "prompt_tokens": 138,
+        "completion_tokens": 16,
+        "total_tokens": 154
+      }
+    }
+  ]
+}

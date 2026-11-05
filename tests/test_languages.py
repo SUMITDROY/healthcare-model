@@ -69,3 +69,28 @@ class NativeMorphology(unittest.TestCase):
             self.assertIn("hepatitis_subtype_a", a)
             self.assertIn("hepatitis_subtype_b", b)
             self.assertNotEqual(a, b)
+
+
+class DescriptionRouting(unittest.TestCase):
+    def test_documented_diagnosis_keeps_specificity_path(self):
+        from coder.symptoms import needs_description
+
+        text = (
+            "Patient reports symptoms and examination findings. " * 10
+        ) + "\nAssessment: migraine without aura."
+        self.assertFalse(needs_description(text, "migraine without aura."))
+
+    def test_long_unasserted_presentation_uses_clinical_descriptions(self):
+        from coder.symptoms import needs_description
+
+        text = (
+            "Patient presents with fever, weakness and abnormal laboratory results. "
+            * 5
+        )
+        self.assertTrue(needs_description(text, text))
+
+    def test_short_clinician_assertion_is_preserved(self):
+        from coder.symptoms import needs_description
+
+        text = "Patient reports symptoms and examination findings. " * 10
+        self.assertFalse(needs_description(text, "acute cystitis"))

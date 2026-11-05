@@ -31,3 +31,10 @@ French and Spanish 2026-01 MMS API records are additionally retained, unmodified
 Antonio Miranda-Escalada, Aitor Gonzalez-Agirre and Martin Krallinger (2020), CodiEsp corpus: Spanish clinical cases coded in ICD10 (CIE10), eHealth CLEF 2020. Author-hosted source: https://huggingface.co/datasets/Biomedical-TeMU/CodiEsp_corpus at revision `5ff2b006ea74699eccd393a5a0f3b99396d01e0c`. Homepage: https://temu.bsc.es/codiesp/ . License: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/ (full text already included as `MTS-Dialog-LICENSE.txt`).
 
 Changes: selected 221 Spanish development cases before inference, preserving clinical text, source ICD-10 annotations and provenance; added exact unique matches to official WHO Spanish terms as **derived ICD-11 proxies, not independent ICD-11 gold**. Selection, hashes and original README: `reports/codiesp/`. These cases do not train or tune the engine. Original corpus licenses and author attribution remain applicable. No inference results were used to select cases.
+
+
+# External exam development and reserved French check
+
+MedExpQA: Iñigo Alonso, Maite Oronoz and Rodrigo Agerri (2024), Artificial Intelligence in Medicine,102938. Source https://huggingface.co/datasets/HiTZ/MedExpQA at revision78b57699763e00e38acd550f28de24d8a65f1643, CC BY4.0. Clinical exam cases/reference answers selected and mechanically aligned to WHO terms; assessments appended only in the explicitly labelled documented-diagnosis mode. These inspected cases are development regressions, not independent clinical validation. Source provenance:reports/exam-development/source-manifest.json.
+
+MediQAl: Bazoge et al.,French medical question-answering dataset, https://huggingface.co/datasets/ANR-MALADES/MediQAl at revision5af34948a74c7b8807c476204a21149ffb00ea2c, CC BY4.0. Five selected French test questions are reserved before implementation changes; source answers mechanically matched to exact French WHO titles. These are clinical-exam proxies, not independently adjudicated ICD-11 outpatient gold. Source/hash/selection:reports/heldout-fr/manifest.json. Full CC BY4.0 license is already included in MTS-Dialog-LICENSE.txt.

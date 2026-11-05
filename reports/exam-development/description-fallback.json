@@ -1,0 +1,4500 @@
+{
+  "scope": "Mechanically aligned clinical exam cases, not adjudicated ICD-11 outpatient accuracy. Inspected development cases are not independent validation.",
+  "cases_sha256": "6549fa7299c111838499271d68150b5e66b58cd7d9b2f6c20f830674efc00e39",
+  "model_sha256": "498d039d38b5296f78e61e5e9a9bea32220ac782ed64c0fb73cfd8796a3a4876",
+  "seconds_excluding_load": 10.69678312499309,
+  "groups": {
+    "strict/symptoms_only/en": {
+      "n": 14,
+      "top1": 0,
+      "top3": 4
+    },
+    "strict/symptoms_only/es": {
+      "n": 14,
+      "top1": 3,
+      "top3": 6
+    },
+    "strict/symptoms_only/fr": {
+      "n": 14,
+      "top1": 2,
+      "top3": 3
+    },
+    "strict/documented_diagnosis/en": {
+      "n": 14,
+      "top1": 14,
+      "top3": 14
+    },
+    "strict/documented_diagnosis/es": {
+      "n": 14,
+      "top1": 14,
+      "top3": 14
+    },
+    "strict/documented_diagnosis/fr": {
+      "n": 14,
+      "top1": 14,
+      "top3": 14
+    },
+    "all/symptoms_only/en": {
+      "n": 41,
+      "top1": 0,
+      "top3": 6
+    },
+    "all/symptoms_only/es": {
+      "n": 41,
+      "top1": 4,
+      "top3": 7
+    },
+    "all/symptoms_only/fr": {
+      "n": 41,
+      "top1": 3,
+      "top3": 4
+    },
+    "all/documented_diagnosis/en": {
+      "n": 41,
+      "top1": 33,
+      "top3": 40
+    },
+    "all/documented_diagnosis/es": {
+      "n": 41,
+      "top1": 35,
+      "top3": 39
+    },
+    "all/documented_diagnosis/fr": {
+      "n": 41,
+      "top1": 37,
+      "top3": 40
+    }
+  },
+  "api_calls": 0,
+  "api_cost_usd": 0,
+  "results": [
+    {
+      "id": "medexpqa-130-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "8A61.30"
+      ],
+      "pred": [
+        "8A61.31",
+        "8A61.23",
+        "8A61.22"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-130-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "8A61.30"
+      ],
+      "pred": [
+        "8A61.30",
+        "8A61.31",
+        "8A61.22"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-130-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "8A61.30"
+      ],
+      "pred": [
+        "8A61.21",
+        "8A61.23",
+        "8A61.31"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-130-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "8A61.30"
+      ],
+      "pred": [
+        "8A61.30",
+        "8A61.41",
+        "8A61.11"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-130-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "8A61.30"
+      ],
+      "pred": [
+        "8A68.2",
+        "8A61.21",
+        "8A61.31"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-130-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "8A61.30"
+      ],
+      "pred": [
+        "8A61.30",
+        "8A61.41",
+        "8A61.11"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-134-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "1F00.10"
+      ],
+      "pred": [
+        "8B61.3",
+        "5B55.3",
+        "5B55.4"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-134-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1F00.10"
+      ],
+      "pred": [
+        "1F00.10",
+        "9A73",
+        "9A72"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-134-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "1F00.10"
+      ],
+      "pred": [
+        "5B55.4",
+        "5B55.3",
+        "8B61.3"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-134-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1F00.10"
+      ],
+      "pred": [
+        "1F00.10",
+        "1F00.01",
+        "1F00.21"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-134-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "1F00.10"
+      ],
+      "pred": [
+        "LA11.2",
+        "1F00.21",
+        "1D44"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-134-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1F00.10"
+      ],
+      "pred": [
+        "1F00.10",
+        "1F00.21",
+        "1F00.01"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-141-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "3B62.0Y"
+      ],
+      "pred": [
+        "3B64.10",
+        "LD2H.2",
+        "AA80"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-141-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "3B62.0Y"
+      ],
+      "pred": [
+        "3B62.0Y",
+        "ME86.D0",
+        "2E92.40"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-141-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "3B62.0Y"
+      ],
+      "pred": [
+        "CA40.11",
+        "2A60.33",
+        "3B64.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-141-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "3B62.0Y"
+      ],
+      "pred": [
+        "3B62.0Y",
+        "CB40.2",
+        "DD92.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-141-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "3B62.0Y"
+      ],
+      "pred": [
+        "BC43.6",
+        "1D44",
+        "EA88.00"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-141-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "3B62.0Y"
+      ],
+      "pred": [
+        "3B62.0Y",
+        "DA04.2",
+        "CB40.2"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-143-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "1B11.0"
+      ],
+      "pred": [
+        "KB61.2",
+        "JA63",
+        "CB24"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-143-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1B11.0"
+      ],
+      "pred": [
+        "1B11.0",
+        "JB63.00",
+        "1B12.41"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-143-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "1B11.0"
+      ],
+      "pred": [
+        "JA63",
+        "5C58.02",
+        "KB61.2"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-143-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1B11.0"
+      ],
+      "pred": [
+        "1B11.0",
+        "1B1Z",
+        "1D01.Z"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-143-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "1B11.0"
+      ],
+      "pred": [
+        "KB61.2",
+        "JA63",
+        "1C80"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-143-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1B11.0"
+      ],
+      "pred": [
+        "1B11.0",
+        "1B1Z",
+        "1B12.40"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-147-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "6A70.3"
+      ],
+      "pred": [
+        "6B42",
+        "6A70.3",
+        "6A71.3"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-147-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "6A70.3"
+      ],
+      "pred": [
+        "6A71.Z",
+        "6A70.3",
+        "6A70.0"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-147-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "6A70.3"
+      ],
+      "pred": [
+        "6A80.3",
+        "6A72",
+        "KA21"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-147-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "6A70.3"
+      ],
+      "pred": [
+        "6A70.3",
+        "6A71.Z",
+        "6A71.3"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-147-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "6A70.3"
+      ],
+      "pred": [
+        "KD32.1",
+        "1F00.21",
+        "6A70.2"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-147-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "6A70.3"
+      ],
+      "pred": [
+        "6A70.3",
+        "6A71.Z",
+        "6A71.3"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-148-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "6D10.Z"
+      ],
+      "pred": [
+        "5C55.01",
+        "5C56.30",
+        "4A60.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-148-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "6D10.Z"
+      ],
+      "pred": [
+        "6D10.Z",
+        "6D11.5",
+        "2C73.4"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-148-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "6D10.Z"
+      ],
+      "pred": [
+        "6D10.1",
+        "HA40.4",
+        "6B64"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-148-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "6D10.Z"
+      ],
+      "pred": [
+        "6D10.Z",
+        "6D10",
+        "6D10.2"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-148-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "6D10.Z"
+      ],
+      "pred": [
+        "6B64",
+        "1F00.21",
+        "6B66"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-148-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "6D10.Z"
+      ],
+      "pred": [
+        "6D10.Z",
+        "6D10",
+        "6B64"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-16-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "5C58.10"
+      ],
+      "pred": [
+        "1E50.2",
+        "5C58.10",
+        "EB41.0"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-16-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "5C58.13"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-16-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "1E50.2",
+        "1E51.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-16-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "5C58.1Z"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-16-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "5C58.10"
+      ],
+      "pred": [
+        "1E50.2",
+        "1E51.1",
+        "1D49"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-16-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "1C1E.2"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-160-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "MF8Y"
+      ],
+      "pred": [
+        "GB60.2",
+        "GB60.0",
+        "4A43.3"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-160-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "MF8Y"
+      ],
+      "pred": [
+        "4A44.92",
+        "MF8Y",
+        "EB42"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-160-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "MF8Y"
+      ],
+      "pred": [
+        "GB60.2",
+        "GB60.0",
+        "5C58.02"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-160-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "MF8Y"
+      ],
+      "pred": [
+        "MF8Y",
+        "4A44.92",
+        "EB40.Y"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-160-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "MF8Y"
+      ],
+      "pred": [
+        "GB60.2",
+        "GB60.0",
+        "KB61.2"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-160-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "MF8Y"
+      ],
+      "pred": [
+        "MF8Y",
+        "4A44.92",
+        "EB40.Y"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-177-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "3A10.Y"
+      ],
+      "pred": [
+        "3B64.10",
+        "3A51.5",
+        "3A50.2"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-177-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "3A10.Y"
+      ],
+      "pred": [
+        "3A10.Y",
+        "LD27.0Y",
+        "3A10.2"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-177-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "3A10.Y"
+      ],
+      "pred": [
+        "LA30.8",
+        "5C58.00",
+        "2B6A.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-177-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "3A10.Y"
+      ],
+      "pred": [
+        "3A10.Y",
+        "LD27.0Y",
+        "3A51.Z"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-177-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "3A10.Y"
+      ],
+      "pred": [
+        "DB99.10",
+        "BC43.6",
+        "2A20.4"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-177-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "3A10.Y"
+      ],
+      "pred": [
+        "3A10.Y",
+        "LD27.0Y",
+        "3A51.Z"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-194-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "1F54.0"
+      ],
+      "pred": [
+        "3B64.10",
+        "KB61.2",
+        "GB60.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-194-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1F54.0"
+      ],
+      "pred": [
+        "1F54.0",
+        "1F54.Z",
+        "1F54"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-194-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "1F54.0"
+      ],
+      "pred": [
+        "5C58.02",
+        "GB60.2",
+        "GB60.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-194-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1F54.0"
+      ],
+      "pred": [
+        "1F54.0",
+        "1F54.Z",
+        "1F54.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-194-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "1F54.0"
+      ],
+      "pred": [
+        "GB60.0",
+        "GB60.2",
+        "2A20.4"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-194-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1F54.0"
+      ],
+      "pred": [
+        "1F54.0",
+        "1F54.Z",
+        "1F54"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-227-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "LA8E.Z"
+      ],
+      "pred": [
+        "BC65.1",
+        "BC81.0",
+        "BC63.3"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-227-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "LA8E.Z"
+      ],
+      "pred": [
+        "LA87.40",
+        "LA8E.1",
+        "LA87.42"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-227-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "LA8E.Z"
+      ],
+      "pred": [
+        "BC63.40",
+        "BC63.5",
+        "BC43.6"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-227-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "LA8E.Z"
+      ],
+      "pred": [
+        "LA8E.Z",
+        "BC40.0",
+        "LA8E.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-227-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "LA8E.Z"
+      ],
+      "pred": [
+        "BC43.6",
+        "BC63.40",
+        "7A42.6"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-227-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "LA8E.Z"
+      ],
+      "pred": [
+        "LA8E.Z",
+        "BC40.0",
+        "LA8E.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-236-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.10",
+        "5C58.02",
+        "5C58.00"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-236-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.14",
+        "3B64.10",
+        "3B64.12"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-236-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "3B64.14"
+      ],
+      "pred": [
+        "5C58.02",
+        "3B64.10",
+        "2A20.4"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-236-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.14",
+        "3B64.10",
+        "3B64.11"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-236-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "3B64.14"
+      ],
+      "pred": [
+        "KB61.2",
+        "2A20.4",
+        "1F00.21"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-236-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.14",
+        "3B64.10",
+        "3B64.12"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-251-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "DB94.1Z"
+      ],
+      "pred": [
+        "2A20.4",
+        "MG30.62",
+        "5C58.02"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-251-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "DB94.1Z"
+      ],
+      "pred": [
+        "DB94.1Z",
+        "DB94.1Y",
+        "DB94.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-251-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "DB94.1Z"
+      ],
+      "pred": [
+        "5C58.02",
+        "1E50.2",
+        "4A44.4"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-251-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "DB94.1Z"
+      ],
+      "pred": [
+        "DB94.1Z",
+        "DB94.1",
+        "DB94.1Y"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-251-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "DB94.1Z"
+      ],
+      "pred": [
+        "2A20.4",
+        "DB99.10",
+        "1D49"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-251-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "DB94.1Z"
+      ],
+      "pred": [
+        "DB94.1Z",
+        "DB94.1",
+        "DB94.1Y"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-279-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "DB33.10"
+      ],
+      "pred": [
+        "DB33.11",
+        "DB33.10",
+        "MG30.51"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-279-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "DB33.10"
+      ],
+      "pred": [
+        "DB33.10",
+        "DB33.11",
+        "DB33.1Z"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-279-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "DB33.10"
+      ],
+      "pred": [
+        "DB33.10",
+        "DB33.11",
+        "5C58.02"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-279-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "DB33.10"
+      ],
+      "pred": [
+        "DB33.10",
+        "DA96.0Y",
+        "4A4Z"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-279-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "DB33.10"
+      ],
+      "pred": [
+        "DB33.10",
+        "5B55.4",
+        "DB33.11"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-279-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "DB33.10"
+      ],
+      "pred": [
+        "DB33.10",
+        "1A40.0",
+        "DA96.0Y"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-28-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "4B20.Z"
+      ],
+      "pred": [
+        "2B02",
+        "3B64.10",
+        "KB27.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-28-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "4B20.Z"
+      ],
+      "pred": [
+        "4B20.Z",
+        "4B20",
+        "4B20.Y"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-28-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "4B20.Z"
+      ],
+      "pred": [
+        "3B64.10",
+        "2B02",
+        "2B30.1"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-28-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "4B20.Z"
+      ],
+      "pred": [
+        "4B20.Z",
+        "4B20",
+        "4B20.0"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-28-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "4B20.Z"
+      ],
+      "pred": [
+        "1F57.2",
+        "2B02",
+        "1F00.21"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-28-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "4B20.Z"
+      ],
+      "pred": [
+        "4B20.Z",
+        "4B20",
+        "4B20.Y"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-280-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "DB33.10"
+      ],
+      "pred": [
+        "DB33.11",
+        "DB33.10",
+        "GC00.3"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-280-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "DB33.10"
+      ],
+      "pred": [
+        "DB33.10",
+        "DB33.11",
+        "DB33.1Z"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-280-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "DB33.10"
+      ],
+      "pred": [
+        "DB33.10",
+        "DB33.11",
+        "5C58.02"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-280-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "DB33.10"
+      ],
+      "pred": [
+        "DB33.10",
+        "DA96.0Y",
+        "4A4Z"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-280-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "DB33.10"
+      ],
+      "pred": [
+        "DB33.10",
+        "5B55.4",
+        "DB33.11"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-280-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "DB33.10"
+      ],
+      "pred": [
+        "DB33.10",
+        "1A40.0",
+        "DA96.0Y"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-290-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "3B64.10",
+        "DA01.00",
+        "4A43.3"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-290-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "1F2J.Z",
+        "1F2J",
+        "1F2J.2"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-290-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "1D44",
+        "5C56.01",
+        "2C34"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-290-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "1F2J.Z",
+        "1F2J",
+        "1F2J.2"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-290-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "1D44",
+        "EA91.43",
+        "1A73"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-290-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "1F2J.Z",
+        "1F2J",
+        "1F2J.Y"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-297-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "5C52.03",
+        "DA01.00",
+        "5C56.33"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-297-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "1F2J.Z",
+        "1F2J",
+        "1F2J.2"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-297-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "5C56.01",
+        "1D44",
+        "1C1D.1"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-297-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "1F2J.Z",
+        "1F2J",
+        "1F2J.2"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-297-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "1D44",
+        "1A73",
+        "EA91.43"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-297-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "1F2J.Z",
+        "1F2J",
+        "1F2J.Y"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-298-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "1B91"
+      ],
+      "pred": [
+        "1F6E",
+        "1D40",
+        "1C88"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-298-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1B91"
+      ],
+      "pred": [
+        "1B91",
+        "QA08.Y",
+        "QA1C"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-298-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "1B91"
+      ],
+      "pred": [
+        "1D49",
+        "1F67",
+        "1F6E"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-298-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1B91"
+      ],
+      "pred": [
+        "1B91",
+        "QA08.Y",
+        "MD90"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-298-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "1B91"
+      ],
+      "pred": [
+        "1D49",
+        "DE11",
+        "1D44"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-298-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1B91"
+      ],
+      "pred": [
+        "1B91",
+        "QA08.Y",
+        "PA90"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-365-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "1F20.Z"
+      ],
+      "pred": [
+        "1D44",
+        "MG30.61",
+        "1F57.2"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-365-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1F20.Z"
+      ],
+      "pred": [
+        "1F20.Z",
+        "1F20",
+        "1F20.02"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-365-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "1F20.Z"
+      ],
+      "pred": [
+        "1D44",
+        "4A44.4",
+        "FA27.2"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-365-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1F20.Z"
+      ],
+      "pred": [
+        "1F20.Z",
+        "1F20",
+        "1F20.1Z"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-365-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "1F20.Z"
+      ],
+      "pred": [
+        "1F00.21",
+        "FA27.2",
+        "1F27.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-365-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1F20.Z"
+      ],
+      "pred": [
+        "1F20.Z",
+        "1F20",
+        "1F20.1Z"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-377-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "8A00.1Y"
+      ],
+      "pred": [
+        "4A43.3",
+        "LD90.3",
+        "3B64.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-377-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "8A00.1Y"
+      ],
+      "pred": [
+        "8A00.1Y",
+        "9A78.4",
+        "9A90.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-377-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "8A00.1Y"
+      ],
+      "pred": [
+        "8A45.41",
+        "LD90.3",
+        "LD90.4"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-377-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "8A00.1Y"
+      ],
+      "pred": [
+        "8A00.1Y",
+        "6D85.Y",
+        "8A00.10"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-377-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "8A00.1Y"
+      ],
+      "pred": [
+        "8A00.1",
+        "8A61.23",
+        "1D49"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-377-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "8A00.1Y"
+      ],
+      "pred": [
+        "8A00.1Y",
+        "6D85.Y",
+        "8A00.10"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-391-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "6B21.Z"
+      ],
+      "pred": [
+        "5C58.00",
+        "MG30.04",
+        "5C56.33"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-391-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "6B21.Z"
+      ],
+      "pred": [
+        "6B21.Z",
+        "6B21",
+        "6B21.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-391-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "6B21.Z"
+      ],
+      "pred": [
+        "5C50.10",
+        "5C56.30",
+        "5C58.00"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-391-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "6B21.Z"
+      ],
+      "pred": [
+        "6B21.Z",
+        "6B21",
+        "6B21.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-391-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "6B21.Z"
+      ],
+      "pred": [
+        "PL11.3",
+        "QE50.7",
+        "JB05"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-391-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "6B21.Z"
+      ],
+      "pred": [
+        "6B21.Z",
+        "LD2F.00",
+        "5A60.0"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-4-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "1E50.1"
+      ],
+      "pred": [
+        "1E50.0",
+        "1E50.1",
+        "1E50.3"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-4-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1E50.1"
+      ],
+      "pred": [
+        "1E50.1",
+        "1E50.0",
+        "1E50.3"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-4-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "1E50.1"
+      ],
+      "pred": [
+        "1E50.0",
+        "1E50.2",
+        "1E50.1"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-4-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1E50.1"
+      ],
+      "pred": [
+        "1E50.1",
+        "1E50.3",
+        "1E50.0"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-4-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "1E50.1"
+      ],
+      "pred": [
+        "1E50.3",
+        "1E50.0",
+        "1E50.1"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-4-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1E50.1"
+      ],
+      "pred": [
+        "1E50.1",
+        "1E51.0Z",
+        "1E51.0Y"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-427-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "2D12.Z"
+      ],
+      "pred": [
+        "5C58.02",
+        "3B64.10",
+        "2A20.4"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-427-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "2D12.Z"
+      ],
+      "pred": [
+        "2D12.Z",
+        "5A5Z",
+        "5A5Y"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-427-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "2D12.Z"
+      ],
+      "pred": [
+        "KB61.2",
+        "5C58.02",
+        "JA63"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-427-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "2D12.Z"
+      ],
+      "pred": [
+        "5A50.Z",
+        "2E6B",
+        "5A5Z"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-427-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "2D12.Z"
+      ],
+      "pred": [
+        "2A20.4",
+        "1F00.21",
+        "CB24"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-427-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "2D12.Z"
+      ],
+      "pred": [
+        "2D12.Z",
+        "5A51.0",
+        "2E6B"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-430-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "1F20.0Y"
+      ],
+      "pred": [
+        "3B64.10",
+        "1D61.2",
+        "5C60.1"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-430-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1F20.0Y"
+      ],
+      "pred": [
+        "1F20.12",
+        "1F20.0Y",
+        "1F20.Z"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-430-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "1F20.0Y"
+      ],
+      "pred": [
+        "3B64.10",
+        "5C60.1",
+        "1D44"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-430-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1F20.0Y"
+      ],
+      "pred": [
+        "1F20.0Y",
+        "1F20.12",
+        "1F20.0Z"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-430-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "1F20.0Y"
+      ],
+      "pred": [
+        "1F57.2",
+        "2A20.4",
+        "CA26.1"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-430-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "1F20.0Y"
+      ],
+      "pred": [
+        "1F20.0Y",
+        "1F20.12",
+        "1F20.0Z"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-447-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "MF8Y"
+      ],
+      "pred": [
+        "5C58.02",
+        "GB60.2",
+        "GB60.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-447-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "MF8Y"
+      ],
+      "pred": [
+        "MF8Y",
+        "MF84",
+        "GB40"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-447-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "MF8Y"
+      ],
+      "pred": [
+        "GB60.2",
+        "GB60.0",
+        "9D90"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-447-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "MF8Y"
+      ],
+      "pred": [
+        "MF8Y",
+        "GB40",
+        "MF84"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-447-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "MF8Y"
+      ],
+      "pred": [
+        "GB60.0",
+        "GB60.2",
+        "9D90"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-447-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "MF8Y"
+      ],
+      "pred": [
+        "MF8Y",
+        "GB40",
+        "FA25.1Y"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-511-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "DB33.1Z"
+      ],
+      "pred": [
+        "DB33.10",
+        "MG30.64",
+        "EH63.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-511-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "DB33.1Z"
+      ],
+      "pred": [
+        "DB33.1Z",
+        "DB33.1Y",
+        "DB33.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-511-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "DB33.1Z"
+      ],
+      "pred": [
+        "DB33.10",
+        "DA0F.0",
+        "5C58.00"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-511-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "DB33.1Z"
+      ],
+      "pred": [
+        "DB33.1Z",
+        "DB33.1",
+        "DB33.1Y"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-511-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "DB33.1Z"
+      ],
+      "pred": [
+        "DB33.10",
+        "1F20.12",
+        "EH63.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-511-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "DB33.1Z"
+      ],
+      "pred": [
+        "DB33.1Z",
+        "DB33.1",
+        "DB33.1Y"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-52-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "6B43"
+      ],
+      "pred": [
+        "MG30.01",
+        "MG30.0",
+        "MG30.03"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-52-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "6B43"
+      ],
+      "pred": [
+        "6B43",
+        "QB30.6",
+        "QB30.5"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-52-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "6B43"
+      ],
+      "pred": [
+        "MG30.01",
+        "MG30.00",
+        "MG30.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-52-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "6B43"
+      ],
+      "pred": [
+        "6B43",
+        "6B06",
+        "6B4Z"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-52-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "6B43"
+      ],
+      "pred": [
+        "6A70.2",
+        "MG30.0",
+        "6A73"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-52-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "6B43"
+      ],
+      "pred": [
+        "6B43",
+        "6B06",
+        "6B4Z"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-552-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "4A44.5"
+      ],
+      "pred": [
+        "CA03.0",
+        "4A44.5",
+        "1B50"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-552-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "4A44.5"
+      ],
+      "pred": [
+        "4A44.5",
+        "BC42.Y",
+        "RA03"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-552-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "4A44.5"
+      ],
+      "pred": [
+        "4A44.5",
+        "CA03.0",
+        "1B50"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-552-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "4A44.5"
+      ],
+      "pred": [
+        "4A44.5",
+        "BC42.Y",
+        "RA03"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-552-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "4A44.5"
+      ],
+      "pred": [
+        "4A44.5",
+        "1D44",
+        "2C32.2"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-552-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "4A44.5"
+      ],
+      "pred": [
+        "4A44.5",
+        "BC42.Y",
+        "MG48"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-558-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.10",
+        "4A43.3",
+        "2A20.4"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-558-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.14",
+        "3B64.10",
+        "3B64.12"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-558-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.10",
+        "2A20.4",
+        "4A43.3"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-558-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.14",
+        "3B64.10",
+        "3B64.11"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-558-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "3B64.14"
+      ],
+      "pred": [
+        "2A20.4",
+        "1D44",
+        "3B64.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-558-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.14",
+        "3B64.10",
+        "3B64.12"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-559-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.10",
+        "4A43.3",
+        "2A20.4"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-559-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.14",
+        "3B64.10",
+        "3B64.12"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-559-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.10",
+        "2A20.4",
+        "4A43.3"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-559-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.14",
+        "3B64.10",
+        "3B64.11"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-559-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "3B64.14"
+      ],
+      "pred": [
+        "2A20.4",
+        "1D44",
+        "3B64.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-559-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.14",
+        "3B64.10",
+        "3B64.12"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-562-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "3B14.0",
+        "3B13",
+        "3B14.1"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-562-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "4A45.Z",
+        "4A45.0",
+        "4A45"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-562-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "5C58.00",
+        "5C58.01",
+        "5C58.02"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-562-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "8A45.4Z",
+        "4A45.Z",
+        "8A6Z"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-562-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "DB99.10",
+        "1D44",
+        "2A20.4"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-562-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "4A45.Z",
+        "4A45",
+        "4A45.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-568-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "MF8Y"
+      ],
+      "pred": [
+        "GB60.2",
+        "GB60.0",
+        "3B64.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-568-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "MF8Y"
+      ],
+      "pred": [
+        "4A44.92",
+        "MF8Y",
+        "EB42"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-568-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "MF8Y"
+      ],
+      "pred": [
+        "GB60.2",
+        "GB60.0",
+        "KB61.2"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-568-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "MF8Y"
+      ],
+      "pred": [
+        "MF8Y",
+        "4A44.92",
+        "EB40.Y"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-568-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "MF8Y"
+      ],
+      "pred": [
+        "GB60.2",
+        "GB60.0",
+        "KB61.2"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-568-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "MF8Y"
+      ],
+      "pred": [
+        "MF8Y",
+        "4A44.92",
+        "EB40.Y"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-593-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "2C10.1"
+      ],
+      "pred": [
+        "GA32.0",
+        "DB99.10",
+        "GA18.1"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-593-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "2C10.1"
+      ],
+      "pred": [
+        "2C10.1",
+        "2E80.0Z",
+        "2E80.02"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-593-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "2C10.1"
+      ],
+      "pred": [
+        "DB99.10",
+        "1C1D.0",
+        "GA32.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-593-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "2C10.1"
+      ],
+      "pred": [
+        "2C10.1",
+        "MD81.0",
+        "MG71.Z"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-593-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "2C10.1"
+      ],
+      "pred": [
+        "DB99.10",
+        "2A20.4",
+        "1D60.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-593-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "2C10.1"
+      ],
+      "pred": [
+        "2C10.1",
+        "EG02",
+        "ME05.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-599-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "3B14.0",
+        "3B13",
+        "5C58.00"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-599-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "4A45.Z",
+        "4A45.0",
+        "4A45"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-599-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "5C58.00",
+        "5C58.01",
+        "5C58.02"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-599-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "8A45.4Z",
+        "4A45.Z",
+        "8A6Z"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-599-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "DB99.10",
+        "1D44",
+        "2A20.4"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-599-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "4A45.Z",
+        "4A45",
+        "4A45.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-75-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "MD11.5"
+      ],
+      "pred": [
+        "MG30.04",
+        "JA23",
+        "BC65.1"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-75-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "MD11.5"
+      ],
+      "pred": [
+        "CB00",
+        "QA0B",
+        "MD11.5"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-75-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "MD11.5"
+      ],
+      "pred": [
+        "JA23",
+        "KB23.0",
+        "8A45.41"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-75-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "MD11.5"
+      ],
+      "pred": [
+        "CB00",
+        "KB23.0Z",
+        "KB2Y"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-75-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "MD11.5"
+      ],
+      "pred": [
+        "MD11.7",
+        "KA05.6",
+        "6D71"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-75-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "MD11.5"
+      ],
+      "pred": [
+        "CB41.0Z",
+        "CB00",
+        "8E7Y"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-86-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "BC43.1Z"
+      ],
+      "pred": [
+        "BC65.1",
+        "BC65.0",
+        "BC43.6"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-86-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "BC43.1Z"
+      ],
+      "pred": [
+        "BC43.1Z",
+        "BC43.12",
+        "BC43.1Y"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-86-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "BC43.1Z"
+      ],
+      "pred": [
+        "BC43.6",
+        "LA8A.4",
+        "8A45.40"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-86-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "BC43.1Z"
+      ],
+      "pred": [
+        "BC43.1Z",
+        "BC43.10",
+        "BC43.12"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-86-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "BC43.1Z"
+      ],
+      "pred": [
+        "BC43.6",
+        "BC43.5",
+        "2A20.4"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-86-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "BC43.1Z"
+      ],
+      "pred": [
+        "BC43.10",
+        "BC43.1Z",
+        "BC43.1"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-95-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "5C58.10"
+      ],
+      "pred": [
+        "EB43",
+        "JA65.10",
+        "EB41.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-95-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "5C58.13"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-95-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "5C58.10"
+      ],
+      "pred": [
+        "JA65.10",
+        "5C58.10",
+        "5C60.1"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-95-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "5C58.1Z"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-95-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "5C58.10"
+      ],
+      "pred": [
+        "ED61.0",
+        "EJ30.0",
+        "1D49"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-95-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "1C1E.2"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-96-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "5C58.10"
+      ],
+      "pred": [
+        "EB43",
+        "JA65.10",
+        "EB41.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-96-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "5C58.13"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-96-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "5C58.10"
+      ],
+      "pred": [
+        "JA65.10",
+        "5C58.10",
+        "5C60.1"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-96-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "5C58.1Z"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-96-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "5C58.10"
+      ],
+      "pred": [
+        "ED61.0",
+        "EJ30.0",
+        "1D49"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-96-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "1C1E.2"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-97-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "1C1D.1",
+        "1C1D.0",
+        "EB90.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-97-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "EA91",
+        "EA91.Z",
+        "EA91.Y"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-97-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "1C1D.0",
+        "1C1D.1",
+        "8B82.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-97-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "EA91",
+        "EA91.Z",
+        "EA91.Y"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-97-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "8B92",
+        "1C1D.0",
+        "1C1D.1"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-97-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "EA91",
+        "EA91.Z",
+        "EA91.Y"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-98-en",
+      "language": "en",
+      "mode": "symptoms_only",
+      "gold": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "1C1D.1",
+        "1C1D.0",
+        "EB90.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-98-en",
+      "language": "en",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "EA91",
+        "EA91.Z",
+        "EA91.Y"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": false,
+      "path": null,
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-98-es",
+      "language": "es",
+      "mode": "symptoms_only",
+      "gold": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "1C1D.0",
+        "1C1D.1",
+        "8B82.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-98-es",
+      "language": "es",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "EA91",
+        "EA91.Z",
+        "EA91.Y"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "medexpqa-98-fr",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "8B92",
+        "1C1D.0",
+        "1C1D.1"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": false,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "medexpqa-98-fr",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "EA91",
+        "EA91.Z",
+        "EA91.Y"
+      ],
+      "top1": false,
+      "top3": true,
+      "strict": false,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    }
+  ]
+}
