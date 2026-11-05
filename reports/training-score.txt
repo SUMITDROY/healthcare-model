@@ -1,0 +1,3 @@
+notes 60  missing predictions 0  invalid codes 0  duplicate ids 0
+slice A: n=60  top1 1.000  top3 1.000  points 75.0 / 75
+SCORE 75.0 / 75

@@ -37,3 +37,20 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Evidence: dev-060's patient thyroid speculation and generic tonsillitis/pneumonia parent predictions exposed errors. Chickenpox/varicella and frozen shoulder/adhesive capsulitis show title-only vocabulary gaps. These are dev-informed changes, so cross-validation is diagnostic rather than an untouched test.
 - Options: more training-note weight, code-by-code overrides, or general text/ranking changes. Chose transparent text/ranking changes without note-ID special cases.
 - Revisit: official WHO aliases, reliable hierarchy metadata and context-aware exclusion handling. These heuristics do not solve clinical reasoning or multilingual coding.
+
+## 2026-11-05 13:58 IST — commit: `Document offline benchmark and accuracy limitations`
+- Decision: measure in a network-disabled 2-CPU/2-GiB container and add a socket guard rather than relying on host thread settings.
+- Evidence: 200/200 external notes in 2.398 seconds; 190.50 MiB peak process RSS; no invalid/empty predictions, missing IDs, API calls or exact-text training overlap. Cgroup limits are saved in benchmark.json. This is ARM64, not an x86 performance claim.
+- Revisit: x86 runtime and more diverse long-note workloads.
+
+## 2026-11-05 13:58 IST — commit: `Document offline benchmark and accuracy limitations`
+- Decision: keep the supervised exemplar component available but explicitly state that training has not yet demonstrated an out-of-fold gain.
+- Evidence: updated five-fold top-1 34/60, top-3 40/60, score 45/75; the no-example ablation also gets 45/75. Training-set scoring is 75/75 and must not be called unseen accuracy.
+- Alternatives: increase training-example influence to optimise resubstitution, remove the component immediately, or retain it as a documented baseline for more representative evaluation.
+- Revisit: additional independent labeled notes and validation-selected weights.
+
+## 2026-11-05 13:58 IST — commit: `Document offline benchmark and accuracy limitations`
+- Decision: provide an entirely offline first implementation, with optional API enhancement deferred.
+- Evidence: CPU throughput exceeds the requested target by a wide margin; accuracy, rather than speed or budget, is now the bottleneck. No paid API is needed to finish every note.
+- Alternatives: spend the $2–3 allowance immediately or add a local generative model before measuring the retriever.
+- Revisit: optional reranking after measuring candidate recall and obtaining independently labeled cases.
