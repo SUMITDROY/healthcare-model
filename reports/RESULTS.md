@@ -18,6 +18,7 @@ The working offline baseline beats the requested 8–10-minute runtime target on
 - Missing IDs: 0. Invalid codes: 0. Empty predictions: 0.
 - API calls: 0. API spending: $0.
 - Exact assignment command and six automated checks pass.
+- Fresh clone of source commit f6fe5f1: a no-cache image build passed, then the exact command produced 200/200 valid outputs in 2.182 seconds including model loading. Code was unchanged after that check.
 
 Raw machine-readable result: `benchmark.json`. Predictions: `external-predictions.jsonl` and `predictions.jsonl`.
 

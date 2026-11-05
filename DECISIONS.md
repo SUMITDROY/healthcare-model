@@ -54,3 +54,9 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Evidence: CPU throughput exceeds the requested target by a wide margin; accuracy, rather than speed or budget, is now the bottleneck. No paid API is needed to finish every note.
 - Alternatives: spend the $2–3 allowance immediately or add a local generative model before measuring the retriever.
 - Revisit: optional reranking after measuring candidate recall and obtaining independently labeled cases.
+
+## 2026-11-05 14:01 IST — commit: `Record fresh-clone verification`
+- Decision: verify from a fresh clone with `docker compose build --no-cache`, then run the assignment's exact command, rather than relying on the host's existing artifact or cached training layers.
+- Evidence: source commit f6fe5f1 builds successfully; the exact command emits 200/200 valid predictions in 2.182 seconds including model load. Six automated contract/regression checks passed on the same code in Docker. Final changes after this check are documentation only.
+- Alternatives: test only the host Python environment or rebuild using the existing image.
+- Revisit: repeat on the target x86 Linux hardware and after any code changes.
