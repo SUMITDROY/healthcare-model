@@ -33,6 +33,7 @@ def main():
     del titles_only
     full = OfflineCoder.load('artifacts/offline.joblib')
     resub = [full.predict(r['text'])[0] for r in notes]
+    profile={'ranker':full.ranker_kind,'learned_primary':full.learned_primary,'who_enrichment':full.reference is not None}
     del full
     heldout = [None]*len(notes)
     diagnostics = [None]*len(notes)
@@ -56,7 +57,7 @@ def main():
         'five_fold_out_of_fold': metrics(notes,heldout),
         'candidate_recall_top50': round(sum(bool(set(r['gold']) & set(d['candidate_codes_top50'])) for r,d in zip(notes,diagnostics))/len(notes),4),
         'candidate_recall_top100': round(sum(bool(set(r['gold']) & set(d['candidate_codes_top100'])) for r,d in zip(notes,diagnostics))/len(notes),4),
-        'trained_method': 'pairwise logistic ranker for alternative suggestions; primary from context-adjusted retrieval',
+        'trained_method': profile,
         'semantic_retrieval_active': any(d['semantic_retrieval'] for d in diagnostics),
         'folds': fold_reports, 'seed': 20261105,
         'seconds': round(time.perf_counter()-start, 3),

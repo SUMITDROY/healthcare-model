@@ -96,3 +96,21 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Evidence: source commit 0e07125 builds without an existing local artifact; the exact assignment command returns 200/200 valid outputs in 4.363 seconds, byte-equivalent as decoded JSON to the original checkout. Machine-readable evidence is fresh-clone-v2.json. Only documentation changes follow that check.
 - Options: trust the existing local environment, or verify a fresh build. Chose reproducibility.
 - Revisit: repeat on target x86 Linux and whenever implementation or dependencies change.
+
+## 2026-11-05 15:27 IST — commit: `Add release-pinned WHO reference knowledge and evaluate offline rankers`
+- Decision: export official WHO 2026-01 English metadata using the documented local ICD API, which requires no cloud OAuth credentials. Analytics were disabled, the service bound to loopback and stopped after export. Ship the original records as compressed reference data with code/title/URI and attribution.
+- Evidence: all 18,375 allowed categories exported in 9.9 seconds; 98,469 index terms and 6,561 definitions; compressed size 3,291,141 bytes. Code coverage is exact. The one title difference (SR40) is quotation-mark styling; original supplied and WHO records are retained unchanged. Manifest records image digest, release, language and export/catalog SHA-256.
+- Options: cloud API credentials, title-only lookup, or supported local export. Local export removes the credential blocker and keeps runtime entirely offline.
+- Revisit: multilingual releases and exclusions/hierarchy-aware reasoning; this English-only enrichment does not prove multilingual clinical accuracy.
+
+## 2026-11-05 15:27 IST — commit: `Add release-pinned WHO reference knowledge and evaluate offline rankers`
+- Decision: add separate stemmed WHO term and definition indexes and retain rejected ranking experiments for audit.
+- Evidence: initial reference-enriched diagnostic was 46/60 top-1 and 51/60 top-3. A flexible tree primary ranker reached 53/60 on training but only 38/60 held-out, so it was rejected. A later evidence-anchored version achieved 47/60 top-1 and 53/60 top-3, with 60/60 gold codes in the first 50 candidates. These remain repeatedly tuned development diagnostics.
+- Options: full learned primary ranking, shared pairwise alternatives, or reference-based evidence constraints. The small visible sample does not support trusting the tree training score.
+- Revisit: independent gold annotations and richer pretrained clinical reasoning. Current adjective/age/condition rules are English-specific and need regression checks.
+
+## 2026-11-05 15:27 IST — commit: `Add release-pinned WHO reference knowledge and evaluate offline rankers`
+- Decision: test a local CPU-only Qwen3-0.6B candidate selector, without making it the default.
+- Evidence: on three diagnostic smoke cases it got one top-1 and two top-3 hits; calls took 8.1–11.8 seconds, plus 24.8-second load, and peaked near 2.3 GiB process RSS. No gold codes were included in prompts. This does not justify deployment or an accuracy claim. A larger quantized model is still under evaluation, not yet selected.
+- Options: deploy the smaller model on assumption, reject it based on measured behaviour, or test a more capable model under the same offline resource limits. No paid API has been called.
+- Revisit: quality and measured selective-call budget must both improve before enabling a local generative selector.

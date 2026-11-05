@@ -29,7 +29,11 @@ def focus(text: str) -> str:
             return '. '.join(candidates)
         # When speech is not a diagnostic template, use clinician statements
         # rather than patient speculation or their guesses at a diagnosis.
-        return doctor
+        declarations=re.findall(r'(?i)\bthe ([^.!?\n]{3,60}?) is ([^.!?\n]{3,140})',doctor)
+        declarations=[subject+' '+state for subject,state in declarations
+                      if len(subject.split())<=5 and not re.search(r'(?i)\b(?:and|but|goes|your)\b',subject)
+                      and not re.search(r'(?i)\b(?:normal|fine|okay|negative|pending|ready)\b',state)]
+        return '. '.join(declarations) if declarations else doctor
     return text
 
 
@@ -46,10 +50,17 @@ def context_flags(text: str) -> dict[str, bool]:
     lower = text.casefold()
     active = clean_query(lower)
     active = re.sub(r'pregnancy test[^.;\n]{0,50}(?:neg|negative)|any chance[^?\n]{0,30}pregnant', '', active)
+    age_match=re.search(r'\b(\d{1,3})\s*(?:[mf]\b|yo\b|y/o\b|years?[- ]old\b|years? old\b)',lower)
+    age=int(age_match.group(1)) if age_match else None
+    pregnancy=bool(re.search(r'\b(?:pregnan\w*|maternal|antenatal|anc|puerper\w*|postpartum|childbirth|postnatal)\b|\bg\d\s*p\d\b',active))
     return {
         'congenital': bool(re.search(r'\b(?:congenital|since birth|born with)\b', active)),
         'neonatal': bool(re.search(r'\b(?:neonat\w*|newborn|new born|day of life)\b|\b(?:[0-9]|1[0-9]|2[0-8])\s*(?:day[- ]old|days old|d old)\b', active)),
-        'pregnancy': bool(re.search(r'\b(?:pregnan\w*|maternal|antenatal|anc|puerper\w*|postpartum|childbirth|postnatal)\b|\bg\d\s*p\d\b', active)),
+        'pregnancy': pregnancy,
+        'elderly': 'elderly' in active or (age is not None and age >= (35 if pregnancy else 65)),
+        'very_young': 'very young' in active or (age is not None and age<16),
+        'secondary': bool(re.search(r'\bsecondary\b',active)),
+        'known_diabetes': bool(re.search(r'\b(?:known|diagnosed|has)\s+(?:t2dm|dm2|diabetes|type [12] diabetes)\b',active)),
         'traditional': bool(re.search(r'\b(?:traditional medicine|tm1|tm2|ayurved\w*)\b', active)),
         'acute': bool(re.search(r'\bacute\b|\bexacerbation\b|\battack\b', active)),
         'chronic': bool(re.search(r'\bchronic\b', active)),

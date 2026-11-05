@@ -4,3 +4,4 @@ artifacts/
 reports/*predictions.jsonl
 reports/*per-note.jsonl
 .venv/
+data/*.partial

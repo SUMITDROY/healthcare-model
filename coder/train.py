@@ -16,7 +16,9 @@ def main():
     model = OfflineCoder(json.loads(Path(a.mms).read_text()), rows(a.examples))
     model.save(a.output)
     print(json.dumps({'categories': len(model.codes), 'labeled_training_examples': len(model.examples),
-                      'trained_method':'pairwise logistic alternative ranker',
+                      'trained_method':model.ranker_kind,
+                      'learned_primary':model.learned_primary,
+                      'who_enrichment':model.reference is not None,
                       'semantic_enabled': model.semantic_enabled,
                       'seconds': round(time.perf_counter()-start, 3), 'artifact': a.output}))
 

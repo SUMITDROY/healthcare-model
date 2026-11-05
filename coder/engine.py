@@ -12,6 +12,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import HistGradientBoostingClassifier
 from coder.context import focus, clean_query, context_flags
 
 
@@ -72,9 +73,16 @@ class OfflineCoder:
     def __init__(self, categories: list[dict], examples: list[dict]):
         self.categories = categories
         self.semantic_enabled = os.environ.get('CODER_SEMANTIC','0') == '1'
+        self.ranker_kind=os.environ.get('CODER_RANKER','pairwise')
+        self.learned_primary=os.environ.get('CODER_LEARNED_PRIMARY','0')=='1'
         self.codes = [r['code'] for r in categories]
         self.valid = set(self.codes)
         self.code_index = {c: i for i, c in enumerate(self.codes)}
+        self.reference=None
+        who_path=Path('data/who-2026-01-en.jsonl.gz')
+        if os.environ.get('CODER_WHO','1')!='0' and who_path.exists():
+            from coder.enrichment import load_reference
+            self.reference=load_reference(str(who_path.resolve()),json.dumps(categories,sort_keys=True))
         self.title_phrases = []
         self.qualifiers = []
         ignored = {'other','specified','unspecified','disease','diseases','complication','complications','associated','mention','the','of','or','and','a','an','to','in','due','without','with','syndrome','disorder','disorders'}
@@ -93,6 +101,8 @@ class OfflineCoder:
                 'pregnancy': r'\bpregnancy\b|\bpuerperium\b|\bchildbirth\b|\bmaternal\b',
                 'traditional': r'\(tm[12]\)',
                 'acute': r'\bacute\b', 'chronic': r'\bchronic\b',
+                'elderly':r'\belderly\b','very_young':r'\bvery young\b',
+                'secondary':r'\bsecondary\b','without_diabetes':r'\bwithout (?:associated )?diabetes\b',
                 'nonleaf': r'$^',
             }.items()
         }
@@ -154,6 +164,7 @@ class OfflineCoder:
             'leaf', 'residual', 'title_length', 'dense_similarity',
             'unsupported_congenital', 'unsupported_neonatal', 'unsupported_pregnancy',
             'unsupported_traditional', 'acute_match', 'chronic_contradiction',
+            'who_term_similarity','who_definition_similarity',
         ]
         if examples:
             features, labels = [], []
@@ -165,14 +176,24 @@ class OfflineCoder:
                 candidates.update(rng.choice(len(self.codes),size=12,replace=False).tolist())
                 candidates = sorted(candidates)
                 negatives = [i for i in candidates if i not in gold]
-                for positive in sorted(gold):
-                    delta = matrix[positive]-matrix[negatives]
-                    features.extend([delta,-delta])
-                    labels.extend([1]*len(negatives)+[0]*len(negatives))
+                if self.ranker_kind=='tree':
+                    features.append(matrix[candidates])
+                    labels.extend(int(i in gold) for i in candidates)
+                else:
+                    for positive in sorted(gold):
+                        delta = matrix[positive]-matrix[negatives]
+                        features.extend([delta,-delta])
+                        labels.extend([1]*len(negatives)+[0]*len(negatives))
             # A shared pair scorer can rank codes never observed as labels.
             # No note lookup and no classifier restricted to 61 seen codes.
-            self.ranker = make_pipeline(StandardScaler(with_mean=False), LogisticRegression(
-                C=0.1, fit_intercept=False, max_iter=600, random_state=20261105))
+            if self.ranker_kind=='tree':
+                self.ranker=HistGradientBoostingClassifier(
+                    max_iter=100,max_leaf_nodes=7,max_depth=3,min_samples_leaf=15,
+                    learning_rate=0.08,l2_regularization=5,class_weight='balanced',
+                    early_stopping=False,random_state=20261105)
+            else:
+                self.ranker = make_pipeline(StandardScaler(with_mean=False), LogisticRegression(
+                    C=0.1, fit_intercept=False, max_iter=600, random_state=20261105))
             self.ranker.fit(np.concatenate(features), np.asarray(labels))
 
     def retrieve(self, text: str):
@@ -182,6 +203,11 @@ class OfflineCoder:
         lexical = (self.title_word @ qw.T).toarray().ravel()
         character = (self.title_char @ qc.T).toarray().ravel()
         scores = 0.65 * lexical + 0.35 * character
+        term_score=np.zeros(len(scores),dtype=np.float32)
+        definition_score=np.zeros(len(scores),dtype=np.float32)
+        if self.reference is not None:
+            term_score,definition_score=self.reference.query(focused,whole)
+            scores += 0.50*term_score+0.10*definition_score
         phrase_matches = np.zeros(len(scores), dtype=np.float32)
         qualifier_supported = np.zeros(len(scores), dtype=np.float32)
         qualifier_unsupported = np.zeros(len(scores), dtype=np.float32)
@@ -216,6 +242,12 @@ class OfflineCoder:
         if flags['acute'] and not flags['chronic']:
             scores[self.title_masks['chronic']] *= 0.55
         scores[self.title_masks['nonleaf']] *= 0.85
+        for key in ('elderly','very_young','secondary'):
+            if not flags[key]:scores[self.title_masks[key]]*=0.30
+        if flags['known_diabetes']:
+            scores[self.title_masks['without_diabetes']]*=0.20
+        if flags['pregnancy'] and re.search(r'\bpregnan\w*\b',focused):
+            scores[self.title_masks['pregnancy']]+=0.15*term_score[self.title_masks['pregnancy']]
         for i in np.argsort(-scores)[:200]:
             qualifier = self.qualifiers[int(i)]
             if qualifier:
@@ -225,6 +257,20 @@ class OfflineCoder:
                 else:
                     scores[i] *= 0.50
                     qualifier_unsupported[i] = 1
+        # A short explicit assessment names the disease before incidental
+        # modifiers. Require its first informative concept to occur in a
+        # candidate's WHO titles/index terms; this is a soft ranking penalty.
+        if self.reference is not None and len(focused)<300 and '\n' not in focused:
+            from coder.enrichment import stem
+            ignored={'a','an','the','acute','chronic','severe','moderate','mild','primary','secondary','without','with','complication','complications','single','intrauterine','community','acquired','viral','bacterial','allergic','provoked','new','uncomplicated','right','left','r','l'}
+            for token in re.findall(r'[a-z]{3,}',focused):
+                if token in ignored:continue
+                if token.endswith(('ional','ical','ive','ary','ory','al','ic','ed','ing')):continue
+                owners=self.reference.concept_owners.get(stem(token))
+                if owners is not None and len(owners)<0.15*len(self.codes):
+                    supported=np.zeros(len(self.codes),dtype=bool);supported[owners]=True
+                    scores[~supported]*=0.35
+                    break
         matrix = np.column_stack([
             lexical, character, scores, phrase_matches, qualifier_supported, qualifier_unsupported,
             ~self.title_masks['nonleaf'], [r['residual'] for r in self.categories],
@@ -233,19 +279,22 @@ class OfflineCoder:
             *[(self.title_masks[key] & (not flags[key])) for key in ('congenital','neonatal','pregnancy','traditional')],
             self.title_masks['acute'] & flags['acute'],
             self.title_masks['chronic'] & flags['acute'] & (not flags['chronic']),
+            term_score,definition_score,
         ]).astype(np.float32)
-        return scores, matrix, {'assessment': focus(text)[:500], 'semantic_retrieval': semantic is not None}
+        return scores, matrix, {'assessment': focus(text)[:500], 'semantic_retrieval': semantic is not None,
+                                'who_enrichment':self.reference is not None}
 
     def predict(self, text: str, use_examples=True) -> tuple[list[str], dict]:
         retrieval, matrix, diagnostic = self.retrieve(text)
         candidates = np.argsort(-retrieval,kind='stable')[:100]
         if use_examples and self.ranker is not None:
-            scores = retrieval[candidates] + 0.02*self.ranker.decision_function(matrix[candidates])
+            scores = self.ranker.decision_function(matrix[candidates])
+            scores = scores + 0.20*retrieval[candidates] if self.learned_primary else retrieval[candidates]+0.02*scores
             ranked = candidates[np.argsort(-scores,kind='stable')]
             # The learned scorer has not improved primary selection on this
             # small sample. Keep evidence-first top-1; learn alternatives.
-            order = np.asarray([candidates[0]]+[i for i in ranked if i != candidates[0]][:2])
-            selected_scores = retrieval[order] + 0.02*self.ranker.decision_function(matrix[order])
+            order = ranked[:3] if self.learned_primary else np.asarray([candidates[0]]+[i for i in ranked if i != candidates[0]][:2])
+            selected_scores = scores[np.argsort(-scores,kind='stable')[:3]] if self.learned_primary else retrieval[order]+0.02*self.ranker.decision_function(matrix[order])
         else:
             order = candidates[:3]
             selected_scores = retrieval[order]
@@ -254,7 +303,7 @@ class OfflineCoder:
             **diagnostic,
             'scores': [round(float(s), 6) for s in selected_scores],
             'supervised_ranker': bool(use_examples and self.ranker is not None),
-            'primary_strategy': 'context-adjusted retrieval; learned alternatives',
+            'primary_strategy': 'learned ranking' if self.learned_primary else 'context-adjusted retrieval; learned alternatives',
             'candidate_codes_top50': [self.codes[int(i)] for i in candidates[:50]],
             'candidate_codes_top100': [self.codes[int(i)] for i in candidates],
             'warning': 'Ranking scores are not calibrated probabilities.',
