@@ -25,10 +25,10 @@ Raw evidence: `evaluation.json`, official `heldout-score.txt` and `training-scor
 
 The final benchmark uses all 200 unmodified dialogue texts from MTS-Dialog TestSet-1, kept outside fitting/tuning. There is zero exact-text overlap with the assignment's training examples.
 
-- Wall time: **10.087 seconds**, including imports, index/artifact loading, inference and output writes.
-- CPU time: 9.7428 seconds. Inference mean: 33.123 ms/note; p95: 37.195 ms/note, excluding startup.
+- Wall time: **28.3638 seconds**, including imports, index/artifact loading, inference and output writes.
+- CPU time: 28.3173 seconds. Inference mean: 99.982 ms/note; p95: 142.744 ms/note, excluding startup.
 - Container quota: **2 CPUs and 2 GiB RAM**. Numerical-library threads: 1. No GPU.
-- Peak process RSS: **548.49 MiB**. Whole-container cgroup peak: about **665.42 MiB**; the accounting methods differ.
+- Peak process RSS: **550.39 MiB**. Whole-container cgroup peak: about **512.15 MiB**; the accounting methods differ.
 - Inputs/outputs: **200/200**, no missing IDs, invalid codes or empty predictions.
 - Keys removed; Compose networking disabled; socket guard active. **0 inference API calls, $0 API spending**.
 - Platform: local Linux ARM64 Docker VM. x86 timings are not measured. Build, downloads and container startup are outside the inference timing.
@@ -61,3 +61,5 @@ The trilingual export service needed a temporary 4-GiB preparation limit after a
 ## Remaining accuracy work
 
 Obtain an independently reviewed, locked clinical test set spanning more chapters, languages and ambiguous encounters. Improve assertion/temporal/context handling against that set. The provisional README hidden estimate is a planning judgment, not a measured forecast. Optional paid-model enhancement has not been implemented or benchmarked in this offline-first version.
+
+Final reproducibility check: a separate clone built without a local artifact or cached training layer, passed the exact command, and emitted identical 200 predictions. The subsequent locked base/dependency build also passed 15 tests and all 30 controls. Evidence: `fresh-clone-v3.json`. The standalone evaluation commands now create their report directories inside clean containers.

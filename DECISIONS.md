@@ -149,3 +149,9 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Evidence: while this work ran, python:3.12-slim moved from digest b18b... to e695..., and threadpoolctl changed from 3.7.0 to 3.8.0. The fresh e695/3.8.0 build emitted exactly the same 200 predictions, but future unpinned changes would weaken reproducibility. The pinned image index includes Linux amd64 and arm64; all ten runtime packages now have explicit versions.
 - Options: accept moving tags/transitive resolution, or lock the tested environment. Chose the lock; no algorithm changes are included.
 - Revisit: deliberately refresh pins for security/compatibility updates and rerun the scorer, controls and resource benchmark.
+
+## 2026-11-05 18:56 IST — commit: `Package the verified v3 implementation and interview notes`
+- Decision: finish on the locked, verified build and record the most recent resource measurement instead of choosing the fastest observed run.
+- Evidence: the pinned fresh-clone build passed the exact command and all 15 tests/30 controls. Final benchmark is 28.3638 seconds for 200 notes, 550.39 MiB process RSS, 2 CPUs/2 GiB, zero paid API calls and no missing/invalid outputs. Earlier builds measured 10.087 seconds; both are well inside the requested runtime. Predictions match the original checkout after dependency locking. A clean-container report-directory issue was caught and fixed; standalone controls now pass.
+- Options: publish earlier timing, leave moving dependencies, or publish the latest pinned result with reproducibility evidence. Chose the last.
+- Revisit: repeat the same checks for any implementation/dependency change and obtain independent clinical accuracy data. Subsequent bundle packaging changes no algorithms.

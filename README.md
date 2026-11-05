@@ -15,7 +15,7 @@ Default input: the independent 200-conversation MTS-Dialog sample. Output: `repo
 
 - Dev-informed five-fold diagnostic: **56/60 top-1 (93.3%), 58/60 top-3 (96.7%), official core score 70.8/75**. V2: 44/60, 50/60, 57.5/75. V1: 34/60, 40/60, 45/75.
 - Each fold excludes its 12 held-out notes when fitting the alternative ranker. Rules, aliases and approach choices used the visible dev set, so the figure is a development diagnostic, not independent accuracy. Training-set performance is also 70.8/75; removing the learned ranker gives the same aggregate result. Its held-out gain is not established in v3.
-- External offline Docker benchmark: **200/200 outputs in 10.087 seconds**, 548.49 MiB peak process RSS, no invalid/empty predictions, no keys, **$0 API cost**. Linux ARM64; image build/container startup excluded. External coding accuracy is unknown because these records have no ICD-11 gold labels.
+- External offline Docker benchmark: **200/200 outputs in 28.3638 seconds**, 550.39 MiB peak process RSS, no invalid/empty predictions, no keys, **$0 API cost**. Linux ARM64; image build/container startup excluded. External coding accuracy is unknown because these records have no ICD-11 gold labels.
 - Beyond dev: 15 contract/regression tests; 20 clinical counterfactual controls; 10 French/Spanish terminology controls; 200 exact-title probes across 26 chapters. All pass. These debugging controls are engineer-authored/catalog-derived, not independent clinical validation.
 - Hidden-score estimate: provisional 80/100, an uncalibrated planning guess. Broader clinical accuracy, complex foreign narrative context and languages beyond English/French/Spanish remain unverified.
 

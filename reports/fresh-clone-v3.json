@@ -6,5 +6,12 @@
   "input_notes": 200,
   "valid_predictions": 200,
   "same_predictions_as_original_checkout": true,
-  "status": "PASS"
+  "status": "PASS",
+  "locked_source_commit": "18a0ba7",
+  "locked_build_passed": true,
+  "standalone_control_command_passed": true,
+  "unit_tests_passed": 15,
+  "clinical_controls_passed": 20,
+  "language_controls_passed": 10,
+  "same_predictions_after_locking": true
 }
