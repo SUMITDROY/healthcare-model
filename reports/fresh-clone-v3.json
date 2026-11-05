@@ -1,0 +1,10 @@
+{
+  "source_commit": "a6f20779da934d25f59c766b0286c50357127af5",
+  "fresh_clone_without_local_artifact": true,
+  "no_cache_build": true,
+  "exact_command": "docker compose run coder /in/notes.jsonl /out/predictions.jsonl",
+  "input_notes": 200,
+  "valid_predictions": 200,
+  "same_predictions_as_original_checkout": true,
+  "status": "PASS"
+}

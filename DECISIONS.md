@@ -143,3 +143,9 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Evidence: Linux Docker diagnostic confirms 56/60 top-1, 58/60 top-3 and 70.833/75. All 15 tests, 20 clinical controls and 10 language controls pass. External 200-note inference is 10.087 seconds, 548.49 MiB peak process RSS, with a 2-CPU/2-GiB cgroup limit, no network, no keys, no missing/invalid predictions and $0 API spending. Exact assignment command also passes.
 - Options: claim the development percentage as unseen accuracy or distinguish the diagnostic from independent validation. Chose explicit separation. The alternative-ranker ablation has the same aggregate v3 score, so no learned-ranker gain is claimed.
 - Revisit: independent clinician-coded test data, complex foreign narrative context, x86 resource verification and other languages. No further English rule tuning is planned before that validation.
+
+## 2026-11-05 18:47 IST — commit: `Pin the validated multi-architecture build environment`
+- Decision: pin the Python base image digest and the four transitive runtime packages to the versions resolved by the successful fresh-clone build.
+- Evidence: while this work ran, python:3.12-slim moved from digest b18b... to e695..., and threadpoolctl changed from 3.7.0 to 3.8.0. The fresh e695/3.8.0 build emitted exactly the same 200 predictions, but future unpinned changes would weaken reproducibility. The pinned image index includes Linux amd64 and arm64; all ten runtime packages now have explicit versions.
+- Options: accept moving tags/transitive resolution, or lock the tested environment. Chose the lock; no algorithm changes are included.
+- Revisit: deliberately refresh pins for security/compatibility updates and rerun the scorer, controls and resource benchmark.
