@@ -1,6 +1,6 @@
 """Direct WHO terminology lookup in French/Spanish, not clinical translation."""
 
-from functools import lru_cache
+from functools import lru_cache, partial
 import gzip
 import json
 
@@ -8,12 +8,13 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 from coder.enrichment import value
-from coder.languages import latin_features, clean
+from coder.languages import language_features, clean
 
 
 class ForeignIndex:
     def __init__(self, path, codes, language):
         self.language = language
+        self.features = partial(language_features, language=language)
         with gzip.open(path, "rt", encoding="utf-8") as f:
             records = {r["code"]: r for r in map(json.loads, f)}
         if set(records) != set(codes):
@@ -24,7 +25,7 @@ class ForeignIndex:
         for i, code in enumerate(codes):
             r = records[code]
             title = value(r["title"])
-            self.titles.append(set(w for w in latin_features(title) if " " not in w))
+            self.titles.append(set(w for w in self.features(title) if " " not in w))
             terms = [title, value(r.get("fullySpecifiedName"))]
             for field in ("indexTerm", "inclusion"):
                 terms.extend(value(t.get("label")) for t in r.get(field, []))
@@ -33,7 +34,7 @@ class ForeignIndex:
             owners.extend([i] * len(terms))
         self.owners = np.asarray(owners, dtype=np.int32)
         self.vectorizer = TfidfVectorizer(
-            analyzer=latin_features,
+            analyzer=self.features,
             max_features=200000,
             sublinear_tf=True,
             dtype=np.float32,
@@ -51,5 +52,5 @@ class ForeignIndex:
         sim = (self.matrix @ q.T).toarray().ravel()
         scores = np.zeros(len(self.titles), dtype=np.float32)
         np.maximum.at(scores, self.owners, sim)
-        tokens = {w for w in latin_features(focused) if " " not in w}
+        tokens = {w for w in self.features(focused) if " " not in w}
         return scores, tokens

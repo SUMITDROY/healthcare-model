@@ -35,6 +35,70 @@ def detect(text):
     return language if language in {"fr", "es"} and confidence >= 0.95 else "en"
 
 
+@lru_cache(maxsize=2)
+def language_stemmer(language):
+    import snowballstemmer
+
+    return snowballstemmer.stemmer({"fr": "french", "es": "spanish"}[language])
+
+
+@lru_cache(maxsize=200000)
+def native_stem(word, language):
+    return language_stemmer(language).stemWord(word)
+
+
+def language_features(text, language):
+    """Native morphology, accent normalization, and explicit letter subtypes."""
+    text = "".join(
+        c
+        for c in unicodedata.normalize("NFKD", text.casefold())
+        if not unicodedata.combining(c)
+    )
+    # A is a stop word in Spanish/English, but carries diagnostic identity in
+    # hepatitis A. Give letter variants the same representation in query/title.
+    markers = re.findall(
+        r"\bhepat\w*(?:\W+(?:viral|virale|aigue|aigu|aguda|agudo|tipo|type)){0,2}\W+([abcde])\b",
+        text,
+    )
+    stop = {
+        "de",
+        "la",
+        "le",
+        "les",
+        "du",
+        "des",
+        "un",
+        "une",
+        "en",
+        "dans",
+        "au",
+        "aux",
+        "et",
+        "a",
+        "el",
+        "los",
+        "las",
+        "del",
+        "una",
+        "por",
+        "para",
+        "y",
+        "o",
+        "l",
+        "d",
+    }
+    words = [
+        native_stem(w, language)
+        for w in re.findall(r"(?u)\b\w+\b", text)
+        if w not in stop
+    ]
+    return (
+        words
+        + [" ".join(pair) for pair in zip(words, words[1:])]
+        + ["hepatitis_subtype_" + letter for letter in markers]
+    )
+
+
 def latin_features(text):
     text = "".join(
         c for c in unicodedata.normalize("NFKD", text) if not unicodedata.combining(c)

@@ -1,0 +1,89 @@
+{
+  "dataset": "HiTZ/MedExpQA",
+  "revision": "78b57699763e00e38acd550f28de24d8a65f1643",
+  "homepage": "https://huggingface.co/datasets/HiTZ/MedExpQA",
+  "license": "CC-BY-4.0",
+  "citation": "Alonso, Oronoz and Agerri (2024), MedExpQA: Multilingual Benchmarking of Large Language Models for Medical Question Answering",
+  "sources": {
+    "en": [
+      {
+        "url": "https://huggingface.co/datasets/HiTZ/MedExpQA/resolve/78b57699763e00e38acd550f28de24d8a65f1643/data/en/train.en.casimedicos.rag.jsonl",
+        "sha256": "96f99857f39b919ad5c09a7b34f1162fcd4c43c3deaf3736cf0cc796df673ca8",
+        "source_rows": 434
+      },
+      {
+        "url": "https://huggingface.co/datasets/HiTZ/MedExpQA/resolve/78b57699763e00e38acd550f28de24d8a65f1643/data/en/dev.en.casimedicos.rag.jsonl",
+        "sha256": "737ef51fc0b4ac4b611f6d5e23db000d31e7e9aed58437e8a16c0396f63f700d",
+        "source_rows": 63
+      },
+      {
+        "url": "https://huggingface.co/datasets/HiTZ/MedExpQA/resolve/78b57699763e00e38acd550f28de24d8a65f1643/data/en/test.en.casimedicos.rag.jsonl",
+        "sha256": "ad08ba40fbde3023e6e50eedc940efd853f9b4293b48e8879160f52c14993293",
+        "source_rows": 125
+      }
+    ],
+    "fr": [
+      {
+        "url": "https://huggingface.co/datasets/HiTZ/MedExpQA/resolve/78b57699763e00e38acd550f28de24d8a65f1643/data/fr/train.fr.casimedicos.rag.jsonl",
+        "sha256": "a3d6c868c4e7f3a015c57ab73d22de00f24c3c6960f08dac782e1082185a527b",
+        "source_rows": 434
+      },
+      {
+        "url": "https://huggingface.co/datasets/HiTZ/MedExpQA/resolve/78b57699763e00e38acd550f28de24d8a65f1643/data/fr/dev.fr.casimedicos.rag.jsonl",
+        "sha256": "960b8e08345d7a28a5a88aca21232ced3769fbfc56ccb40cebb4184b15a84078",
+        "source_rows": 63
+      },
+      {
+        "url": "https://huggingface.co/datasets/HiTZ/MedExpQA/resolve/78b57699763e00e38acd550f28de24d8a65f1643/data/fr/test.fr.casimedicos.rag.jsonl",
+        "sha256": "af484feba8c5af37aba3c9e21bafb769a1a72df4ce14eea081feafb7972f55e0",
+        "source_rows": 125
+      }
+    ],
+    "es": [
+      {
+        "url": "https://huggingface.co/datasets/HiTZ/MedExpQA/resolve/78b57699763e00e38acd550f28de24d8a65f1643/data/es/train.es.casimedicos.rag.jsonl",
+        "sha256": "753a3ac207bc757115ea5e47d0a216e2e766ba106ce20eda90f5a143dd44e12b",
+        "source_rows": 434
+      },
+      {
+        "url": "https://huggingface.co/datasets/HiTZ/MedExpQA/resolve/78b57699763e00e38acd550f28de24d8a65f1643/data/es/dev.es.casimedicos.rag.jsonl",
+        "sha256": "6b38d44b67d2df688ef0234c630c2d7ed0a219205ad996a5ed8df1d6da178fdf",
+        "source_rows": 63
+      },
+      {
+        "url": "https://huggingface.co/datasets/HiTZ/MedExpQA/resolve/78b57699763e00e38acd550f28de24d8a65f1643/data/es/test.es.casimedicos.rag.jsonl",
+        "sha256": "1a9111253fdbf2c257a0db1f6a58f5326fc106c04e4f88eb9e760f1d529884d0",
+        "source_rows": 125
+      }
+    ]
+  },
+  "eligible_english_diagnosis_questions": 247,
+  "excluded": {
+    "not_diagnosis_question": 366,
+    "no_unique_exact_who_leaf_match": 206,
+    "negative_or_exception_question": 9
+  },
+  "source_case_ids": 41,
+  "unique_english_texts": 41,
+  "strict_title_matched_case_ids": 14,
+  "language_observations": 123,
+  "per_language": 41,
+  "cases_sha256": "6549fa7299c111838499271d68150b5e66b58cd7d9b2f6c20f830674efc00e39",
+  "source_commit_under_test": "c420802e757b0c8669b67a6ef5dafde7a1f0c8a6",
+  "selection_frozen_before_predictions": true,
+  "trained_on_cases": false,
+  "notes": [
+    "These are exam clinical vignettes, not outpatient coding notes.",
+    "French and English versions are paired with Spanish source cases; language observations are not independent patients.",
+    "Expected ICD-11 codes are exact-WHO-term-derived proxies, not independently adjudicated gold.",
+    "Exact-answer matching selects reference-covered vocabulary.",
+    "Only case/question text enters inference; no choices, correct answers, explanations or RAG snippets.",
+    "All three source splits processed with deterministic selection before first inference; no prediction-based exclusions. None of these source training rows trained our engine."
+  ],
+  "evaluation_modes": {
+    "symptoms_only": "Original full_question only, with no answer options, correct answer, explanation or RAG.",
+    "documented_diagnosis": "Adapted coding note: source clinical vignette plus localized assessment heading and author reference diagnosis. This mode intentionally documents the diagnosis; it is not a blinded diagnostic-reasoning test."
+  },
+  "primary_subset": "Only source answers exactly matching normalized category title; synonym-derived matches supplementary and not a reliable coding gold set.",
+  "frozen_at_utc": "2026-11-05T14:53:09.948350+00:00"
+}

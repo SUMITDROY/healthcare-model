@@ -1,0 +1,67 @@
+[
+  {
+    "id": "mediqal-13041",
+    "raw": [
+      "MD11.5",
+      "MD12",
+      "CB41.2Z"
+    ],
+    "documented": [
+      "CA21.1",
+      "CA21.Z",
+      "CA21"
+    ]
+  },
+  {
+    "id": "mediqal-22550",
+    "raw": [
+      "MG22",
+      "HA01.1Z",
+      "MG48"
+    ],
+    "documented": [
+      "5A61.0",
+      "5D43",
+      "9B61"
+    ]
+  },
+  {
+    "id": "mediqal-20650",
+    "raw": [
+      "MG24.5",
+      "MB24.A",
+      "MC81.2"
+    ],
+    "documented": [
+      "MB23.H",
+      "6A80.1",
+      "6B01"
+    ]
+  },
+  {
+    "id": "mediqal-10167",
+    "raw": [
+      "8A40.Y",
+      "9D94",
+      "QF01.Y"
+    ],
+    "documented": [
+      "QC30",
+      "6D50",
+      "9B70"
+    ]
+  },
+  {
+    "id": "mediqal-1949",
+    "raw": [
+      "5C70.0",
+      "MG22",
+      "ME67"
+    ],
+    "documented": [
+      "EB41.0",
+      "EB41.Y",
+      "EB41.Z"
+    ]
+  }
+]

@@ -1,0 +1,6273 @@
+{
+  "scope": "Public clinical-vignette check. Primary strict-title subset has exact diagnosis-title alignment; broad synonym subset has weaker proxy labels. Neither is independent clinician-adjudicated ICD-11 coding gold. No fitting/tuning.",
+  "manifest_sha256": "3cbaf20c736fde4474bab194c95b9fd172429012bfc33944b75155db2faa2546",
+  "model_sha256": "ca085ff2822e27a8715b80bc6cbab33d1a62f8d2ca4e4341e7bdcfc3389ad5bb",
+  "n_source_case_ids": 41,
+  "n_language_observations": 123,
+  "n_predictions_two_modes": 246,
+  "primary_strict_title_subset": {
+    "symptoms_only": {
+      "en": {
+        "n": 14,
+        "top1_hits": 0,
+        "top3_hits": 0,
+        "top1_pct": 0.0,
+        "top3_pct": 0.0,
+        "language_correct": 14
+      },
+      "fr": {
+        "n": 14,
+        "top1_hits": 0,
+        "top3_hits": 0,
+        "top1_pct": 0.0,
+        "top3_pct": 0.0,
+        "language_correct": 14
+      },
+      "es": {
+        "n": 14,
+        "top1_hits": 0,
+        "top3_hits": 0,
+        "top1_pct": 0.0,
+        "top3_pct": 0.0,
+        "language_correct": 14
+      }
+    },
+    "documented_diagnosis": {
+      "en": {
+        "n": 14,
+        "top1_hits": 14,
+        "top3_hits": 14,
+        "top1_pct": 100.0,
+        "top3_pct": 100.0,
+        "language_correct": 14
+      },
+      "fr": {
+        "n": 14,
+        "top1_hits": 12,
+        "top3_hits": 12,
+        "top1_pct": 85.7,
+        "top3_pct": 85.7,
+        "language_correct": 14
+      },
+      "es": {
+        "n": 14,
+        "top1_hits": 13,
+        "top3_hits": 14,
+        "top1_pct": 92.9,
+        "top3_pct": 100.0,
+        "language_correct": 14
+      }
+    }
+  },
+  "supplementary_weaker_synonym_proxy_subset": {
+    "symptoms_only": {
+      "en": {
+        "n": 41,
+        "top1_hits": 0,
+        "top3_hits": 0,
+        "top1_pct": 0.0,
+        "top3_pct": 0.0,
+        "language_correct": 41
+      },
+      "fr": {
+        "n": 41,
+        "top1_hits": 0,
+        "top3_hits": 0,
+        "top1_pct": 0.0,
+        "top3_pct": 0.0,
+        "language_correct": 41
+      },
+      "es": {
+        "n": 41,
+        "top1_hits": 0,
+        "top3_hits": 0,
+        "top1_pct": 0.0,
+        "top3_pct": 0.0,
+        "language_correct": 41
+      }
+    },
+    "documented_diagnosis": {
+      "en": {
+        "n": 41,
+        "top1_hits": 33,
+        "top3_hits": 40,
+        "top1_pct": 80.5,
+        "top3_pct": 97.6,
+        "language_correct": 41
+      },
+      "fr": {
+        "n": 41,
+        "top1_hits": 33,
+        "top3_hits": 37,
+        "top1_pct": 80.5,
+        "top3_pct": 90.2,
+        "language_correct": 41
+      },
+      "es": {
+        "n": 41,
+        "top1_hits": 34,
+        "top3_hits": 39,
+        "top1_pct": 82.9,
+        "top3_pct": 95.1,
+        "language_correct": 41
+      }
+    }
+  },
+  "seconds_inference_excluding_model_load": 3.527,
+  "api_calls": 0,
+  "api_cost_usd": 0,
+  "network_guard": true,
+  "exact_text_training_overlap": 0,
+  "results": [
+    {
+      "id": "medexpqa-130-en",
+      "source_id": "130",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "NEUROLOGY AND NEUROSURGERY",
+      "exact_category_title_match": true,
+      "reference_answer": "Juvenile myoclonic epilepsy.",
+      "proxy_icd11": [
+        "8A61.30"
+      ],
+      "pred": [
+        "8A68.4",
+        "8A63.Y",
+        "8A63.Z"
+      ],
+      "pred_titles": [
+        "Generalised tonic-clonic seizure",
+        "Seizure due to other acute cause",
+        "Seizure due to unspecified acute cause"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-130-en",
+      "source_id": "130",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "NEUROLOGY AND NEUROSURGERY",
+      "exact_category_title_match": true,
+      "reference_answer": "Juvenile myoclonic epilepsy.",
+      "proxy_icd11": [
+        "8A61.30"
+      ],
+      "pred": [
+        "8A61.30",
+        "8A61.31",
+        "8A61.22"
+      ],
+      "pred_titles": [
+        "Juvenile myoclonic epilepsy",
+        "Juvenile absence epilepsy",
+        "Epilepsy with myoclonic-astatic seizures"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-130-es",
+      "source_id": "130",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "NEUROLOGÍA Y NEUROCIRUGÍA",
+      "exact_category_title_match": true,
+      "reference_answer": "Epilepsia mioclónica juvenil.",
+      "proxy_icd11": [
+        "8A61.30"
+      ],
+      "pred": [
+        "8A61.4Y",
+        "NB51.1",
+        "BA40.0"
+      ],
+      "pred_titles": [
+        "Other specified genetic epileptic syndromes with variable age of onset",
+        "Laceration with foreign body of abdomen, lower back or pelvis",
+        "Unstable angina"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-130-es",
+      "source_id": "130",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "NEUROLOGÍA Y NEUROCIRUGÍA",
+      "exact_category_title_match": true,
+      "reference_answer": "Epilepsia mioclónica juvenil.",
+      "proxy_icd11": [
+        "8A61.30"
+      ],
+      "pred": [
+        "8A61.30",
+        "8A61.41",
+        "8A61.11"
+      ],
+      "pred_titles": [
+        "Juvenile myoclonic epilepsy",
+        "Progressive myoclonic epilepsy",
+        "Dravet syndrome"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-130-fr",
+      "source_id": "130",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "NEUROLOGIE ET NEUROCHIRURGIE",
+      "exact_category_title_match": true,
+      "reference_answer": "Épilepsie myoclonique juvénile.",
+      "proxy_icd11": [
+        "8A61.30"
+      ],
+      "pred": [
+        "8A68.Y",
+        "8A68.1",
+        "8A68.2"
+      ],
+      "pred_titles": [
+        "Other specified type of seizure",
+        "Absence seizures, atypical",
+        "Absence seizures, typical"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-130-fr",
+      "source_id": "130",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "NEUROLOGIE ET NEUROCHIRURGIE",
+      "exact_category_title_match": true,
+      "reference_answer": "Épilepsie myoclonique juvénile.",
+      "proxy_icd11": [
+        "8A61.30"
+      ],
+      "pred": [
+        "8A61.30",
+        "8A61.41",
+        "8A61.11"
+      ],
+      "pred_titles": [
+        "Juvenile myoclonic epilepsy",
+        "Progressive myoclonic epilepsy",
+        "Dravet syndrome"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-134-en",
+      "source_id": "134",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "OPHTHALMOLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Herpetic keratitis.",
+      "proxy_icd11": [
+        "1F00.10"
+      ],
+      "pred": [
+        "9A76",
+        "LA11.Z",
+        "LA11.Y"
+      ],
+      "pred_titles": [
+        "Corneal ulcer",
+        "Structural developmental anomalies of the anterior segment of eye, unspecified",
+        "Other specified structural developmental anomalies of the anterior segment of eye"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-134-en",
+      "source_id": "134",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "OPHTHALMOLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Herpetic keratitis.",
+      "proxy_icd11": [
+        "1F00.10"
+      ],
+      "pred": [
+        "1F00.10",
+        "9A73",
+        "9A72"
+      ],
+      "pred_titles": [
+        "Herpes simplex keratitis",
+        "Exposure keratitis",
+        "Traumatic keratitis"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-134-es",
+      "source_id": "134",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "OFTALMOLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Queratitis herpética.",
+      "proxy_icd11": [
+        "1F00.10"
+      ],
+      "pred": [
+        "9A76",
+        "DB52",
+        "MF58"
+      ],
+      "pred_titles": [
+        "Corneal ulcer",
+        "Ulcer of anus",
+        "Urethral discharge"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-134-es",
+      "source_id": "134",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "OFTALMOLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Queratitis herpética.",
+      "proxy_icd11": [
+        "1F00.10"
+      ],
+      "pred": [
+        "1F00.10",
+        "1F00.01",
+        "1F00.20"
+      ],
+      "pred_titles": [
+        "Herpes simplex keratitis",
+        "Herpes simplex labialis",
+        "Herpes simplex meningitis"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-134-fr",
+      "source_id": "134",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "OPHTHALMOLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Kératite herpétique.",
+      "proxy_icd11": [
+        "1F00.10"
+      ],
+      "pred": [
+        "9A76",
+        "LA11.Z",
+        "LA11.Y"
+      ],
+      "pred_titles": [
+        "Corneal ulcer",
+        "Structural developmental anomalies of the anterior segment of eye, unspecified",
+        "Other specified structural developmental anomalies of the anterior segment of eye"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-134-fr",
+      "source_id": "134",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "OPHTHALMOLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Kératite herpétique.",
+      "proxy_icd11": [
+        "1F00.10"
+      ],
+      "pred": [
+        "1F00.10",
+        "1F00.21",
+        "1F00.01"
+      ],
+      "pred_titles": [
+        "Herpes simplex keratitis",
+        "Encephalitis due to herpes simplex virus",
+        "Herpes simplex labialis"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-141-en",
+      "source_id": "141",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "PEDIATRICS",
+      "exact_category_title_match": false,
+      "reference_answer": "Wiskott-Aldrich syndrome.",
+      "proxy_icd11": [
+        "3B62.0Y"
+      ],
+      "pred": [
+        "1C1C.0",
+        "AB00",
+        "4A01.02"
+      ],
+      "pred_titles": [
+        "Meningococcal meningitis",
+        "Acute otitis media",
+        "Specific antibody deficiency with normal immunoglobulin concentrations or normal number of B cells"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-141-en",
+      "source_id": "141",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "PEDIATRICS",
+      "exact_category_title_match": false,
+      "reference_answer": "Wiskott-Aldrich syndrome.",
+      "proxy_icd11": [
+        "3B62.0Y"
+      ],
+      "pred": [
+        "3B62.0Y",
+        "ME86.D0",
+        "2E92.40"
+      ],
+      "pred_titles": [
+        "Other specified inherited qualitative platelet defects",
+        "Shoulder syndrome",
+        "Polyposis syndrome"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-141-es",
+      "source_id": "141",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "PEDIATRÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Síndrome de Wiskott-Aldrich.",
+      "proxy_icd11": [
+        "3B62.0Y"
+      ],
+      "pred": [
+        "AB00",
+        "1C1C.0",
+        "MD41"
+      ],
+      "pred_titles": [
+        "Acute otitis media",
+        "Meningococcal meningitis",
+        "Clinical findings on diagnostic imaging of lung"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-141-es",
+      "source_id": "141",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "PEDIATRÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Síndrome de Wiskott-Aldrich.",
+      "proxy_icd11": [
+        "3B62.0Y"
+      ],
+      "pred": [
+        "3B62.0Y",
+        "CB40.2",
+        "8A6Z"
+      ],
+      "pred_titles": [
+        "Other specified inherited qualitative platelet defects",
+        "Pulmonary collapse",
+        "Epilepsy or seizures, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-141-fr",
+      "source_id": "141",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "PÉDIATRIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Syndrome de Wiskott-Aldrich.",
+      "proxy_icd11": [
+        "3B62.0Y"
+      ],
+      "pred": [
+        "AB00",
+        "1C1C.0",
+        "AB0Y"
+      ],
+      "pred_titles": [
+        "Acute otitis media",
+        "Meningococcal meningitis",
+        "Other specified otitis media"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-141-fr",
+      "source_id": "141",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "PÉDIATRIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Syndrome de Wiskott-Aldrich.",
+      "proxy_icd11": [
+        "3B62.0Y"
+      ],
+      "pred": [
+        "3B62.0Y",
+        "DA04.2",
+        "CB40.2"
+      ],
+      "pred_titles": [
+        "Other specified inherited qualitative platelet defects",
+        "Sialoadenitis",
+        "Pulmonary collapse"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-143-en",
+      "source_id": "143",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "PEDIATRICS",
+      "exact_category_title_match": true,
+      "reference_answer": "Tuberculous meningitis.",
+      "proxy_icd11": [
+        "1B11.0"
+      ],
+      "pred": [
+        "MB24.C",
+        "8D65",
+        "8D63"
+      ],
+      "pred_titles": [
+        "Irritability",
+        "Cerebrospinal fluid fistula",
+        "Cerebrospinal fluid otorrhoea"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-143-en",
+      "source_id": "143",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "PEDIATRICS",
+      "exact_category_title_match": true,
+      "reference_answer": "Tuberculous meningitis.",
+      "proxy_icd11": [
+        "1B11.0"
+      ],
+      "pred": [
+        "1B11.0",
+        "JB63.00",
+        "1B12.41"
+      ],
+      "pred_titles": [
+        "Tuberculous meningitis",
+        "Tuberculous placenta",
+        "Tuberculous myositis"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-143-es",
+      "source_id": "143",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "PEDIATRÍA",
+      "exact_category_title_match": true,
+      "reference_answer": "Meningitis tuberculosa.",
+      "proxy_icd11": [
+        "1B11.0"
+      ],
+      "pred": [
+        "MB24.C",
+        "ME84.2Z",
+        "8D65"
+      ],
+      "pred_titles": [
+        "Irritability",
+        "Low back pain, unspecified",
+        "Cerebrospinal fluid fistula"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-143-es",
+      "source_id": "143",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "PEDIATRÍA",
+      "exact_category_title_match": true,
+      "reference_answer": "Meningitis tuberculosa.",
+      "proxy_icd11": [
+        "1B11.0"
+      ],
+      "pred": [
+        "1B11.0",
+        "1B12.40",
+        "1B1Z"
+      ],
+      "pred_titles": [
+        "Tuberculous meningitis",
+        "Tuberculosis of bones or joints",
+        "Tuberculosis, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-143-fr",
+      "source_id": "143",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "PÉDIATRIE",
+      "exact_category_title_match": true,
+      "reference_answer": "Méningite tuberculeuse.",
+      "proxy_icd11": [
+        "1B11.0"
+      ],
+      "pred": [
+        "MB24.C",
+        "8C60.Z",
+        "1F86"
+      ],
+      "pred_titles": [
+        "Irritability",
+        "Myasthenia gravis, unspecified",
+        "Schistosomiasis"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-143-fr",
+      "source_id": "143",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "PÉDIATRIE",
+      "exact_category_title_match": true,
+      "reference_answer": "Méningite tuberculeuse.",
+      "proxy_icd11": [
+        "1B11.0"
+      ],
+      "pred": [
+        "1B11.0",
+        "1B1Z",
+        "1B12.40"
+      ],
+      "pred_titles": [
+        "Tuberculous meningitis",
+        "Tuberculosis, unspecified",
+        "Tuberculosis of bones or joints"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-147-en",
+      "source_id": "147",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "PSYCHIATRY",
+      "exact_category_title_match": false,
+      "reference_answer": "Major depressive disorder.",
+      "proxy_icd11": [
+        "6A70.3"
+      ],
+      "pred": [
+        "QF24",
+        "QA1C",
+        "MG43.5"
+      ],
+      "pred_titles": [
+        "Difficulty or need for assistance with self-care",
+        "Person with feared complaint in whom no diagnosis is made",
+        "Excessive weight loss"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-147-en",
+      "source_id": "147",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "PSYCHIATRY",
+      "exact_category_title_match": false,
+      "reference_answer": "Major depressive disorder.",
+      "proxy_icd11": [
+        "6A70.3"
+      ],
+      "pred": [
+        "6A71.Z",
+        "6A70.3",
+        "6A70.0"
+      ],
+      "pred_titles": [
+        "Recurrent depressive disorder, unspecified",
+        "Single episode depressive disorder, severe, without psychotic symptoms",
+        "Single episode depressive disorder, mild"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-147-es",
+      "source_id": "147",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "PSIQUIATRÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Trastorno depresivo mayor.",
+      "proxy_icd11": [
+        "6A70.3"
+      ],
+      "pred": [
+        "MB21.A",
+        "MG43.7",
+        "QA44"
+      ],
+      "pred_titles": [
+        "Poor concentration",
+        "Anorexia",
+        "Expectant parent pre-birth visit"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-147-es",
+      "source_id": "147",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "PSIQUIATRÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Trastorno depresivo mayor.",
+      "proxy_icd11": [
+        "6A70.3"
+      ],
+      "pred": [
+        "6A70.3",
+        "6A71.Z",
+        "6A71.3"
+      ],
+      "pred_titles": [
+        "Single episode depressive disorder, severe, without psychotic symptoms",
+        "Recurrent depressive disorder, unspecified",
+        "Recurrent depressive disorder, current episode severe, without psychotic symptoms"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-147-fr",
+      "source_id": "147",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "PSYCHIATRIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Trouble dépressif majeur.",
+      "proxy_icd11": [
+        "6A70.3"
+      ],
+      "pred": [
+        "MB26.A",
+        "MG43.7",
+        "DB99.7"
+      ],
+      "pred_titles": [
+        "Suicidal ideation",
+        "Anorexia",
+        "Hepatic failure without mention whether acute or chronic"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-147-fr",
+      "source_id": "147",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "PSYCHIATRIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Trouble dépressif majeur.",
+      "proxy_icd11": [
+        "6A70.3"
+      ],
+      "pred": [
+        "6A70.3",
+        "6A71.Z",
+        "6A71.3"
+      ],
+      "pred_titles": [
+        "Single episode depressive disorder, severe, without psychotic symptoms",
+        "Recurrent depressive disorder, unspecified",
+        "Recurrent depressive disorder, current episode severe, without psychotic symptoms"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-148-en",
+      "source_id": "148",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "PSYCHIATRY",
+      "exact_category_title_match": false,
+      "reference_answer": "Borderline personality disorder.",
+      "proxy_icd11": [
+        "6D10.Z"
+      ],
+      "pred": [
+        "QE51.0",
+        "QC49",
+        "PK81.D"
+      ],
+      "pred_titles": [
+        "Relationship distress with spouse or partner",
+        "Personal history of noncompliance with medical treatment or regimen",
+        "Other specified medical procedure associated with injury or harm in therapeutic use"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-148-en",
+      "source_id": "148",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "PSYCHIATRY",
+      "exact_category_title_match": false,
+      "reference_answer": "Borderline personality disorder.",
+      "proxy_icd11": [
+        "6D10.Z"
+      ],
+      "pred": [
+        "6D10.Z",
+        "6D11.5",
+        "2C73.4"
+      ],
+      "pred_titles": [
+        "Personality disorder, severity unspecified",
+        "Borderline pattern",
+        "Serous cystadenoma, borderline malignancy of ovary"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-148-es",
+      "source_id": "148",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "PSIQUIATRÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Trastorno de la personalidad límite.",
+      "proxy_icd11": [
+        "6D10.Z"
+      ],
+      "pred": [
+        "MF58",
+        "HA40.4",
+        "NB9Z"
+      ],
+      "pred_titles": [
+        "Urethral discharge",
+        "Aetiological considerations associated with relationship factors",
+        "Injuries to the abdomen, lower back, lumbar spine or pelvis, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-148-es",
+      "source_id": "148",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "PSIQUIATRÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Trastorno de la personalidad límite.",
+      "proxy_icd11": [
+        "6D10.Z"
+      ],
+      "pred": [
+        "6D10.Z",
+        "6D10",
+        "6D10.2"
+      ],
+      "pred_titles": [
+        "Personality disorder, severity unspecified",
+        "Personality disorder",
+        "Severe personality disorder"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-148-fr",
+      "source_id": "148",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "PSYCHIATRIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Trouble de la personnalité limite.",
+      "proxy_icd11": [
+        "6D10.Z"
+      ],
+      "pred": [
+        "QC4B",
+        "MB24.F",
+        "MG25"
+      ],
+      "pred_titles": [
+        "Personal history of self-harm",
+        "Restlessness",
+        "Feeling ill"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-148-fr",
+      "source_id": "148",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "PSYCHIATRIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Trouble de la personnalité limite.",
+      "proxy_icd11": [
+        "6D10.Z"
+      ],
+      "pred": [
+        "6D10.Z",
+        "6D10",
+        "6B64"
+      ],
+      "pred_titles": [
+        "Personality disorder, severity unspecified",
+        "Personality disorder",
+        "Dissociative identity disorder"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-16-en",
+      "source_id": "16",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "DERMATOLOGY",
+      "exact_category_title_match": true,
+      "reference_answer": "Porphyria cutanea tarda.",
+      "proxy_icd11": [
+        "5C58.10"
+      ],
+      "pred": [
+        "ED71",
+        "DB91.0",
+        "6C40.Z"
+      ],
+      "pred_titles": [
+        "Hypertrichosis",
+        "Acute or subacute hepatic failure due to hepatitis virus",
+        "Disorders due to use of alcohol, unspecified"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-16-en",
+      "source_id": "16",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "DERMATOLOGY",
+      "exact_category_title_match": true,
+      "reference_answer": "Porphyria cutanea tarda.",
+      "proxy_icd11": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "5C58.13"
+      ],
+      "pred_titles": [
+        "Porphyria cutanea tarda",
+        "Other specified porphyrias",
+        "Variegate porphyria"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-16-es",
+      "source_id": "16",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "DERMATOLOGÍA",
+      "exact_category_title_match": true,
+      "reference_answer": "Porfiria cutánea tarda.",
+      "proxy_icd11": [
+        "5C58.10"
+      ],
+      "pred": [
+        "ED71",
+        "1E51.Y",
+        "KA62.9"
+      ],
+      "pred_titles": [
+        "Hypertrichosis",
+        "Other specified chronic viral hepatitis",
+        "Congenital viral hepatitis"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-16-es",
+      "source_id": "16",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "DERMATOLOGÍA",
+      "exact_category_title_match": true,
+      "reference_answer": "Porfiria cutánea tarda.",
+      "proxy_icd11": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "5C58.1Z"
+      ],
+      "pred_titles": [
+        "Porphyria cutanea tarda",
+        "Other specified porphyrias",
+        "Porphyrias, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-16-fr",
+      "source_id": "16",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "DERMATOLOGIE",
+      "exact_category_title_match": true,
+      "reference_answer": "Porphyrie cutanée tardive.",
+      "proxy_icd11": [
+        "5C58.10"
+      ],
+      "pred": [
+        "ED71",
+        "QC46",
+        "1E51.Y"
+      ],
+      "pred_titles": [
+        "Hypertrichosis",
+        "Personal history of mental or behavioural disorder",
+        "Other specified chronic viral hepatitis"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-16-fr",
+      "source_id": "16",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "DERMATOLOGIE",
+      "exact_category_title_match": true,
+      "reference_answer": "Porphyrie cutanée tardive.",
+      "proxy_icd11": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "1C1E.2"
+      ],
+      "pred_titles": [
+        "Porphyria cutanea tarda",
+        "Other specified porphyrias",
+        "Late lesions of pinta"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-160-en",
+      "source_id": "160",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "NEPHROLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "IgA nephropathy.",
+      "proxy_icd11": [
+        "MF8Y"
+      ],
+      "pred": [
+        "BA50",
+        "CA45",
+        "JB61.0"
+      ],
+      "pred_titles": [
+        "Old myocardial infarction",
+        "Respiratory infections, not elsewhere classified",
+        "Death from direct obstetric cause occurring more than 42 days but less than one year after delivery"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-160-en",
+      "source_id": "160",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "NEPHROLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "IgA nephropathy.",
+      "proxy_icd11": [
+        "MF8Y"
+      ],
+      "pred": [
+        "4A44.92",
+        "MF8Y",
+        "EB42"
+      ],
+      "pred_titles": [
+        "IgA vasculitis",
+        "Other specified clinical findings in specimens from the urinary system",
+        "Linear IgA bullous dermatosis"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-160-es",
+      "source_id": "160",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "NEFROLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Nefropatía IgA.",
+      "proxy_icd11": [
+        "MF8Y"
+      ],
+      "pred": [
+        "ME84.2Z",
+        "JB09.2",
+        "GB4Y"
+      ],
+      "pred_titles": [
+        "Low back pain, unspecified",
+        "Third degree perineal laceration during delivery",
+        "Other specified glomerular diseases"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-160-es",
+      "source_id": "160",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "NEFROLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Nefropatía IgA.",
+      "proxy_icd11": [
+        "MF8Y"
+      ],
+      "pred": [
+        "MF8Y",
+        "4A44.92",
+        "EB40.Y"
+      ],
+      "pred_titles": [
+        "Other specified clinical findings in specimens from the urinary system",
+        "IgA vasculitis",
+        "Other specified pemphigus"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-160-fr",
+      "source_id": "160",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "NEPHROLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Néphropathie à IgA.",
+      "proxy_icd11": [
+        "MF8Y"
+      ],
+      "pred": [
+        "MF96.Y",
+        "MA16.0Z",
+        "MA16.0"
+      ],
+      "pred_titles": [
+        "Other specified proteinuria",
+        "Abnormality of red blood cells, unspecified",
+        "Abnormality of red blood cells"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-160-fr",
+      "source_id": "160",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "NEPHROLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Néphropathie à IgA.",
+      "proxy_icd11": [
+        "MF8Y"
+      ],
+      "pred": [
+        "MF8Y",
+        "4A44.92",
+        "EB40.Y"
+      ],
+      "pred_titles": [
+        "Other specified clinical findings in specimens from the urinary system",
+        "IgA vasculitis",
+        "Other specified pemphigus"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-177-en",
+      "source_id": "177",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "HEMATOLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Hereditary spherocytosis.",
+      "proxy_icd11": [
+        "3A10.Y"
+      ],
+      "pred": [
+        "1A61.Z",
+        "ME10.01",
+        "QA00.1"
+      ],
+      "pred_titles": [
+        "Early syphilis, unspecified",
+        "Splenomegaly, not elsewhere classified",
+        "Routine child health examination"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-177-en",
+      "source_id": "177",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "HEMATOLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Hereditary spherocytosis.",
+      "proxy_icd11": [
+        "3A10.Y"
+      ],
+      "pred": [
+        "3A10.Y",
+        "LD27.0Y",
+        "3A10.2"
+      ],
+      "pred_titles": [
+        "Other specified hereditary haemolytic anaemia",
+        "Other specified ectodermal dysplasia syndromes",
+        "Hereditary elliptocytosis"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-177-es",
+      "source_id": "177",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "HEMATOLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Esferocitosis hereditaria.",
+      "proxy_icd11": [
+        "3A10.Y"
+      ],
+      "pred": [
+        "DC11.Z",
+        "DC11.3",
+        "QC62"
+      ],
+      "pred_titles": [
+        "Cholelithiasis, unspecified",
+        "Calculus of gallbladder or cystic duct without cholecystitis or cholangitis",
+        "Family history of diseases of the blood or blood-forming organs"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-177-es",
+      "source_id": "177",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "HEMATOLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Esferocitosis hereditaria.",
+      "proxy_icd11": [
+        "3A10.Y"
+      ],
+      "pred": [
+        "3A10.Y",
+        "LD27.0Y",
+        "3A51.Z"
+      ],
+      "pred_titles": [
+        "Other specified hereditary haemolytic anaemia",
+        "Other specified ectodermal dysplasia syndromes",
+        "Sickle cell disorders or other haemoglobinopathies, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-177-fr",
+      "source_id": "177",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "HÉMATOLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Sphérocytose héréditaire.",
+      "proxy_icd11": [
+        "3A10.Y"
+      ],
+      "pred": [
+        "QA00.2",
+        "QA00.0",
+        "QA0Y"
+      ],
+      "pred_titles": [
+        "Routine newborn health examination",
+        "General adult medical examination",
+        "Other examination or investigation"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-177-fr",
+      "source_id": "177",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "HÉMATOLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Sphérocytose héréditaire.",
+      "proxy_icd11": [
+        "3A10.Y"
+      ],
+      "pred": [
+        "3A10.Y",
+        "LD27.0Y",
+        "3A51.Z"
+      ],
+      "pred_titles": [
+        "Other specified hereditary haemolytic anaemia",
+        "Other specified ectodermal dysplasia syndromes",
+        "Sickle cell disorders or other haemoglobinopathies, unspecified"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-194-en",
+      "source_id": "194",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "PEDIATRICS",
+      "exact_category_title_match": true,
+      "reference_answer": "Visceral leishmaniasis.",
+      "proxy_icd11": [
+        "1F54.0"
+      ],
+      "pred": [
+        "ME64.2",
+        "ME10.01",
+        "4B21"
+      ],
+      "pred_titles": [
+        "Pallor",
+        "Splenomegaly, not elsewhere classified",
+        "Polyclonal hypergammaglobulinaemia"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-194-en",
+      "source_id": "194",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "PEDIATRICS",
+      "exact_category_title_match": true,
+      "reference_answer": "Visceral leishmaniasis.",
+      "proxy_icd11": [
+        "1F54.0"
+      ],
+      "pred": [
+        "1F54.0",
+        "1F54.Z",
+        "1F54"
+      ],
+      "pred_titles": [
+        "Visceral leishmaniasis",
+        "Leishmaniasis, unspecified",
+        "Leishmaniasis"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-194-es",
+      "source_id": "194",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "PEDIATRÍA",
+      "exact_category_title_match": true,
+      "reference_answer": "Leishmaniasis visceral.",
+      "proxy_icd11": [
+        "1F54.0"
+      ],
+      "pred": [
+        "4B21",
+        "ME64.2",
+        "MG43.7"
+      ],
+      "pred_titles": [
+        "Polyclonal hypergammaglobulinaemia",
+        "Pallor",
+        "Anorexia"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-194-es",
+      "source_id": "194",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "PEDIATRÍA",
+      "exact_category_title_match": true,
+      "reference_answer": "Leishmaniasis visceral.",
+      "proxy_icd11": [
+        "1F54.0"
+      ],
+      "pred": [
+        "1F54.0",
+        "1F54.Z",
+        "1F54.1"
+      ],
+      "pred_titles": [
+        "Visceral leishmaniasis",
+        "Leishmaniasis, unspecified",
+        "Cutaneous leishmaniasis"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-194-fr",
+      "source_id": "194",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "PÉDIATRIE",
+      "exact_category_title_match": true,
+      "reference_answer": "Leishmaniose viscérale.",
+      "proxy_icd11": [
+        "1F54.0"
+      ],
+      "pred": [
+        "4B21",
+        "ME64.2",
+        "MG43.7"
+      ],
+      "pred_titles": [
+        "Polyclonal hypergammaglobulinaemia",
+        "Pallor",
+        "Anorexia"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-194-fr",
+      "source_id": "194",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "PÉDIATRIE",
+      "exact_category_title_match": true,
+      "reference_answer": "Leishmaniose viscérale.",
+      "proxy_icd11": [
+        "1F54.0"
+      ],
+      "pred": [
+        "1F54.0",
+        "1F54.Z",
+        "1F54"
+      ],
+      "pred_titles": [
+        "Visceral leishmaniasis",
+        "Leishmaniasis, unspecified",
+        "Leishmaniasis"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-227-en",
+      "source_id": "227",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "CARDIOLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Atrial septal defect.",
+      "proxy_icd11": [
+        "LA8E.Z"
+      ],
+      "pred": [
+        "MC81.2",
+        "ME64.1",
+        "MG22"
+      ],
+      "pred_titles": [
+        "Palpitations",
+        "Cyanosis",
+        "Fatigue"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-227-en",
+      "source_id": "227",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "CARDIOLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Atrial septal defect.",
+      "proxy_icd11": [
+        "LA8E.Z"
+      ],
+      "pred": [
+        "LA87.40",
+        "LA8E.1",
+        "LA87.42"
+      ],
+      "pred_titles": [
+        "Atrioventricular septal defect with communication at the atrial level only",
+        "Atrial septal defect within oval fossa",
+        "Atrioventricular septal defect with communication at atrial level and restrictive communication at ventricular level"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-227-es",
+      "source_id": "227",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "CARDIOLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Comunicación interauricular.",
+      "proxy_icd11": [
+        "LA8E.Z"
+      ],
+      "pred": [
+        "MB22.7",
+        "MG22",
+        "MD11.80"
+      ],
+      "pred_titles": [
+        "Tiredness",
+        "Fatigue",
+        "Stertor"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-227-es",
+      "source_id": "227",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "CARDIOLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Comunicación interauricular.",
+      "proxy_icd11": [
+        "LA8E.Z"
+      ],
+      "pred": [
+        "LA8E.Z",
+        "BC40.0",
+        "LA8E.1"
+      ],
+      "pred_titles": [
+        "Congenital anomaly of atrial septum, unspecified",
+        "Acquired interatrial communication",
+        "Atrial septal defect within oval fossa"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-227-fr",
+      "source_id": "227",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "CARDIOLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Communication interauriculaire.",
+      "proxy_icd11": [
+        "LA8E.Z"
+      ],
+      "pred": [
+        "MC81.2",
+        "CB01",
+        "MB22.7"
+      ],
+      "pred_titles": [
+        "Palpitations",
+        "Pulmonary oedema",
+        "Tiredness"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-227-fr",
+      "source_id": "227",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "CARDIOLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Communication interauriculaire.",
+      "proxy_icd11": [
+        "LA8E.Z"
+      ],
+      "pred": [
+        "LA8E.Z",
+        "BC40.0",
+        "LA8E.1"
+      ],
+      "pred_titles": [
+        "Congenital anomaly of atrial septum, unspecified",
+        "Acquired interatrial communication",
+        "Atrial septal defect within oval fossa"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-236-en",
+      "source_id": "236",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "HEMATOLOGY",
+      "exact_category_title_match": true,
+      "reference_answer": "Thrombotic thrombocytopenic purpura.",
+      "proxy_icd11": [
+        "3B64.14"
+      ],
+      "pred": [
+        "ME64.3",
+        "MG30.64",
+        "4B05"
+      ],
+      "pred_titles": [
+        "Petechiae",
+        "Chronic headache or orofacial pain associated with disorders of homoeostasis or their nonpharmacological treatment",
+        "Disorders with increased monocyte counts"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-236-en",
+      "source_id": "236",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "HEMATOLOGY",
+      "exact_category_title_match": true,
+      "reference_answer": "Thrombotic thrombocytopenic purpura.",
+      "proxy_icd11": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.14",
+        "3B64.10",
+        "3B64.12"
+      ],
+      "pred_titles": [
+        "Thrombotic thrombocytopenic purpura",
+        "Immune thrombocytopenic purpura",
+        "Drug-induced thrombocytopenic purpura"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-236-es",
+      "source_id": "236",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "HEMATOLOGÍA",
+      "exact_category_title_match": true,
+      "reference_answer": "Purpura trombótica trombocitopénica.",
+      "proxy_icd11": [
+        "3B64.14"
+      ],
+      "pred": [
+        "ME64.3",
+        "ME84.2Z",
+        "MC81.3"
+      ],
+      "pred_titles": [
+        "Petechiae",
+        "Low back pain, unspecified",
+        "Paroxysmal tachycardia"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-236-es",
+      "source_id": "236",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "HEMATOLOGÍA",
+      "exact_category_title_match": true,
+      "reference_answer": "Purpura trombótica trombocitopénica.",
+      "proxy_icd11": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.14",
+        "3B64.10",
+        "3B64.11"
+      ],
+      "pred_titles": [
+        "Thrombotic thrombocytopenic purpura",
+        "Immune thrombocytopenic purpura",
+        "Secondary thrombocytopenic purpura"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-236-fr",
+      "source_id": "236",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "HÉMATOLOGIE",
+      "exact_category_title_match": true,
+      "reference_answer": "Purpura thrombocytopénique thrombotique.",
+      "proxy_icd11": [
+        "3B64.14"
+      ],
+      "pred": [
+        "ME64.3",
+        "MG22",
+        "6B8Z"
+      ],
+      "pred_titles": [
+        "Petechiae",
+        "Fatigue",
+        "Feeding or eating disorders, unspecified"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-236-fr",
+      "source_id": "236",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "HÉMATOLOGIE",
+      "exact_category_title_match": true,
+      "reference_answer": "Purpura thrombocytopénique thrombotique.",
+      "proxy_icd11": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.14",
+        "3B64.10",
+        "3B64.12"
+      ],
+      "pred_titles": [
+        "Thrombotic thrombocytopenic purpura",
+        "Immune thrombocytopenic purpura",
+        "Drug-induced thrombocytopenic purpura"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-251-en",
+      "source_id": "251",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "DIGESTIVE SYSTEM",
+      "exact_category_title_match": false,
+      "reference_answer": "Alcoholic hepatitis.",
+      "proxy_icd11": [
+        "DB94.1Z"
+      ],
+      "pred": [
+        "MB21.4",
+        "MB46.0",
+        "MG43.7"
+      ],
+      "pred_titles": [
+        "Disorientation",
+        "Asterixis",
+        "Anorexia"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-251-en",
+      "source_id": "251",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "DIGESTIVE SYSTEM",
+      "exact_category_title_match": false,
+      "reference_answer": "Alcoholic hepatitis.",
+      "proxy_icd11": [
+        "DB94.1Z"
+      ],
+      "pred": [
+        "DB94.1Z",
+        "DB94.1Y",
+        "DB94.1"
+      ],
+      "pred_titles": [
+        "Alcoholic hepatitis, unspecified",
+        "Other specified alcoholic hepatitis",
+        "Alcoholic hepatitis"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-251-es",
+      "source_id": "251",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "APARATO DIGESTIVO",
+      "exact_category_title_match": false,
+      "reference_answer": "Hepatitis alcohólica.",
+      "proxy_icd11": [
+        "DB94.1Z"
+      ],
+      "pred": [
+        "QA00.C",
+        "MB46.0",
+        "MB21.4"
+      ],
+      "pred_titles": [
+        "Laboratory examination",
+        "Asterixis",
+        "Disorientation"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-251-es",
+      "source_id": "251",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "APARATO DIGESTIVO",
+      "exact_category_title_match": false,
+      "reference_answer": "Hepatitis alcohólica.",
+      "proxy_icd11": [
+        "DB94.1Z"
+      ],
+      "pred": [
+        "DB94.1Z",
+        "DB94.1",
+        "DB94.1Y"
+      ],
+      "pred_titles": [
+        "Alcoholic hepatitis, unspecified",
+        "Alcoholic hepatitis",
+        "Other specified alcoholic hepatitis"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-251-fr",
+      "source_id": "251",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "SYSTÈME DIGESTIF",
+      "exact_category_title_match": false,
+      "reference_answer": "Hépatite alcoolique.",
+      "proxy_icd11": [
+        "DB94.1Z"
+      ],
+      "pred": [
+        "QA00.C",
+        "MB46.0",
+        "MB21.4"
+      ],
+      "pred_titles": [
+        "Laboratory examination",
+        "Asterixis",
+        "Disorientation"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-251-fr",
+      "source_id": "251",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "SYSTÈME DIGESTIF",
+      "exact_category_title_match": false,
+      "reference_answer": "Hépatite alcoolique.",
+      "proxy_icd11": [
+        "DB94.1Z"
+      ],
+      "pred": [
+        "DB94.1Z",
+        "DB94.1",
+        "DB94.1Y"
+      ],
+      "pred_titles": [
+        "Alcoholic hepatitis, unspecified",
+        "Alcoholic hepatitis",
+        "Other specified alcoholic hepatitis"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-279-en",
+      "source_id": "279",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "PATHOLOGICAL ANATOMY",
+      "exact_category_title_match": true,
+      "reference_answer": "Collagenous colitis.",
+      "proxy_icd11": [
+        "DB33.10"
+      ],
+      "pred": [
+        "KB86.2",
+        "2B90.20",
+        "KB85.1"
+      ],
+      "pred_titles": [
+        "Postnatal intestinal perforation due to intestinal atresia or stenosis",
+        "Adenocarcinoma of transverse colon",
+        "Prenatal intrauterine intestinal perforation due to intestinal atresia or stenosis"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-279-en",
+      "source_id": "279",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "PATHOLOGICAL ANATOMY",
+      "exact_category_title_match": true,
+      "reference_answer": "Collagenous colitis.",
+      "proxy_icd11": [
+        "DB33.10"
+      ],
+      "pred": [
+        "DB33.10",
+        "DB33.11",
+        "DB33.1Z"
+      ],
+      "pred_titles": [
+        "Collagenous colitis",
+        "Lymphocytic colitis",
+        "Microscopic colitis, unspecified"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-279-es",
+      "source_id": "279",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "ANATOMÍA PATOLÓGICA",
+      "exact_category_title_match": true,
+      "reference_answer": "Colitis colágena.",
+      "proxy_icd11": [
+        "DB33.10"
+      ],
+      "pred": [
+        "ME05.1",
+        "DB52",
+        "2B90.2Z"
+      ],
+      "pred_titles": [
+        "Diarrhoea",
+        "Ulcer of anus",
+        "Malignant neoplasm of transverse colon, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-279-es",
+      "source_id": "279",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "ANATOMÍA PATOLÓGICA",
+      "exact_category_title_match": true,
+      "reference_answer": "Colitis colágena.",
+      "proxy_icd11": [
+        "DB33.10"
+      ],
+      "pred": [
+        "DB33.10",
+        "EJ20.0",
+        "DD71.Z"
+      ],
+      "pred_titles": [
+        "Collagenous colitis",
+        "Actinic elastosis",
+        "Ulcerative colitis, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-279-fr",
+      "source_id": "279",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "ANATOMIE PATHOLOGIQUE",
+      "exact_category_title_match": true,
+      "reference_answer": "Colite collagénique.",
+      "proxy_icd11": [
+        "DB33.10"
+      ],
+      "pred": [
+        "ME05.1",
+        "DA01.0Z",
+        "1A40.Z"
+      ],
+      "pred_titles": [
+        "Diarrhoea",
+        "Disturbances of oral epithelium, unspecified",
+        "Infectious gastroenteritis or colitis without specification of infectious agent"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-279-fr",
+      "source_id": "279",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "ANATOMIE PATHOLOGIQUE",
+      "exact_category_title_match": true,
+      "reference_answer": "Colite collagénique.",
+      "proxy_icd11": [
+        "DB33.10"
+      ],
+      "pred": [
+        "1A40.0",
+        "EJ20.0",
+        "DD71.Z"
+      ],
+      "pred_titles": [
+        "Gastroenteritis or colitis without specification of origin",
+        "Actinic elastosis",
+        "Ulcerative colitis, unspecified"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-28-en",
+      "source_id": "28",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "NEUROLOGY AND THORACIC SURGERY",
+      "exact_category_title_match": false,
+      "reference_answer": "Sarcoidosis.",
+      "proxy_icd11": [
+        "4B20.Z"
+      ],
+      "pred": [
+        "2A86.1",
+        "2A86.2",
+        "MA16.10"
+      ],
+      "pred_titles": [
+        "B-cell lymphoma unclassifiable with features intermediate between Burkitt lymphoma and diffuse large B-cell lymphoma",
+        "B-cell lymphoma unclassifiable with features intermediate between classical Hodgkin lymphoma and diffuse large B-cell lymphoma",
+        "Decreased white blood cell count"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-28-en",
+      "source_id": "28",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "NEUROLOGY AND THORACIC SURGERY",
+      "exact_category_title_match": false,
+      "reference_answer": "Sarcoidosis.",
+      "proxy_icd11": [
+        "4B20.Z"
+      ],
+      "pred": [
+        "4B20.Z",
+        "4B20",
+        "4B20.Y"
+      ],
+      "pred_titles": [
+        "Sarcoidosis, unspecified",
+        "Sarcoidosis",
+        "Other specified sarcoidosis"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-28-es",
+      "source_id": "28",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "NEUROLOGÍA Y CIRUGÍA TORÁCICA",
+      "exact_category_title_match": false,
+      "reference_answer": "Sarcoidosis.",
+      "proxy_icd11": [
+        "4B20.Z"
+      ],
+      "pred": [
+        "MA01.0",
+        "QA00.B",
+        "QA02.0"
+      ],
+      "pred_titles": [
+        "Localised lymph node enlargement",
+        "Radiological examination",
+        "Observation for suspected tuberculosis, ruled out"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-28-es",
+      "source_id": "28",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "NEUROLOGÍA Y CIRUGÍA TORÁCICA",
+      "exact_category_title_match": false,
+      "reference_answer": "Sarcoidosis.",
+      "proxy_icd11": [
+        "4B20.Z"
+      ],
+      "pred": [
+        "4B20.Z",
+        "4B20",
+        "4B20.0"
+      ],
+      "pred_titles": [
+        "Sarcoidosis, unspecified",
+        "Sarcoidosis",
+        "Sarcoidosis of lung"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-28-fr",
+      "source_id": "28",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "NEUROLOGIE ET CHIRURGIE THORACIQUE",
+      "exact_category_title_match": false,
+      "reference_answer": "La sarcoïdose.",
+      "proxy_icd11": [
+        "4B20.Z"
+      ],
+      "pred": [
+        "QA02.0",
+        "MA01.0",
+        "2C25.0"
+      ],
+      "pred_titles": [
+        "Observation for suspected tuberculosis, ruled out",
+        "Localised lymph node enlargement",
+        "Adenocarcinoma of bronchus or lung"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-28-fr",
+      "source_id": "28",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "NEUROLOGIE ET CHIRURGIE THORACIQUE",
+      "exact_category_title_match": false,
+      "reference_answer": "La sarcoïdose.",
+      "proxy_icd11": [
+        "4B20.Z"
+      ],
+      "pred": [
+        "4B20.Z",
+        "4B20",
+        "4B20.Y"
+      ],
+      "pred_titles": [
+        "Sarcoidosis, unspecified",
+        "Sarcoidosis",
+        "Other specified sarcoidosis"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-280-en",
+      "source_id": "280",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "PATHOLOGICAL ANATOMY",
+      "exact_category_title_match": true,
+      "reference_answer": "Collagenous colitis.",
+      "proxy_icd11": [
+        "DB33.10"
+      ],
+      "pred": [
+        "KB86.2",
+        "2B90.20",
+        "KB85.1"
+      ],
+      "pred_titles": [
+        "Postnatal intestinal perforation due to intestinal atresia or stenosis",
+        "Adenocarcinoma of transverse colon",
+        "Prenatal intrauterine intestinal perforation due to intestinal atresia or stenosis"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-280-en",
+      "source_id": "280",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "PATHOLOGICAL ANATOMY",
+      "exact_category_title_match": true,
+      "reference_answer": "Collagenous colitis.",
+      "proxy_icd11": [
+        "DB33.10"
+      ],
+      "pred": [
+        "DB33.10",
+        "DB33.11",
+        "DB33.1Z"
+      ],
+      "pred_titles": [
+        "Collagenous colitis",
+        "Lymphocytic colitis",
+        "Microscopic colitis, unspecified"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-280-es",
+      "source_id": "280",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "ANATOMÍA PATOLÓGICA",
+      "exact_category_title_match": true,
+      "reference_answer": "Colitis colágena.",
+      "proxy_icd11": [
+        "DB33.10"
+      ],
+      "pred": [
+        "ME05.1",
+        "DB52",
+        "2B90.2Z"
+      ],
+      "pred_titles": [
+        "Diarrhoea",
+        "Ulcer of anus",
+        "Malignant neoplasm of transverse colon, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-280-es",
+      "source_id": "280",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "ANATOMÍA PATOLÓGICA",
+      "exact_category_title_match": true,
+      "reference_answer": "Colitis colágena.",
+      "proxy_icd11": [
+        "DB33.10"
+      ],
+      "pred": [
+        "DB33.10",
+        "EJ20.0",
+        "DD71.Z"
+      ],
+      "pred_titles": [
+        "Collagenous colitis",
+        "Actinic elastosis",
+        "Ulcerative colitis, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-280-fr",
+      "source_id": "280",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "ANATOMIE PATHOLOGIQUE",
+      "exact_category_title_match": true,
+      "reference_answer": "Colite collagénique.",
+      "proxy_icd11": [
+        "DB33.10"
+      ],
+      "pred": [
+        "ME05.1",
+        "DA01.0Z",
+        "1A40.Z"
+      ],
+      "pred_titles": [
+        "Diarrhoea",
+        "Disturbances of oral epithelium, unspecified",
+        "Infectious gastroenteritis or colitis without specification of infectious agent"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-280-fr",
+      "source_id": "280",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "ANATOMIE PATHOLOGIQUE",
+      "exact_category_title_match": true,
+      "reference_answer": "Colite collagénique.",
+      "proxy_icd11": [
+        "DB33.10"
+      ],
+      "pred": [
+        "1A40.0",
+        "EJ20.0",
+        "DD71.Z"
+      ],
+      "pred_titles": [
+        "Gastroenteritis or colitis without specification of origin",
+        "Actinic elastosis",
+        "Ulcerative colitis, unspecified"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-290-en",
+      "source_id": "290",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "DERMATOLOGY, VENEREOLOGY AND PLASTIC SURGERY",
+      "exact_category_title_match": false,
+      "reference_answer": "Sporotrichosis.",
+      "proxy_icd11": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "EK2Y",
+        "EB90.0",
+        "ME60.Z"
+      ],
+      "pred_titles": [
+        "Phototoxic reaction to skin contact with other specified photoactive agent",
+        "Diabetic skin lesions",
+        "Skin lesion of unspecified nature"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-290-en",
+      "source_id": "290",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "DERMATOLOGY, VENEREOLOGY AND PLASTIC SURGERY",
+      "exact_category_title_match": false,
+      "reference_answer": "Sporotrichosis.",
+      "proxy_icd11": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "1F2J.Z",
+        "1F2J",
+        "1F2J.2"
+      ],
+      "pred_titles": [
+        "Sporotrichosis, unspecified",
+        "Sporotrichosis",
+        "Pulmonary sporotrichosis"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-290-es",
+      "source_id": "290",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "DERMATOLOGÍA, VENEREOLOGÍA Y CIRUGÍA PLÁSTICA",
+      "exact_category_title_match": false,
+      "reference_answer": "Esporotricosis.",
+      "proxy_icd11": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "MF58",
+        "ME60.Z",
+        "EB90.0"
+      ],
+      "pred_titles": [
+        "Urethral discharge",
+        "Skin lesion of unspecified nature",
+        "Diabetic skin lesions"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-290-es",
+      "source_id": "290",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "DERMATOLOGÍA, VENEREOLOGÍA Y CIRUGÍA PLÁSTICA",
+      "exact_category_title_match": false,
+      "reference_answer": "Esporotricosis.",
+      "proxy_icd11": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "1F2J.Z",
+        "1F2J",
+        "1F2J.2"
+      ],
+      "pred_titles": [
+        "Sporotrichosis, unspecified",
+        "Sporotrichosis",
+        "Pulmonary sporotrichosis"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-290-fr",
+      "source_id": "290",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "DERMATOLOGIE, VÉNÉRÉOLOGIE ET CHIRURGIE PLASTIQUE",
+      "exact_category_title_match": false,
+      "reference_answer": "Sporotrichose.",
+      "proxy_icd11": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "KD39.3",
+        "ME60.Z",
+        "1A72.Y"
+      ],
+      "pred_titles": [
+        "Fetus or newborn affected by complications of fetal surgery",
+        "Skin lesion of unspecified nature",
+        "Gonococcal infection of other specified sites"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-290-fr",
+      "source_id": "290",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "DERMATOLOGIE, VÉNÉRÉOLOGIE ET CHIRURGIE PLASTIQUE",
+      "exact_category_title_match": false,
+      "reference_answer": "Sporotrichose.",
+      "proxy_icd11": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "1F2J.Z",
+        "1F2J",
+        "1F2J.Y"
+      ],
+      "pred_titles": [
+        "Sporotrichosis, unspecified",
+        "Sporotrichosis",
+        "Other specified sporotrichosis"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-297-en",
+      "source_id": "297",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "INFECTIOUS DISEASES",
+      "exact_category_title_match": false,
+      "reference_answer": "Sporotrichosis.",
+      "proxy_icd11": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "EB90.0",
+        "ME60.Z",
+        "QC04.0"
+      ],
+      "pred_titles": [
+        "Diabetic skin lesions",
+        "Skin lesion of unspecified nature",
+        "Immunization not carried out due to patient having had the disease"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-297-en",
+      "source_id": "297",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "INFECTIOUS DISEASES",
+      "exact_category_title_match": false,
+      "reference_answer": "Sporotrichosis.",
+      "proxy_icd11": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "1F2J.Z",
+        "1F2J",
+        "1F2J.2"
+      ],
+      "pred_titles": [
+        "Sporotrichosis, unspecified",
+        "Sporotrichosis",
+        "Pulmonary sporotrichosis"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-297-es",
+      "source_id": "297",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "ENFERMEDADES INFECCIOSAS",
+      "exact_category_title_match": false,
+      "reference_answer": "Esporotricosis.",
+      "proxy_icd11": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "MF58",
+        "ME60.Z",
+        "EB90.0"
+      ],
+      "pred_titles": [
+        "Urethral discharge",
+        "Skin lesion of unspecified nature",
+        "Diabetic skin lesions"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-297-es",
+      "source_id": "297",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "ENFERMEDADES INFECCIOSAS",
+      "exact_category_title_match": false,
+      "reference_answer": "Esporotricosis.",
+      "proxy_icd11": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "1F2J.Z",
+        "1F2J",
+        "1F2J.2"
+      ],
+      "pred_titles": [
+        "Sporotrichosis, unspecified",
+        "Sporotrichosis",
+        "Pulmonary sporotrichosis"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-297-fr",
+      "source_id": "297",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "LES MALADIES INFECTIEUSES",
+      "exact_category_title_match": false,
+      "reference_answer": "Sporotrichose.",
+      "proxy_icd11": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "KD39.3",
+        "ME60.Z",
+        "1A72.Y"
+      ],
+      "pred_titles": [
+        "Fetus or newborn affected by complications of fetal surgery",
+        "Skin lesion of unspecified nature",
+        "Gonococcal infection of other specified sites"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-297-fr",
+      "source_id": "297",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "LES MALADIES INFECTIEUSES",
+      "exact_category_title_match": false,
+      "reference_answer": "Sporotrichose.",
+      "proxy_icd11": [
+        "1F2J.Z"
+      ],
+      "pred": [
+        "1F2J.Z",
+        "1F2J",
+        "1F2J.Y"
+      ],
+      "pred_titles": [
+        "Sporotrichosis, unspecified",
+        "Sporotrichosis",
+        "Other specified sporotrichosis"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-298-en",
+      "source_id": "298",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "INFECTIOUS DISEASES",
+      "exact_category_title_match": true,
+      "reference_answer": "Leptospirosis.",
+      "proxy_icd11": [
+        "1B91"
+      ],
+      "pred": [
+        "BA50",
+        "PL14.A",
+        "PL14.9"
+      ],
+      "pred_titles": [
+        "Old myocardial infarction",
+        "Delayed diagnosis",
+        "Incorrect diagnosis"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-298-en",
+      "source_id": "298",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "INFECTIOUS DISEASES",
+      "exact_category_title_match": true,
+      "reference_answer": "Leptospirosis.",
+      "proxy_icd11": [
+        "1B91"
+      ],
+      "pred": [
+        "1B91",
+        "QA08.Y",
+        "QA1C"
+      ],
+      "pred_titles": [
+        "Leptospirosis",
+        "Special screening examination for other specified infectious diseases",
+        "Person with feared complaint in whom no diagnosis is made"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-298-es",
+      "source_id": "298",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "ENFERMEDADES INFECCIOSAS",
+      "exact_category_title_match": true,
+      "reference_answer": "Leptospirosis.",
+      "proxy_icd11": [
+        "1B91"
+      ],
+      "pred": [
+        "MD90.0",
+        "FB56.2",
+        "MD90.1"
+      ],
+      "pred_titles": [
+        "Nausea",
+        "Myalgia",
+        "Vomiting"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-298-es",
+      "source_id": "298",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "ENFERMEDADES INFECCIOSAS",
+      "exact_category_title_match": true,
+      "reference_answer": "Leptospirosis.",
+      "proxy_icd11": [
+        "1B91"
+      ],
+      "pred": [
+        "1B91",
+        "QA08.Y",
+        "MD90"
+      ],
+      "pred_titles": [
+        "Leptospirosis",
+        "Special screening examination for other specified infectious diseases",
+        "Nausea or vomiting"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-298-fr",
+      "source_id": "298",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "LES MALADIES INFECTIEUSES",
+      "exact_category_title_match": true,
+      "reference_answer": "Leptospirose.",
+      "proxy_icd11": [
+        "1B91"
+      ],
+      "pred": [
+        "MD90.0",
+        "FB56.2",
+        "MD90.1"
+      ],
+      "pred_titles": [
+        "Nausea",
+        "Myalgia",
+        "Vomiting"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-298-fr",
+      "source_id": "298",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "LES MALADIES INFECTIEUSES",
+      "exact_category_title_match": true,
+      "reference_answer": "Leptospirose.",
+      "proxy_icd11": [
+        "1B91"
+      ],
+      "pred": [
+        "1B91",
+        "QA08.Y",
+        "PA90"
+      ],
+      "pred_titles": [
+        "Leptospirosis",
+        "Special screening examination for other specified infectious diseases",
+        "Unintentional drowning or submersion, while in body of water"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-365-en",
+      "source_id": "365",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "PNEUMOLOGY AND THORACIC SURGERY",
+      "exact_category_title_match": false,
+      "reference_answer": "Aspergillosis.",
+      "proxy_icd11": [
+        "1F20.Z"
+      ],
+      "pred": [
+        "CB27",
+        "MG43.7",
+        "MD12"
+      ],
+      "pred_titles": [
+        "Pleural effusion",
+        "Anorexia",
+        "Cough"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-365-en",
+      "source_id": "365",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "PNEUMOLOGY AND THORACIC SURGERY",
+      "exact_category_title_match": false,
+      "reference_answer": "Aspergillosis.",
+      "proxy_icd11": [
+        "1F20.Z"
+      ],
+      "pred": [
+        "1F20.Z",
+        "1F20",
+        "1F20.02"
+      ],
+      "pred_titles": [
+        "Aspergillosis, unspecified",
+        "Aspergillosis",
+        "Disseminated aspergillosis"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-365-es",
+      "source_id": "365",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "NEUMOLOGÍA Y CIRUGÍA TORÁCICA",
+      "exact_category_title_match": false,
+      "reference_answer": "Aspergilosis.",
+      "proxy_icd11": [
+        "1F20.Z"
+      ],
+      "pred": [
+        "CB27",
+        "MA16.11",
+        "MG43.7"
+      ],
+      "pred_titles": [
+        "Pleural effusion",
+        "Elevated white blood cell count",
+        "Anorexia"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-365-es",
+      "source_id": "365",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "NEUMOLOGÍA Y CIRUGÍA TORÁCICA",
+      "exact_category_title_match": false,
+      "reference_answer": "Aspergilosis.",
+      "proxy_icd11": [
+        "1F20.Z"
+      ],
+      "pred": [
+        "1F20.Z",
+        "1F20",
+        "1F20.1Z"
+      ],
+      "pred_titles": [
+        "Aspergillosis, unspecified",
+        "Aspergillosis",
+        "Non-invasive aspergillosis, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-365-fr",
+      "source_id": "365",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "PNEUMOLOGIE ET CHIRURGIE THORACIQUE",
+      "exact_category_title_match": false,
+      "reference_answer": "Aspergillose.",
+      "proxy_icd11": [
+        "1F20.Z"
+      ],
+      "pred": [
+        "CB27",
+        "MG22",
+        "MG43.7"
+      ],
+      "pred_titles": [
+        "Pleural effusion",
+        "Fatigue",
+        "Anorexia"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-365-fr",
+      "source_id": "365",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "PNEUMOLOGIE ET CHIRURGIE THORACIQUE",
+      "exact_category_title_match": false,
+      "reference_answer": "Aspergillose.",
+      "proxy_icd11": [
+        "1F20.Z"
+      ],
+      "pred": [
+        "1F20.Z",
+        "1F20",
+        "1F20.1Z"
+      ],
+      "pred_titles": [
+        "Aspergillosis, unspecified",
+        "Aspergillosis",
+        "Non-invasive aspergillosis, unspecified"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-377-en",
+      "source_id": "377",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "NEUROLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Corticobasal degeneration.",
+      "proxy_icd11": [
+        "8A00.1Y"
+      ],
+      "pred": [
+        "MB4A",
+        "8A00.Z",
+        "BA50"
+      ],
+      "pred_titles": [
+        "Apraxia",
+        "Parkinsonism, unspecified",
+        "Old myocardial infarction"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-377-en",
+      "source_id": "377",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "NEUROLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Corticobasal degeneration.",
+      "proxy_icd11": [
+        "8A00.1Y"
+      ],
+      "pred": [
+        "8A00.1Y",
+        "9A78.4",
+        "9A90.1"
+      ],
+      "pred_titles": [
+        "Other specified atypical parkinsonism",
+        "Corneal degeneration",
+        "Degeneration of iris"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-377-es",
+      "source_id": "377",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "NEUROLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Degeneración corticobasal.",
+      "proxy_icd11": [
+        "8A00.1Y"
+      ],
+      "pred": [
+        "MB4A",
+        "6A01.0",
+        "DB94.1Z"
+      ],
+      "pred_titles": [
+        "Apraxia",
+        "Developmental speech sound disorder",
+        "Alcoholic hepatitis, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-377-es",
+      "source_id": "377",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "NEUROLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Degeneración corticobasal.",
+      "proxy_icd11": [
+        "8A00.1Y"
+      ],
+      "pred": [
+        "8A00.1Y",
+        "6D85.Y",
+        "8A00.10"
+      ],
+      "pred_titles": [
+        "Other specified atypical parkinsonism",
+        "Dementia due to other specified diseases classified elsewhere",
+        "Progressive supranuclear palsy"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-377-fr",
+      "source_id": "377",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "NEUROLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Dégénérescence corticobasale.",
+      "proxy_icd11": [
+        "8A00.1Y"
+      ],
+      "pred": [
+        "MB4A",
+        "6A01.0",
+        "MB47.Y"
+      ],
+      "pred_titles": [
+        "Apraxia",
+        "Developmental speech sound disorder",
+        "Other specified abnormality of tonus or reflex"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-377-fr",
+      "source_id": "377",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "NEUROLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Dégénérescence corticobasale.",
+      "proxy_icd11": [
+        "8A00.1Y"
+      ],
+      "pred": [
+        "8A00.1Y",
+        "6D85.Y",
+        "MG20.Z"
+      ],
+      "pred_titles": [
+        "Other specified atypical parkinsonism",
+        "Dementia due to other specified diseases classified elsewhere",
+        "Cachexia, unspecified"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-391-en",
+      "source_id": "391",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "PSYCHIATRY",
+      "exact_category_title_match": false,
+      "reference_answer": "Body dysmorphic disorder.",
+      "proxy_icd11": [
+        "6B21.Z"
+      ],
+      "pred": [
+        "QA77",
+        "PL13.7",
+        "QC11"
+      ],
+      "pred_titles": [
+        "Medication or substance that is known to be contraindicated for the patient without injury or harm",
+        "Medication or substance that is known to be contraindicated for the patient, as mode of injury or harm",
+        "Procedure not carried out because of patient's decision for reasons of belief or group pressure"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-391-en",
+      "source_id": "391",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "PSYCHIATRY",
+      "exact_category_title_match": false,
+      "reference_answer": "Body dysmorphic disorder.",
+      "proxy_icd11": [
+        "6B21.Z"
+      ],
+      "pred": [
+        "6B21.Z",
+        "6B21",
+        "6B21.1"
+      ],
+      "pred_titles": [
+        "Body dysmorphic disorder, unspecified",
+        "Body dysmorphic disorder",
+        "Body dysmorphic disorder with poor to absent insight"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-391-es",
+      "source_id": "391",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "PSIQUIATRÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Trastorno dismórfico corporal.",
+      "proxy_icd11": [
+        "6B21.Z"
+      ],
+      "pred": [
+        "MF58",
+        "6B02",
+        "KB20.1"
+      ],
+      "pred_titles": [
+        "Urethral discharge",
+        "Agoraphobia",
+        "Intrauterine hypoxia first noted during labour or delivery"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-391-es",
+      "source_id": "391",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "PSIQUIATRÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Trastorno dismórfico corporal.",
+      "proxy_icd11": [
+        "6B21.Z"
+      ],
+      "pred": [
+        "6B21.Z",
+        "6B21",
+        "6B21.1"
+      ],
+      "pred_titles": [
+        "Body dysmorphic disorder, unspecified",
+        "Body dysmorphic disorder",
+        "Body dysmorphic disorder with poor to absent insight"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-391-fr",
+      "source_id": "391",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "PSYCHIATRIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Dysmorphie corporelle.",
+      "proxy_icd11": [
+        "6B21.Z"
+      ],
+      "pred": [
+        "LA88.Y",
+        "LA52",
+        "QC04.5"
+      ],
+      "pred_titles": [
+        "Other specified congenital anomaly of a ventricle or the ventricular septum",
+        "Facial asymmetry",
+        "Immunization not carried out because of patient refusal"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-391-fr",
+      "source_id": "391",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "PSYCHIATRIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Dysmorphie corporelle.",
+      "proxy_icd11": [
+        "6B21.Z"
+      ],
+      "pred": [
+        "6B21.Z",
+        "5A60.0",
+        "LD26.4Y"
+      ],
+      "pred_titles": [
+        "Body dysmorphic disorder, unspecified",
+        "Acromegaly or pituitary gigantism",
+        "Other specified arthrogryposis syndromes"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-4-en",
+      "source_id": "4",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "DIGESTIVE",
+      "exact_category_title_match": true,
+      "reference_answer": "Acute hepatitis B.",
+      "proxy_icd11": [
+        "1E50.1"
+      ],
+      "pred": [
+        "MA14.13",
+        "MB28.A",
+        "MA14.14"
+      ],
+      "pred_titles": [
+        "Anti-nuclear antibody negative",
+        "Negative affectivity",
+        "Anti-nuclear antibody positive"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-4-en",
+      "source_id": "4",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "DIGESTIVE",
+      "exact_category_title_match": true,
+      "reference_answer": "Acute hepatitis B.",
+      "proxy_icd11": [
+        "1E50.1"
+      ],
+      "pred": [
+        "1E50.1",
+        "1E50.0",
+        "1E50.3"
+      ],
+      "pred_titles": [
+        "Acute hepatitis B",
+        "Acute hepatitis A",
+        "Acute hepatitis D"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-4-es",
+      "source_id": "4",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "DIGESTIVO",
+      "exact_category_title_match": true,
+      "reference_answer": "Hepatitis aguda B.",
+      "proxy_icd11": [
+        "1E50.1"
+      ],
+      "pred": [
+        "GC50.0",
+        "MA14.11",
+        "4A01.05"
+      ],
+      "pred_titles": [
+        "Overactive bladder",
+        "Anticitrullinated protein antibody negative",
+        "Immunodeficiencies with severe reduction in serum IgG or IgA with normal or elevated IgM and normal numbers of B-cells"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-4-es",
+      "source_id": "4",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "DIGESTIVO",
+      "exact_category_title_match": true,
+      "reference_answer": "Hepatitis aguda B.",
+      "proxy_icd11": [
+        "1E50.1"
+      ],
+      "pred": [
+        "1E50.0",
+        "1E50.1",
+        "1E50.Z"
+      ],
+      "pred_titles": [
+        "Acute hepatitis A",
+        "Acute hepatitis B",
+        "Acute viral hepatitis, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-4-fr",
+      "source_id": "4",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "DIGESTIF",
+      "exact_category_title_match": true,
+      "reference_answer": "Hépatite B aiguë.",
+      "proxy_icd11": [
+        "1E50.1"
+      ],
+      "pred": [
+        "MG22",
+        "FA24.1",
+        "8C01.3"
+      ],
+      "pred_titles": [
+        "Fatigue",
+        "Juvenile idiopathic polyarthritis",
+        "Chronic inflammatory demyelinating polyneuropathy"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-4-fr",
+      "source_id": "4",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "DIGESTIF",
+      "exact_category_title_match": true,
+      "reference_answer": "Hépatite B aiguë.",
+      "proxy_icd11": [
+        "1E50.1"
+      ],
+      "pred": [
+        "1E50.1",
+        "1E50.0",
+        "1E51.0Z"
+      ],
+      "pred_titles": [
+        "Acute hepatitis B",
+        "Acute hepatitis A",
+        "Chronic hepatitis B, unspecified"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-427-en",
+      "source_id": "427",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "ENDOCRINOLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Parathyroid carcinoma.",
+      "proxy_icd11": [
+        "2D12.Z"
+      ],
+      "pred": [
+        "MA82.1Z",
+        "6B60.Y",
+        "MB21.Z"
+      ],
+      "pred_titles": [
+        "Dysphonia, unspecified",
+        "Dissociative neurological symptom disorder, with other specified symptoms",
+        "Symptoms, signs or clinical findings involving cognition, unspecified"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-427-en",
+      "source_id": "427",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "ENDOCRINOLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Parathyroid carcinoma.",
+      "proxy_icd11": [
+        "2D12.Z"
+      ],
+      "pred": [
+        "2D12.Z",
+        "5A5Z",
+        "5A5Y"
+      ],
+      "pred_titles": [
+        "Malignant neoplasms of other endocrine glands or related structures, unspecified",
+        "Disorders of the parathyroids or parathyroid hormone system, unspecified",
+        "Other specified disorders of the parathyroids or parathyroid hormone system"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-427-es",
+      "source_id": "427",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "ENDOCRINOLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Carcinoma paratiroideo.",
+      "proxy_icd11": [
+        "2D12.Z"
+      ],
+      "pred": [
+        "ME84.2Z",
+        "MA82.1Z",
+        "5B81.00"
+      ],
+      "pred_titles": [
+        "Low back pain, unspecified",
+        "Dysphonia, unspecified",
+        "Obesity in children or adolescents"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-427-es",
+      "source_id": "427",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "ENDOCRINOLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Carcinoma paratiroideo.",
+      "proxy_icd11": [
+        "2D12.Z"
+      ],
+      "pred": [
+        "2E6B",
+        "2F37.Y",
+        "2F37.Z"
+      ],
+      "pred_titles": [
+        "Carcinoma in situ of thyroid or other endocrine glands",
+        "Other specified benign neoplasm of endocrine glands",
+        "Benign neoplasm of endocrine glands, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-427-fr",
+      "source_id": "427",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "ENDOCRINOLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Carcinome de la parathyroïde.",
+      "proxy_icd11": [
+        "2D12.Z"
+      ],
+      "pred": [
+        "MA82.1Z",
+        "NA60.Z",
+        "ME84.0"
+      ],
+      "pred_titles": [
+        "Dysphonia, unspecified",
+        "Injury of blood vessels at neck level, unspecified",
+        "Cervical spine pain"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-427-fr",
+      "source_id": "427",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "ENDOCRINOLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Carcinome de la parathyroïde.",
+      "proxy_icd11": [
+        "2D12.Z"
+      ],
+      "pred": [
+        "2E6B",
+        "2D12.Z",
+        "5A51.0"
+      ],
+      "pred_titles": [
+        "Carcinoma in situ of thyroid or other endocrine glands",
+        "Malignant neoplasms of other endocrine glands or related structures, unspecified",
+        "Primary hyperparathyroidism"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-430-en",
+      "source_id": "430",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "INFECTIOUS DISEASES AND MICROBIOLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Invasive pulmonary aspergillosis.",
+      "proxy_icd11": [
+        "1F20.0Y"
+      ],
+      "pred": [
+        "MD12",
+        "2D42",
+        "2C11.0"
+      ],
+      "pred_titles": [
+        "Cough",
+        "Malignant neoplasms of ill-defined sites",
+        "Adenocarcinoma of other or ill-defined digestive organs"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-430-en",
+      "source_id": "430",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "INFECTIOUS DISEASES AND MICROBIOLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Invasive pulmonary aspergillosis.",
+      "proxy_icd11": [
+        "1F20.0Y"
+      ],
+      "pred": [
+        "1F20.12",
+        "1F20.0Y",
+        "1F20.Z"
+      ],
+      "pred_titles": [
+        "Chronic pulmonary aspergillosis",
+        "Invasive aspergillosis of other specified site",
+        "Aspergillosis, unspecified"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-430-es",
+      "source_id": "430",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "ENFERMEDADES INFECCIOSAS Y MICROBIOLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Aspergilosis pulmonar invasiva.",
+      "proxy_icd11": [
+        "1F20.0Y"
+      ],
+      "pred": [
+        "MD11.5",
+        "MD12",
+        "1C11.1"
+      ],
+      "pred_titles": [
+        "Dyspnoea",
+        "Cough",
+        "Trench fever"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-430-es",
+      "source_id": "430",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "ENFERMEDADES INFECCIOSAS Y MICROBIOLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Aspergilosis pulmonar invasiva.",
+      "proxy_icd11": [
+        "1F20.0Y"
+      ],
+      "pred": [
+        "1F20.0Y",
+        "1F20.12",
+        "1F20.0Z"
+      ],
+      "pred_titles": [
+        "Invasive aspergillosis of other specified site",
+        "Chronic pulmonary aspergillosis",
+        "Invasive aspergillosis, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-430-fr",
+      "source_id": "430",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "MALADIES INFECTIEUSES ET MICROBIOLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Aspergillose pulmonaire invasive.",
+      "proxy_icd11": [
+        "1F20.0Y"
+      ],
+      "pred": [
+        "MD11.5",
+        "MD12",
+        "1C11.1"
+      ],
+      "pred_titles": [
+        "Dyspnoea",
+        "Cough",
+        "Trench fever"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-430-fr",
+      "source_id": "430",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "MALADIES INFECTIEUSES ET MICROBIOLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Aspergillose pulmonaire invasive.",
+      "proxy_icd11": [
+        "1F20.0Y"
+      ],
+      "pred": [
+        "1F20.0Y",
+        "1F20.12",
+        "1F20.0Z"
+      ],
+      "pred_titles": [
+        "Invasive aspergillosis of other specified site",
+        "Chronic pulmonary aspergillosis",
+        "Invasive aspergillosis, unspecified"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-447-en",
+      "source_id": "447",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "NEPHROLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Membranoproliferative glomerulonephritis.",
+      "proxy_icd11": [
+        "MF8Y"
+      ],
+      "pred": [
+        "MA14.1D",
+        "MF96.Z",
+        "MA14.17"
+      ],
+      "pred_titles": [
+        "Rheumatoid factor negative",
+        "Proteinuria, unspecified",
+        "Human leukocyte antigen negative"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-447-en",
+      "source_id": "447",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "NEPHROLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Membranoproliferative glomerulonephritis.",
+      "proxy_icd11": [
+        "MF8Y"
+      ],
+      "pred": [
+        "MF8Y",
+        "MF84",
+        "GB40"
+      ],
+      "pred_titles": [
+        "Other specified clinical findings in specimens from the urinary system",
+        "Pauci-immune proliferative glomerulonephritis",
+        "Nephritic syndrome"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-447-es",
+      "source_id": "447",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "NEFROLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Glomerulonefritis membranoproliferativa.",
+      "proxy_icd11": [
+        "MF8Y"
+      ],
+      "pred": [
+        "ME84.2Z",
+        "MA14.1D",
+        "FA24.1"
+      ],
+      "pred_titles": [
+        "Low back pain, unspecified",
+        "Rheumatoid factor negative",
+        "Juvenile idiopathic polyarthritis"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-447-es",
+      "source_id": "447",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "NEFROLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Glomerulonefritis membranoproliferativa.",
+      "proxy_icd11": [
+        "MF8Y"
+      ],
+      "pred": [
+        "MF8Y",
+        "GB40",
+        "MF84"
+      ],
+      "pred_titles": [
+        "Other specified clinical findings in specimens from the urinary system",
+        "Nephritic syndrome",
+        "Pauci-immune proliferative glomerulonephritis"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-447-fr",
+      "source_id": "447",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "NEPHROLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Glomérulonéphrite membranoproliférative.",
+      "proxy_icd11": [
+        "MF8Y"
+      ],
+      "pred": [
+        "FA24.1",
+        "FA20.1",
+        "MA14.1D"
+      ],
+      "pred_titles": [
+        "Juvenile idiopathic polyarthritis",
+        "Seronegative rheumatoid arthritis",
+        "Rheumatoid factor negative"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-447-fr",
+      "source_id": "447",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "NEPHROLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Glomérulonéphrite membranoproliférative.",
+      "proxy_icd11": [
+        "MF8Y"
+      ],
+      "pred": [
+        "MF8Y",
+        "GB40",
+        "FA25.1Y"
+      ],
+      "pred_titles": [
+        "Other specified clinical findings in specimens from the urinary system",
+        "Nephritic syndrome",
+        "Other specified secondary gout"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-511-en",
+      "source_id": "511",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "DIGESTIVE",
+      "exact_category_title_match": false,
+      "reference_answer": "Microscopic colitis.",
+      "proxy_icd11": [
+        "DB33.1Z"
+      ],
+      "pred": [
+        "DA51.2",
+        "2A81.7",
+        "PB24"
+      ],
+      "pred_titles": [
+        "Lymphocytic duodenitis",
+        "Diffuse large B-cell lymphoma associated with chronic inflammation",
+        "Unintentional exposure to or harmful effects of analgesics, antipyretics or nonsteroidal anti-inflammatory drugs"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-511-en",
+      "source_id": "511",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "DIGESTIVE",
+      "exact_category_title_match": false,
+      "reference_answer": "Microscopic colitis.",
+      "proxy_icd11": [
+        "DB33.1Z"
+      ],
+      "pred": [
+        "DB33.1Z",
+        "DB33.1Y",
+        "DB33.1"
+      ],
+      "pred_titles": [
+        "Microscopic colitis, unspecified",
+        "Other specified microscopic colitis",
+        "Microscopic colitis"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-511-es",
+      "source_id": "511",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "DIGESTIVO",
+      "exact_category_title_match": false,
+      "reference_answer": "Colitis microscópica.",
+      "proxy_icd11": [
+        "DB33.1Z"
+      ],
+      "pred": [
+        "ME05.1",
+        "PB24",
+        "1A40.Z"
+      ],
+      "pred_titles": [
+        "Diarrhoea",
+        "Unintentional exposure to or harmful effects of analgesics, antipyretics or nonsteroidal anti-inflammatory drugs",
+        "Infectious gastroenteritis or colitis without specification of infectious agent"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-511-es",
+      "source_id": "511",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "DIGESTIVO",
+      "exact_category_title_match": false,
+      "reference_answer": "Colitis microscópica.",
+      "proxy_icd11": [
+        "DB33.1Z"
+      ],
+      "pred": [
+        "DB33.1Z",
+        "DB33.1",
+        "DB33.1Y"
+      ],
+      "pred_titles": [
+        "Microscopic colitis, unspecified",
+        "Microscopic colitis",
+        "Other specified microscopic colitis"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-511-fr",
+      "source_id": "511",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "DIGESTIF",
+      "exact_category_title_match": false,
+      "reference_answer": "Colite microscopique.",
+      "proxy_icd11": [
+        "DB33.1Z"
+      ],
+      "pred": [
+        "ME05.1",
+        "DB33.43",
+        "DA60.62"
+      ],
+      "pred_titles": [
+        "Diarrhoea",
+        "Drug-induced colitis",
+        "Drug-induced gastric ulcer"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-511-fr",
+      "source_id": "511",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "DIGESTIF",
+      "exact_category_title_match": false,
+      "reference_answer": "Colite microscopique.",
+      "proxy_icd11": [
+        "DB33.1Z"
+      ],
+      "pred": [
+        "DB33.1Z",
+        "DB33.1",
+        "DB33.1Y"
+      ],
+      "pred_titles": [
+        "Microscopic colitis, unspecified",
+        "Microscopic colitis",
+        "Other specified microscopic colitis"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-52-en",
+      "source_id": "52",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "PSYCHIATRY",
+      "exact_category_title_match": true,
+      "reference_answer": "Adjustment disorder.",
+      "proxy_icd11": [
+        "6B43"
+      ],
+      "pred": [
+        "MB24.5",
+        "6A70.2",
+        "6A71.2"
+      ],
+      "pred_titles": [
+        "Depressed mood",
+        "Single episode depressive disorder, moderate, with psychotic symptoms",
+        "Recurrent depressive disorder, current episode moderate, with psychotic symptoms"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-52-en",
+      "source_id": "52",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "PSYCHIATRY",
+      "exact_category_title_match": true,
+      "reference_answer": "Adjustment disorder.",
+      "proxy_icd11": [
+        "6B43"
+      ],
+      "pred": [
+        "6B43",
+        "QB30.6",
+        "QB30.5"
+      ],
+      "pred_titles": [
+        "Adjustment disorder",
+        "Adjustment or management of breast implant",
+        "Fitting or adjustment of urinary device"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-52-es",
+      "source_id": "52",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "PSIQUIATRÍA",
+      "exact_category_title_match": true,
+      "reference_answer": "Trastorno de adaptación.",
+      "proxy_icd11": [
+        "6B43"
+      ],
+      "pred": [
+        "PA0Z",
+        "MB24.5",
+        "PA2Z"
+      ],
+      "pred_titles": [
+        "Unintentional land transport traffic event injuring a user of unspecified land transport",
+        "Depressed mood",
+        "Unintentional land transport injury event unknown whether traffic or nontraffic injuring a user of unspecified transport"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-52-es",
+      "source_id": "52",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "PSIQUIATRÍA",
+      "exact_category_title_match": true,
+      "reference_answer": "Trastorno de adaptación.",
+      "proxy_icd11": [
+        "6B43"
+      ],
+      "pred": [
+        "6B43",
+        "6B06",
+        "6B4Z"
+      ],
+      "pred_titles": [
+        "Adjustment disorder",
+        "Selective mutism",
+        "Disorders specifically associated with stress, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-52-fr",
+      "source_id": "52",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "PSYCHIATRIE",
+      "exact_category_title_match": true,
+      "reference_answer": "Trouble de l'adaptation.",
+      "proxy_icd11": [
+        "6B43"
+      ],
+      "pred": [
+        "MB24.5",
+        "MB24.3",
+        "6A80.0"
+      ],
+      "pred_titles": [
+        "Depressed mood",
+        "Anxiety",
+        "Prominent anxiety symptoms in mood episodes"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-52-fr",
+      "source_id": "52",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "PSYCHIATRIE",
+      "exact_category_title_match": true,
+      "reference_answer": "Trouble de l'adaptation.",
+      "proxy_icd11": [
+        "6B43"
+      ],
+      "pred": [
+        "6B43",
+        "6B06",
+        "6B4Z"
+      ],
+      "pred_titles": [
+        "Adjustment disorder",
+        "Selective mutism",
+        "Disorders specifically associated with stress, unspecified"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-552-en",
+      "source_id": "552",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "DERMATOLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Kawasaki disease.",
+      "proxy_icd11": [
+        "4A44.5"
+      ],
+      "pred": [
+        "ME64.0",
+        "ME66.6Z",
+        "MF9Y"
+      ],
+      "pred_titles": [
+        "Erythema",
+        "Rash, unspecified",
+        "Other specified clinical findings on examination of urine, without diagnosis"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-552-en",
+      "source_id": "552",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "DERMATOLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Kawasaki disease.",
+      "proxy_icd11": [
+        "4A44.5"
+      ],
+      "pred": [
+        "4A44.5",
+        "BC42.Y",
+        "RA03"
+      ],
+      "pred_titles": [
+        "Mucocutaneous lymph node syndrome",
+        "Other specific myocarditis",
+        "Multisystem inflammatory syndrome associated with COVID-19"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-552-es",
+      "source_id": "552",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "DERMATOLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Enfermedad de Kawasaki.",
+      "proxy_icd11": [
+        "4A44.5"
+      ],
+      "pred": [
+        "ME64.0",
+        "GA04",
+        "MA01.0"
+      ],
+      "pred_titles": [
+        "Erythema",
+        "Cervicitis",
+        "Localised lymph node enlargement"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-552-es",
+      "source_id": "552",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "DERMATOLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Enfermedad de Kawasaki.",
+      "proxy_icd11": [
+        "4A44.5"
+      ],
+      "pred": [
+        "4A44.5",
+        "BC42.Y",
+        "RA03"
+      ],
+      "pred_titles": [
+        "Mucocutaneous lymph node syndrome",
+        "Other specific myocarditis",
+        "Multisystem inflammatory syndrome associated with COVID-19"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-552-fr",
+      "source_id": "552",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "DERMATOLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Maladie de Kawasaki.",
+      "proxy_icd11": [
+        "4A44.5"
+      ],
+      "pred": [
+        "ME64.0",
+        "MA01.0",
+        "RA01.1"
+      ],
+      "pred_titles": [
+        "Erythema",
+        "Localised lymph node enlargement",
+        "COVID-19, virus not identified"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-552-fr",
+      "source_id": "552",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "DERMATOLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Maladie de Kawasaki.",
+      "proxy_icd11": [
+        "4A44.5"
+      ],
+      "pred": [
+        "4A44.5",
+        "BC42.Y",
+        "MG48"
+      ],
+      "pred_titles": [
+        "Mucocutaneous lymph node syndrome",
+        "Other specific myocarditis",
+        "Unknown or unspecified causes of morbidity"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-558-en",
+      "source_id": "558",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "HEMATOLOGY",
+      "exact_category_title_match": true,
+      "reference_answer": "Thrombotic thrombocytopenic purpura.",
+      "proxy_icd11": [
+        "3B64.14"
+      ],
+      "pred": [
+        "4B05",
+        "4B04",
+        "4A01.05"
+      ],
+      "pred_titles": [
+        "Disorders with increased monocyte counts",
+        "Disorders with decreased monocyte counts",
+        "Immunodeficiencies with severe reduction in serum IgG or IgA with normal or elevated IgM and normal numbers of B-cells"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-558-en",
+      "source_id": "558",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "HEMATOLOGY",
+      "exact_category_title_match": true,
+      "reference_answer": "Thrombotic thrombocytopenic purpura.",
+      "proxy_icd11": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.14",
+        "3B64.10",
+        "3B64.12"
+      ],
+      "pred_titles": [
+        "Thrombotic thrombocytopenic purpura",
+        "Immune thrombocytopenic purpura",
+        "Drug-induced thrombocytopenic purpura"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-558-es",
+      "source_id": "558",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "HEMATOLOGIA",
+      "exact_category_title_match": true,
+      "reference_answer": "Púrpura trombótica trombocitopénica.",
+      "proxy_icd11": [
+        "3B64.14"
+      ],
+      "pred": [
+        "KB21.1",
+        "ME84.2Z",
+        "MG26"
+      ],
+      "pred_titles": [
+        "Mild and moderate birth asphyxia",
+        "Low back pain, unspecified",
+        "Fever of other or unknown origin"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-558-es",
+      "source_id": "558",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "HEMATOLOGIA",
+      "exact_category_title_match": true,
+      "reference_answer": "Púrpura trombótica trombocitopénica.",
+      "proxy_icd11": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.14",
+        "3B64.10",
+        "3B64.11"
+      ],
+      "pred_titles": [
+        "Thrombotic thrombocytopenic purpura",
+        "Immune thrombocytopenic purpura",
+        "Secondary thrombocytopenic purpura"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-558-fr",
+      "source_id": "558",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "HÉMATOLOGIE",
+      "exact_category_title_match": true,
+      "reference_answer": "Purpura thrombocytopénique thrombotique.",
+      "proxy_icd11": [
+        "3B64.14"
+      ],
+      "pred": [
+        "MA16.1Z",
+        "MG26",
+        "6B8Z"
+      ],
+      "pred_titles": [
+        "Abnormality of white blood cells, unspecified",
+        "Fever of other or unknown origin",
+        "Feeding or eating disorders, unspecified"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-558-fr",
+      "source_id": "558",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "HÉMATOLOGIE",
+      "exact_category_title_match": true,
+      "reference_answer": "Purpura thrombocytopénique thrombotique.",
+      "proxy_icd11": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.14",
+        "3B64.10",
+        "3B64.12"
+      ],
+      "pred_titles": [
+        "Thrombotic thrombocytopenic purpura",
+        "Immune thrombocytopenic purpura",
+        "Drug-induced thrombocytopenic purpura"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-559-en",
+      "source_id": "559",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "HEMATOLOGY",
+      "exact_category_title_match": true,
+      "reference_answer": "Thrombotic thrombocytopenic purpura.",
+      "proxy_icd11": [
+        "3B64.14"
+      ],
+      "pred": [
+        "4B05",
+        "4B04",
+        "4A01.05"
+      ],
+      "pred_titles": [
+        "Disorders with increased monocyte counts",
+        "Disorders with decreased monocyte counts",
+        "Immunodeficiencies with severe reduction in serum IgG or IgA with normal or elevated IgM and normal numbers of B-cells"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-559-en",
+      "source_id": "559",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "HEMATOLOGY",
+      "exact_category_title_match": true,
+      "reference_answer": "Thrombotic thrombocytopenic purpura.",
+      "proxy_icd11": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.14",
+        "3B64.10",
+        "3B64.12"
+      ],
+      "pred_titles": [
+        "Thrombotic thrombocytopenic purpura",
+        "Immune thrombocytopenic purpura",
+        "Drug-induced thrombocytopenic purpura"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-559-es",
+      "source_id": "559",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "HEMATOLOGIA",
+      "exact_category_title_match": true,
+      "reference_answer": "Púrpura trombótica trombocitopénica.",
+      "proxy_icd11": [
+        "3B64.14"
+      ],
+      "pred": [
+        "KB21.1",
+        "ME84.2Z",
+        "MG26"
+      ],
+      "pred_titles": [
+        "Mild and moderate birth asphyxia",
+        "Low back pain, unspecified",
+        "Fever of other or unknown origin"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-559-es",
+      "source_id": "559",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "HEMATOLOGIA",
+      "exact_category_title_match": true,
+      "reference_answer": "Púrpura trombótica trombocitopénica.",
+      "proxy_icd11": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.14",
+        "3B64.10",
+        "3B64.11"
+      ],
+      "pred_titles": [
+        "Thrombotic thrombocytopenic purpura",
+        "Immune thrombocytopenic purpura",
+        "Secondary thrombocytopenic purpura"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-559-fr",
+      "source_id": "559",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "HÉMATOLOGIE",
+      "exact_category_title_match": true,
+      "reference_answer": "Purpura thrombocytopénique thrombotique.",
+      "proxy_icd11": [
+        "3B64.14"
+      ],
+      "pred": [
+        "MA16.1Z",
+        "MG26",
+        "6B8Z"
+      ],
+      "pred_titles": [
+        "Abnormality of white blood cells, unspecified",
+        "Fever of other or unknown origin",
+        "Feeding or eating disorders, unspecified"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-559-fr",
+      "source_id": "559",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "HÉMATOLOGIE",
+      "exact_category_title_match": true,
+      "reference_answer": "Purpura thrombocytopénique thrombotique.",
+      "proxy_icd11": [
+        "3B64.14"
+      ],
+      "pred": [
+        "3B64.14",
+        "3B64.10",
+        "3B64.12"
+      ],
+      "pred_titles": [
+        "Thrombotic thrombocytopenic purpura",
+        "Immune thrombocytopenic purpura",
+        "Drug-induced thrombocytopenic purpura"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-562-en",
+      "source_id": "562",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "HEMATOLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Antiphospholipid syndrome.",
+      "proxy_icd11": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "LA85.41",
+        "DB91.0",
+        "MC81.0"
+      ],
+      "pred_titles": [
+        "Common arterial trunk with pulmonary dominance and interrupted aortic arch",
+        "Acute or subacute hepatic failure due to hepatitis virus",
+        "Tachycardia, unspecified"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-562-en",
+      "source_id": "562",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "HEMATOLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Antiphospholipid syndrome.",
+      "proxy_icd11": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "4A45.Z",
+        "4A45.0",
+        "4A45"
+      ],
+      "pred_titles": [
+        "Antiphospholipid syndrome, unspecified",
+        "Primary antiphospholipid syndrome",
+        "Antiphospholipid syndrome"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-562-es",
+      "source_id": "562",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "HEMATOLOGIA",
+      "exact_category_title_match": false,
+      "reference_answer": "Síndrome antifosfolípido.",
+      "proxy_icd11": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "MA18.2",
+        "MC83.Z",
+        "GC2Z"
+      ],
+      "pred_titles": [
+        "Abnormal arterial blood-gas level",
+        "Cardiac murmurs or sounds, unspecified",
+        "Diseases of the urinary system, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-562-es",
+      "source_id": "562",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "HEMATOLOGIA",
+      "exact_category_title_match": false,
+      "reference_answer": "Síndrome antifosfolípido.",
+      "proxy_icd11": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "8A45.4Z",
+        "4A45.Z",
+        "8A6Z"
+      ],
+      "pred_titles": [
+        "White matter disorders due to certain specified systemic disease, unspecified",
+        "Antiphospholipid syndrome, unspecified",
+        "Epilepsy or seizures, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-562-fr",
+      "source_id": "562",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "HÉMATOLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Syndrome des antiphospholipides.",
+      "proxy_icd11": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "MD11.5",
+        "MC41",
+        "DB99.2"
+      ],
+      "pred_titles": [
+        "Dyspnoea",
+        "Tinnitus",
+        "Hepatorenal syndrome"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-562-fr",
+      "source_id": "562",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "HÉMATOLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Syndrome des antiphospholipides.",
+      "proxy_icd11": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "4A45.Z",
+        "4A45",
+        "4A45.1"
+      ],
+      "pred_titles": [
+        "Antiphospholipid syndrome, unspecified",
+        "Antiphospholipid syndrome",
+        "Secondary antiphospholipid syndrome"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-568-en",
+      "source_id": "568",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "NEPHROLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "IgA nephropathy.",
+      "proxy_icd11": [
+        "MF8Y"
+      ],
+      "pred": [
+        "ME64.0",
+        "QA00.C",
+        "DB96.0"
+      ],
+      "pred_titles": [
+        "Erythema",
+        "Laboratory examination",
+        "Autoimmune hepatitis"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-568-en",
+      "source_id": "568",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "NEPHROLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "IgA nephropathy.",
+      "proxy_icd11": [
+        "MF8Y"
+      ],
+      "pred": [
+        "4A44.92",
+        "MF8Y",
+        "EB42"
+      ],
+      "pred_titles": [
+        "IgA vasculitis",
+        "Other specified clinical findings in specimens from the urinary system",
+        "Linear IgA bullous dermatosis"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-568-es",
+      "source_id": "568",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "NEFROLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Nefropatía IgA.",
+      "proxy_icd11": [
+        "MF8Y"
+      ],
+      "pred": [
+        "ME64.0",
+        "ME84.2Z",
+        "QA00.61"
+      ],
+      "pred_titles": [
+        "Erythema",
+        "Low back pain, unspecified",
+        "Normal Visual Field"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-568-es",
+      "source_id": "568",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "NEFROLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Nefropatía IgA.",
+      "proxy_icd11": [
+        "MF8Y"
+      ],
+      "pred": [
+        "MF8Y",
+        "4A44.92",
+        "EB40.Y"
+      ],
+      "pred_titles": [
+        "Other specified clinical findings in specimens from the urinary system",
+        "IgA vasculitis",
+        "Other specified pemphigus"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-568-fr",
+      "source_id": "568",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "NEPHROLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Néphropathie à IgA.",
+      "proxy_icd11": [
+        "MF8Y"
+      ],
+      "pred": [
+        "QA00.C",
+        "ME64.0",
+        "CA0Y"
+      ],
+      "pred_titles": [
+        "Laboratory examination",
+        "Erythema",
+        "Other specified upper respiratory tract disorders"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-568-fr",
+      "source_id": "568",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "NEPHROLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Néphropathie à IgA.",
+      "proxy_icd11": [
+        "MF8Y"
+      ],
+      "pred": [
+        "MF8Y",
+        "4A44.92",
+        "EB40.Y"
+      ],
+      "pred_titles": [
+        "Other specified clinical findings in specimens from the urinary system",
+        "IgA vasculitis",
+        "Other specified pemphigus"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-593-en",
+      "source_id": "593",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "ONCOLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "VIPoma.",
+      "proxy_icd11": [
+        "2C10.1"
+      ],
+      "pred": [
+        "BA50",
+        "MD82",
+        "5B80.00"
+      ],
+      "pred_titles": [
+        "Old myocardial infarction",
+        "Intra-abdominal or pelvic swelling, mass or lump",
+        "Overweight in infants, children or adolescents"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-593-en",
+      "source_id": "593",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "ONCOLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "VIPoma.",
+      "proxy_icd11": [
+        "2C10.1"
+      ],
+      "pred": [
+        "2C10.1",
+        "2E80.0Z",
+        "2E80.02"
+      ],
+      "pred_titles": [
+        "Neuroendocrine neoplasms of pancreas",
+        "Lipoma, unspecified site",
+        "Deep internal or visceral lipoma"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-593-es",
+      "source_id": "593",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "ONCOLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "VIPoma.",
+      "proxy_icd11": [
+        "2C10.1"
+      ],
+      "pred": [
+        "ME64.4",
+        "5C77",
+        "ME05.1"
+      ],
+      "pred_titles": [
+        "Flushing",
+        "Hypokalaemia",
+        "Diarrhoea"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-593-es",
+      "source_id": "593",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "ONCOLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "VIPoma.",
+      "proxy_icd11": [
+        "2C10.1"
+      ],
+      "pred": [
+        "2C10.1",
+        "MG71.Z",
+        "MD81.4"
+      ],
+      "pred_titles": [
+        "Neuroendocrine neoplasms of pancreas",
+        "Abnormal laboratory results, not elsewhere classified, unspecified",
+        "Other and unspecified abdominal pain"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-593-fr",
+      "source_id": "593",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "ONCOLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "VIPoma.",
+      "proxy_icd11": [
+        "2C10.1"
+      ],
+      "pred": [
+        "EG02",
+        "ME05.1",
+        "5C77"
+      ],
+      "pred_titles": [
+        "Flushing disorders",
+        "Diarrhoea",
+        "Hypokalaemia"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-593-fr",
+      "source_id": "593",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "ONCOLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "VIPoma.",
+      "proxy_icd11": [
+        "2C10.1"
+      ],
+      "pred": [
+        "EG02",
+        "ME05.1",
+        "ME1Y"
+      ],
+      "pred_titles": [
+        "Flushing disorders",
+        "Diarrhoea",
+        "Other specified symptoms or signs involving the digestive system or abdomen"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-599-en",
+      "source_id": "599",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "RHEUMATOLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Antiphospholipid syndrome.",
+      "proxy_icd11": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "LA85.41",
+        "DB91.0",
+        "MC81.0"
+      ],
+      "pred_titles": [
+        "Common arterial trunk with pulmonary dominance and interrupted aortic arch",
+        "Acute or subacute hepatic failure due to hepatitis virus",
+        "Tachycardia, unspecified"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-599-en",
+      "source_id": "599",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "RHEUMATOLOGY",
+      "exact_category_title_match": false,
+      "reference_answer": "Antiphospholipid syndrome.",
+      "proxy_icd11": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "4A45.Z",
+        "4A45.0",
+        "4A45"
+      ],
+      "pred_titles": [
+        "Antiphospholipid syndrome, unspecified",
+        "Primary antiphospholipid syndrome",
+        "Antiphospholipid syndrome"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-599-es",
+      "source_id": "599",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "REUMATOLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Síndrome antifosfolípido.",
+      "proxy_icd11": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "MA18.2",
+        "MC83.Z",
+        "GC2Z"
+      ],
+      "pred_titles": [
+        "Abnormal arterial blood-gas level",
+        "Cardiac murmurs or sounds, unspecified",
+        "Diseases of the urinary system, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-599-es",
+      "source_id": "599",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "REUMATOLOGÍA",
+      "exact_category_title_match": false,
+      "reference_answer": "Síndrome antifosfolípido.",
+      "proxy_icd11": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "8A45.4Z",
+        "4A45.Z",
+        "8A6Z"
+      ],
+      "pred_titles": [
+        "White matter disorders due to certain specified systemic disease, unspecified",
+        "Antiphospholipid syndrome, unspecified",
+        "Epilepsy or seizures, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-599-fr",
+      "source_id": "599",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "RHEUMATOLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Syndrome des antiphospholipides.",
+      "proxy_icd11": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "MD11.5",
+        "MC41",
+        "DB99.2"
+      ],
+      "pred_titles": [
+        "Dyspnoea",
+        "Tinnitus",
+        "Hepatorenal syndrome"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-599-fr",
+      "source_id": "599",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "RHEUMATOLOGIE",
+      "exact_category_title_match": false,
+      "reference_answer": "Syndrome des antiphospholipides.",
+      "proxy_icd11": [
+        "4A45.Z"
+      ],
+      "pred": [
+        "4A45.Z",
+        "4A45",
+        "4A45.1"
+      ],
+      "pred_titles": [
+        "Antiphospholipid syndrome, unspecified",
+        "Antiphospholipid syndrome",
+        "Secondary antiphospholipid syndrome"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-75-en",
+      "source_id": "75",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "ANESTHESIOLOGY, CRITICAL CARE AND EMERGENCIES",
+      "exact_category_title_match": false,
+      "reference_answer": "Respiratory distress.",
+      "proxy_icd11": [
+        "MD11.5"
+      ],
+      "pred": [
+        "ME64.1",
+        "DC31.Z",
+        "MC81.0"
+      ],
+      "pred_titles": [
+        "Cyanosis",
+        "Acute pancreatitis, unspecified",
+        "Tachycardia, unspecified"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-75-en",
+      "source_id": "75",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "ANESTHESIOLOGY, CRITICAL CARE AND EMERGENCIES",
+      "exact_category_title_match": false,
+      "reference_answer": "Respiratory distress.",
+      "proxy_icd11": [
+        "MD11.5"
+      ],
+      "pred": [
+        "CB00",
+        "QA0B",
+        "MD11.5"
+      ],
+      "pred_titles": [
+        "Acute respiratory distress syndrome",
+        "Preprocedural examination",
+        "Dyspnoea"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-75-es",
+      "source_id": "75",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "ANESTESIOLOGÍA, CUIDADOS CRÍTICOS Y URGENCIAS",
+      "exact_category_title_match": false,
+      "reference_answer": "Distress respiratorio.",
+      "proxy_icd11": [
+        "MD11.5"
+      ],
+      "pred": [
+        "CB04.4",
+        "ME64.1",
+        "EF40.0"
+      ],
+      "pred_titles": [
+        "Pulmonary capillaritis",
+        "Cyanosis",
+        "Capillaritis"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-75-es",
+      "source_id": "75",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "ANESTESIOLOGÍA, CUIDADOS CRÍTICOS Y URGENCIAS",
+      "exact_category_title_match": false,
+      "reference_answer": "Distress respiratorio.",
+      "proxy_icd11": [
+        "MD11.5"
+      ],
+      "pred": [
+        "CB00",
+        "KB23.0Z",
+        "KB2Y"
+      ],
+      "pred_titles": [
+        "Acute respiratory distress syndrome",
+        "Respiratory distress syndrome of newborn, unspecified",
+        "Other specified respiratory disorders specific to the perinatal or neonatal period"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-75-fr",
+      "source_id": "75",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "ANESTHÉSIOLOGIE, SOINS INTENSIFS ET MÉDECINE D'URGENCE",
+      "exact_category_title_match": false,
+      "reference_answer": "Détresse respiratoire.",
+      "proxy_icd11": [
+        "MD11.5"
+      ],
+      "pred": [
+        "ME64.1",
+        "DC31.Z",
+        "CB02.Z"
+      ],
+      "pred_titles": [
+        "Cyanosis",
+        "Acute pancreatitis, unspecified",
+        "Pulmonary eosinophilia, unspecified"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-75-fr",
+      "source_id": "75",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "ANESTHÉSIOLOGIE, SOINS INTENSIFS ET MÉDECINE D'URGENCE",
+      "exact_category_title_match": false,
+      "reference_answer": "Détresse respiratoire.",
+      "proxy_icd11": [
+        "MD11.5"
+      ],
+      "pred": [
+        "CB41.0Z",
+        "8E7Y",
+        "KB23.Z"
+      ],
+      "pred_titles": [
+        "Acute respiratory failure, unspecified",
+        "Other specified diseases of the nervous system",
+        "Respiratory distress of newborn, unspecified"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-86-en",
+      "source_id": "86",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "CARDIOLOGY AND VASCULAR SURGERY",
+      "exact_category_title_match": false,
+      "reference_answer": "Hypertrophic cardiomyopathy.",
+      "proxy_icd11": [
+        "BC43.1Z"
+      ],
+      "pred": [
+        "BA50",
+        "BD11.Z",
+        "DA0D.1"
+      ],
+      "pred_titles": [
+        "Old myocardial infarction",
+        "Left ventricular failure, unspecified",
+        "Gingival enlargement"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-86-en",
+      "source_id": "86",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "CARDIOLOGY AND VASCULAR SURGERY",
+      "exact_category_title_match": false,
+      "reference_answer": "Hypertrophic cardiomyopathy.",
+      "proxy_icd11": [
+        "BC43.1Z"
+      ],
+      "pred": [
+        "BC43.1Z",
+        "BC43.12",
+        "BC43.1Y"
+      ],
+      "pred_titles": [
+        "Hypertrophic cardiomyopathy, unspecified",
+        "Obstructive hypertrophic cardiomyopathy",
+        "Other specified hypertrophic cardiomyopathy"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-86-es",
+      "source_id": "86",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "CARDIOLOGÍA Y CIRUGÍA VASCULAR",
+      "exact_category_title_match": false,
+      "reference_answer": "Miocardiopatía hipertrófica.",
+      "proxy_icd11": [
+        "BC43.1Z"
+      ],
+      "pred": [
+        "LA88.Y",
+        "BC41.Y",
+        "LA8A.5"
+      ],
+      "pred_titles": [
+        "Other specified congenital anomaly of a ventricle or the ventricular septum",
+        "Other specified acquired ventricular abnormality",
+        "Congenital subaortic stenosis"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-86-es",
+      "source_id": "86",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "CARDIOLOGÍA Y CIRUGÍA VASCULAR",
+      "exact_category_title_match": false,
+      "reference_answer": "Miocardiopatía hipertrófica.",
+      "proxy_icd11": [
+        "BC43.1Z"
+      ],
+      "pred": [
+        "BC43.1Z",
+        "BC43.10",
+        "BC43.12"
+      ],
+      "pred_titles": [
+        "Hypertrophic cardiomyopathy, unspecified",
+        "Familial-genetic hypertrophic cardiomyopathy",
+        "Obstructive hypertrophic cardiomyopathy"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-86-fr",
+      "source_id": "86",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "CARDIOLOGIE ET CHIRURGIE VASCULAIRE",
+      "exact_category_title_match": false,
+      "reference_answer": "Cardiomyopathie hypertrophique.",
+      "proxy_icd11": [
+        "BC43.1Z"
+      ],
+      "pred": [
+        "BA00.Z",
+        "BD11.Z",
+        "LA88.Y"
+      ],
+      "pred_titles": [
+        "Essential hypertension, unspecified",
+        "Left ventricular failure, unspecified",
+        "Other specified congenital anomaly of a ventricle or the ventricular septum"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-86-fr",
+      "source_id": "86",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "CARDIOLOGIE ET CHIRURGIE VASCULAIRE",
+      "exact_category_title_match": false,
+      "reference_answer": "Cardiomyopathie hypertrophique.",
+      "proxy_icd11": [
+        "BC43.1Z"
+      ],
+      "pred": [
+        "BC43.10",
+        "BC43.1Z",
+        "BC43.1"
+      ],
+      "pred_titles": [
+        "Familial-genetic hypertrophic cardiomyopathy",
+        "Hypertrophic cardiomyopathy, unspecified",
+        "Hypertrophic cardiomyopathy"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-95-en",
+      "source_id": "95",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "DERMATOLOGY, VENEREOLOGY AND PLASTIC SURGERY",
+      "exact_category_title_match": true,
+      "reference_answer": "Porphyria cutanea tarda.",
+      "proxy_icd11": [
+        "5C58.10"
+      ],
+      "pred": [
+        "EE40.3",
+        "EE40.31",
+        "KC30"
+      ],
+      "pred_titles": [
+        "Skin fragility",
+        "Age-related skin fragility",
+        "Skin fragility of prematurity"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-95-en",
+      "source_id": "95",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "DERMATOLOGY, VENEREOLOGY AND PLASTIC SURGERY",
+      "exact_category_title_match": true,
+      "reference_answer": "Porphyria cutanea tarda.",
+      "proxy_icd11": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "5C58.13"
+      ],
+      "pred_titles": [
+        "Porphyria cutanea tarda",
+        "Other specified porphyrias",
+        "Variegate porphyria"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-95-es",
+      "source_id": "95",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "DERMATOLOGÍA, VENEREOLOGÍA Y CIRUGÍA PLÁSTICA",
+      "exact_category_title_match": true,
+      "reference_answer": "Porfiria cutánea tarda.",
+      "proxy_icd11": [
+        "5C58.10"
+      ],
+      "pred": [
+        "EE40.3",
+        "EE40.31",
+        "EB20"
+      ],
+      "pred_titles": [
+        "Skin fragility",
+        "Age-related skin fragility",
+        "Acute febrile neutrophilic dermatosis"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-95-es",
+      "source_id": "95",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "DERMATOLOGÍA, VENEREOLOGÍA Y CIRUGÍA PLÁSTICA",
+      "exact_category_title_match": true,
+      "reference_answer": "Porfiria cutánea tarda.",
+      "proxy_icd11": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "5C58.1Z"
+      ],
+      "pred_titles": [
+        "Porphyria cutanea tarda",
+        "Other specified porphyrias",
+        "Porphyrias, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-95-fr",
+      "source_id": "95",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "DERMATOLOGIE, VÉNÉRÉOLOGIE ET CHIRURGIE PLASTIQUE",
+      "exact_category_title_match": true,
+      "reference_answer": "Porphyrie cutanée tardive.",
+      "proxy_icd11": [
+        "5C58.10"
+      ],
+      "pred": [
+        "EE21",
+        "PF12",
+        "MB24.6Z"
+      ],
+      "pred_titles": [
+        "Epidermal fragility",
+        "Assault by exposure to sunlight",
+        "Disturbance of affect, unspecified"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-95-fr",
+      "source_id": "95",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "DERMATOLOGIE, VÉNÉRÉOLOGIE ET CHIRURGIE PLASTIQUE",
+      "exact_category_title_match": true,
+      "reference_answer": "Porphyrie cutanée tardive.",
+      "proxy_icd11": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "1C1E.2"
+      ],
+      "pred_titles": [
+        "Porphyria cutanea tarda",
+        "Other specified porphyrias",
+        "Late lesions of pinta"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-96-en",
+      "source_id": "96",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "DERMATOLOGY, VENEREOLOGY AND PLASTIC SURGERY",
+      "exact_category_title_match": true,
+      "reference_answer": "Porphyria cutanea tarda.",
+      "proxy_icd11": [
+        "5C58.10"
+      ],
+      "pred": [
+        "EE40.3",
+        "EE40.31",
+        "KC30"
+      ],
+      "pred_titles": [
+        "Skin fragility",
+        "Age-related skin fragility",
+        "Skin fragility of prematurity"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-96-en",
+      "source_id": "96",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "DERMATOLOGY, VENEREOLOGY AND PLASTIC SURGERY",
+      "exact_category_title_match": true,
+      "reference_answer": "Porphyria cutanea tarda.",
+      "proxy_icd11": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "5C58.13"
+      ],
+      "pred_titles": [
+        "Porphyria cutanea tarda",
+        "Other specified porphyrias",
+        "Variegate porphyria"
+      ],
+      "detected": "en",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-96-es",
+      "source_id": "96",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "DERMATOLOGÍA, VENEREOLOGÍA Y CIRUGÍA PLÁSTICA",
+      "exact_category_title_match": true,
+      "reference_answer": "Porfiria cutánea tarda.",
+      "proxy_icd11": [
+        "5C58.10"
+      ],
+      "pred": [
+        "EE40.3",
+        "EE40.31",
+        "EB20"
+      ],
+      "pred_titles": [
+        "Skin fragility",
+        "Age-related skin fragility",
+        "Acute febrile neutrophilic dermatosis"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-96-es",
+      "source_id": "96",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "DERMATOLOGÍA, VENEREOLOGÍA Y CIRUGÍA PLÁSTICA",
+      "exact_category_title_match": true,
+      "reference_answer": "Porfiria cutánea tarda.",
+      "proxy_icd11": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "5C58.1Z"
+      ],
+      "pred_titles": [
+        "Porphyria cutanea tarda",
+        "Other specified porphyrias",
+        "Porphyrias, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-96-fr",
+      "source_id": "96",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "DERMATOLOGIE, VÉNÉRÉOLOGIE ET CHIRURGIE PLASTIQUE",
+      "exact_category_title_match": true,
+      "reference_answer": "Porphyrie cutanée tardive.",
+      "proxy_icd11": [
+        "5C58.10"
+      ],
+      "pred": [
+        "EE21",
+        "PF12",
+        "MB24.6Z"
+      ],
+      "pred_titles": [
+        "Epidermal fragility",
+        "Assault by exposure to sunlight",
+        "Disturbance of affect, unspecified"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-96-fr",
+      "source_id": "96",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "DERMATOLOGIE, VÉNÉRÉOLOGIE ET CHIRURGIE PLASTIQUE",
+      "exact_category_title_match": true,
+      "reference_answer": "Porphyrie cutanée tardive.",
+      "proxy_icd11": [
+        "5C58.10"
+      ],
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "1C1E.2"
+      ],
+      "pred_titles": [
+        "Porphyria cutanea tarda",
+        "Other specified porphyrias",
+        "Late lesions of pinta"
+      ],
+      "detected": "fr",
+      "top1_proxy": true,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-97-en",
+      "source_id": "97",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "DERMATOLOGY, VENEREOLOGY AND PLASTIC SURGERY",
+      "exact_category_title_match": false,
+      "reference_answer": "Lichen planus.",
+      "proxy_icd11": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "6C4F.Z",
+        "ME62.0",
+        "EB90.10"
+      ],
+      "pred_titles": [
+        "Disorders due to use of multiple specified psychoactive substances, including medications, unspecified",
+        "Acute erythematous skin eruption",
+        "Pretibial myxoedema"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-97-en",
+      "source_id": "97",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "DERMATOLOGY, VENEREOLOGY AND PLASTIC SURGERY",
+      "exact_category_title_match": false,
+      "reference_answer": "Lichen planus.",
+      "proxy_icd11": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "EA91",
+        "EA91.Z",
+        "EA91.Y"
+      ],
+      "pred_titles": [
+        "Lichen planus",
+        "Lichen planus of unspecified type",
+        "Other specified lichen planus"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-97-es",
+      "source_id": "97",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "DERMATOLOGÍA, VENEREOLOGÍA Y CIRUGÍA PLÁSTICA",
+      "exact_category_title_match": false,
+      "reference_answer": "Liquen plano.",
+      "proxy_icd11": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "EL3Y",
+        "BA41.0",
+        "KB40.Z"
+      ],
+      "pred_titles": [
+        "Other specified cutaneous markers of internal disorders",
+        "Acute ST elevation myocardial infarction",
+        "Neonatal cardiac failure, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-97-es",
+      "source_id": "97",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "DERMATOLOGÍA, VENEREOLOGÍA Y CIRUGÍA PLÁSTICA",
+      "exact_category_title_match": false,
+      "reference_answer": "Liquen plano.",
+      "proxy_icd11": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "EA91",
+        "EA91.Z",
+        "EA91.4"
+      ],
+      "pred_titles": [
+        "Lichen planus",
+        "Lichen planus of unspecified type",
+        "Lichen planus and lichenoid reactions of oral mucosa"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-97-fr",
+      "source_id": "97",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "DERMATOLOGIE, VÉNÉRÉOLOGIE ET CHIRURGIE PLASTIQUE",
+      "exact_category_title_match": false,
+      "reference_answer": "Lichen plan.",
+      "proxy_icd11": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "2D8Y",
+        "2B66.Z",
+        "2E90.3"
+      ],
+      "pred_titles": [
+        "Malignant neoplasm metastasis in other specified digestive system organ",
+        "Malignant neoplasms of other or unspecified parts of mouth, unspecified",
+        "Benign neoplasm of other or unspecified parts of mouth"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-97-fr",
+      "source_id": "97",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "DERMATOLOGIE, VÉNÉRÉOLOGIE ET CHIRURGIE PLASTIQUE",
+      "exact_category_title_match": false,
+      "reference_answer": "Lichen plan.",
+      "proxy_icd11": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "EA91",
+        "EA91.Z",
+        "EA91.Y"
+      ],
+      "pred_titles": [
+        "Lichen planus",
+        "Lichen planus of unspecified type",
+        "Other specified lichen planus"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-98-en",
+      "source_id": "98",
+      "mode": "symptoms_only",
+      "language": "en",
+      "specialty": "DERMATOLOGY, VENEREOLOGY AND PLASTIC SURGERY",
+      "exact_category_title_match": false,
+      "reference_answer": "Lichen planus.",
+      "proxy_icd11": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "ME62.0",
+        "EB90.10",
+        "9A82"
+      ],
+      "pred_titles": [
+        "Acute erythematous skin eruption",
+        "Pretibial myxoedema",
+        "Cyst in the anterior chamber of the eye"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-98-en",
+      "source_id": "98",
+      "mode": "documented_diagnosis",
+      "language": "en",
+      "specialty": "DERMATOLOGY, VENEREOLOGY AND PLASTIC SURGERY",
+      "exact_category_title_match": false,
+      "reference_answer": "Lichen planus.",
+      "proxy_icd11": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "EA91",
+        "EA91.Z",
+        "EA91.Y"
+      ],
+      "pred_titles": [
+        "Lichen planus",
+        "Lichen planus of unspecified type",
+        "Other specified lichen planus"
+      ],
+      "detected": "en",
+      "top1_proxy": false,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-98-es",
+      "source_id": "98",
+      "mode": "symptoms_only",
+      "language": "es",
+      "specialty": "DERMATOLOGÍA, VENEREOLOGÍA Y CIRUGÍA PLÁSTICA",
+      "exact_category_title_match": false,
+      "reference_answer": "Liquen plano.",
+      "proxy_icd11": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "EL3Y",
+        "BA41.0",
+        "KB40.Z"
+      ],
+      "pred_titles": [
+        "Other specified cutaneous markers of internal disorders",
+        "Acute ST elevation myocardial infarction",
+        "Neonatal cardiac failure, unspecified"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-98-es",
+      "source_id": "98",
+      "mode": "documented_diagnosis",
+      "language": "es",
+      "specialty": "DERMATOLOGÍA, VENEREOLOGÍA Y CIRUGÍA PLÁSTICA",
+      "exact_category_title_match": false,
+      "reference_answer": "Liquen plano.",
+      "proxy_icd11": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "EA91",
+        "EA91.Z",
+        "EA91.4"
+      ],
+      "pred_titles": [
+        "Lichen planus",
+        "Lichen planus of unspecified type",
+        "Lichen planus and lichenoid reactions of oral mucosa"
+      ],
+      "detected": "es",
+      "top1_proxy": false,
+      "top3_proxy": true
+    },
+    {
+      "id": "medexpqa-98-fr",
+      "source_id": "98",
+      "mode": "symptoms_only",
+      "language": "fr",
+      "specialty": "DERMATOLOGIE, VÉNÉRÉOLOGIE ET CHIRURGIE PLASTIQUE",
+      "exact_category_title_match": false,
+      "reference_answer": "Lichen plan.",
+      "proxy_icd11": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "2D8Y",
+        "2B66.Z",
+        "2E90.3"
+      ],
+      "pred_titles": [
+        "Malignant neoplasm metastasis in other specified digestive system organ",
+        "Malignant neoplasms of other or unspecified parts of mouth, unspecified",
+        "Benign neoplasm of other or unspecified parts of mouth"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": false
+    },
+    {
+      "id": "medexpqa-98-fr",
+      "source_id": "98",
+      "mode": "documented_diagnosis",
+      "language": "fr",
+      "specialty": "DERMATOLOGIE, VÉNÉRÉOLOGIE ET CHIRURGIE PLASTIQUE",
+      "exact_category_title_match": false,
+      "reference_answer": "Lichen plan.",
+      "proxy_icd11": [
+        "EA91.Z"
+      ],
+      "pred": [
+        "EA91",
+        "EA91.Z",
+        "EA91.Y"
+      ],
+      "pred_titles": [
+        "Lichen planus",
+        "Lichen planus of unspecified type",
+        "Other specified lichen planus"
+      ],
+      "detected": "fr",
+      "top1_proxy": false,
+      "top3_proxy": true
+    }
+  ]
+}

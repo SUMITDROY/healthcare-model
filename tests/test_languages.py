@@ -50,3 +50,22 @@ class Languages(unittest.TestCase):
         self.assertEqual(detect("No presenta tuberculosis, pero cólera."), "es")
         self.assertEqual(detect("Diagnosis: cholera."), "en")
         self.assertEqual(detect("Conclusion: diabetes mellitus."), "en")
+
+
+class NativeMorphology(unittest.TestCase):
+    def test_french_morphology_matches_without_alias_for_one_disease(self):
+        from coder.languages import language_features
+
+        a = set(language_features("Colite collagénique", "fr"))
+        b = set(language_features("Colite collagène", "fr"))
+        self.assertEqual(a, b)
+
+    def test_letter_subtypes_remain_distinct(self):
+        from coder.languages import language_features
+
+        for lang, name in [("fr", "Hépatite aiguë"), ("es", "Hepatitis aguda")]:
+            a = set(language_features(name + " A", lang))
+            b = set(language_features(name + " B", lang))
+            self.assertIn("hepatitis_subtype_a", a)
+            self.assertIn("hepatitis_subtype_b", b)
+            self.assertNotEqual(a, b)
