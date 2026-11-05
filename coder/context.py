@@ -37,7 +37,7 @@ def clean_query(text: str) -> str:
     text = re.sub(r'(?i)\b(?:no|without)\s+(?:any\s+)?complications?\b', ' uncomplicated ', text)
     text = re.sub(r'(?i)\b(?:no|without)\s+coma\b', ' without coma ', text)
     # Scope is intentionally short; we retain the raw note separately.
-    text = re.sub(r'(?i)\b(?:no (?!coma\b)|not (?!specified\b)|denies |negative for |ruled out )[^.;\n!?]+', ' ', text)
+    text = re.sub(r'(?i)\b(?:no (?!coma\b)|not (?!(?:specified|identified|elsewhere|otherwise)\b)|denies |negative for |ruled out )[^.;\n!?]+', ' ', text)
     text = re.sub(r'(?i)\b[\w-]+\s+(?:excluded|ruled out)\b', ' ', text)
     return text.strip()
 
@@ -49,7 +49,7 @@ def context_flags(text: str) -> dict[str, bool]:
     return {
         'congenital': bool(re.search(r'\b(?:congenital|since birth|born with)\b', active)),
         'neonatal': bool(re.search(r'\b(?:neonat\w*|newborn|new born|day of life)\b|\b(?:[0-9]|1[0-9]|2[0-8])\s*(?:day[- ]old|days old|d old)\b', active)),
-        'pregnancy': bool(re.search(r'\b(?:pregnan\w*|antenatal|anc|puerper\w*|postpartum|childbirth|postnatal)\b|\bg\d\s*p\d\b', active)),
+        'pregnancy': bool(re.search(r'\b(?:pregnan\w*|maternal|antenatal|anc|puerper\w*|postpartum|childbirth|postnatal)\b|\bg\d\s*p\d\b', active)),
         'traditional': bool(re.search(r'\b(?:traditional medicine|tm1|tm2|ayurved\w*)\b', active)),
         'acute': bool(re.search(r'\bacute\b|\bexacerbation\b|\battack\b', active)),
         'chronic': bool(re.search(r'\bchronic\b', active)),

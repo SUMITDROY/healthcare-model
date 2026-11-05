@@ -62,6 +62,14 @@ class ContractTests(unittest.TestCase):
         text = "Patient: I think it's malaria.\nDoctor: It is not malaria. This is acute tonsillitis."
         self.assertEqual(self.model.predict(text)[0][0], 'CA03.Z')
 
+    def test_taxonomy_negative_does_not_reverse_virus_identification(self):
+        self.assertEqual(self.model.predict('Diagnosis: COVID-19, virus not identified.')[0][0],'RA01.1')
+        self.assertEqual(self.model.predict('Diagnosis: COVID-19, virus identified.')[0][0],'RA01.0')
+
+    def test_maternal_care_supplies_obstetric_context(self):
+        text='Diagnosis: Maternal care for disproportion due to unusually large fetus.'
+        self.assertEqual(self.model.predict(text)[0][0],'JA83.5')
+
     def test_cli_preserves_ids_and_unicode(self):
         with tempfile.TemporaryDirectory() as d:
             inp, out = Path(d)/'in.jsonl', Path(d)/'out.jsonl'

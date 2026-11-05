@@ -1,5 +1,4 @@
 .git
 artifacts
-third_party
 reports
 __pycache__

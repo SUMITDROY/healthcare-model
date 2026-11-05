@@ -9,4 +9,5 @@ COPY scripts scripts
 COPY tests tests
 COPY score.py .
 RUN python -m coder.train
+COPY third_party/ATTRIBUTION.md third_party/MTS-Dialog-LICENSE.txt third_party/
 ENTRYPOINT ["python", "-m", "coder.cli"]
