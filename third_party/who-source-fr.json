@@ -1,0 +1,19 @@
+{
+  "source": "World Health Organization ICD API local deployment",
+  "release": "2026-01",
+  "language": "fr",
+  "image": "whoicd/icd-api@sha256:1b77eb6dc43e0c65a12e9e9340ad178493c93488e728d0d936507cc57ada1b7c",
+  "records": 18375,
+  "index_terms": 99541,
+  "records_with_definitions": 6561,
+  "records_with_other_title_language": 0,
+  "catalog_sha256": "bcedb28e33edb64e8e3c98464f1ada55ac5233e2475b0760ebb2c2e3c5e88dce",
+  "export_sha256": "9e00433df40d981874d597108aa1f089423fa2df8f4182babd5f86b123927dfa",
+  "export_bytes": 3596262,
+  "export_seconds": 12.62,
+  "original_records_preserved": true,
+  "runtime_downloads": false,
+  "analytics_enabled": false,
+  "documentation": "https://icd.who.int/docs/icd-api/ICDAPI-LocalDeployment/",
+  "license": "https://icd.who.int/en/docs/icd11-license.pdf"
+}

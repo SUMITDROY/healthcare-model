@@ -114,3 +114,26 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Evidence: on three diagnostic smoke cases it got one top-1 and two top-3 hits; calls took 8.1–11.8 seconds, plus 24.8-second load, and peaked near 2.3 GiB process RSS. No gold codes were included in prompts. This does not justify deployment or an accuracy claim. A larger quantized model is still under evaluation, not yet selected.
 - Options: deploy the smaller model on assumption, reject it based on measured behaviour, or test a more capable model under the same offline resource limits. No paid API has been called.
 - Revisit: quality and measured selective-call budget must both improve before enabling a local generative selector.
+
+## 2026-11-05 16:36 IST — commit: `Ground subtype ranking in explicit facts and official multilingual terminology`
+- Decision: keep diagnosis-first retrieval and require full clinical qualifiers to match actual evidence. Replace five-character pseudo-stems with proper stemming, constrain causal qualifiers to their clause, prefer fully supported leaf titles, and extract explicit BP, coma, pregnancy/onset and acquired-condition facts without emitting codes in the fact extractor.
+- Evidence: pseudo-stemming conflated protein with Proteus, while an HIV-malaria qualifier incorrectly matched the later clinical-stage wording. Correcting these general errors and adding explicit facts raises dev-informed five-fold results to 56/60 top-1 (93.3%) and 58/60 top-3 (96.7%), 70.833/75. No note-ID or gold-code overrides were added. Rules were tuned using the visible dev data; this is not independent clinical validation.
+- Options: keep adding model capacity, trust coarse lexical overlap, or improve provenance-linked evidence. The more flexible learned primary model overfit; the explicit evidence path is selected.
+- Revisit: independent clinician-reviewed labels are necessary before estimating true hidden or clinical accuracy. Four dev top-1 failures remain; the rules are now frozen instead of chasing them.
+
+## 2026-11-05 16:36 IST — commit: `Ground subtype ranking in explicit facts and official multilingual terminology`
+- Decision: add separate official French/Spanish WHO term indexes, leaving English vocabulary/IDF unchanged, and use guarded code-aligned projection only for an explicitly stated pregnancy modifier.
+- Evidence: exports cover all 18,375 allowed categories in each language, with 99,541 French and 126,187 Spanish index terms. No title-language fallbacks occurred. English routing and its 93.3% diagnostic were preserved. The 20 clinical counterfactual controls and 10 language controls pass; 200 exact-title catalog controls pass. Controls exposed and helped fix family-history ownership and foreign obstetric context, so they are debugging sets, not untouched evaluations.
+- Options: merge all languages into one IDF corpus, free-form translation, or separate reference-backed lookup. Chose separate indexes and language identification. Only English, French and Spanish terminology lookup is supported; no fluency or broad language accuracy claim is made.
+- Revisit: sentence-level foreign negation/context and real clinical annotations in each language. French/Spanish lookup does not perform a full clinical translation.
+
+## 2026-11-05 16:36 IST — commit: `Ground subtype ranking in explicit facts and official multilingual terminology`
+- Decision: reject local generative selectors/translators from the default engine and preserve their provenance/results under reports/experiments.
+- Evidence: Qwen3-1.7B Q4 candidate selection got 2/3 top-1 smoke cases, 7.2–10.4 seconds/call and near 2.9 GiB process RSS. Translation copied a French diagnosis and changed a Swahili age of 30 into a temperature of 30°C while reversing uncomplicated malaria into severe disease. This is unacceptable evidence corruption. No gold codes were in prompts; no paid inference APIs were called. Rejected weights were removed.
+- Options: deploy on model reputation, add more model size without evidence, or use official multilingual references. Chose measured reference lookup.
+- Revisit: a specialized clinical/translation model requires separate accuracy, contradiction and latency checks before deployment.
+
+## 2026-11-05 16:36 IST — commit: `Ground subtype ranking in explicit facts and official multilingual terminology`
+- Decision: after the user's authorization to free space, remove regenerable unused Docker build caches and task-created temporary files, retaining personal files, project data, images/volumes and the selected model artifact.
+- Evidence: reclaimed 3.912 GB of unused build cache last accessed months ago; free space increased from 1.9 GiB to 5.6 GiB. Metadata services, raw export caches and rejected model files were subsequently removed after the compressed reference exports were verified.
+- Revisit: future large-model experiments should check free disk before downloads. Runtime engine remains a small sparse index, without a generative model.

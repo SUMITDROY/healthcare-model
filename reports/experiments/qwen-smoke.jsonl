@@ -1,0 +1,3 @@
+{"id": "dev-011", "codes": ["1C62.0", "1C62.2", "1C62.1"], "seconds": 8.137, "raw": "{\"ranked\": [1, 2, 3]}", "usage": {"prompt_tokens": 1050, "completion_tokens": 13, "total_tokens": 1063}, "top1": true, "top3": true}
+{"id": "dev-044", "codes": ["8D8D", "5A21.Z", "5A4Y"], "seconds": 11.821, "raw": "{\"ranked\": [1, 3, 13]}", "usage": {"prompt_tokens": 1383, "completion_tokens": 14, "total_tokens": 1397}, "top1": false, "top3": false}
+{"id": "dev-059", "codes": ["GC00.Z", "JA62.1", "JA62.Z"], "seconds": 10.162, "raw": "{\"ranked\": [1, 5, 19]}", "usage": {"prompt_tokens": 1055, "completion_tokens": 14, "total_tokens": 1069}, "top1": false, "top3": true}

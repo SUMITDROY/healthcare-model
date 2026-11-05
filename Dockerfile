@@ -10,4 +10,5 @@ COPY tests tests
 COPY score.py .
 RUN python -m coder.train
 COPY third_party/ATTRIBUTION.md third_party/MTS-Dialog-LICENSE.txt third_party/
+COPY third_party/WHO-ICD11-LICENSE.pdf third_party/who-source*.json third_party/
 ENTRYPOINT ["python", "-m", "coder.cli"]

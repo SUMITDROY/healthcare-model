@@ -1,0 +1,35 @@
+[
+  {
+    "language": "fr",
+    "original": "Patiente de 28 ans, enceinte de 20 semaines. Brûlures urinaires et pollakiurie depuis 3 jours. Pas de fièvre ni de douleur lombaire. Diagnostic : cystite pendant la grossesse.",
+    "translation": "{\"assessment\": \"Cystite pendant la grossesse\", \"context\": \"28 ans, enceinte de 20 semaines, brûlures urinaires et pollakiurie depuis 3 jours, pas de fièvre ni de douleur lombaire\"}",
+    "seconds": 2.985,
+    "usage": {
+      "prompt_tokens": 135,
+      "completion_tokens": 60,
+      "total_tokens": 195
+    }
+  },
+  {
+    "language": "hi",
+    "original": "52 वर्षीय पुरुष। डॉक्टर का निदान: टाइप 2 मधुमेह। कोई जटिलता नहीं मिली। मेटफॉर्मिन शुरू की गई।",
+    "translation": "{\"assessment\": \"Type 2 Diabetes\", \"context\": \"52-year-old male. No complications found. Metformin started.\"}",
+    "seconds": 1.727,
+    "usage": {
+      "prompt_tokens": 167,
+      "completion_tokens": 29,
+      "total_tokens": 196
+    }
+  },
+  {
+    "language": "sw",
+    "original": "Mgonjwa mwenye umri wa miaka 30 ana homa. Kipimo kinaonyesha Plasmodium falciparum. Daktari: Hii ni malaria isiyo na matatizo. Hana dalili za ugonjwa wa ubongo.",
+    "translation": "{\"assessment\": \"Malaria\", \"context\": \"Patient has a fever of 30°C and is being treated for Plasmodium falciparum. Doctor: This is malaria, and it is a severe condition. Symptoms include fever of the body.\"}",
+    "seconds": 2.81,
+    "usage": {
+      "prompt_tokens": 143,
+      "completion_tokens": 56,
+      "total_tokens": 199
+    }
+  }
+]

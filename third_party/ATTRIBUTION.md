@@ -22,3 +22,6 @@ International Classification of Diseases, Eleventh Revision (ICD-11), World Heal
 The export in `data/who-2026-01-en.jsonl.gz` preserves complete original API category records, including codes, titles and canonical URIs. It is filtered to exactly the supplied 18,375 allowed categories, not a modified classification or different coding standard. Source image/release/language/checksums are in `who-source.json`. Search normalisation, stemmed features, ranking rules and predictions are our software's additions and do not originate from WHO. No WHO endorsement is implied.
 
 Official local deployment documentation: https://icd.who.int/docs/icd-api/ICDAPI-LocalDeployment/ . API analytics were disabled. Only public category identifiers, never consultation text, were sent to the local metadata service. The service is not required during inference.
+
+
+French and Spanish 2026-01 MMS API records are additionally retained, unmodified, in `data/who-2026-01-fr.jsonl.gz` and `data/who-2026-01-es.jsonl.gz`. Their source manifests include language-specific hashes and confirm that every title is in its requested language. These are WHO's translations, not generated translations. English search normalization and separate foreign lookup indexes are our software additions.

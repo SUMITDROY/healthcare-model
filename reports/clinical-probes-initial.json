@@ -1,0 +1,262 @@
+[
+  {
+    "id": "clinical-protein_not_proteus",
+    "gold": [
+      "GC08.Z"
+    ],
+    "pred": [
+      "GC08.Z",
+      "JB40.3",
+      "NB92.7"
+    ],
+    "top1": true,
+    "top3": true
+  },
+  {
+    "id": "clinical-proteus_confirmed",
+    "gold": [
+      "GC08.2"
+    ],
+    "pred": [
+      "GC08.2",
+      "GC08.Z",
+      "JB40.3"
+    ],
+    "top1": true,
+    "top3": true
+  },
+  {
+    "id": "clinical-hypo_awake",
+    "gold": [
+      "5A21.0"
+    ],
+    "pred": [
+      "5A21.0",
+      "5A21.Z",
+      "5A21"
+    ],
+    "top1": true,
+    "top3": true
+  },
+  {
+    "id": "clinical-hypo_coma",
+    "gold": [
+      "5A21.1"
+    ],
+    "pred": [
+      "5A21.1",
+      "5A21.0",
+      "5A21.Z"
+    ],
+    "top1": true,
+    "top3": true
+  },
+  {
+    "id": "clinical-hypo_unknown_coma",
+    "gold": [
+      "5A21.Z"
+    ],
+    "pred": [
+      "5A21.Z",
+      "5A21.0",
+      "5A21"
+    ],
+    "top1": true,
+    "top3": true
+  },
+  {
+    "id": "clinical-family_not_patient_diabetes",
+    "gold": [
+      "5A41"
+    ],
+    "pred": [
+      "5A21.0",
+      "5A21.Z",
+      "5A21"
+    ],
+    "top1": false,
+    "top3": false
+  },
+  {
+    "id": "clinical-both_bp_components",
+    "gold": [
+      "BA00.0"
+    ],
+    "pred": [
+      "BA00.0",
+      "BA00.1",
+      "BA00.2"
+    ],
+    "top1": true,
+    "top3": true
+  },
+  {
+    "id": "clinical-controlled_unspecified_bp",
+    "gold": [
+      "BA00.Z"
+    ],
+    "pred": [
+      "BA00.Z",
+      "BA00.Y",
+      "BA00"
+    ],
+    "top1": true,
+    "top3": true
+  },
+  {
+    "id": "clinical-cystitis_pregnant",
+    "gold": [
+      "JA62.1"
+    ],
+    "pred": [
+      "JA62.1",
+      "GC00.Z",
+      "GC00.1"
+    ],
+    "top1": true,
+    "top3": true
+  },
+  {
+    "id": "clinical-cystitis_not_pregnant",
+    "gold": [
+      "GC00.Z"
+    ],
+    "pred": [
+      "GC00.Z",
+      "GC00.Y",
+      "GC00.1"
+    ],
+    "top1": true,
+    "top3": true
+  },
+  {
+    "id": "clinical-normal_first_pregnancy",
+    "gold": [
+      "QA42.0"
+    ],
+    "pred": [
+      "QA42.0",
+      "QA42.Y",
+      "QA42.Z"
+    ],
+    "top1": true,
+    "top3": true
+  },
+  {
+    "id": "clinical-elderly_first_pregnancy",
+    "gold": [
+      "QA43.4"
+    ],
+    "pred": [
+      "QA43.4",
+      "QA42.0",
+      "QA42.Y"
+    ],
+    "top1": true,
+    "top3": true
+  },
+  {
+    "id": "clinical-acquired_thyroid",
+    "gold": [
+      "5A00.2Z"
+    ],
+    "pred": [
+      "5A00.2Z",
+      "5A00.Z",
+      "5A00.2Y"
+    ],
+    "top1": true,
+    "top3": true
+  },
+  {
+    "id": "clinical-acute_node",
+    "gold": [
+      "BD90.0"
+    ],
+    "pred": [
+      "BD90.0",
+      "BD90.Z",
+      "BD90"
+    ],
+    "top1": true,
+    "top3": true
+  },
+  {
+    "id": "clinical-hiv_without_malaria",
+    "gold": [
+      "1C62.0"
+    ],
+    "pred": [
+      "1C62.0",
+      "1C62.1",
+      "1C62.2"
+    ],
+    "top1": true,
+    "top3": true
+  },
+  {
+    "id": "clinical-falciparum_uncomplicated",
+    "gold": [
+      "1F40.Z"
+    ],
+    "pred": [
+      "1F40.Z",
+      "1F40",
+      "1F43"
+    ],
+    "top1": true,
+    "top3": true
+  },
+  {
+    "id": "clinical-falciparum_cerebral",
+    "gold": [
+      "1F40.0"
+    ],
+    "pred": [
+      "1F40.0",
+      "1F40.Z",
+      "1F40.Y"
+    ],
+    "top1": true,
+    "top3": true
+  },
+  {
+    "id": "clinical-virus_not_identified",
+    "gold": [
+      "RA01.1"
+    ],
+    "pred": [
+      "RA01.1",
+      "RA01.0",
+      "QC42.0"
+    ],
+    "top1": true,
+    "top3": true
+  },
+  {
+    "id": "clinical-virus_identified",
+    "gold": [
+      "RA01.0"
+    ],
+    "pred": [
+      "RA01.0",
+      "RA01.1",
+      "RA01"
+    ],
+    "top1": true,
+    "top3": true
+  },
+  {
+    "id": "clinical-stable_angina",
+    "gold": [
+      "BA40.1"
+    ],
+    "pred": [
+      "BA40.1",
+      "BA40.0",
+      "5A11"
+    ],
+    "top1": true,
+    "top3": true
+  }
+]

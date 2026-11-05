@@ -1,31 +1,35 @@
 {
   "title_only_no_supervised_examples": {
     "n": 60,
-    "top1_hits": 44,
-    "top3_hits": 48,
-    "top1_accuracy": 0.7333,
-    "top3_accuracy": 0.8,
-    "score_out_of_75": 56.667
+    "top1_hits": 56,
+    "top3_hits": 58,
+    "top1_accuracy": 0.9333,
+    "top3_accuracy": 0.9667,
+    "score_out_of_75": 70.833
   },
   "training_set_resubstitution_not_generalisation": {
     "n": 60,
-    "top1_hits": 44,
-    "top3_hits": 50,
-    "top1_accuracy": 0.7333,
-    "top3_accuracy": 0.8333,
-    "score_out_of_75": 57.5
+    "top1_hits": 56,
+    "top3_hits": 58,
+    "top1_accuracy": 0.9333,
+    "top3_accuracy": 0.9667,
+    "score_out_of_75": 70.833
   },
   "five_fold_out_of_fold": {
     "n": 60,
-    "top1_hits": 44,
-    "top3_hits": 50,
-    "top1_accuracy": 0.7333,
-    "top3_accuracy": 0.8333,
-    "score_out_of_75": 57.5
+    "top1_hits": 56,
+    "top3_hits": 58,
+    "top1_accuracy": 0.9333,
+    "top3_accuracy": 0.9667,
+    "score_out_of_75": 70.833
   },
-  "candidate_recall_top50": 0.9667,
+  "candidate_recall_top50": 1.0,
   "candidate_recall_top100": 1.0,
-  "trained_method": "pairwise logistic ranker for alternative suggestions; primary from context-adjusted retrieval",
+  "trained_method": {
+    "ranker": "pairwise",
+    "learned_primary": false,
+    "who_enrichment": true
+  },
   "semantic_retrieval_active": false,
   "folds": [
     {
@@ -365,7 +369,7 @@
     }
   ],
   "seed": 20261105,
-  "seconds": 29.65,
+  "seconds": 38.37,
   "limitations": [
     "Only 60 development notes; wide uncertainty and narrow chapter coverage.",
     "Each fold fits vocabulary and supervised examples without the held-out notes.",
