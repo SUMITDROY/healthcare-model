@@ -86,6 +86,7 @@ def main():
         ),
         "failures": failed,
     }
+    Path(a.report).parent.mkdir(parents=True, exist_ok=True)
     Path(a.report).write_text(json.dumps(report, indent=2) + "\n")
     print(json.dumps({k: v for k, v in report.items() if k != "failures"}, indent=2))
 

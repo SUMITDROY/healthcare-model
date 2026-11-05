@@ -9,6 +9,7 @@ from coder.engine import OfflineCoder, rows
 
 
 def main():
+    Path("reports").mkdir(parents=True, exist_ok=True)
     model = OfflineCoder.load("artifacts/offline.joblib")
     report = {
         "scope": "Engineer-authored/debugging controls; not independent clinical validation",

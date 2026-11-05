@@ -31,6 +31,7 @@ def write_predictions(path, notes, predictions):
 
 
 def main():
+    Path("reports").mkdir(parents=True, exist_ok=True)
     start = time.perf_counter()
     categories = json.loads(Path("data/mms-2026-01.json").read_text())
     notes = rows("data/dev_notes.jsonl")
