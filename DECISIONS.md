@@ -155,3 +155,10 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Evidence: the pinned fresh-clone build passed the exact command and all 15 tests/30 controls. Final benchmark is 28.3638 seconds for 200 notes, 550.39 MiB process RSS, 2 CPUs/2 GiB, zero paid API calls and no missing/invalid outputs. Earlier builds measured 10.087 seconds; both are well inside the requested runtime. Predictions match the original checkout after dependency locking. A clean-container report-directory issue was caught and fixed; standalone controls now pass.
 - Options: publish earlier timing, leave moving dependencies, or publish the latest pinned result with reproducibility evidence. Chose the last.
 - Revisit: repeat the same checks for any implementation/dependency change and obtain independent clinical accuracy data. Subsequent bundle packaging changes no algorithms.
+
+
+## 2026-11-05 19:08 IST — commit: `Handle French and Spanish assertion context with reproducible regressions`
+- Request: address multilingual generalisation beyond terminology lookup. Chose bounded context parsing and a frozen reproducible challenge rather than deploying the previously failed generative translator.
+- Evidence: 132 synthetic/context and official-title cases initially 108 top-1 / 116 top-3; after contrast-aware negation, localized assertion extraction and case-normalized language detection, 132/132. Existing controls remain separately reported. No test rows fit the alternative ranker.
+- Limitation: 80 variants derive from ten existing controls, and 52 use official titles. These are inspected development controls, not independent clinical gold. Explicitly retain the broader unverified limitation; revisit with clinician-adjudicated multilingual consultations.
+- Final verification: 20 unit/contract tests and 30 original controls pass; final Docker image passes all 132 challenge cases. Offline external throughput 200 notes/43.6538 seconds/549.48 MiB RSS at 2 CPUs/2 GiB, $0; bilingual challenge ran concurrently in a separate capped container.

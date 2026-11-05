@@ -336,12 +336,13 @@ class OfflineCoder:
             and self.reference is not None
             and self.reference.foreign
         ):
-            from coder.languages import detect
+            from coder.languages import detect, clinical_focus
 
             language = detect(text)
             if language in self.reference.foreign:
                 index = self.reference.foreign[language]
-                scores, tokens = index.query(focus(text), text)
+                foreign_assessment = clinical_focus(text, language)
+                scores, tokens = index.query(foreign_assessment, text)
                 scores = scores.copy()
                 # Align an explicitly stated obstetric modifier through the
                 # official shared code identity, not a generated translation.
@@ -349,7 +350,9 @@ class OfflineCoder:
 
                 assessment = "".join(
                     c
-                    for c in unicodedata.normalize("NFKD", focus(text).casefold())
+                    for c in unicodedata.normalize(
+                        "NFKD", foreign_assessment.casefold()
+                    )
                     if not unicodedata.combining(c)
                 )
                 positive = re.search(
@@ -388,11 +391,11 @@ class OfflineCoder:
                     scores,
                     features,
                     {
-                        "assessment": focus(text)[:500],
+                        "assessment": foreign_assessment[:500],
                         "semantic_retrieval": False,
                         "who_enrichment": True,
                         "language": language,
-                        "path": "official terminology lookup; not full clinical translation",
+                        "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
                     },
                 )
         whole, focused = (

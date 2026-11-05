@@ -63,3 +63,14 @@ The trilingual export service needed a temporary 4-GiB preparation limit after a
 Obtain an independently reviewed, locked clinical test set spanning more chapters, languages and ambiguous encounters. Improve assertion/temporal/context handling against that set. The provisional README hidden estimate is a planning judgment, not a measured forecast. Optional paid-model enhancement has not been implemented or benchmarked in this offline-first version.
 
 Final reproducibility check: a separate clone built without a local artifact or cached training layer, passed the exact command, and emitted identical 200 predictions. The subsequent locked base/dependency build also passed 15 tests and all 30 controls. Evidence: `fresh-clone-v3.json`. The standalone evaluation commands now create their report directories inside clean containers.
+
+
+## V4 — French/Spanish context regression (2026-11-05)
+
+Added localized assessment headings, unheaded diagnosis assertions, sentence-scoped family-history removal, contrast-aware negation, and case-normalized language detection. Qualifiers such as sans/sin aura and unspecified remain intact. English “Conclusion” is not automatically classified as French. No model weights, API calls or runtime dependencies were added.
+
+Frozen reproducible challenge: 132 rows, SHA-256 `787b1eb0a04b9fc4a3d30604d254570c3d5dc0c358c4eea76018c394c0452d9f`. Before: 108/132 top-1, 116/132 top-3. After: 132/132 for both. The 80 context variants reuse 10 existing controls (five disease families); 52 localized official-title checks cover all 26 chapters. Results are debugging evidence, not independent clinical accuracy. Cases were inspected during development, and the full 132 are therefore development controls. Full text, gold, predictions and per-scenario results are in `multilingual-before.json` and `multilingual-context.json`.
+
+Reproduce: `python scripts/evaluate_multilingual.py`. This script neither fits the model nor reads the external MTS reference summaries. The official localized WHO titles supply gold only for the terminology controls; contextual cases inherit the existing engineer-authored control labels. No clinician adjudication is claimed. Generalisation to real multilingual consultations, code-switching, symptom-only narratives and other languages remains unverified. Resolving that broader claim requires independently labelled clinical records; passing this suite alone cannot establish it.
+
+V4 packaged Docker check: 132/132 challenge first choices; 200 external notes in 43.6538 seconds, 549.48 MiB peak RSS, 2 CPUs/2 GiB, no network, zero API calls/cost and zero missing/invalid/empty outputs. See `v4-benchmark.json`. The bilingual challenge was run concurrently in a separate capped container.

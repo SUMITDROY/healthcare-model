@@ -17,3 +17,6 @@ Resource limits are a design input: sparse indexes, bounded candidate sets, sing
 An actual AI error caught: a local model changed an age of 30 into a fever of 30°C and reversed uncomplicated malaria into severe disease. Keep the raw failed output as evidence. A larger model was not accepted merely because it was larger.
 
 For further work, prioritise a locked, independently reviewed set across clinics, chapters and languages. Improve assertions and temporal/context resolution against that set. An optional API reranker could be evaluated under a reserved token/cost budget, but this version has no paid inference path and no measured API-enhanced accuracy.
+
+
+French/Spanish follow-up: “I found and fixed concrete context errors rather than relying only on dictionary lookup. A reproducible 132-case synthetic challenge improved from 108 to 132 correct first choices. It covers negation contrast, relatives, assessment headings, plan distractors and uppercase input, plus official terms across 26 chapters. We inspected these cases while developing, so I would not call that unseen clinical accuracy. Real multilingual clinical generalisation still requires independent clinician-labelled evaluation.”

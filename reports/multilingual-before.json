@@ -1,0 +1,2364 @@
+{
+  "scope": "Synthetic debugging challenge: 80 contextual variants of 10 existing controls (5 disease families), plus 52 official-title controls across 26 chapters. Not independent clinical validation; no clinician-adjudicated gold. No training on these rows.",
+  "dataset_sha256": "787b1eb0a04b9fc4a3d30604d254570c3d5dc0c358c4eea76018c394c0452d9f",
+  "n": 132,
+  "top1": 108,
+  "top3": 116,
+  "seconds": 4.713086125004338,
+  "groups": {
+    "fr/conclusion": {
+      "n": 5,
+      "top1": 5,
+      "top3": 5,
+      "language_correct": 5
+    },
+    "fr/unheaded": {
+      "n": 5,
+      "top1": 4,
+      "top3": 4,
+      "language_correct": 5
+    },
+    "fr/family": {
+      "n": 5,
+      "top1": 5,
+      "top3": 5,
+      "language_correct": 5
+    },
+    "fr/negated": {
+      "n": 5,
+      "top1": 5,
+      "top3": 5,
+      "language_correct": 5
+    },
+    "fr/contrast": {
+      "n": 5,
+      "top1": 1,
+      "top3": 1,
+      "language_correct": 5
+    },
+    "fr/history": {
+      "n": 5,
+      "top1": 4,
+      "top3": 4,
+      "language_correct": 5
+    },
+    "fr/plan": {
+      "n": 5,
+      "top1": 5,
+      "top3": 5,
+      "language_correct": 5
+    },
+    "fr/unicode": {
+      "n": 5,
+      "top1": 2,
+      "top3": 3,
+      "language_correct": 0
+    },
+    "es/conclusion": {
+      "n": 5,
+      "top1": 5,
+      "top3": 5,
+      "language_correct": 5
+    },
+    "es/unheaded": {
+      "n": 5,
+      "top1": 5,
+      "top3": 5,
+      "language_correct": 5
+    },
+    "es/family": {
+      "n": 5,
+      "top1": 5,
+      "top3": 5,
+      "language_correct": 5
+    },
+    "es/negated": {
+      "n": 5,
+      "top1": 5,
+      "top3": 5,
+      "language_correct": 4
+    },
+    "es/contrast": {
+      "n": 5,
+      "top1": 3,
+      "top3": 3,
+      "language_correct": 3
+    },
+    "es/history": {
+      "n": 5,
+      "top1": 3,
+      "top3": 4,
+      "language_correct": 3
+    },
+    "es/plan": {
+      "n": 5,
+      "top1": 4,
+      "top3": 5,
+      "language_correct": 3
+    },
+    "es/unicode": {
+      "n": 5,
+      "top1": 2,
+      "top3": 3,
+      "language_correct": 0
+    },
+    "fr/official-title": {
+      "n": 26,
+      "top1": 24,
+      "top3": 26,
+      "language_correct": 20
+    },
+    "es/official-title": {
+      "n": 26,
+      "top1": 21,
+      "top3": 23,
+      "language_correct": 15
+    }
+  },
+  "results": [
+    {
+      "id": "fr-cholera-conclusion",
+      "text": "Consultation de suivi. Conclusion :  choléra.",
+      "gold": [
+        "1A00"
+      ],
+      "language": "fr",
+      "scenario": "conclusion",
+      "pred": [
+        "1A00",
+        "QA21.Z",
+        "QC90.00"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-cholera-unheaded",
+      "text": "Le diagnostic retenu est  choléra.",
+      "gold": [
+        "1A00"
+      ],
+      "language": "fr",
+      "scenario": "unheaded",
+      "pred": [
+        "1A00",
+        "QA02.5",
+        "QA02.0"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-cholera-family",
+      "text": "Antécédents familiaux : la mère souffre de tuberculose. Diagnostic :  choléra.",
+      "gold": [
+        "1A00"
+      ],
+      "language": "fr",
+      "scenario": "family",
+      "pred": [
+        "1A00",
+        "QC90.00",
+        "QA08.0"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-cholera-negated",
+      "text": "Absence de tuberculose. Diagnostic :  choléra.",
+      "gold": [
+        "1A00"
+      ],
+      "language": "fr",
+      "scenario": "negated",
+      "pred": [
+        "1A00",
+        "QC90.00",
+        "QA08.0"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-cholera-contrast",
+      "text": "Pas de tuberculose, mais  choléra.",
+      "gold": [
+        "1A00"
+      ],
+      "language": "fr",
+      "scenario": "contrast",
+      "pred": [
+        "1A00",
+        "1A01",
+        "1A02"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-cholera-history",
+      "text": "Antécédents : tuberculose guérie. Évaluation :  choléra.",
+      "gold": [
+        "1A00"
+      ],
+      "language": "fr",
+      "scenario": "history",
+      "pred": [
+        "1A00",
+        "DB10.1",
+        "QA04.Z"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-cholera-plan",
+      "text": "Diagnostic :  choléra. Traitement : dépistage de tuberculose prévu.",
+      "gold": [
+        "1A00"
+      ],
+      "language": "fr",
+      "scenario": "plan",
+      "pred": [
+        "1A00",
+        "QC90.00",
+        "QA08.0"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-cholera-unicode",
+      "text": "CONCLUSION :  CHOLÉRA.",
+      "gold": [
+        "1A00"
+      ],
+      "language": "fr",
+      "scenario": "unicode",
+      "pred": [
+        "1A00",
+        "QC90.00",
+        "QC00.0"
+      ],
+      "detected": "en",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-type2-conclusion",
+      "text": "Consultation de suivi. Conclusion :  diabète sucré de type 2.",
+      "gold": [
+        "5A11"
+      ],
+      "language": "fr",
+      "scenario": "conclusion",
+      "pred": [
+        "5A11",
+        "5A10",
+        "5A14"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-type2-unheaded",
+      "text": "Le diagnostic retenu est  diabète sucré de type 2.",
+      "gold": [
+        "5A11"
+      ],
+      "language": "fr",
+      "scenario": "unheaded",
+      "pred": [
+        "5A11",
+        "5A10",
+        "5A14"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-type2-family",
+      "text": "Antécédents familiaux : la mère souffre de tuberculose. Diagnostic :  diabète sucré de type 2.",
+      "gold": [
+        "5A11"
+      ],
+      "language": "fr",
+      "scenario": "family",
+      "pred": [
+        "5A11",
+        "5A10",
+        "5A14"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-type2-negated",
+      "text": "Absence de tuberculose. Diagnostic :  diabète sucré de type 2.",
+      "gold": [
+        "5A11"
+      ],
+      "language": "fr",
+      "scenario": "negated",
+      "pred": [
+        "5A11",
+        "5A10",
+        "5A14"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-type2-contrast",
+      "text": "Pas de tuberculose, mais  diabète sucré de type 2.",
+      "gold": [
+        "5A11"
+      ],
+      "language": "fr",
+      "scenario": "contrast",
+      "pred": [
+        "1A00",
+        "1A01",
+        "1A02"
+      ],
+      "detected": "fr",
+      "top1": false,
+      "top3": false
+    },
+    {
+      "id": "fr-type2-history",
+      "text": "Antécédents : tuberculose guérie. Évaluation :  diabète sucré de type 2.",
+      "gold": [
+        "5A11"
+      ],
+      "language": "fr",
+      "scenario": "history",
+      "pred": [
+        "5A11",
+        "5A10",
+        "5A14"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-type2-plan",
+      "text": "Diagnostic :  diabète sucré de type 2. Traitement : dépistage de tuberculose prévu.",
+      "gold": [
+        "5A11"
+      ],
+      "language": "fr",
+      "scenario": "plan",
+      "pred": [
+        "5A11",
+        "5A10",
+        "5A14"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-type2-unicode",
+      "text": "CONCLUSION :  DIABÈTE SUCRÉ DE TYPE 2.",
+      "gold": [
+        "5A11"
+      ],
+      "language": "fr",
+      "scenario": "unicode",
+      "pred": [
+        "5A11",
+        "LD2D.11",
+        "5C56.31"
+      ],
+      "detected": "en",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-migraine-conclusion",
+      "text": "Consultation de suivi. Conclusion :  migraine sans aura.",
+      "gold": [
+        "8A80.0"
+      ],
+      "language": "fr",
+      "scenario": "conclusion",
+      "pred": [
+        "8A80.0",
+        "MB49",
+        "8A80.Z"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-migraine-unheaded",
+      "text": "Le diagnostic retenu est  migraine sans aura.",
+      "gold": [
+        "8A80.0"
+      ],
+      "language": "fr",
+      "scenario": "unheaded",
+      "pred": [
+        "8A80.0",
+        "MB49",
+        "8A80.Z"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-migraine-family",
+      "text": "Antécédents familiaux : la mère souffre de tuberculose. Diagnostic :  migraine sans aura.",
+      "gold": [
+        "8A80.0"
+      ],
+      "language": "fr",
+      "scenario": "family",
+      "pred": [
+        "8A80.0",
+        "MB49",
+        "8A80.Z"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-migraine-negated",
+      "text": "Absence de tuberculose. Diagnostic :  migraine sans aura.",
+      "gold": [
+        "8A80.0"
+      ],
+      "language": "fr",
+      "scenario": "negated",
+      "pred": [
+        "8A80.0",
+        "MB49",
+        "8A80.Z"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-migraine-contrast",
+      "text": "Pas de tuberculose, mais  migraine sans aura.",
+      "gold": [
+        "8A80.0"
+      ],
+      "language": "fr",
+      "scenario": "contrast",
+      "pred": [
+        "1A00",
+        "1A01",
+        "1A02"
+      ],
+      "detected": "fr",
+      "top1": false,
+      "top3": false
+    },
+    {
+      "id": "fr-migraine-history",
+      "text": "Antécédents : tuberculose guérie. Évaluation :  migraine sans aura.",
+      "gold": [
+        "8A80.0"
+      ],
+      "language": "fr",
+      "scenario": "history",
+      "pred": [
+        "8A80.0",
+        "MB49",
+        "8A80.Z"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-migraine-plan",
+      "text": "Diagnostic :  migraine sans aura. Traitement : dépistage de tuberculose prévu.",
+      "gold": [
+        "8A80.0"
+      ],
+      "language": "fr",
+      "scenario": "plan",
+      "pred": [
+        "8A80.0",
+        "MB49",
+        "8A80.Z"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-migraine-unicode",
+      "text": "CONCLUSION :  MIGRAINE SANS AURA.",
+      "gold": [
+        "8A80.0"
+      ],
+      "language": "fr",
+      "scenario": "unicode",
+      "pred": [
+        "8A80.1Z",
+        "8A80.Z",
+        "8A80.1Y"
+      ],
+      "detected": "en",
+      "top1": false,
+      "top3": false
+    },
+    {
+      "id": "fr-cystitis-pregnancy-conclusion",
+      "text": "Consultation de suivi. Conclusion :  cystite pendant la grossesse.",
+      "gold": [
+        "JA62.1"
+      ],
+      "language": "fr",
+      "scenario": "conclusion",
+      "pred": [
+        "JA62.1",
+        "GC00.Z",
+        "GC00.1"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-cystitis-pregnancy-unheaded",
+      "text": "Le diagnostic retenu est  cystite pendant la grossesse.",
+      "gold": [
+        "JA62.1"
+      ],
+      "language": "fr",
+      "scenario": "unheaded",
+      "pred": [
+        "QA02.5",
+        "QA04.5Z",
+        "QA04.51"
+      ],
+      "detected": "fr",
+      "top1": false,
+      "top3": false
+    },
+    {
+      "id": "fr-cystitis-pregnancy-family",
+      "text": "Antécédents familiaux : la mère souffre de tuberculose. Diagnostic :  cystite pendant la grossesse.",
+      "gold": [
+        "JA62.1"
+      ],
+      "language": "fr",
+      "scenario": "family",
+      "pred": [
+        "JA62.1",
+        "GC00.Z",
+        "GC00.1"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-cystitis-pregnancy-negated",
+      "text": "Absence de tuberculose. Diagnostic :  cystite pendant la grossesse.",
+      "gold": [
+        "JA62.1"
+      ],
+      "language": "fr",
+      "scenario": "negated",
+      "pred": [
+        "JA62.1",
+        "GC00.Z",
+        "GC00.1"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-cystitis-pregnancy-contrast",
+      "text": "Pas de tuberculose, mais  cystite pendant la grossesse.",
+      "gold": [
+        "JA62.1"
+      ],
+      "language": "fr",
+      "scenario": "contrast",
+      "pred": [
+        "1A00",
+        "1A01",
+        "1A02"
+      ],
+      "detected": "fr",
+      "top1": false,
+      "top3": false
+    },
+    {
+      "id": "fr-cystitis-pregnancy-history",
+      "text": "Antécédents : tuberculose guérie. Évaluation :  cystite pendant la grossesse.",
+      "gold": [
+        "JA62.1"
+      ],
+      "language": "fr",
+      "scenario": "history",
+      "pred": [
+        "GC00.Z",
+        "JA65.Y",
+        "JA61.2"
+      ],
+      "detected": "fr",
+      "top1": false,
+      "top3": false
+    },
+    {
+      "id": "fr-cystitis-pregnancy-plan",
+      "text": "Diagnostic :  cystite pendant la grossesse. Traitement : dépistage de tuberculose prévu.",
+      "gold": [
+        "JA62.1"
+      ],
+      "language": "fr",
+      "scenario": "plan",
+      "pred": [
+        "JA62.1",
+        "GC00.Z",
+        "GC00.1"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-cystitis-pregnancy-unicode",
+      "text": "CONCLUSION :  CYSTITE PENDANT LA GROSSESSE.",
+      "gold": [
+        "JA62.1"
+      ],
+      "language": "fr",
+      "scenario": "unicode",
+      "pred": [
+        "1C8D",
+        "8C75",
+        "8A05.00"
+      ],
+      "detected": "en",
+      "top1": false,
+      "top3": false
+    },
+    {
+      "id": "fr-parkinson-conclusion",
+      "text": "Consultation de suivi. Conclusion :  maladie de Parkinson, sans précision.",
+      "gold": [
+        "8A00.0Z"
+      ],
+      "language": "fr",
+      "scenario": "conclusion",
+      "pred": [
+        "8A00.0Z",
+        "8A00.0",
+        "6D85.0"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-parkinson-unheaded",
+      "text": "Le diagnostic retenu est  maladie de Parkinson, sans précision.",
+      "gold": [
+        "8A00.0Z"
+      ],
+      "language": "fr",
+      "scenario": "unheaded",
+      "pred": [
+        "8A00.0Z",
+        "8A00.0",
+        "QA02.5"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-parkinson-family",
+      "text": "Antécédents familiaux : la mère souffre de tuberculose. Diagnostic :  maladie de Parkinson, sans précision.",
+      "gold": [
+        "8A00.0Z"
+      ],
+      "language": "fr",
+      "scenario": "family",
+      "pred": [
+        "8A00.0Z",
+        "8A00.0",
+        "6D85.0"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-parkinson-negated",
+      "text": "Absence de tuberculose. Diagnostic :  maladie de Parkinson, sans précision.",
+      "gold": [
+        "8A00.0Z"
+      ],
+      "language": "fr",
+      "scenario": "negated",
+      "pred": [
+        "8A00.0Z",
+        "8A00.0",
+        "6D85.0"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-parkinson-contrast",
+      "text": "Pas de tuberculose, mais  maladie de Parkinson, sans précision.",
+      "gold": [
+        "8A00.0Z"
+      ],
+      "language": "fr",
+      "scenario": "contrast",
+      "pred": [
+        "1A00",
+        "1A01",
+        "1A02"
+      ],
+      "detected": "fr",
+      "top1": false,
+      "top3": false
+    },
+    {
+      "id": "fr-parkinson-history",
+      "text": "Antécédents : tuberculose guérie. Évaluation :  maladie de Parkinson, sans précision.",
+      "gold": [
+        "8A00.0Z"
+      ],
+      "language": "fr",
+      "scenario": "history",
+      "pred": [
+        "8A00.0Z",
+        "1B1Z",
+        "8A00.0"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-parkinson-plan",
+      "text": "Diagnostic :  maladie de Parkinson, sans précision. Traitement : dépistage de tuberculose prévu.",
+      "gold": [
+        "8A00.0Z"
+      ],
+      "language": "fr",
+      "scenario": "plan",
+      "pred": [
+        "8A00.0Z",
+        "8A00.0",
+        "6D85.0"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-parkinson-unicode",
+      "text": "CONCLUSION :  MALADIE DE PARKINSON, SANS PRÉCISION.",
+      "gold": [
+        "8A00.0Z"
+      ],
+      "language": "fr",
+      "scenario": "unicode",
+      "pred": [
+        "EF5Y",
+        "LA88.42",
+        "8A00.0Z"
+      ],
+      "detected": "en",
+      "top1": false,
+      "top3": true
+    },
+    {
+      "id": "es-cholera-conclusion",
+      "text": "Consulta de seguimiento. Conclusión:  cólera.",
+      "gold": [
+        "1A00"
+      ],
+      "language": "es",
+      "scenario": "conclusion",
+      "pred": [
+        "1A00",
+        "MB24.1",
+        "QA08.0"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-cholera-unheaded",
+      "text": "El diagnóstico confirmado es  cólera.",
+      "gold": [
+        "1A00"
+      ],
+      "language": "es",
+      "scenario": "unheaded",
+      "pred": [
+        "1A00",
+        "MB24.1",
+        "1F44"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-cholera-family",
+      "text": "Antecedentes familiares: la madre tiene tuberculosis. Diagnóstico:  cólera.",
+      "gold": [
+        "1A00"
+      ],
+      "language": "es",
+      "scenario": "family",
+      "pred": [
+        "1A00",
+        "MB24.1",
+        "QA08.0"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-cholera-negated",
+      "text": "Se descarta tuberculosis. Diagnóstico:  cólera.",
+      "gold": [
+        "1A00"
+      ],
+      "language": "es",
+      "scenario": "negated",
+      "pred": [
+        "1A00",
+        "MB24.1",
+        "QA08.0"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-cholera-contrast",
+      "text": "No presenta tuberculosis, pero  cólera.",
+      "gold": [
+        "1A00"
+      ],
+      "language": "es",
+      "scenario": "contrast",
+      "pred": [
+        "1A00",
+        "MB24.1",
+        "QA08.0"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-cholera-history",
+      "text": "Antecedentes: tuberculosis resuelta. Valoración:  cólera.",
+      "gold": [
+        "1A00"
+      ],
+      "language": "es",
+      "scenario": "history",
+      "pred": [
+        "1A00",
+        "MB24.1",
+        "EM0Y"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-cholera-plan",
+      "text": "Diagnóstico:  cólera. Plan: cribado de tuberculosis.",
+      "gold": [
+        "1A00"
+      ],
+      "language": "es",
+      "scenario": "plan",
+      "pred": [
+        "1A00",
+        "MB24.1",
+        "QA08.0"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-cholera-unicode",
+      "text": "CONCLUSIÓN:  CÓLERA.",
+      "gold": [
+        "1A00"
+      ],
+      "language": "es",
+      "scenario": "unicode",
+      "pred": [
+        "4A41.2Z",
+        "4A41.20",
+        "4A41.21"
+      ],
+      "detected": "en",
+      "top1": false,
+      "top3": false
+    },
+    {
+      "id": "es-type2-conclusion",
+      "text": "Consulta de seguimiento. Conclusión:  diabetes mellitus de tipo 2.",
+      "gold": [
+        "5A11"
+      ],
+      "language": "es",
+      "scenario": "conclusion",
+      "pred": [
+        "5A11",
+        "5A10",
+        "5A14"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-type2-unheaded",
+      "text": "El diagnóstico confirmado es  diabetes mellitus de tipo 2.",
+      "gold": [
+        "5A11"
+      ],
+      "language": "es",
+      "scenario": "unheaded",
+      "pred": [
+        "5A11",
+        "5A10",
+        "5A14"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-type2-family",
+      "text": "Antecedentes familiares: la madre tiene tuberculosis. Diagnóstico:  diabetes mellitus de tipo 2.",
+      "gold": [
+        "5A11"
+      ],
+      "language": "es",
+      "scenario": "family",
+      "pred": [
+        "5A11",
+        "5A10",
+        "5A14"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-type2-negated",
+      "text": "Se descarta tuberculosis. Diagnóstico:  diabetes mellitus de tipo 2.",
+      "gold": [
+        "5A11"
+      ],
+      "language": "es",
+      "scenario": "negated",
+      "pred": [
+        "5A11",
+        "5A13.5",
+        "5A14"
+      ],
+      "detected": "en",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-type2-contrast",
+      "text": "No presenta tuberculosis, pero  diabetes mellitus de tipo 2.",
+      "gold": [
+        "5A11"
+      ],
+      "language": "es",
+      "scenario": "contrast",
+      "pred": [
+        "1A00",
+        "1A40.0",
+        "1A61.3"
+      ],
+      "detected": "en",
+      "top1": false,
+      "top3": false
+    },
+    {
+      "id": "es-type2-history",
+      "text": "Antecedentes: tuberculosis resuelta. Valoración:  diabetes mellitus de tipo 2.",
+      "gold": [
+        "5A11"
+      ],
+      "language": "es",
+      "scenario": "history",
+      "pred": [
+        "1B1Z",
+        "5A11",
+        "5A13.5"
+      ],
+      "detected": "en",
+      "top1": false,
+      "top3": true
+    },
+    {
+      "id": "es-type2-plan",
+      "text": "Diagnóstico:  diabetes mellitus de tipo 2. Plan: cribado de tuberculosis.",
+      "gold": [
+        "5A11"
+      ],
+      "language": "es",
+      "scenario": "plan",
+      "pred": [
+        "5A11",
+        "5A13.5",
+        "5A14"
+      ],
+      "detected": "en",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-type2-unicode",
+      "text": "CONCLUSIÓN:  DIABETES MELLITUS DE TIPO 2.",
+      "gold": [
+        "5A11"
+      ],
+      "language": "es",
+      "scenario": "unicode",
+      "pred": [
+        "5A11",
+        "5A13.5",
+        "5A14"
+      ],
+      "detected": "en",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-migraine-conclusion",
+      "text": "Consulta de seguimiento. Conclusión:  migraña sin aura.",
+      "gold": [
+        "8A80.0"
+      ],
+      "language": "es",
+      "scenario": "conclusion",
+      "pred": [
+        "8A80.0",
+        "MB49",
+        "8A80.Z"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-migraine-unheaded",
+      "text": "El diagnóstico confirmado es  migraña sin aura.",
+      "gold": [
+        "8A80.0"
+      ],
+      "language": "es",
+      "scenario": "unheaded",
+      "pred": [
+        "8A80.0",
+        "MB49",
+        "8A80.Z"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-migraine-family",
+      "text": "Antecedentes familiares: la madre tiene tuberculosis. Diagnóstico:  migraña sin aura.",
+      "gold": [
+        "8A80.0"
+      ],
+      "language": "es",
+      "scenario": "family",
+      "pred": [
+        "8A80.0",
+        "MB49",
+        "8A80.Z"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-migraine-negated",
+      "text": "Se descarta tuberculosis. Diagnóstico:  migraña sin aura.",
+      "gold": [
+        "8A80.0"
+      ],
+      "language": "es",
+      "scenario": "negated",
+      "pred": [
+        "8A80.0",
+        "MB49",
+        "8A80.Z"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-migraine-contrast",
+      "text": "No presenta tuberculosis, pero  migraña sin aura.",
+      "gold": [
+        "8A80.0"
+      ],
+      "language": "es",
+      "scenario": "contrast",
+      "pred": [
+        "8A80.0",
+        "MB49",
+        "8A80.Z"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-migraine-history",
+      "text": "Antecedentes: tuberculosis resuelta. Valoración:  migraña sin aura.",
+      "gold": [
+        "8A80.0"
+      ],
+      "language": "es",
+      "scenario": "history",
+      "pred": [
+        "1B1Z",
+        "MB49",
+        "1B12.0"
+      ],
+      "detected": "en",
+      "top1": false,
+      "top3": false
+    },
+    {
+      "id": "es-migraine-plan",
+      "text": "Diagnóstico:  migraña sin aura. Plan: cribado de tuberculosis.",
+      "gold": [
+        "8A80.0"
+      ],
+      "language": "es",
+      "scenario": "plan",
+      "pred": [
+        "MB49",
+        "8A80.0",
+        "8A80.1Z"
+      ],
+      "detected": "en",
+      "top1": false,
+      "top3": true
+    },
+    {
+      "id": "es-migraine-unicode",
+      "text": "CONCLUSIÓN:  MIGRAÑA SIN AURA.",
+      "gold": [
+        "8A80.0"
+      ],
+      "language": "es",
+      "scenario": "unicode",
+      "pred": [
+        "MB49",
+        "8A80.0",
+        "8A80.1Z"
+      ],
+      "detected": "en",
+      "top1": false,
+      "top3": true
+    },
+    {
+      "id": "es-cystitis-pregnancy-conclusion",
+      "text": "Consulta de seguimiento. Conclusión:  cistitis durante el embarazo.",
+      "gold": [
+        "JA62.1"
+      ],
+      "language": "es",
+      "scenario": "conclusion",
+      "pred": [
+        "JA62.1",
+        "GC00.Z",
+        "GC00.1"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-cystitis-pregnancy-unheaded",
+      "text": "El diagnóstico confirmado es  cistitis durante el embarazo.",
+      "gold": [
+        "JA62.1"
+      ],
+      "language": "es",
+      "scenario": "unheaded",
+      "pred": [
+        "JA62.1",
+        "GC00.Z",
+        "GC00.1"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-cystitis-pregnancy-family",
+      "text": "Antecedentes familiares: la madre tiene tuberculosis. Diagnóstico:  cistitis durante el embarazo.",
+      "gold": [
+        "JA62.1"
+      ],
+      "language": "es",
+      "scenario": "family",
+      "pred": [
+        "JA62.1",
+        "GC00.Z",
+        "GC00.1"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-cystitis-pregnancy-negated",
+      "text": "Se descarta tuberculosis. Diagnóstico:  cistitis durante el embarazo.",
+      "gold": [
+        "JA62.1"
+      ],
+      "language": "es",
+      "scenario": "negated",
+      "pred": [
+        "JA62.1",
+        "GC00.Z",
+        "GC00.1"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-cystitis-pregnancy-contrast",
+      "text": "No presenta tuberculosis, pero  cistitis durante el embarazo.",
+      "gold": [
+        "JA62.1"
+      ],
+      "language": "es",
+      "scenario": "contrast",
+      "pred": [
+        "1A00",
+        "1A40.0",
+        "1A61.3"
+      ],
+      "detected": "en",
+      "top1": false,
+      "top3": false
+    },
+    {
+      "id": "es-cystitis-pregnancy-history",
+      "text": "Antecedentes: tuberculosis resuelta. Valoración:  cistitis durante el embarazo.",
+      "gold": [
+        "JA62.1"
+      ],
+      "language": "es",
+      "scenario": "history",
+      "pred": [
+        "JA62.1",
+        "GC00.Z",
+        "GC00.1"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-cystitis-pregnancy-plan",
+      "text": "Diagnóstico:  cistitis durante el embarazo. Plan: cribado de tuberculosis.",
+      "gold": [
+        "JA62.1"
+      ],
+      "language": "es",
+      "scenario": "plan",
+      "pred": [
+        "JA62.1",
+        "GC00.Z",
+        "GC00.1"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-cystitis-pregnancy-unicode",
+      "text": "CONCLUSIÓN:  CISTITIS DURANTE EL EMBARAZO.",
+      "gold": [
+        "JA62.1"
+      ],
+      "language": "es",
+      "scenario": "unicode",
+      "pred": [
+        "1F54.0",
+        "4A41.20",
+        "4A41.2Z"
+      ],
+      "detected": "en",
+      "top1": false,
+      "top3": false
+    },
+    {
+      "id": "es-parkinson-conclusion",
+      "text": "Consulta de seguimiento. Conclusión:  enfermedad de Parkinson, sin especificar.",
+      "gold": [
+        "8A00.0Z"
+      ],
+      "language": "es",
+      "scenario": "conclusion",
+      "pred": [
+        "8A00.0Z",
+        "8A00.0",
+        "6D85.0"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-parkinson-unheaded",
+      "text": "El diagnóstico confirmado es  enfermedad de Parkinson, sin especificar.",
+      "gold": [
+        "8A00.0Z"
+      ],
+      "language": "es",
+      "scenario": "unheaded",
+      "pred": [
+        "8A00.0Z",
+        "8A00.0",
+        "6D85.0"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-parkinson-family",
+      "text": "Antecedentes familiares: la madre tiene tuberculosis. Diagnóstico:  enfermedad de Parkinson, sin especificar.",
+      "gold": [
+        "8A00.0Z"
+      ],
+      "language": "es",
+      "scenario": "family",
+      "pred": [
+        "8A00.0Z",
+        "8A00.0",
+        "6D85.0"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-parkinson-negated",
+      "text": "Se descarta tuberculosis. Diagnóstico:  enfermedad de Parkinson, sin especificar.",
+      "gold": [
+        "8A00.0Z"
+      ],
+      "language": "es",
+      "scenario": "negated",
+      "pred": [
+        "8A00.0Z",
+        "8A00.0",
+        "6D85.0"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-parkinson-contrast",
+      "text": "No presenta tuberculosis, pero  enfermedad de Parkinson, sin especificar.",
+      "gold": [
+        "8A00.0Z"
+      ],
+      "language": "es",
+      "scenario": "contrast",
+      "pred": [
+        "8A00.0Z",
+        "8A00.0",
+        "6D85.0"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-parkinson-history",
+      "text": "Antecedentes: tuberculosis resuelta. Valoración:  enfermedad de Parkinson, sin especificar.",
+      "gold": [
+        "8A00.0Z"
+      ],
+      "language": "es",
+      "scenario": "history",
+      "pred": [
+        "8A00.0Z",
+        "8A00.0",
+        "6D85.0"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-parkinson-plan",
+      "text": "Diagnóstico:  enfermedad de Parkinson, sin especificar. Plan: cribado de tuberculosis.",
+      "gold": [
+        "8A00.0Z"
+      ],
+      "language": "es",
+      "scenario": "plan",
+      "pred": [
+        "8A00.0Z",
+        "8A00.0",
+        "6D85.0"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-parkinson-unicode",
+      "text": "CONCLUSIÓN:  ENFERMEDAD DE PARKINSON, SIN ESPECIFICAR.",
+      "gold": [
+        "8A00.0Z"
+      ],
+      "language": "es",
+      "scenario": "unicode",
+      "pred": [
+        "8A00.0Z",
+        "8A00.0Y",
+        "8A00.01"
+      ],
+      "detected": "en",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-01",
+      "text": "Diagnostic : Choléra.",
+      "gold": [
+        "1A00"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "1A00",
+        "QC90.00",
+        "QC00.0"
+      ],
+      "detected": "en",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-02",
+      "text": "Diagnostic : Glioblastome du cerveau.",
+      "gold": [
+        "2A00.00"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "2A00.00",
+        "NA07.3Y",
+        "2A00.5"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-03",
+      "text": "Diagnostic : Anémie chronique posthémorragique.",
+      "gold": [
+        "3A00.01"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "3A00.01",
+        "3A9Z",
+        "3A03.Y"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-04",
+      "text": "Diagnostic : Syndrome d'immunodéficience neutrophile.",
+      "gold": [
+        "4A00.00"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "4A00.00",
+        "1C62.3Z",
+        "4B4Z"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-05",
+      "text": "Diagnostic : Hypothyroïdie congénitale permanente avec goitre diffus.",
+      "gold": [
+        "5A00.00"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "5A00.00",
+        "5A00.0Z",
+        "5A00.01"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-06",
+      "text": "Diagnostic : Trouble du développement intellectuel, léger.",
+      "gold": [
+        "6A00.0"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "6A00.0",
+        "6A00.Z",
+        "6A00"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-07",
+      "text": "Diagnostic : Insomnie chronique.",
+      "gold": [
+        "7A00"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "7A00",
+        "7A0Z",
+        "7A01"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-08",
+      "text": "Diagnostic : Maladie de Parkinson sporadique.",
+      "gold": [
+        "8A00.00"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "8A00.00",
+        "8A00.0Z",
+        "8A00.0"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-09",
+      "text": "Diagnostic : Dystopie canthale.",
+      "gold": [
+        "9A00.0"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "9A00.0",
+        "MD41",
+        "PK8Y"
+      ],
+      "detected": "en",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-10",
+      "text": "Diagnostic : Abcès de l'oreille externe.",
+      "gold": [
+        "AA00"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "AA00",
+        "NA0B",
+        "AA9Z"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-11",
+      "text": "Diagnostic : Hypertension artérielle diastolique et systolique combinée.",
+      "gold": [
+        "BA00.0"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "BA00.0",
+        "MC80.01",
+        "BA04.0"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-12",
+      "text": "Diagnostic : Rhinopharyngite aigüe.",
+      "gold": [
+        "CA00"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "PK8Y",
+        "CA04",
+        "CA00"
+      ],
+      "detected": "en",
+      "top1": false,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-13",
+      "text": "Diagnostic : Chéilite.",
+      "gold": [
+        "DA00.0"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "DA00.0",
+        "MD41",
+        "MG00"
+      ],
+      "detected": "en",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-14",
+      "text": "Diagnostic : Exanthème viral dû à un agent inconnu ou non précisé.",
+      "gold": [
+        "EA00"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "EA00",
+        "1G60.0",
+        "2A00.5"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-15",
+      "text": "Diagnostic : Arthrose primaire de la hanche.",
+      "gold": [
+        "FA00.0"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "FA00.0",
+        "FA01.0",
+        "FA02.0"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-16",
+      "text": "Diagnostic : Vulvite aigüe.",
+      "gold": [
+        "GA00.0"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "GA00.Z",
+        "GA00.0",
+        "MD41"
+      ],
+      "detected": "en",
+      "top1": false,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-17",
+      "text": "Diagnostic : Trouble du désir sexuel hypoactif, permanent, généralisé.",
+      "gold": [
+        "HA00.0"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "HA00.0",
+        "HA00.1",
+        "HA00.Z"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-18",
+      "text": "Diagnostic : Avortement spontané, incomplet, compliqué d'une infection des voies génitales ou pelvienne.",
+      "gold": [
+        "JA00.00"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "JA00.00",
+        "JA00.10",
+        "JA00.05"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-19",
+      "text": "Diagnostic : Fœtus ou nouveau-né affecté par des affections hypertensives maternelles.",
+      "gold": [
+        "KA00.0"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "KA00.0",
+        "KA00.8",
+        "KA05.4"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-20",
+      "text": "Diagnostic : Craniorachischisis.",
+      "gold": [
+        "LA00.00"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "LA00.00",
+        "MD41",
+        "MG00"
+      ],
+      "detected": "en",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-21",
+      "text": "Diagnostic : Symptôme ou plainte du sang.",
+      "gold": [
+        "MA00"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "MA00",
+        "ME86.1",
+        "ME86.0"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-22",
+      "text": "Diagnostic : Abrasion du cuir chevelu.",
+      "gold": [
+        "NA00.00"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "NA00.00",
+        "KA42.Y",
+        "NA01.2"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-23",
+      "text": "Diagnostic : Évènement routier de transport terrestre accidentel blessant un piéton.",
+      "gold": [
+        "PA00"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "PA00",
+        "PD50",
+        "PA10"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-24",
+      "text": "Diagnostic : Examen médical général de l'adulte.",
+      "gold": [
+        "QA00.0"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "QA00.0",
+        "QA01.8",
+        "QA01.Y"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-25",
+      "text": "Diagnostic : Trouble lié au vapotage.",
+      "gold": [
+        "RA00.0"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "RA00.0",
+        "6C4A.Z",
+        "BE14.B"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "fr-chapter-26",
+      "text": "Diagnostic : Douleur de l'hypochondre (MT1).",
+      "gold": [
+        "SA00"
+      ],
+      "language": "fr",
+      "scenario": "official-title",
+      "pred": [
+        "SA00",
+        "2B5K",
+        "FB53.Y"
+      ],
+      "detected": "fr",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-01",
+      "text": "Diagnóstico: Cólera.",
+      "gold": [
+        "1A00"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "1A00",
+        "QC90.00",
+        "MB28.8"
+      ],
+      "detected": "en",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-02",
+      "text": "Diagnóstico: Glioblastoma de cerebro.",
+      "gold": [
+        "2A00.00"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "2A00.00",
+        "2A02.00",
+        "PL12.4"
+      ],
+      "detected": "en",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-03",
+      "text": "Diagnóstico: Anemia posthemorrágica crónica.",
+      "gold": [
+        "3A00.01"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "3A00.01",
+        "3A94",
+        "3A00.0Z"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-04",
+      "text": "Diagnóstico: Síndrome de inmunodeficiencia de neutrófilos.",
+      "gold": [
+        "4A00.00"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "4A00.00",
+        "4A01.1Z",
+        "1C62.3Z"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-05",
+      "text": "Diagnóstico: Hipotiroidismo congénito permanente con bocio difuso.",
+      "gold": [
+        "5A00.00"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "BC81.32",
+        "8E21",
+        "PK9C.31"
+      ],
+      "detected": "en",
+      "top1": false,
+      "top3": false
+    },
+    {
+      "id": "es-chapter-06",
+      "text": "Diagnóstico: Trastorno del desarrollo intelectual, leve.",
+      "gold": [
+        "6A00.0"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "6A00.0",
+        "6A00.Z",
+        "6A00"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-07",
+      "text": "Diagnóstico: Insomnio crónico.",
+      "gold": [
+        "7A00"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "7A00",
+        "7A0Z",
+        "8E02.2"
+      ],
+      "detected": "en",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-08",
+      "text": "Diagnóstico: Enfermedad de Parkinson esporádica.",
+      "gold": [
+        "8A00.00"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "8A00.00",
+        "8A00.0Z",
+        "8A00.0"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-09",
+      "text": "Diagnóstico: Distopia cantal.",
+      "gold": [
+        "9A00.0"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "9A00.0",
+        "9D00.0",
+        "MC19"
+      ],
+      "detected": "en",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-10",
+      "text": "Diagnóstico: Absceso del oído externo.",
+      "gold": [
+        "AA00"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "AA00",
+        "AA9Z",
+        "AA6Z"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-11",
+      "text": "Diagnóstico: Hipertensión sistólica y diastólica mixta.",
+      "gold": [
+        "BA00.0"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "BA00.0",
+        "BA00.2",
+        "BA04.2"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-12",
+      "text": "Diagnóstico: Nasofaringitis aguda.",
+      "gold": [
+        "CA00"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "CA00",
+        "AB14",
+        "CA09.1"
+      ],
+      "detected": "en",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-13",
+      "text": "Diagnóstico: Queilitis.",
+      "gold": [
+        "DA00.0"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "DA00.0",
+        "8B41",
+        "FB10"
+      ],
+      "detected": "en",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-14",
+      "text": "Diagnóstico: Exantema viral por virus desconocido o no especificado.",
+      "gold": [
+        "EA00"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "EA0Y",
+        "1D6Z",
+        "CA40.1Z"
+      ],
+      "detected": "en",
+      "top1": false,
+      "top3": false
+    },
+    {
+      "id": "es-chapter-15",
+      "text": "Diagnóstico: Osteoartrosis primaria de la cadera.",
+      "gold": [
+        "FA00.0"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "1C8D",
+        "LD24.03",
+        "8A05.00"
+      ],
+      "detected": "en",
+      "top1": false,
+      "top3": false
+    },
+    {
+      "id": "es-chapter-16",
+      "text": "Diagnóstico: Vulvitis aguda.",
+      "gold": [
+        "GA00.0"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "GA00.Z",
+        "GA00",
+        "GA00.0"
+      ],
+      "detected": "en",
+      "top1": false,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-17",
+      "text": "Diagnóstico: Disfunción por deseo sexual hipoactivo, de toda la vida, generalizada.",
+      "gold": [
+        "HA00.0"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "HA00.0",
+        "HA00.1",
+        "HA00.Z"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-18",
+      "text": "Diagnóstico: Aborto espontáneo, incompleto, complicado por infección pélvica o de los órganos genitales.",
+      "gold": [
+        "JA00.00"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "JA00.00",
+        "JA00.10",
+        "JA00.02"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-19",
+      "text": "Diagnóstico: Feto o recién nacido afectado por trastornos hipertensivos de la madre.",
+      "gold": [
+        "KA00.0"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "KA00.0",
+        "KA00.6Z",
+        "KA00.2"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-20",
+      "text": "Diagnóstico: Craneorraquisquisis.",
+      "gold": [
+        "LA00.00"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "EB43",
+        "LA00.00",
+        "2A02.3"
+      ],
+      "detected": "en",
+      "top1": false,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-21",
+      "text": "Diagnóstico: Síntoma signo relativo a la sangre.",
+      "gold": [
+        "MA00"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "MA00",
+        "MB28.Z",
+        "MB2A"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-22",
+      "text": "Diagnóstico: Excoriación en el cuero cabelludo.",
+      "gold": [
+        "NA00.00"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "NA00.00",
+        "KA42.Y",
+        "MG27"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-23",
+      "text": "Diagnóstico: Evento no intencional de transporte terrestre en el tránsito que causa traumatismo a un peatón.",
+      "gold": [
+        "PA00"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "PA00",
+        "PA10",
+        "PA02"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-24",
+      "text": "Diagnóstico: Examen médico general del adulto.",
+      "gold": [
+        "QA00.0"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "QA00.0",
+        "QA01.8",
+        "QA01.Y"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-25",
+      "text": "Diagnóstico: Trastorno relacionado con el vapeo.",
+      "gold": [
+        "RA00.0"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "RA00.0",
+        "6B4Z",
+        "6B40"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    },
+    {
+      "id": "es-chapter-26",
+      "text": "Diagnóstico: Trastorno de dolor en el hipocondrio (MT1).",
+      "gold": [
+        "SA00"
+      ],
+      "language": "es",
+      "scenario": "official-title",
+      "pred": [
+        "SA00",
+        "8E43.Z",
+        "8E43"
+      ],
+      "detected": "es",
+      "top1": true,
+      "top3": true
+    }
+  ]
+}
