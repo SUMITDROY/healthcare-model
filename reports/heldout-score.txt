@@ -1,3 +1,3 @@
 notes 60  missing predictions 0  invalid codes 0  duplicate ids 0
-slice A: n=60  top1 0.567  top3 0.667  points 45.0 / 75
-SCORE 45.0 / 75
+slice A: n=60  top1 0.733  top3 0.833  points 57.5 / 75
+SCORE 57.5 / 75

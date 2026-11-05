@@ -84,3 +84,9 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Evidence: catalog probes initially exposed three v2 first-choice failures (197/200), including maternal care being suppressed and COVID-19 `virus not identified` losing its negation. General fixes bring this debugging set to 200/200 top-1/top-3. The v1 image got 198/200 top-1 on the same probes, missing numeric grade/type distinctions. All 13 contract/regression checks pass after the fixes; dev-informed five-fold accuracy remains 44/60 top-1 and 50/60 top-3.
 - Options: exempt individual codes, keep the regression, or fix text/context handling for all matching categories. Chose general handling. The probe set has now been used for debugging, not independent clinical validation.
 - Revisit: clinical assertion parsing must distinguish absence of a disease from absence of confirmation or a qualifier. The current English rules remain limited.
+
+## 2026-11-05 14:39 IST — commit: `Publish v2 offline accuracy and resource measurements`
+- Decision: ship context-adjusted primary retrieval plus trained alternatives; keep E5 disabled and retain the v1 evidence for comparison.
+- Evidence: Linux Docker five-fold evaluation confirms 44/60 top-1, 50/60 top-3 and 57.5/75. Top-100 candidate recall is 60/60. External 200-note inference is 5.0495 seconds, 202.05 MiB peak process RSS, capped at 2 CPUs/2 GiB, network disabled, no API cost, no missing/invalid/empty predictions. Thirteen tests pass in Docker. Current training-set score is 57.5/75, not the prior memorized 75/75.
+- Options: default the larger model despite its regression, present only the training score, or publish the smaller measured result with limitations. Chose the latter.
+- Revisit: independently labeled clinical accuracy, broader language coverage and official WHO enrichment are still required. Public MTS-Dialog lacks ICD-11 gold labels; synthetic catalog probes are debugging controls.
