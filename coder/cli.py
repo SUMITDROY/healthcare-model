@@ -30,6 +30,7 @@ def main():
     )
     seen = set()
     count = 0
+    fallback_count = 0
     try:
         with (
             open(a.input, encoding="utf-8") as source,
@@ -44,7 +45,8 @@ def main():
                 if row["id"] in seen:
                     raise ValueError(f"Duplicate input id: {row['id']}")
                 seen.add(row["id"])
-                codes, diagnostic = model.predict(row["text"])
+                codes, diagnostic = model.safe_predict(row["text"])
+                fallback_count += int(bool(diagnostic.get("fallback")))
                 target.write(
                     json.dumps({"id": row["id"], "codes": codes}, ensure_ascii=False)
                     + "\n"
@@ -65,6 +67,7 @@ def main():
                 "notes": count,
                 "seconds_including_model_load": round(time.perf_counter() - start, 3),
                 "mode": "offline",
+                "fallback_predictions": fallback_count,
                 "api_calls": 0,
                 "api_cost_usd": 0,
             }

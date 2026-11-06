@@ -652,6 +652,45 @@ class OfflineCoder:
             "warning": "Ranking scores are not calibrated probabilities.",
         }
 
+    def safe_predict(self, text: str) -> tuple[list[str], dict]:
+        """Preserve the batch contract when one note's rich ranking fails."""
+        failure = None
+        try:
+            codes, diagnostic = self.predict(text)
+            valid = list(
+                dict.fromkeys(
+                    c for c in codes if isinstance(c, str) and c in self.valid
+                )
+            )[:3]
+            if valid:
+                return valid, diagnostic if isinstance(diagnostic, dict) else {}
+            failure = "NoValidPrediction"
+        except Exception as error:
+            # No patient text or exception message is logged here.
+            failure = type(error).__name__
+        try:
+            query = text.casefold()
+            word = (self.title_word @ self.word.transform([query]).T).toarray().ravel()
+            char = (self.title_char @ self.char.transform([query]).T).toarray().ravel()
+            scores = 0.65 * word + 0.35 * char
+            for parent, generic in self.unspecified_children.items():
+                scores[generic] = max(scores[generic], scores[parent])
+                scores[parent] *= 0.85
+            order = np.argsort(-scores, kind="stable")[:3]
+            codes = [self.codes[int(i)] for i in order]
+            path = "catalog-only lexical recovery after per-note inference failure"
+        except Exception:
+            # Last-resort contract recovery is explicitly not an evidence-based
+            # diagnosis. It is only reachable if both inference paths failed.
+            codes = [next(c["code"] for c in self.categories if c["leaf"])]
+            path = "emergency allowed-code recovery; no reliable clinical inference"
+        return codes, {
+            "fallback": True,
+            "failure_type": failure,
+            "path": path,
+            "warning": "Recovery prediction; clinical correctness is not established.",
+        }
+
     def save(self, path):
         Path(path).parent.mkdir(parents=True, exist_ok=True)
         joblib.dump(self, path, compress=3)

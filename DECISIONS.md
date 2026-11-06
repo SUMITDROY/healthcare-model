@@ -195,3 +195,11 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Five reserved French cases showed no symptom gain:0/5 before and after; documented diagnoses5/5 before and after. Policy source hashes were frozen before examining outcomes and no inference code changed afterward. Seven additional validation-source cases remain reserved and uninspected; no candidate outcomes are claimed.
 - Packaged runtime:25tests pass; supplied scorer70.8/75;200-note no-key/network-disabled Docker benchmark40.9851s,816.68MiB peak RSS at2CPUs/2GiB,$0. Keep changed-language regressions separate from unproven diagnostic generalisation.
 - Revisit: stronger clinical reasoning only when it improves untouched cases within memory/time limits. Do not turn now-inspected probes into alleged independent accuracy. Ship concrete language fixes and faster description retrieval while explicitly retaining the unresolved symptom-only limitation.
+
+
+## 2026-11-06 13:37 IST — commit: `Isolate note failures and prepare the 600-note assignment audit`
+- Re-read the original brief and kept scope on batch consultation coding, not passing symptom-only diagnosis exams. Source scorer,60dev notes and18,375-category whitelist are byte-for-byte unchanged from the supplied pack.
+- Found one operational gap: a per-note ranking exception could truncate later outputs. Added safe_predict, whitelist/dedup filtering and a separate catalog-only recovery path; last-resort allowed-code recovery is explicitly not a reliable clinical diagnosis. Invalid input JSON/IDs still fail clearly. The clinical retrieval/ranking implementation is unchanged.
+- Evidence:29unit/contract tests pass, including forced middle-note failure, invalid outputs, continued processing and on-disk incremental flush checks.
+- Prepared600distinct public dialogue texts from pinned MTS-Dialog split files, selecting only id/text and never fitting on these rows. Exact training-text overlap0; patient independence and clinical ICD-11 accuracy are not asserted. Freeze manifest/source hashes before the full-sized contract/run audit.
+- Revisit: real ICD-11 annotated coding evaluation; operational recovery ensures completion, not correct diagnosis. Applicant personal hours and actual email submission cannot be inferred or fabricated by the agent.
