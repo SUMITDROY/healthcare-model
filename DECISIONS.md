@@ -209,3 +209,9 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Assignment-format audit reproduced a Spanish error: a long follow-up note headed by the official diagnosis Epilepsia mioclónica juvenil was sent to symptom inference and missed8A61.30, despite the diagnosis already being written.
 - Added a global preferred-title lookup derived only from the supplied/WHO categories. A unique specific non-residual leaf on its own first line is documented evidence, not a symptom inference. Parent/residual titles and ambiguous localized titles are excluded; a later explicit assessment/clinician focus takes precedence. This is full-taxonomy title identity, not a case-ID or training-gold lookup.
 - Added EN/FR/ES heading regressions and an assessment-precedence regression. Retain the existing symptom-only limitations; this fix addresses consultation coding scope, not medical-exam diagnosis. Revisit narrative diagnosis extraction with source-separated coding evaluation.
+
+
+## 2026-11-06 13:51 IST — commit: `Use the 600-note public audit sample for the default command`
+- Chose600distinct public dialogue texts rather than repeated/synthetic copies of200 notes, so the exact default command exercises the assignment-sized batch. The original200-note file remains available for historical comparisons.
+- Only data/notes.jsonl changes; original supplied scorer,dev notes and whitelist remain untouched. Source training-split rows in the fixture are inference-only, and all source hashes/selection are in the audit manifest.
+- Revisit: this full-size operational check is not a clinical accuracy test, and its600notes are not the employer hidden set.
