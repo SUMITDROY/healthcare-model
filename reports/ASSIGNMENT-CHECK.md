@@ -29,12 +29,12 @@ python scripts/audit_submission.py
 - DECISIONS.md retains the original decisions, dates, commit references, alternatives, measured evidence and revisit conditions. Repeated identical date/commit headings were grouped structurally; no decision text was removed. Its Git history remains contemporaneous.
 - The final attachment is `sumitdebroy-final.bundle`; `SUBMISSION.md` contains a ready-to-copy email draft. No message has been sent.
 
-## Items that cannot honestly be certified
+## Submission status and limits
 
-**Personal hours:** the assignment asks for a numeric applicant-hours total. None was tracked or supplied. The README says so transparently; it does not fully supply the requested number. Agent activity or elapsed Git windows must not be passed off as the applicant's personal working hours.
+**Personal hours:** the applicant supplied an estimate of approximately 8–14 hours, with AI assistance. That estimate is now included in the README and submission draft.
 
 **Email and deadline:** attaching the bundle to the original email thread within three days remains a user action. The agent has neither sent the submission nor verified the original receipt timestamp. Do not treat preparing the bundle as submitting it.
 
 **Hidden accuracy:** only the employer can measure the450core/150generalisation scores on their hidden 600 notes. The60visible notes and synthetic/derived-label evaluations cannot prove that score. Available French/Spanish checks do not establish broad multilingual clinical accuracy. The extra symptom-only exam tests remain weak; the concrete code/format fixes do not solve general medical diagnosis.
 
-The technical/package checks therefore pass, while personal-hours reporting and actual submission remain open. This is the accurate scope of the assurance, not a guarantee of a high hidden score.
+The technical/package checks pass and the applicant-hours estimate is supplied. Actual email submission remains open. This is not a guarantee of a high hidden score.

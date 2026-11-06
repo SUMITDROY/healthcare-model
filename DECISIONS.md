@@ -227,3 +227,8 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 ## 2026-11-06 14:36 IST — commit: `Remove interview preparation document before GitHub publication`
 - User requested publication to SUMITDROY/healthcare-model and removal of INTERVIEW.md. Removed the file from the current tree and its live submission-document references. Retained the real development history required by the assignment.
 - Remote inspection returned no existing refs, so publish the current project on main without overwriting remote work. This documentation-only change does not alter the verified inference implementation; no model/test rerun is needed.
+
+
+## 2026-11-06 14:40 IST — commit: `Record applicant-provided estimate of 8–14 hours with AI assistance`
+- Applicant supplied the approximate time range after publication. Updated the README, submission draft and current requirements audit to approximately8–14hours with AI assistance. This is the applicant's estimate, not a number inferred from agent/Git timestamps. Historical decision entries remain unchanged.
+- Documentation/metadata only; inference behavior and previously verified tests/resources are unchanged. Actual email submission still requires the applicant's action.

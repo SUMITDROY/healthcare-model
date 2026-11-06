@@ -6,9 +6,9 @@ Suggested reply text:
 
 > Please find my ICD-11 coding assignment attached as a Git bundle. The default implementation runs entirely offline and proposes up to three allowed codes per note. The README reports the supplied dev score, data provenance, external evaluation and limitations. The exact Docker command was verified from a clean final bundle clone with a no-cache build, and all 600 public audit notes received valid predictions.
 >
-> Hours spent: not tracked reliably; the implementation was substantially AI-assisted. Git timestamps reflect agent activity rather than a reliable total of my personal working hours.
+> Hours spent: approximately 8–14 hours, with AI assistance.
 
-The hours statement is a transparent disclosure, not a numeric estimate. The assignment requests hours, and no reliable applicant total was supplied or measured; a number must not be invented.
+The hours range is the applicant’s approximate estimate, including AI-assisted work.
 
 To open the attachment locally:
 

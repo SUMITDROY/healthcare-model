@@ -113,10 +113,10 @@ def main():
         "readme_words": len(Path("README.md").read_text().split()),
         "real_decision_history": "Retained in Git; contemporaneous entries and failed experiments included.",
         "api_enhancement": "Optional in the brief; this implementation always chooses offline inference.",
-        "hours_reporting": "Transparent not-tracked statement; actual applicant total unavailable.",
+        "hours_reporting": "Applicant-provided estimate: approximately 8–14 hours, with AI assistance.",
         "email_submission": "Not sent; user must reply to the original thread within the assigned window.",
         "quality_limitations": "Most-specific checks and broad taxonomy/language retrieval implemented; no guarantee of hidden accuracy or clinical diagnosis from symptoms. Medical-exam diagnosis is an extra stress test, not the specified deliverable.",
-        "status": "PASS technical checks; applicant hours and actual email submission cannot be independently completed by this audit.",
+        "status": "PASS technical checks and hours disclosure; actual email submission remains open.",
     }
     Path(a.output).parent.mkdir(parents=True, exist_ok=True)
     Path(a.output).write_text(json.dumps(report, indent=2) + "\n")

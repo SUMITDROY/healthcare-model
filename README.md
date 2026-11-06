@@ -17,4 +17,4 @@ Default input: **600 distinct public dialogue texts**, not the employer's hidden
 
 **AI error caught:** a local translator changed age 30 into a temperature and reversed uncomplicated malaria into severe disease. It was rejected; raw failure evidence is retained. No experimental generative model ships.
 
-**Hours spent:** not tracked reliably; substantially AI-assisted. Git timestamps document agent activity, not applicant working hours.
+**Hours spent:** approximately 8–14 hours, with AI assistance.
