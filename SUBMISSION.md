@@ -1,6 +1,6 @@
 # Submission package
 
-Attach `sumitdebroy-final.bundle` to the original assignment email thread. It contains the real Git history, code, packaged reference data, README, decisions, source attribution, evaluation data and interview notes. No email was sent by the agent.
+Attach `sumitdebroy-final.bundle` to the original assignment email thread. It contains the real Git history, code, packaged reference data, README, decisions, source attribution, evaluation data. No email was sent by the agent.
 
 Suggested reply text:
 
@@ -19,4 +19,4 @@ docker compose build
 docker compose run coder /in/notes.jsonl /out/predictions.jsonl
 ```
 
-Review `INTERVIEW.md` before presenting. Visible development scores and synthetic controls do not establish hidden-note accuracy. External Spanish results are explicitly reference-derived proxies, not independently adjudicated ICD-11 gold.
+Visible development scores and synthetic controls do not establish hidden-note accuracy. External Spanish results are explicitly reference-derived proxies, not independently adjudicated ICD-11 gold.

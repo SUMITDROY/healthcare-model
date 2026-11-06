@@ -222,3 +222,8 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Benchmark now measures the same safe_predict path as the CLI; removed its hardcoded200-note source caption. Corrected the earlier600-run caption transparently, without changing any input SHA, predictions or resource statistic.
 - README is kept to one-page scope; checklist maps requirements to evidence and distinguishes extra symptom-only diagnosis exams from consultation coding. Repeated identical date/commit headings in this log were grouped structurally, with all decision text and real history retained.
 - Personal-hours total and original-email deadline/submission are not known or completed. Keep the candid not-tracked line and unsent email draft rather than fabricating compliance. Revisit only with applicant data/explicit submission instruction. Hidden accuracy remains employer-measured.
+
+
+## 2026-11-06 14:36 IST — commit: `Remove interview preparation document before GitHub publication`
+- User requested publication to SUMITDROY/healthcare-model and removal of INTERVIEW.md. Removed the file from the current tree and its live submission-document references. Retained the real development history required by the assignment.
+- Remote inspection returned no existing refs, so publish the current project on main without overwriting remote work. This documentation-only change does not alter the verified inference implementation; no model/test rerun is needed.
