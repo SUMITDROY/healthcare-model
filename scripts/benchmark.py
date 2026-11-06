@@ -38,12 +38,14 @@ def main():
     inputs = rows(a.input)
     model = OfflineCoder.load(a.model)
     Path(a.output).parent.mkdir(parents=True, exist_ok=True)
+    fallback_count = 0
     times = []
     predictions = []
     with open(a.output, "w", encoding="utf-8", buffering=1) as f:
         for row in inputs:
             t = time.perf_counter()
-            codes, _ = model.predict(row["text"])
+            codes, diagnostic = model.safe_predict(row["text"])
+            fallback_count += int(bool(diagnostic.get("fallback")))
             times.append(time.perf_counter() - t)
             prediction = {"id": row["id"], "codes": codes}
             predictions.append(prediction)
@@ -67,7 +69,7 @@ def main():
 
     result = {
         "benchmark_type": "external throughput and output validity; NOT coding accuracy",
-        "source": "MTS-Dialog TestSet-1, 200 unmodified dialogue texts",
+        "source": "Caller-supplied JSONL; use input_sha256 and its provenance manifest to identify the dataset.",
         "input_sha256": hashlib.sha256(Path(a.input).read_bytes()).hexdigest(),
         "input_notes": len(inputs),
         "output_notes": len(predictions),
@@ -76,6 +78,7 @@ def main():
         "missing_ids": len({r["id"] for r in inputs} - {r["id"] for r in predictions}),
         "invalid_codes": sum(c not in valid for r in predictions for c in r["codes"]),
         "empty_predictions": sum(not r["codes"] for r in predictions),
+        "fallback_predictions": fallback_count,
         "exact_text_training_overlap": overlap,
         "wall_seconds_including_import_and_model_load": round(elapsed, 4),
         "cpu_seconds": round(time.process_time() - cpu_start, 4),

@@ -8,19 +8,19 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Evidence: 18,375 categories, 60 labeled examples, only 11 represented chapters. A small sparse index fits the hardware target; accuracy must be measured rather than assumed.
 - Revisit: multilingual semantic retrieval and WHO enrichment once the baseline is reproducible.
 
-## 2026-11-05 13:50 IST — commit: `Initialize offline coder and independent internet test source`
+### 2026-11-05 13:50 IST — commit: `Initialize offline coder and independent internet test source`
 - Decision: use the supplied 60 labeled notes as supervised nearest-neighbour training examples, with explicit assessment extraction and broad category retrieval.
 - Alternatives: train a classifier on 61 observed labels, or retrieve using titles alone.
 - Evidence: a classifier restricted to observed labels cannot cover the other supplied categories. The chosen index retains all allowed codes.
 - Revisit: title-only ablation and held-out validation; training-set scores must be labeled resubstitution.
 
-## 2026-11-05 13:50 IST — commit: `Initialize offline coder and independent internet test source`
+### 2026-11-05 13:50 IST — commit: `Initialize offline coder and independent internet test source`
 - Decision: reserve MTS-Dialog TestSet-1's 200 conversations strictly for inference, not training or tuning.
 - Alternatives: scrape clinical websites, use credentialed patient data, or generate synthetic test notes.
 - Evidence: a public 200-conversation release with CC BY 4.0 attribution and a pinned source commit is available. It lacks ICD-11 gold labels and includes note sections rather than complete consultations.
 - Revisit: obtain independently reviewed ICD-11 labels before calling this an accuracy benchmark.
 
-## 2026-11-05 13:50 IST — commit: `Initialize offline coder and independent internet test source`
+### 2026-11-05 13:50 IST — commit: `Initialize offline coder and independent internet test source`
 - Decision: use a 2-CPU, 2-GiB container with `network_mode: none`; build the index during image build.
 - Alternatives: host-only thread limits, or downloads at startup.
 - Evidence: host-only thread limits do not prove memory/CPU isolation; runtime downloads violate the assignment's offline requirement.
@@ -32,7 +32,7 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Options: report only the attractive dev score, or separate the training, ablation and held-out results. Chose the latter.
 - Revisit: independent expert-labeled notes are needed for a credible unseen accuracy estimate.
 
-## 2026-11-05 13:57 IST — commit: `Measure honest holdouts and correct context and specificity errors`
+### 2026-11-05 13:57 IST — commit: `Measure honest holdouts and correct context and specificity errors`
 - Decision: restrict ambient assessment extraction to Doctor lines; add explicit terminology aliases; prefer a title-verified unspecified leaf over its generic non-leaf parent; gate weak exemplar matches.
 - Evidence: dev-060's patient thyroid speculation and generic tonsillitis/pneumonia parent predictions exposed errors. Chickenpox/varicella and frozen shoulder/adhesive capsulitis show title-only vocabulary gaps. These are dev-informed changes, so cross-validation is diagnostic rather than an untouched test.
 - Options: more training-note weight, code-by-code overrides, or general text/ranking changes. Chose transparent text/ranking changes without note-ID special cases.
@@ -43,13 +43,13 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Evidence: 200/200 external notes in 2.398 seconds; 190.50 MiB peak process RSS; no invalid/empty predictions, missing IDs, API calls or exact-text training overlap. Cgroup limits are saved in benchmark.json. This is ARM64, not an x86 performance claim.
 - Revisit: x86 runtime and more diverse long-note workloads.
 
-## 2026-11-05 13:58 IST — commit: `Document offline benchmark and accuracy limitations`
+### 2026-11-05 13:58 IST — commit: `Document offline benchmark and accuracy limitations`
 - Decision: keep the supervised exemplar component available but explicitly state that training has not yet demonstrated an out-of-fold gain.
 - Evidence: updated five-fold top-1 34/60, top-3 40/60, score 45/75; the no-example ablation also gets 45/75. Training-set scoring is 75/75 and must not be called unseen accuracy.
 - Alternatives: increase training-example influence to optimise resubstitution, remove the component immediately, or retain it as a documented baseline for more representative evaluation.
 - Revisit: additional independent labeled notes and validation-selected weights.
 
-## 2026-11-05 13:58 IST — commit: `Document offline benchmark and accuracy limitations`
+### 2026-11-05 13:58 IST — commit: `Document offline benchmark and accuracy limitations`
 - Decision: provide an entirely offline first implementation, with optional API enhancement deferred.
 - Evidence: CPU throughput exceeds the requested target by a wide margin; accuracy, rather than speed or budget, is now the bottleneck. No paid API is needed to finish every note.
 - Alternatives: spend the $2–3 allowance immediately or add a local generative model before measuring the retriever.
@@ -67,13 +67,13 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Options: note-specific overrides, more weight on matching training notes, or reusable parsing and category-evidence rules. Chose reusable rules; eleven regression/contract tests pass.
 - Revisit: a real clinical assertion parser and official hierarchy/terminology enrichment. These heuristics remain dev-informed and have scope limitations.
 
-## 2026-11-05 14:28 IST — commit: `Improve evidence parsing and train code-agnostic alternative ranking`
+### 2026-11-05 14:28 IST — commit: `Improve evidence parsing and train code-agnostic alternative ranking`
 - Decision: remove nearest-note label transfer. Train a shared pairwise logistic ranking function on positive and negative category pairs from the supplied 60 notes. Fit search vocabulary on the catalog only. Retain the evidence-based first choice; use the trained function for the two alternatives.
 - Evidence: full pointwise model reranking achieved only 40/60 held-out top-1. Pairwise reranking of all positions achieved 43/60 and 50/60 top-3. Keeping evidence-first top-1 with learned alternatives gives 44/60 top-1 and 50/60 top-3, or 57.5/75, versus v1's 45/75. Training-set performance is now 57.5/75 rather than a memorized 75/75.
 - Options: a 61-class classifier, exemplar lookup, pointwise/pairwise full reranking, or learned alternatives. Shared features can score all 18,375 categories, including codes never used as training labels.
 - Revisit: more representative independent labels may support learned primary selection. Repeated dev-informed validation is diagnostic, not an unbiased estimate.
 
-## 2026-11-05 14:28 IST — commit: `Improve evidence parsing and train code-agnostic alternative ranking`
+### 2026-11-05 14:28 IST — commit: `Improve evidence parsing and train code-agnostic alternative ranking`
 - Decision: leave quantized multilingual E5 disabled by default; retain a pinned, hashed offline-build experiment and the upstream/converter model cards.
 - Evidence: first semantic fusion trial reduced held-out top-1 from 40/60 to 39/60 and top-3 from 47/60 to 46/60, while adding a 118 MB model, 17 MB tokenizer and 28 MB category vectors. Title embeddings built on CPU in 56 seconds. WHO's official API returned 401 without credentials; attempted public browser endpoints returned 404, so no WHO enrichment is claimed.
 - Options: default semantic retrieval, lexical-only improvements, or a local generative model. Selected the smaller measured improvement and no runtime model downloads.
@@ -103,13 +103,13 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Options: cloud API credentials, title-only lookup, or supported local export. Local export removes the credential blocker and keeps runtime entirely offline.
 - Revisit: multilingual releases and exclusions/hierarchy-aware reasoning; this English-only enrichment does not prove multilingual clinical accuracy.
 
-## 2026-11-05 15:27 IST — commit: `Add release-pinned WHO reference knowledge and evaluate offline rankers`
+### 2026-11-05 15:27 IST — commit: `Add release-pinned WHO reference knowledge and evaluate offline rankers`
 - Decision: add separate stemmed WHO term and definition indexes and retain rejected ranking experiments for audit.
 - Evidence: initial reference-enriched diagnostic was 46/60 top-1 and 51/60 top-3. A flexible tree primary ranker reached 53/60 on training but only 38/60 held-out, so it was rejected. A later evidence-anchored version achieved 47/60 top-1 and 53/60 top-3, with 60/60 gold codes in the first 50 candidates. These remain repeatedly tuned development diagnostics.
 - Options: full learned primary ranking, shared pairwise alternatives, or reference-based evidence constraints. The small visible sample does not support trusting the tree training score.
 - Revisit: independent gold annotations and richer pretrained clinical reasoning. Current adjective/age/condition rules are English-specific and need regression checks.
 
-## 2026-11-05 15:27 IST — commit: `Add release-pinned WHO reference knowledge and evaluate offline rankers`
+### 2026-11-05 15:27 IST — commit: `Add release-pinned WHO reference knowledge and evaluate offline rankers`
 - Decision: test a local CPU-only Qwen3-0.6B candidate selector, without making it the default.
 - Evidence: on three diagnostic smoke cases it got one top-1 and two top-3 hits; calls took 8.1–11.8 seconds, plus 24.8-second load, and peaked near 2.3 GiB process RSS. No gold codes were included in prompts. This does not justify deployment or an accuracy claim. A larger quantized model is still under evaluation, not yet selected.
 - Options: deploy the smaller model on assumption, reject it based on measured behaviour, or test a more capable model under the same offline resource limits. No paid API has been called.
@@ -121,19 +121,19 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Options: keep adding model capacity, trust coarse lexical overlap, or improve provenance-linked evidence. The more flexible learned primary model overfit; the explicit evidence path is selected.
 - Revisit: independent clinician-reviewed labels are necessary before estimating true hidden or clinical accuracy. Four dev top-1 failures remain; the rules are now frozen instead of chasing them.
 
-## 2026-11-05 16:36 IST — commit: `Ground subtype ranking in explicit facts and official multilingual terminology`
+### 2026-11-05 16:36 IST — commit: `Ground subtype ranking in explicit facts and official multilingual terminology`
 - Decision: add separate official French/Spanish WHO term indexes, leaving English vocabulary/IDF unchanged, and use guarded code-aligned projection only for an explicitly stated pregnancy modifier.
 - Evidence: exports cover all 18,375 allowed categories in each language, with 99,541 French and 126,187 Spanish index terms. No title-language fallbacks occurred. English routing and its 93.3% diagnostic were preserved. The 20 clinical counterfactual controls and 10 language controls pass; 200 exact-title catalog controls pass. Controls exposed and helped fix family-history ownership and foreign obstetric context, so they are debugging sets, not untouched evaluations.
 - Options: merge all languages into one IDF corpus, free-form translation, or separate reference-backed lookup. Chose separate indexes and language identification. Only English, French and Spanish terminology lookup is supported; no fluency or broad language accuracy claim is made.
 - Revisit: sentence-level foreign negation/context and real clinical annotations in each language. French/Spanish lookup does not perform a full clinical translation.
 
-## 2026-11-05 16:36 IST — commit: `Ground subtype ranking in explicit facts and official multilingual terminology`
+### 2026-11-05 16:36 IST — commit: `Ground subtype ranking in explicit facts and official multilingual terminology`
 - Decision: reject local generative selectors/translators from the default engine and preserve their provenance/results under reports/experiments.
 - Evidence: Qwen3-1.7B Q4 candidate selection got 2/3 top-1 smoke cases, 7.2–10.4 seconds/call and near 2.9 GiB process RSS. Translation copied a French diagnosis and changed a Swahili age of 30 into a temperature of 30°C while reversing uncomplicated malaria into severe disease. This is unacceptable evidence corruption. No gold codes were in prompts; no paid inference APIs were called. Rejected weights were removed.
 - Options: deploy on model reputation, add more model size without evidence, or use official multilingual references. Chose measured reference lookup.
 - Revisit: a specialized clinical/translation model requires separate accuracy, contradiction and latency checks before deployment.
 
-## 2026-11-05 16:36 IST — commit: `Ground subtype ranking in explicit facts and official multilingual terminology`
+### 2026-11-05 16:36 IST — commit: `Ground subtype ranking in explicit facts and official multilingual terminology`
 - Decision: after the user's authorization to free space, remove regenerable unused Docker build caches and task-created temporary files, retaining personal files, project data, images/volumes and the selected model artifact.
 - Evidence: reclaimed 3.912 GB of unused build cache last accessed months ago; free space increased from 1.9 GiB to 5.6 GiB. Metadata services, raw export caches and rejected model files were subsequently removed after the compressed reference exports were verified.
 - Revisit: future large-model experiments should check free disk before downloads. Runtime engine remains a small sparse index, without a generative model.
@@ -215,3 +215,10 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Chose600distinct public dialogue texts rather than repeated/synthetic copies of200 notes, so the exact default command exercises the assignment-sized batch. The original200-note file remains available for historical comparisons.
 - Only data/notes.jsonl changes; original supplied scorer,dev notes and whitelist remain untouched. Source training-split rows in the fixture are inference-only, and all source hashes/selection are in the audit manifest.
 - Revisit: this full-size operational check is not a clinical accuracy test, and its600notes are not the employer hidden set.
+
+
+## 2026-11-06 14:08 IST — commit: `Verify the assignment-sized batch and document remaining submission actions`
+- Full scope audit:600distinct public texts, all600IDs/codes valid,0fallbacks, exact command81.529s; resource benchmark85.5374s/832.74MiB at2CPUs/2GiB/no network/$0. All31tests pass and the unchanged supplied scorer stays70.8/75. Additional test containers ran concurrently.
+- Benchmark now measures the same safe_predict path as the CLI; removed its hardcoded200-note source caption. Corrected the earlier600-run caption transparently, without changing any input SHA, predictions or resource statistic.
+- README is kept to one-page scope; checklist maps requirements to evidence and distinguishes extra symptom-only diagnosis exams from consultation coding. Repeated identical date/commit headings in this log were grouped structurally, with all decision text and real history retained.
+- Personal-hours total and original-email deadline/submission are not known or completed. Keep the candid not-tracked line and unsent email draft rather than fabricating compliance. Revisit only with applicant data/explicit submission instruction. Hidden accuracy remains employer-measured.

@@ -1,10 +1,10 @@
 # Submission package
 
-Attach `sumitdebroy-v5.bundle` to the original assignment email thread. It contains the real Git history, code, packaged reference data, README, decisions, source attribution, evaluation data and interview notes. No email was sent by the agent.
+Attach `sumitdebroy-final.bundle` to the original assignment email thread. It contains the real Git history, code, packaged reference data, README, decisions, source attribution, evaluation data and interview notes. No email was sent by the agent.
 
 Suggested reply text:
 
-> Please find my ICD-11 coding assignment attached as a Git bundle. The default implementation runs entirely offline and proposes up to three allowed codes per note. The README reports the supplied dev score, data provenance, external evaluation and limitations. The exact Docker command was verified from a clean v5 bundle clone with a no-cache build, and all 200 input notes received valid predictions.
+> Please find my ICD-11 coding assignment attached as a Git bundle. The default implementation runs entirely offline and proposes up to three allowed codes per note. The README reports the supplied dev score, data provenance, external evaluation and limitations. The exact Docker command was verified from a clean final bundle clone with a no-cache build, and all 600 public audit notes received valid predictions.
 >
 > Hours spent: not tracked reliably; the implementation was substantially AI-assisted. Git timestamps reflect agent activity rather than a reliable total of my personal working hours.
 
@@ -13,7 +13,7 @@ The hours statement is a transparent disclosure, not a numeric estimate. The ass
 To open the attachment locally:
 
 ```sh
-git clone sumitdebroy-v5.bundle sugen-coder
+git clone sumitdebroy-final.bundle sugen-coder
 cd sugen-coder
 docker compose build
 docker compose run coder /in/notes.jsonl /out/predictions.jsonl

@@ -1,20 +1,20 @@
-# Sugen offline ICD-11 coder — V5
+# Sugen consultation-note ICD-11 coder
 
-CPU-only ranking across **18,375 allowed MMS 2026-01 categories**. Assessment extraction, sparse WHO-reference retrieval, specificity checks and a shared alternative ranker return up to three codes. Long unasserted narratives use a separate clinical-definition index. French/Spanish use native morphology and retain diagnostic letter subtypes. No hosted API, generative model, GPU or runtime downloads.
+Reads consultation notes and returns up to three allowed codes, best first, across **18,375 MMS 2026-01 categories**. The offline pipeline uses assessment extraction, official WHO terminology/definitions, specificity checks and a shared alternative ranker. English/French/Spanish lookup and native morphology are supported. This is a coding engine; accurate diagnosis from symptom-only medical exam cases is not established.
 
 ```sh
 docker compose build
 docker compose run coder /in/notes.jsonl /out/predictions.jsonl
 ```
 
-Compose caps inference at **2 CPUs / 2 GiB**, with networking disabled. Default input is 200 external MTS-Dialog notes; output is `reports/predictions.jsonl`. Override folders with `CODER_INPUT_DIR`/`CODER_OUTPUT_DIR`. Each prediction flushes immediately. Build installs pinned dependencies and fits indexes from packaged references.
+Default input: **600 distinct public dialogue texts**, not the employer's hidden notes. Output: `reports/predictions.jsonl`. Set `CODER_INPUT_DIR`/`CODER_OUTPUT_DIR` for other folders. Compose caps inference at **2 CPUs / 2 GiB**, disables networking and uses no GPU/API keys. Build installs pinned dependencies and creates indexes from packaged data. Predictions flush per note; note-level inference errors recover through catalog-only retrieval so later records continue. Standalone official diagnosis headings are preserved; later explicit assessments take precedence.
 
-**Dev score:** supplied scorer **70.8/75**, 56/60 first-choice and 58/60 top-three hits. Rules and approach choices used visible notes, so this is development evidence. Prior ranker ablation gave the same aggregate result. Hidden-score estimate: **60/100**, an uncalibrated planning guess.
+**Dev score:** unchanged supplied scorer **70.8/75**: 56/60 first-choice, 58/60 top-three. The visible set influenced rules and approach choices; this is development evidence. Hidden-score estimate: **60/100**, an uncalibrated planning guess.
 
-**Data added:** official WHO English/French/Spanish API records, including 324,197 index-term entries, definitions and hierarchy metadata, restricted to allowed codes. Source hashes/licenses: `third_party/`. MTS-Dialog supplies 200 unchanged dialogues for throughput only; summaries never train or enter inference. CodiEsp, MedExpQA and MediQAl provide external evaluation text and source annotations/reference answers. Added code labels are mechanically aligned proxies, not clinician-adjudicated ICD-11 gold. These evaluation cases do not fit the learned ranker.
+**Added data:** official WHO English/French/Spanish API records include 324,197 index-term entries, definitions and hierarchy metadata, restricted to allowed codes. Provenance, hashes and licenses: `third_party/`. MTS-Dialog provides the 600-text throughput fixture; summaries never train or enter inference. CodiEsp, MedExpQA and MediQAl supply external evaluation text/reference answers with mechanically aligned code proxies, not clinician-adjudicated ICD-11 gold. Evaluation cases do not fit the learned ranker.
 
-**Beyond dev:** Docker processed **200 valid outputs in 40.99 seconds**, **816.68 MiB peak RSS**, **$0 API cost**. All **25 unit/contract tests** pass. Inspected language regressions now code all 14 documented diagnoses correctly in each language. Symptom-only top-three matches improved from zero to English4/14, French4/14 and Spanish6/14; most first choices still fail. On five separately reserved French cases, symptom-only performance remained0/5, while documented-diagnosis coding remained5/5. Synthetic controls and inspected examples are development evidence; broad diagnostic generalisation remains unverified. Details: `reports/V5-RESULTS.md`.
+**Beyond dev:** the 600-note Docker audit returned **600/600 valid outputs in 85.54 seconds**, with **832.74 MiB peak RSS**, zero inference fallbacks, no network/keys and **$0 API cost**. **31 tests** pass, covering output IDs/whitelist, incremental flush, forced note failure, specificity and languages. Clinical accuracy on the 600texts is unknown. Independent hidden-note accuracy remains unverified; extra symptom-only exam stress tests remain weak. Details:`reports/ASSIGNMENT-CHECK.md` and versioned results.
 
-**AI mistake caught:** a tested local translator changed age30 into a temperature and reversed uncomplicated malaria into severe disease. It was rejected. Subsequent generic/medical model diagnosis proposals were also insufficiently reliable and are not shipped; raw evidence is retained.
+**AI error caught:** a local translator changed age 30 into a temperature and reversed uncomplicated malaria into severe disease. It was rejected; raw failure evidence is retained. No experimental generative model ships.
 
-**Hours spent:** not tracked reliably; implementation substantially AI-assisted. Git timestamps document agent activity, not applicant working hours.
+**Hours spent:** not tracked reliably; substantially AI-assisted. Git timestamps document agent activity, not applicant working hours.

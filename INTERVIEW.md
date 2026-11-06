@@ -71,3 +71,8 @@ French/Spanish documented-diagnosis failures came from using English stemming an
 Do not say the symptom-only flaw is solved. Strict development top-three hits are now English4/14, French4/14, Spanish6/14, but five separately reserved French cases remained0/5 before and after. The documented-diagnosis version of those five stayed5/5. Explain why a visible development gain can coexist with no measured held-out gain. These exam/code-alignment probes are not clinician-adjudicated outpatient ICD-11 gold.
 
 Current packaged benchmark:200 notes in40.9851seconds at2CPUs/2GiB,816.68MiB peak process RSS,$0,25tests. See reports/V5-RESULTS.md for failures and rejected model experiments. The old31-second v4 clean-clone number is historical, not the current v5 resource benchmark.
+
+
+## Final assignment audit
+
+Keep the interview scope on coding consultation notes. Symptom-only exam diagnosis was an additional stress test, not the requested product. The final format audit added per-note recovery and direct recognition of unambiguous official diagnosis headings, without letting a header override a later explicit assessment. The default command now runs600distinct public dialogue texts. The600-note operational benchmark completed in85.5374seconds at2CPUs/2GiB with832.74MiB peak RSS,$0 and zero fallbacks.31tests pass. Report the unknown hidden score honestly; personal applicant hours remain untracked, and email delivery is separate from a ready bundle.
