@@ -1,4 +1,4 @@
-# Sugen consultation-note ICD-11 coder
+# Offline ICD-11 consultation coder
 
 Reads consultation notes and returns up to three allowed codes, best first, across **18,375 MMS 2026-01 categories**. The offline pipeline uses assessment extraction, official WHO terminology/definitions, specificity checks and a shared alternative ranker. English/French/Spanish lookup and native morphology are supported. This is a coding engine; accurate diagnosis from symptom-only medical exam cases is not established.
 
@@ -13,8 +13,12 @@ Default input: **600 distinct public dialogue texts**, not the employer's hidden
 
 **Added data:** official WHO English/French/Spanish API records include 324,197 index-term entries, definitions and hierarchy metadata, restricted to allowed codes. Provenance, hashes and licenses: `third_party/`. MTS-Dialog provides the 600-text throughput fixture; summaries never train or enter inference. CodiEsp, MedExpQA and MediQAl supply external evaluation text/reference answers with mechanically aligned code proxies, not clinician-adjudicated ICD-11 gold. Evaluation cases do not fit the learned ranker.
 
-**Beyond dev:** the 600-note Docker audit returned **600/600 valid outputs in 85.54 seconds**, with **832.74 MiB peak RSS**, zero inference fallbacks, no network/keys and **$0 API cost**. **31 tests** pass, covering output IDs/whitelist, incremental flush, forced note failure, specificity and languages. Clinical accuracy on the 600texts is unknown. Independent hidden-note accuracy remains unverified; extra symptom-only exam stress tests remain weak. Details:`reports/ASSIGNMENT-CHECK.md` and versioned results.
+**Beyond dev:** the 600-note Docker audit returned **600/600 valid outputs in 85.54 seconds**, with **832.74 MiB peak RSS**, zero inference fallbacks, no network/keys and **$0 API cost**. **31 tests** pass, covering output IDs/whitelist, incremental flush, forced note failure, specificity and languages. Clinical accuracy on the 600 texts is unknown. Independent hidden-note accuracy remains unverified; extra symptom-only exam stress tests remain weak. See the [evaluation guide](docs/EVALUATION.md) for evidence and limitations.
 
 **AI error caught:** a local translator changed age 30 into a temperature and reversed uncomplicated malaria into severe disease. It was rejected; raw failure evidence is retained. No experimental generative model ships.
+
+## Reviewer guide
+
+[Setup and custom inputs](docs/SETUP.md) · [Architecture and scaling](docs/ARCHITECTURE.md) · [Evaluation](docs/EVALUATION.md) · [Evidence index](reports/README.md) · [Decisions](DECISIONS.md) · [Assignment brief](BRIEF.md) · [Submission draft](docs/SUBMISSION.md)
 
 **Hours spent:** approximately 8–14 hours, with AI assistance.

@@ -27,7 +27,7 @@ python scripts/audit_submission.py
 - A Git bundle is created with `git bundle create ... --all`, preserving the real development history, model failures and contemporaneous decisions. No history squash.
 - README is approximately one page of content and includes the supplied scorer result, a candid hidden-score estimate, added-data provenance, evaluation beyond 60 and a concrete caught AI error.
 - DECISIONS.md retains the original decisions, dates, commit references, alternatives, measured evidence and revisit conditions. Repeated identical date/commit headings were grouped structurally; no decision text was removed. Its Git history remains contemporaneous.
-- The final attachment is `sumitdebroy-final.bundle`; `SUBMISSION.md` contains a ready-to-copy email draft. No message has been sent.
+- The final attachment is `sumitdebroy-final.bundle`; [`docs/SUBMISSION.md`](../docs/SUBMISSION.md) contains a ready-to-copy email draft. No message has been sent.
 
 ## Submission status and limits
 

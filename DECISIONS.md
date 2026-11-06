@@ -232,3 +232,10 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 ## 2026-11-06 14:40 IST — commit: `Record applicant-provided estimate of 8–14 hours with AI assistance`
 - Applicant supplied the approximate time range after publication. Updated the README, submission draft and current requirements audit to approximately8–14hours with AI assistance. This is the applicant's estimate, not a number inferred from agent/Git timestamps. Historical decision entries remain unchanged.
 - Documentation/metadata only; inference behavior and previously verified tests/resources are unchanged. Actual email submission still requires the applicant's action.
+
+## 2026-11-06 — Repository presentation
+
+- Decision: retain the short root README; add detailed setup, architecture/scaling and evaluation guides under docs/, move the submission draft there, and index current versus historical evidence.
+- Alternatives: expand the root beyond the assignment's one-page limit, or delete older evidence. Preserve evidence paths to keep reproduction scripts and decision references valid.
+- Evidence: current and historical reports previously lacked a navigation entry point. No inference code, dependencies or packaged data change.
+- Revisit: archive historical files only with their provenance and references preserved.
