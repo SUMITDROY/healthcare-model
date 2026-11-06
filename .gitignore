@@ -5,3 +5,5 @@ reports/*predictions.jsonl
 reports/*per-note.jsonl
 .venv/
 data/*.partial
+
+.DS_Store

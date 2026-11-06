@@ -62,3 +62,12 @@ French/Spanish follow-up: “I found and fixed concrete context errors rather th
 5. Show `reports/codiesp/results.json` alongside its manifest. Explain the weaker external result, mapping caveats and the next properly held-out evaluation.
 
 Do not claim access to the employer's hidden notes, clinically validated multilingual accuracy, a measured 600-note timing result, or that all 18,375 categories have been independently clinically tested.
+
+
+## V5 update: what was actually fixed
+
+French/Spanish documented-diagnosis failures came from using English stemming and dropping clinically meaningful letter subtypes. Native morphology and hepatitis letter markers fix the inspected14-case regressions in each language. A new sparse clinical-description path adds symptom-only candidate recall without a GPU or generative model.
+
+Do not say the symptom-only flaw is solved. Strict development top-three hits are now English4/14, French4/14, Spanish6/14, but five separately reserved French cases remained0/5 before and after. The documented-diagnosis version of those five stayed5/5. Explain why a visible development gain can coexist with no measured held-out gain. These exam/code-alignment probes are not clinician-adjudicated outpatient ICD-11 gold.
+
+Current packaged benchmark:200 notes in40.9851seconds at2CPUs/2GiB,816.68MiB peak process RSS,$0,25tests. See reports/V5-RESULTS.md for failures and rejected model experiments. The old31-second v4 clean-clone number is historical, not the current v5 resource benchmark.

@@ -1,20 +1,20 @@
-# Sugen offline ICD-11 coder
+# Sugen offline ICD-11 coder — V5
 
-CPU-only ranking across all **18,375 allowed MMS 2026-01 categories**. Assessment extraction, sparse lexical/WHO-reference retrieval, explicit-context checks and a shared alternative ranker produce up to three valid codes. Entirely offline: no API keys, GPU or runtime downloads.
+CPU-only ranking across **18,375 allowed MMS 2026-01 categories**. Assessment extraction, sparse WHO-reference retrieval, specificity checks and a shared alternative ranker return up to three codes. Long unasserted narratives use a separate clinical-definition index. French/Spanish use native morphology and retain diagnostic letter subtypes. No hosted API, generative model, GPU or runtime downloads.
 
 ```sh
 docker compose build
 docker compose run coder /in/notes.jsonl /out/predictions.jsonl
 ```
 
-Compose caps inference at **2 CPUs / 2 GiB**, with networking disabled. Default input is the external 200-note sample; output is `reports/predictions.jsonl`. Override host folders with `CODER_INPUT_DIR` and `CODER_OUTPUT_DIR`. Predictions flush after every note. Build downloads pinned dependencies and creates indexes from packaged data.
+Compose caps inference at **2 CPUs / 2 GiB**, with networking disabled. Default input is 200 external MTS-Dialog notes; output is `reports/predictions.jsonl`. Override folders with `CODER_INPUT_DIR`/`CODER_OUTPUT_DIR`. Each prediction flushes immediately. Build installs pinned dependencies and fits indexes from packaged references.
 
-**Scores.** The supplied scorer reports **70.8/75**, with **56/60 top-1** and **58/60 top-3**. Five-fold ranker diagnostics agree, but rules and approach choices used all visible notes: these are development scores, not independent accuracy. Removing the learned ranker gives the same aggregate result. My hidden-score estimate is **60/100**, an uncalibrated planning guess; no independent ICD-11 gold set establishes it.
+**Dev score:** supplied scorer **70.8/75**, 56/60 first-choice and 58/60 top-three hits. Rules and approach choices used visible notes, so this is development evidence. Prior ranker ablation gave the same aggregate result. Hidden-score estimate: **60/100**, an uncalibrated planning guess.
 
-**Added data.** Official WHO English/French/Spanish API records supply 324,197 index-term entries, definitions and hierarchy metadata, restricted to the allowed codes. Release, hashes, licenses and attribution: `third_party/`. MTS-Dialog TestSet-1 supplies 200 unchanged English dialogues for inference only; summaries never train or enter inference. CodiEsp supplies 221 external Spanish cases for evaluation only, with original ICD-10 annotations and explicitly derived ICD-11 proxies. Neither external corpus trains the engine.
+**Data added:** official WHO English/French/Spanish API records, including 324,197 index-term entries, definitions and hierarchy metadata, restricted to allowed codes. Source hashes/licenses: `third_party/`. MTS-Dialog supplies 200 unchanged dialogues for throughput only; summaries never train or enter inference. CodiEsp, MedExpQA and MediQAl provide external evaluation text and source annotations/reference answers. Added code labels are mechanically aligned proxies, not clinician-adjudicated ICD-11 gold. These evaluation cases do not fit the learned ranker.
 
-**Beyond dev.** Offline Docker benchmark: **200 valid outputs / 43.65 s / 549.48 MiB peak RSS / $0 API cost**. Fresh clone from the v4 bundle, no-cache build and the exact assignment command pass; predictions match. All 20 unit/contract tests, 30 clinical/language controls, 132 bilingual challenges and 200 catalog probes pass. Synthetic controls were used in development. External CodiEsp proxy matches: **81/221 first choice; 138/221 top three**. These are not ICD-11 accuracy: mappings are reference-derived, cases are multi-diagnosis, and selection is terminology-biased. Real multilingual generalisation remains unverified.
+**Beyond dev:** Docker processed **200 valid outputs in 40.99 seconds**, **816.68 MiB peak RSS**, **$0 API cost**. All **25 unit/contract tests** pass. Inspected language regressions now code all 14 documented diagnoses correctly in each language. Symptom-only top-three matches improved from zero to English4/14, French4/14 and Spanish6/14; most first choices still fail. On five separately reserved French cases, symptom-only performance remained0/5, while documented-diagnosis coding remained5/5. Synthetic controls and inspected examples are development evidence; broad diagnostic generalisation remains unverified. Details: `reports/V5-RESULTS.md`.
 
-**AI mistake caught.** A local model turned age 30 into a temperature and reversed uncomplicated malaria into severe disease. It was rejected; raw evidence is retained. No generative translator ships.
+**AI mistake caught:** a tested local translator changed age30 into a temperature and reversed uncomplicated malaria into severe disease. It was rejected. Subsequent generic/medical model diagnosis proposals were also insufficiently reliable and are not shipped; raw evidence is retained.
 
-**Hours spent:** not tracked reliably; implementation was substantially AI-assisted. Repository timestamps document agent activity, not applicant working hours.
+**Hours spent:** not tracked reliably; implementation substantially AI-assisted. Git timestamps document agent activity, not applicant working hours.

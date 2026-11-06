@@ -1,0 +1,930 @@
+{
+  "scope": "Inspected exam development cases, not independent validation. Generated concepts are hypotheses, not documented diagnoses. No reference answers or codes supplied to model.",
+  "seconds_total": 128.1273274999985,
+  "results": [
+    {
+      "id": "medexpqa-130-en",
+      "language": "en",
+      "diagnosis": "Tuberous sclerosis complex",
+      "raw": "{\"diagnosis\": \"Tuberous sclerosis complex\"}",
+      "pred": [
+        "LD2D.2",
+        "CB07.0",
+        "EB90.21"
+      ],
+      "gold": [
+        "8A61.30"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.73,
+      "usage": {
+        "prompt_tokens": 117,
+        "completion_tokens": 10,
+        "total_tokens": 127
+      }
+    },
+    {
+      "id": "medexpqa-130-es",
+      "language": "es",
+      "diagnosis": "Epilepsy",
+      "raw": "{ \"diagnosis\": \"Epilepsy\" }",
+      "pred": [
+        "8A61.4Y",
+        "8A66.0",
+        "BA40.0"
+      ],
+      "gold": [
+        "8A61.30"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.013,
+      "usage": {
+        "prompt_tokens": 129,
+        "completion_tokens": 10,
+        "total_tokens": 139
+      }
+    },
+    {
+      "id": "medexpqa-130-fr",
+      "language": "fr",
+      "diagnosis": "Epilepsie",
+      "raw": "{ \"diagnosis\": \"Epilepsie\" }",
+      "pred": [
+        "1B10.Z",
+        "ME24",
+        "8A6Y"
+      ],
+      "gold": [
+        "8A61.30"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.301,
+      "usage": {
+        "prompt_tokens": 148,
+        "completion_tokens": 10,
+        "total_tokens": 158
+      }
+    },
+    {
+      "id": "medexpqa-143-en",
+      "language": "en",
+      "diagnosis": "Viral meningitis",
+      "raw": "{\"diagnosis\": \"Viral meningitis\"}",
+      "pred": [
+        "1C8E.Z",
+        "1C8E.Y",
+        "1C8E.1"
+      ],
+      "gold": [
+        "1B11.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 1.661,
+      "usage": {
+        "prompt_tokens": 117,
+        "completion_tokens": 7,
+        "total_tokens": 124
+      }
+    },
+    {
+      "id": "medexpqa-143-es",
+      "language": "es",
+      "diagnosis": "Meningitis por estreptococo",
+      "raw": "{\"diagnosis\": \"Meningitis por estreptococo\"}",
+      "pred": [
+        "MB24.C",
+        "ME84.2Z",
+        "1B53"
+      ],
+      "gold": [
+        "1B11.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.382,
+      "usage": {
+        "prompt_tokens": 133,
+        "completion_tokens": 13,
+        "total_tokens": 146
+      }
+    },
+    {
+      "id": "medexpqa-143-fr",
+      "language": "fr",
+      "diagnosis": "Méningite virale",
+      "raw": "{\"diagnosis\": \"Méningite virale\"}",
+      "pred": [
+        "MB24.C",
+        "8C60.Z",
+        "1C8E.Z"
+      ],
+      "gold": [
+        "1B11.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.441,
+      "usage": {
+        "prompt_tokens": 139,
+        "completion_tokens": 10,
+        "total_tokens": 149
+      }
+    },
+    {
+      "id": "medexpqa-16-en",
+      "language": "en",
+      "diagnosis": "Alcoholic Hand-Foot Syndrome",
+      "raw": "{\"diagnosis\": \"Alcoholic Hand-Foot Syndrome\"}",
+      "pred": [
+        "NF03.1",
+        "NF08.20",
+        "1F05.0"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.267,
+      "usage": {
+        "prompt_tokens": 131,
+        "completion_tokens": 11,
+        "total_tokens": 142
+      }
+    },
+    {
+      "id": "medexpqa-16-es",
+      "language": "es",
+      "diagnosis": "Síndrome de Gorlin",
+      "raw": "{\"diagnosis\": \"Síndrome de Gorlin\"}",
+      "pred": [
+        "LD2D.4",
+        "ED71",
+        "ME86.D0"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.242,
+      "usage": {
+        "prompt_tokens": 137,
+        "completion_tokens": 10,
+        "total_tokens": 147
+      }
+    },
+    {
+      "id": "medexpqa-16-fr",
+      "language": "fr",
+      "diagnosis": "Herpangina",
+      "raw": "{\"diagnosis\": \"Herpangina\"}",
+      "pred": [
+        "ED71",
+        "QC46",
+        "1E51.Y"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.397,
+      "usage": {
+        "prompt_tokens": 154,
+        "completion_tokens": 8,
+        "total_tokens": 162
+      }
+    },
+    {
+      "id": "medexpqa-194-en",
+      "language": "en",
+      "diagnosis": "Malaria",
+      "raw": "{\"diagnosis\": \"Malaria\"}",
+      "pred": [
+        "1F42.Y",
+        "1F4Z",
+        "1F42"
+      ],
+      "gold": [
+        "1F54.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.844,
+      "usage": {
+        "prompt_tokens": 193,
+        "completion_tokens": 7,
+        "total_tokens": 200
+      }
+    },
+    {
+      "id": "medexpqa-194-es",
+      "language": "es",
+      "diagnosis": "Síndrome de Wiskott-Aldrich",
+      "raw": "{\"diagnosis\": \"Síndrome de Wiskott-Aldrich\"}",
+      "pred": [
+        "4B21",
+        "ME64.2",
+        "3B62.0Y"
+      ],
+      "gold": [
+        "1F54.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.756,
+      "usage": {
+        "prompt_tokens": 219,
+        "completion_tokens": 13,
+        "total_tokens": 232
+      }
+    },
+    {
+      "id": "medexpqa-194-fr",
+      "language": "fr",
+      "diagnosis": "Maladie de Gaucher",
+      "raw": "{\"diagnosis\": \"Maladie de Gaucher\"}",
+      "pred": [
+        "4B21",
+        "ME64.2",
+        "3A51.6"
+      ],
+      "gold": [
+        "1F54.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.673,
+      "usage": {
+        "prompt_tokens": 229,
+        "completion_tokens": 10,
+        "total_tokens": 239
+      }
+    },
+    {
+      "id": "medexpqa-236-en",
+      "language": "en",
+      "diagnosis": "Ticlopidine-induced Thrombotic Thrombocytopenic Purpura (TTP)",
+      "raw": "{\"diagnosis\": \"Ticlopidine-induced Thrombotic Thrombocytopenic Purpura (TTP)\"}",
+      "pred": [
+        "3B64.14",
+        "3B64.12",
+        "3B64.10"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": true,
+      "top3": true,
+      "seconds": 4.087,
+      "usage": {
+        "prompt_tokens": 183,
+        "completion_tokens": 23,
+        "total_tokens": 206
+      }
+    },
+    {
+      "id": "medexpqa-236-es",
+      "language": "es",
+      "diagnosis": "Hemólisis microangiopática",
+      "raw": "{\"diagnosis\": \"Hemólisis microangiopática\"}",
+      "pred": [
+        "ME64.3",
+        "ME84.2Z",
+        "MC81.3"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.522,
+      "usage": {
+        "prompt_tokens": 202,
+        "completion_tokens": 12,
+        "total_tokens": 214
+      }
+    },
+    {
+      "id": "medexpqa-236-fr",
+      "language": "fr",
+      "diagnosis": "Thrombocytopénie thrombotique induite par la ticlopidine",
+      "raw": "{\"diagnosis\": \"Thrombocytopénie thrombotique induite par la ticlopidine\"}",
+      "pred": [
+        "ME64.3",
+        "MG22",
+        "3B64.14"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": true,
+      "seconds": 4.513,
+      "usage": {
+        "prompt_tokens": 224,
+        "completion_tokens": 21,
+        "total_tokens": 245
+      }
+    },
+    {
+      "id": "medexpqa-279-en",
+      "language": "en",
+      "diagnosis": "Inflammatory Bowel Disease (IBD)",
+      "raw": "{\"diagnosis\": \"Inflammatory Bowel Disease (IBD)\"}",
+      "pred": [
+        "DD7Z",
+        "DD7Y",
+        "4A44.Y"
+      ],
+      "gold": [
+        "DB33.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.906,
+      "usage": {
+        "prompt_tokens": 152,
+        "completion_tokens": 14,
+        "total_tokens": 166
+      }
+    },
+    {
+      "id": "medexpqa-279-es",
+      "language": "es",
+      "diagnosis": "Inflammatory bowel disease (IBD)",
+      "raw": "{\"diagnosis\": \"Inflammatory bowel disease (IBD)\"}",
+      "pred": [
+        "ME05.1",
+        "2B90.2Z",
+        "QA1C"
+      ],
+      "gold": [
+        "DB33.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.328,
+      "usage": {
+        "prompt_tokens": 187,
+        "completion_tokens": 13,
+        "total_tokens": 200
+      }
+    },
+    {
+      "id": "medexpqa-279-fr",
+      "language": "fr",
+      "diagnosis": "Crohn's disease",
+      "raw": "{\"diagnosis\": \"Crohn's disease\"}",
+      "pred": [
+        "ME05.1",
+        "1A40.Z",
+        "BD50.41"
+      ],
+      "gold": [
+        "DB33.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.012,
+      "usage": {
+        "prompt_tokens": 181,
+        "completion_tokens": 10,
+        "total_tokens": 191
+      }
+    },
+    {
+      "id": "medexpqa-280-en",
+      "language": "en",
+      "diagnosis": "Inflammatory bowel disease (IBD)",
+      "raw": "{\"diagnosis\": \"Inflammatory bowel disease (IBD)\"}",
+      "pred": [
+        "DD7Z",
+        "DD7Y",
+        "4A44.Y"
+      ],
+      "gold": [
+        "DB33.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.822,
+      "usage": {
+        "prompt_tokens": 150,
+        "completion_tokens": 13,
+        "total_tokens": 163
+      }
+    },
+    {
+      "id": "medexpqa-280-es",
+      "language": "es",
+      "diagnosis": "Inflammatory bowel disease (IBD)",
+      "raw": "{\"diagnosis\": \"Inflammatory bowel disease (IBD)\"}",
+      "pred": [
+        "ME05.1",
+        "2B90.2Z",
+        "QA1C"
+      ],
+      "gold": [
+        "DB33.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.413,
+      "usage": {
+        "prompt_tokens": 187,
+        "completion_tokens": 13,
+        "total_tokens": 200
+      }
+    },
+    {
+      "id": "medexpqa-280-fr",
+      "language": "fr",
+      "diagnosis": "Crohn's disease",
+      "raw": "{\"diagnosis\": \"Crohn's disease\"}",
+      "pred": [
+        "ME05.1",
+        "1A40.Z",
+        "BD50.41"
+      ],
+      "gold": [
+        "DB33.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.307,
+      "usage": {
+        "prompt_tokens": 181,
+        "completion_tokens": 10,
+        "total_tokens": 191
+      }
+    },
+    {
+      "id": "medexpqa-298-en",
+      "language": "en",
+      "diagnosis": "Viral hepatitis",
+      "raw": "{\"diagnosis\": \"Viral hepatitis\"}",
+      "pred": [
+        "1E5Z",
+        "1E50.Z",
+        "1E51.Z"
+      ],
+      "gold": [
+        "1B91"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 1.783,
+      "usage": {
+        "prompt_tokens": 107,
+        "completion_tokens": 7,
+        "total_tokens": 114
+      }
+    },
+    {
+      "id": "medexpqa-298-es",
+      "language": "es",
+      "diagnosis": "Viral hepatitis",
+      "raw": "{\"diagnosis\": \"Viral hepatitis\"}",
+      "pred": [
+        "FB56.2",
+        "MD90.1",
+        "MD90"
+      ],
+      "gold": [
+        "1B91"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 1.909,
+      "usage": {
+        "prompt_tokens": 121,
+        "completion_tokens": 7,
+        "total_tokens": 128
+      }
+    },
+    {
+      "id": "medexpqa-298-fr",
+      "language": "fr",
+      "diagnosis": "Hépatite virale",
+      "raw": "{\"diagnosis\": \"Hépatite virale\"}",
+      "pred": [
+        "MD90.0",
+        "FB56.2",
+        "MD90.1"
+      ],
+      "gold": [
+        "1B91"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.065,
+      "usage": {
+        "prompt_tokens": 134,
+        "completion_tokens": 11,
+        "total_tokens": 145
+      }
+    },
+    {
+      "id": "medexpqa-4-en",
+      "language": "en",
+      "diagnosis": "Acute Hepatitis B",
+      "raw": "{\"diagnosis\": \"Acute Hepatitis B\"}",
+      "pred": [
+        "1E50.1",
+        "1E50.0",
+        "1E50.3"
+      ],
+      "gold": [
+        "1E50.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "seconds": 1.77,
+      "usage": {
+        "prompt_tokens": 104,
+        "completion_tokens": 8,
+        "total_tokens": 112
+      }
+    },
+    {
+      "id": "medexpqa-4-es",
+      "language": "es",
+      "diagnosis": "Hepatitis B aguda",
+      "raw": "{\"diagnosis\": \"Hepatitis B aguda\"}",
+      "pred": [
+        "1E50.1",
+        "1E51.0Z",
+        "GC50.0"
+      ],
+      "gold": [
+        "1E50.1"
+      ],
+      "top1": true,
+      "top3": true,
+      "seconds": 2.096,
+      "usage": {
+        "prompt_tokens": 113,
+        "completion_tokens": 10,
+        "total_tokens": 123
+      }
+    },
+    {
+      "id": "medexpqa-4-fr",
+      "language": "fr",
+      "diagnosis": "Hepatitis B e",
+      "raw": "{\"diagnosis\": \"Hepatitis B e\" }",
+      "pred": [
+        "MG22",
+        "8C01.3",
+        "FA24.1"
+      ],
+      "gold": [
+        "1E50.1"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.261,
+      "usage": {
+        "prompt_tokens": 119,
+        "completion_tokens": 11,
+        "total_tokens": 130
+      }
+    },
+    {
+      "id": "medexpqa-52-en",
+      "language": "en",
+      "diagnosis": "Major Depressive Disorder",
+      "raw": "{\"diagnosis\": \"Major Depressive Disorder\"}",
+      "pred": [
+        "6A71.Z",
+        "6A70.3",
+        "6A70.4"
+      ],
+      "gold": [
+        "6B43"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.48,
+      "usage": {
+        "prompt_tokens": 143,
+        "completion_tokens": 9,
+        "total_tokens": 152
+      }
+    },
+    {
+      "id": "medexpqa-52-es",
+      "language": "es",
+      "diagnosis": "Major Depressive Disorder",
+      "raw": "{\"diagnosis\": \"Major Depressive Disorder\"}",
+      "pred": [
+        "PA0Z",
+        "MB24.5",
+        "PA2Z"
+      ],
+      "gold": [
+        "6B43"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.707,
+      "usage": {
+        "prompt_tokens": 160,
+        "completion_tokens": 9,
+        "total_tokens": 169
+      }
+    },
+    {
+      "id": "medexpqa-52-fr",
+      "language": "fr",
+      "diagnosis": "Major Depressive Disorder",
+      "raw": "{\"diagnosis\": \"Major Depressive Disorder\"}",
+      "pred": [
+        "MB24.5",
+        "MB24.3",
+        "QF2Z"
+      ],
+      "gold": [
+        "6B43"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.752,
+      "usage": {
+        "prompt_tokens": 164,
+        "completion_tokens": 9,
+        "total_tokens": 173
+      }
+    },
+    {
+      "id": "medexpqa-558-en",
+      "language": "en",
+      "diagnosis": "TTP",
+      "raw": "{\"diagnosis\": \"TTP\"}",
+      "pred": [
+        "3B64.14",
+        "4A01.05",
+        "4A01.02"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": true,
+      "top3": true,
+      "seconds": 2.826,
+      "usage": {
+        "prompt_tokens": 178,
+        "completion_tokens": 7,
+        "total_tokens": 185
+      }
+    },
+    {
+      "id": "medexpqa-558-es",
+      "language": "es",
+      "diagnosis": "Hemólisis microangiopática",
+      "raw": "{\"diagnosis\": \"Hemólisis microangiopática\"}",
+      "pred": [
+        "KB21.1",
+        "MG26",
+        "ME84.2Z"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.632,
+      "usage": {
+        "prompt_tokens": 201,
+        "completion_tokens": 12,
+        "total_tokens": 213
+      }
+    },
+    {
+      "id": "medexpqa-558-fr",
+      "language": "fr",
+      "diagnosis": "Thrombopénie thrombotique paradoxale",
+      "raw": "{\"diagnosis\": \"Thrombopénie thrombotique paradoxale\"}",
+      "pred": [
+        "MA16.1Z",
+        "MG26",
+        "6B8Z"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 4.195,
+      "usage": {
+        "prompt_tokens": 218,
+        "completion_tokens": 14,
+        "total_tokens": 232
+      }
+    },
+    {
+      "id": "medexpqa-559-en",
+      "language": "en",
+      "diagnosis": "Hemolytic uremic syndrome (HUS)",
+      "raw": "{\"diagnosis\": \"Hemolytic uremic syndrome (HUS)\"}",
+      "pred": [
+        "3A21.2",
+        "3A10.Y",
+        "ME86.D0"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 3.866,
+      "usage": {
+        "prompt_tokens": 178,
+        "completion_tokens": 14,
+        "total_tokens": 192
+      }
+    },
+    {
+      "id": "medexpqa-559-es",
+      "language": "es",
+      "diagnosis": "Hemólisis microangiopática",
+      "raw": "{\"diagnosis\": \"Hemólisis microangiopática\"}",
+      "pred": [
+        "KB21.1",
+        "MG26",
+        "ME84.2Z"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 4.089,
+      "usage": {
+        "prompt_tokens": 201,
+        "completion_tokens": 12,
+        "total_tokens": 213
+      }
+    },
+    {
+      "id": "medexpqa-559-fr",
+      "language": "fr",
+      "diagnosis": "Thrombopénie thrombotique paradoxale",
+      "raw": "{\"diagnosis\": \"Thrombopénie thrombotique paradoxale\"}",
+      "pred": [
+        "MA16.1Z",
+        "MG26",
+        "6B8Z"
+      ],
+      "gold": [
+        "3B64.14"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 4.289,
+      "usage": {
+        "prompt_tokens": 218,
+        "completion_tokens": 14,
+        "total_tokens": 232
+      }
+    },
+    {
+      "id": "medexpqa-95-en",
+      "language": "en",
+      "diagnosis": "Porphyria cutanea tarda",
+      "raw": "{\"diagnosis\": \"Porphyria cutanea tarda\"}",
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "5C58.13"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": true,
+      "top3": true,
+      "seconds": 2.51,
+      "usage": {
+        "prompt_tokens": 113,
+        "completion_tokens": 12,
+        "total_tokens": 125
+      }
+    },
+    {
+      "id": "medexpqa-95-es",
+      "language": "es",
+      "diagnosis": "Pemphigus foliaceus",
+      "raw": "{\"diagnosis\": \"Pemphigus foliaceus\"}",
+      "pred": [
+        "EE40.3",
+        "ME67",
+        "EE40.31"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.495,
+      "usage": {
+        "prompt_tokens": 125,
+        "completion_tokens": 10,
+        "total_tokens": 135
+      }
+    },
+    {
+      "id": "medexpqa-95-fr",
+      "language": "fr",
+      "diagnosis": "Psoriasis",
+      "raw": "{\"diagnosis\": \"Psoriasis\"}",
+      "pred": [
+        "EE21",
+        "PF12",
+        "PD22"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.526,
+      "usage": {
+        "prompt_tokens": 136,
+        "completion_tokens": 8,
+        "total_tokens": 144
+      }
+    },
+    {
+      "id": "medexpqa-96-en",
+      "language": "en",
+      "diagnosis": "Porphyria cutanea tarda",
+      "raw": "{\"diagnosis\": \"Porphyria cutanea tarda\"}",
+      "pred": [
+        "5C58.10",
+        "5C58.1Y",
+        "5C58.13"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": true,
+      "top3": true,
+      "seconds": 2.457,
+      "usage": {
+        "prompt_tokens": 109,
+        "completion_tokens": 12,
+        "total_tokens": 121
+      }
+    },
+    {
+      "id": "medexpqa-96-es",
+      "language": "es",
+      "diagnosis": "Pemphigus foliaceus",
+      "raw": "{\"diagnosis\": \"Pemphigus foliaceus\"}",
+      "pred": [
+        "EE40.3",
+        "ME67",
+        "EE40.31"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.623,
+      "usage": {
+        "prompt_tokens": 125,
+        "completion_tokens": 10,
+        "total_tokens": 135
+      }
+    },
+    {
+      "id": "medexpqa-96-fr",
+      "language": "fr",
+      "diagnosis": "Psoriasis",
+      "raw": "{\"diagnosis\": \"Psoriasis\"}",
+      "pred": [
+        "EE21",
+        "PF12",
+        "PD22"
+      ],
+      "gold": [
+        "5C58.10"
+      ],
+      "top1": false,
+      "top3": false,
+      "seconds": 2.67,
+      "usage": {
+        "prompt_tokens": 136,
+        "completion_tokens": 8,
+        "total_tokens": 144
+      }
+    }
+  ]
+}

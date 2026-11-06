@@ -1,0 +1,38 @@
+{
+  "scope": "Five French clinical-exam questions reserved before implementation; mechanically aligned code labels, not adjudicated outpatient ICD-11 gold. Too small for a broad accuracy estimate.",
+  "n": 5,
+  "unique_source_case_texts": 5,
+  "baseline": {
+    "symptoms_only": {
+      "top1": 0,
+      "top3": 0
+    },
+    "documented_diagnosis": {
+      "top1": 5,
+      "top3": 5
+    }
+  },
+  "candidate": {
+    "strict/symptoms_only/fr": {
+      "n": 5,
+      "top1": 0,
+      "top3": 0
+    },
+    "strict/documented_diagnosis/fr": {
+      "n": 5,
+      "top1": 5,
+      "top3": 5
+    },
+    "all/symptoms_only/fr": {
+      "n": 5,
+      "top1": 0,
+      "top3": 0
+    },
+    "all/documented_diagnosis/fr": {
+      "n": 5,
+      "top1": 5,
+      "top3": 5
+    }
+  },
+  "policy_unchanged_after_results": true
+}

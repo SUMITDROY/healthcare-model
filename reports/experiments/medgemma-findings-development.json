@@ -1,0 +1,98 @@
+[
+  {
+    "id": "medexpqa-16-en",
+    "raw": "{ \"findings\": \"Tense blisters on dorsum of hands, malar hypertrichosis, history of alcohol abuse, hepatitis C, ibuprofen use.\", \"diagnosis\": \"Scleroderma\" }",
+    "diagnosis": "Scleroderma",
+    "pred": [
+      "4A42.Z",
+      "KC22.2",
+      "EB60.Y"
+    ],
+    "gold": [
+      "5C58.10"
+    ],
+    "top1": false,
+    "top3": false,
+    "seconds": 7.284160499984864
+  },
+  {
+    "id": "medexpqa-16-fr",
+    "raw": "{ \"findings\": \"Les vésicules tendues sur les mains, l'hypertrichose malaire et l'antécédent d'abus d'alcool suggèrent une possible réaction de photosensibilité induite par l'ibuprofène.\", \"diagnosis\": \"Photosensibilité\" }",
+    "diagnosis": "Photosensibilité",
+    "pred": [
+      "ME66.0",
+      "EH75",
+      "EJ30.0"
+    ],
+    "gold": [
+      "5C58.10"
+    ],
+    "top1": false,
+    "top3": false,
+    "seconds": 8.161369416979142
+  },
+  {
+    "id": "medexpqa-236-en",
+    "raw": "{ \"findings\": \"Headache, asthenia, petechiae, anemia (Hb 8.2 g/dL), thrombocytopenia (platelets 25000/ul), schistocytes on blood smear, elevated LDH (2700 IU/l), elevated bilirubin (2.6 mg/dl), normal coagulation studies.\", \"diagnosis\": \"Thrombotic Thrombocytopenic Purpura (TTP)\" }",
+    "diagnosis": "Thrombotic Thrombocytopenic Purpura (TTP)",
+    "pred": [
+      "3B64.14",
+      "3B64.10",
+      "3B64.12"
+    ],
+    "gold": [
+      "3B64.14"
+    ],
+    "top1": true,
+    "top3": true,
+    "seconds": 11.055941250000615
+  },
+  {
+    "id": "medexpqa-236-fr",
+    "raw": "{ \"findings\": \"Anemia, thrombocytopenia, schistocytes, elevated LDH, and elevated reticulocyte count suggest microangiopathic hemolytic anemia (MAHA).\", \"diagnosis\": \"Ticlopidine-induced hemolytic uremic syndrome (HUS)\" }",
+    "diagnosis": "Ticlopidine-induced hemolytic uremic syndrome (HUS)",
+    "pred": [
+      "3A21.2",
+      "3A10.Y",
+      "EH63.0"
+    ],
+    "gold": [
+      "3B64.14"
+    ],
+    "top1": false,
+    "top3": false,
+    "seconds": 8.62147733400343
+  },
+  {
+    "id": "medexpqa-298-en",
+    "raw": "{ \"findings\": \"Fever, headache, myalgia, nausea, vomiting, abdominal pain, jaundice, conjunctival injection, recent travel to Thailand.\", \"diagnosis\": \"Cholangitis\" }",
+    "diagnosis": "Cholangitis",
+    "pred": [
+      "DC13",
+      "DB96.2Z",
+      "DB96.1Z"
+    ],
+    "gold": [
+      "1B91"
+    ],
+    "top1": false,
+    "top3": false,
+    "seconds": 5.578322874993319
+  },
+  {
+    "id": "medexpqa-298-fr",
+    "raw": "{ \"findings\": \"Fever, headache, myalgia, nausea, vomiting, abdominal pain, jaundice, conjunctival injection, recent travel to Thailand.\", \"diagnosis\": \"Hepatitis A\" }",
+    "diagnosis": "Hepatitis A",
+    "pred": [
+      "1E50.0",
+      "DB91.0",
+      "1E50.1"
+    ],
+    "gold": [
+      "1B91"
+    ],
+    "top1": false,
+    "top3": false,
+    "seconds": 7.036265041009756
+  }
+]

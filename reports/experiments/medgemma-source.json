@@ -1,0 +1,9 @@
+{
+  "repo": "unsloth/medgemma-4b-it-GGUF",
+  "revision": "fa17ea2647ef236db91adfe1465a61ab6562cf2c",
+  "url": "https://huggingface.co/unsloth/medgemma-4b-it-GGUF/resolve/fa17ea2647ef236db91adfe1465a61ab6562cf2c/medgemma-4b-it-Q4_K_M.gguf",
+  "bytes": 2489894720,
+  "sha256": "d842e8d2aca3fc5e613c5f9255e693768eeccae729e5c2653159eb79afe751f3",
+  "license": "Health AI Developer Foundations terms; see upstream model card",
+  "upstream": "https://huggingface.co/google/medgemma-4b-it"
+}

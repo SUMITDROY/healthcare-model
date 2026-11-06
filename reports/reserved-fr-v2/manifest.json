@@ -1,0 +1,10 @@
+{
+  "source": "https://huggingface.co/datasets/ANR-MALADES/MediQAl/resolve/5af34948a74c7b8807c476204a21149ffb00ea2c/mcqu/validation.json",
+  "license": "CC-BY-4.0",
+  "source_sha256": "ef0af56870fe1b958a066a14c2099a00d5a2e82d90b96d67fa90e2c270f37015",
+  "cases_sha256": "2a6a131fd436cf89fd70ae74274399aba0e9cdce16076432691cc7cd42f460cb",
+  "n": 7,
+  "selection": "French diagnosis questions with a single author answer exactly matching one allowed leaf title; no predictions used.",
+  "scope": "External clinical-exam proxy probe, not expert-adjudicated ICD-11 outpatient gold.",
+  "do_not_inspect_or_tune_on_results_before_final_policy": true
+}

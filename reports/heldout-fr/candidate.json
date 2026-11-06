@@ -1,0 +1,212 @@
+{
+  "scope": "Mechanically aligned clinical exam cases, not adjudicated ICD-11 outpatient accuracy. Inspected development cases are not independent validation.",
+  "cases_sha256": "eee8ec23e9359bbebafea4bd4ce6f503cd97f8e712f149737add8a18a9ffb632",
+  "model_sha256": "498d039d38b5296f78e61e5e9a9bea32220ac782ed64c0fb73cfd8796a3a4876",
+  "seconds_excluding_load": 2.2301809579948895,
+  "groups": {
+    "strict/symptoms_only/fr": {
+      "n": 5,
+      "top1": 0,
+      "top3": 0
+    },
+    "strict/documented_diagnosis/fr": {
+      "n": 5,
+      "top1": 5,
+      "top3": 5
+    },
+    "all/symptoms_only/fr": {
+      "n": 5,
+      "top1": 0,
+      "top3": 0
+    },
+    "all/documented_diagnosis/fr": {
+      "n": 5,
+      "top1": 5,
+      "top3": 5
+    }
+  },
+  "api_calls": 0,
+  "api_cost_usd": 0,
+  "results": [
+    {
+      "id": "mediqal-13041",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "CA21.1"
+      ],
+      "pred": [
+        "1D44",
+        "2A20.4",
+        "CA26.1"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "mediqal-13041",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "CA21.1"
+      ],
+      "pred": [
+        "CA21.1",
+        "CA21.Z",
+        "CA21"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "mediqal-22550",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "5A61.0"
+      ],
+      "pred": [
+        "JA20.3",
+        "9D90",
+        "7A42.0"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "mediqal-22550",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "5A61.0"
+      ],
+      "pred": [
+        "5A61.0",
+        "5D43",
+        "9B61"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "mediqal-20650",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "MB23.H"
+      ],
+      "pred": [
+        "6A73",
+        "6C45.73",
+        "6C4G.73"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "mediqal-20650",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "MB23.H"
+      ],
+      "pred": [
+        "MB23.H",
+        "6A80.1",
+        "6B01"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "mediqal-10167",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "QC30"
+      ],
+      "pred": [
+        "9D90",
+        "9B71.5",
+        "2A82.00"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "mediqal-10167",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "QC30"
+      ],
+      "pred": [
+        "QC30",
+        "6D50",
+        "9B70"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    },
+    {
+      "id": "mediqal-1949",
+      "language": "fr",
+      "mode": "symptoms_only",
+      "gold": [
+        "EB41.0"
+      ],
+      "pred": [
+        "9A78.20",
+        "DB99.10",
+        "6B64"
+      ],
+      "top1": false,
+      "top3": false,
+      "strict": true,
+      "path": "WHO clinical-description BM25; diagnostic hypothesis, not an asserted diagnosis",
+      "symptom_path": true
+    },
+    {
+      "id": "mediqal-1949",
+      "language": "fr",
+      "mode": "documented_diagnosis",
+      "gold": [
+        "EB41.0"
+      ],
+      "pred": [
+        "EB41.0",
+        "EB41.Y",
+        "EB41.Z"
+      ],
+      "top1": true,
+      "top3": true,
+      "strict": true,
+      "path": "official terminology with bounded French/Spanish assertion parsing; not full clinical translation",
+      "symptom_path": false
+    }
+  ]
+}
