@@ -8,7 +8,7 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 from coder.enrichment import value
-from coder.languages import language_features, clean
+from coder.languages import language_features, clean, canonical_title
 
 
 class ForeignIndex:
@@ -22,9 +22,11 @@ class ForeignIndex:
         labels = []
         owners = []
         self.titles = []
+        self.title_codes = {}
         for i, code in enumerate(codes):
             r = records[code]
             title = value(r["title"])
+            self.title_codes.setdefault(canonical_title(title), set()).add(code)
             self.titles.append(set(w for w in self.features(title) if " " not in w))
             terms = [title, value(r.get("fullySpecifiedName"))]
             for field in ("indexTerm", "inclusion"):

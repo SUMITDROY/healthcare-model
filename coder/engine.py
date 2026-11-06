@@ -106,6 +106,31 @@ class OfflineCoder:
             self.reference = load_reference(
                 str(who_path.resolve()), json.dumps(categories, sort_keys=True)
             )
+        # Only unique preferred titles of specific leaves qualify for the
+        # diagnosis-heading shortcut. Synonyms/parents/residuals do not.
+        from coder.languages import canonical_title
+
+        title_maps = {"en": {}}
+        for category in categories:
+            title_maps["en"].setdefault(canonical_title(category["title"]), set()).add(
+                category["code"]
+            )
+        if self.reference is not None:
+            title_maps.update(
+                {
+                    lang: index.title_codes
+                    for lang, index in self.reference.foreign.items()
+                }
+            )
+        specific = {c["code"] for c in categories if c["leaf"] and not c["residual"]}
+        self.documented_title_codes = {
+            lang: {
+                title: next(iter(codes))
+                for title, codes in names.items()
+                if len(codes) == 1 and codes <= specific
+            }
+            for lang, names in title_maps.items()
+        }
         self.title_phrases = []
         self.full_title_terms = []
         self.base_terms = []
@@ -606,6 +631,33 @@ class OfflineCoder:
         )
 
     def predict(self, text: str, use_examples=True) -> tuple[list[str], dict]:
+        # A literal diagnosis on its own first line is documented evidence,
+        # even without an "Assessment:" label. A later explicit assessment or
+        # clinician assertion takes precedence through the normal focus path.
+        first, separator, _ = text.strip().partition("\n")
+        if separator and len(first) <= 180:
+            from coder.languages import canonical_title, detect, clinical_focus
+            from coder.symptoms import needs_description
+
+            language = detect(text)
+            focused = (
+                clinical_focus(text, language)
+                if language in {"fr", "es"}
+                else focus(text)
+            )
+            code = (
+                getattr(self, "documented_title_codes", {})
+                .get(language, {})
+                .get(canonical_title(first))
+            )
+            if code and needs_description(text, focused):
+                return [code], {
+                    "language": language,
+                    "documented_title": True,
+                    "path": "unique official specific-leaf diagnosis heading; not symptom inference",
+                    "scores": [1.0],
+                    "warning": "Exact title match; score is not a calibrated probability.",
+                }
         retrieval, matrix, diagnostic = self.retrieve(text)
         candidates = np.argsort(-retrieval, kind="stable")[:100]
         use_examples = (

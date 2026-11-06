@@ -99,6 +99,16 @@ def language_features(text, language):
     )
 
 
+def canonical_title(text):
+    """Exact preferred-title identity, ignoring accents and punctuation only."""
+    text = "".join(
+        c
+        for c in unicodedata.normalize("NFKD", text.casefold())
+        if not unicodedata.combining(c)
+    )
+    return " ".join(re.findall(r"(?u)\w+", text))
+
+
 def latin_features(text):
     text = "".join(
         c for c in unicodedata.normalize("NFKD", text) if not unicodedata.combining(c)

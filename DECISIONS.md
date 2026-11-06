@@ -203,3 +203,9 @@ Entries name the commit subject they are committed with; `git log --oneline -- D
 - Evidence:29unit/contract tests pass, including forced middle-note failure, invalid outputs, continued processing and on-disk incremental flush checks.
 - Prepared600distinct public dialogue texts from pinned MTS-Dialog split files, selecting only id/text and never fitting on these rows. Exact training-text overlap0; patient independence and clinical ICD-11 accuracy are not asserted. Freeze manifest/source hashes before the full-sized contract/run audit.
 - Revisit: real ICD-11 annotated coding evaluation; operational recovery ensures completion, not correct diagnosis. Applicant personal hours and actual email submission cannot be inferred or fabricated by the agent.
+
+
+## 2026-11-06 13:48 IST — commit: `Preserve explicit diagnosis headings without requiring a label`
+- Assignment-format audit reproduced a Spanish error: a long follow-up note headed by the official diagnosis Epilepsia mioclónica juvenil was sent to symptom inference and missed8A61.30, despite the diagnosis already being written.
+- Added a global preferred-title lookup derived only from the supplied/WHO categories. A unique specific non-residual leaf on its own first line is documented evidence, not a symptom inference. Parent/residual titles and ambiguous localized titles are excluded; a later explicit assessment/clinician focus takes precedence. This is full-taxonomy title identity, not a case-ID or training-gold lookup.
+- Added EN/FR/ES heading regressions and an assessment-precedence regression. Retain the existing symptom-only limitations; this fix addresses consultation coding scope, not medical-exam diagnosis. Revisit narrative diagnosis extraction with source-separated coding evaluation.
